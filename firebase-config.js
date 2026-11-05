@@ -9,12 +9,12 @@
 // =============================================================
 
 export const firebaseConfig = {
-  apiKey: "",
-  authDomain: "",
-  projectId: "",
-  storageBucket: "",
-  messagingSenderId: "",
-  appId: "",
+  apiKey: "AIzaSyBz9ZLmNGyiTeKXKR3wN9EwuZr7_Amo7lo",
+  authDomain: "gia-plan-2026.firebaseapp.com",
+  projectId: "gia-plan-2026",
+  storageBucket: "gia-plan-2026.firebasestorage.app",
+  messagingSenderId: "890897855214",
+  appId: "1:890897855214:web:48ff3dd992a53dc632b9ff",
 };
 
 // Who is who: the two login emails and their display names.
