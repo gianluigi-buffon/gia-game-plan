@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#2a1a4a" />
+  <title>Gia's Game Plan</title>
+  <link rel="stylesheet" href="styles.css?v=1" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐉</text></svg>" />
+  <script>
+    // Local demo mode (never on the live site): http://localhost:8765/?demo=gia or ?demo=mum
+    // swaps Firebase for an in-browser fake so the whole app can be tried without logging in.
+    if (/^(localhost|127\.0\.0\.1)$/.test(location.hostname) && new URLSearchParams(location.search).has("demo")) {
+      const fb = "https://www.gstatic.com/firebasejs/10.12.2/";
+      document.write('<script type="importmap">' + JSON.stringify({ imports: {
+        [fb + "firebase-app.js"]: "./dev/mock/firebase-app.js",
+        [fb + "firebase-auth.js"]: "./dev/mock/firebase-auth.js",
+        [fb + "firebase-firestore.js"]: "./dev/mock/firebase-firestore.js",
+      } }) + '<\/script>');
+    }
+  </script>
+</head>
+<body>
+
+  <!-- ===== LOGIN SCREEN ===== -->
+  <div id="loginScreen" class="login-wrap hidden">
+    <div class="login-card">
+      <div class="logo">🐉 Gia's Game Plan</div>
+      <p class="muted">Homework · Revision · Creations · Wushu · Reading</p>
+      <input id="email" type="email" placeholder="Email" autocomplete="username" />
+      <input id="password" type="password" placeholder="Password" autocomplete="current-password" />
+      <button id="loginBtn" class="btn primary">Log in</button>
+      <button id="forgotBtn" class="btn tiny ghost" type="button" style="margin-top:10px">Forgot password?</button>
+      <p id="loginMsg" class="error"></p>
+      <p id="loginInfo" class="muted small"></p>
+      <div id="setupNote" class="setup-note hidden">Firebase isn't connected yet. Paste the project keys into <b>firebase-config.js</b> (see README.md, Part A).</div>
+    </div>
+  </div>
+
+  <!-- ===== MAIN APP ===== -->
+  <div id="app" class="hidden">
+    <header class="topbar">
+      <div class="brand">🐉 Gia's Game Plan</div>
+      <div class="who"><span id="whoami"></span> <button id="logoutBtn" class="btn tiny ghost">Log out</button></div>
+    </header>
+
+    <nav class="tabs">
+      <button class="tab active" data-tab="home">🏠 Home</button>
+      <button class="tab" data-tab="today">📅 Today</button>
+      <button class="tab" data-tab="homework">📝 Homework</button>
+      <button class="tab" data-tab="revision">📖 Revision</button>
+      <button class="tab" data-tab="creations">🎨 Creations</button>
+      <button class="tab" data-tab="wushu">🥋 Wushu</button>
+      <button class="tab" data-tab="reading">📚 Reading</button>
+      <button class="tab" data-tab="progress">⭐ Progress</button>
+    </nav>
+
+    <main>
+      <!-- HOME / DASHBOARD -->
+      <section id="tab-home" class="tab-panel active">
+        <h2 id="dashHi">Dashboard</h2>
+        <div id="dashboard" class="dash"></div>
+      </section>
+
+      <!-- TODAY -->
+      <section id="tab-today" class="tab-panel">
+        <div id="dayQuote" class="quote"></div>
+        <div class="row-between" style="margin-top:14px">
+          <h2 id="todayTitle">Today</h2>
+          <select id="planDay" class="select" style="width:auto"></select>
+        </div>
+        <div id="dueAlerts"></div>
+        <h3 class="section-h">⏱️ Your plan</h3>
+        <div id="timeline" class="timeline"></div>
+        <p class="muted small">The plan builds itself from your pending homework and revision sessions, around school, Wushu and sleep. Add or tick homework in the Homework tab.</p>
+        <div id="holidayBox"></div>
+      </section>
+
+      <!-- HOMEWORK -->
+      <section id="tab-homework" class="tab-panel">
+        <h2>📝 Homework</h2>
+        <div class="card add-card">
+          <div class="grid2">
+            <label class="mins">Subject
+              <select id="hwSubject" class="select"></select>
+            </label>
+            <label class="mins">Due date
+              <input id="hwDue" type="date" class="select" />
+            </label>
+          </div>
+          <input id="hwTask" type="text" placeholder="What's the homework? e.g. Ch.4 problems 1–10" />
+          <div class="grid2">
+            <label class="mins">Est. mins
+              <input id="hwMins" type="number" value="45" min="10" step="5" />
+            </label>
+            <button id="hwAdd" class="btn primary">Add homework</button>
+          </div>
+        </div>
+        <div id="hwList" class="list"></div>
+      </section>
+
+      <!-- REVISION (rendered by revision/revision.js) -->
+      <section id="tab-revision" class="tab-panel"><div id="revRoot"></div></section>
+
+      <!-- CREATIONS -->
+      <section id="tab-creations" class="tab-panel">
+        <h2>🎨 Collection of Creations: Feelings</h2>
+        <div id="missionBox" class="quote mission"></div>
+        <div id="crStats" class="stats"></div>
+        <div id="crPace"></div>
+        <div class="card add-card">
+          <b>➕ Add a creation</b>
+          <input id="crTitle" type="text" placeholder="Title, e.g. “The colour of nervous”" style="margin-top:8px" />
+          <div class="grid2">
+            <label class="mins">Type
+              <select id="crType" class="select">
+                <option>Sketch</option><option>Mixed media</option><option>Poem</option><option>Short story</option><option>Other</option>
+              </select>
+            </label>
+            <label class="mins">Feeling
+              <input id="crEmotion" type="text" placeholder="e.g. Joy, Anger, Hope" />
+            </label>
+          </div>
+          <div class="grid2">
+            <label class="mins">Finished on (leave empty if still working on it)
+              <input id="crDate" type="date" class="select" />
+            </label>
+            <label class="mins">Skill learned or improved
+              <input id="crSkill" type="text" placeholder="e.g. first watercolour wash" />
+            </label>
+          </div>
+          <button id="crAdd" class="btn primary">Add creation</button>
+        </div>
+        <div id="crList" class="list"></div>
+        <h3 class="section-h">🌱 Skills I've grown</h3>
+        <div id="crSkills"></div>
+      </section>
+
+      <!-- WUSHU -->
+      <section id="tab-wushu" class="tab-panel">
+        <h2>🥋 Wushu</h2>
+        <p class="muted small">Classes are Mon/Wed/Fri 5–6:30pm. Mark each class as attended, missed or cancelled (or do it from the Today tab).</p>
+        <div id="wuStats" class="stats"></div>
+        <div id="wuRecent"></div>
+        <h3 class="section-h">❌ Missed classes</h3>
+        <div class="card add-card">
+          <div class="grid2">
+            <label class="mins">Date missed<input id="missDate" type="date" class="select" /></label>
+            <label class="mins">Why
+              <select id="missReason" class="select"></select>
+            </label>
+          </div>
+          <input id="missNote" type="text" placeholder="Note (optional) e.g. fever, practised forms at home" />
+          <button id="missAdd" class="btn primary">Log missed class</button>
+        </div>
+        <div id="missList" class="list"></div>
+        <h3 class="section-h">🏅 Gradings & competitions</h3>
+        <div class="card add-card">
+          <input id="evName" type="text" placeholder="e.g. Grading, inter-school competition" />
+          <div class="grid2">
+            <input id="evDate" type="date" class="select" />
+            <input id="evLoc" type="text" placeholder="Location (optional)" />
+          </div>
+          <button id="evAdd" class="btn primary">Add event</button>
+        </div>
+        <div id="evList" class="list"></div>
+        <h3 class="section-h">🔁 Home practice</h3>
+        <p class="muted small">Tick what you practised today.</p>
+        <div id="pracList" class="list"></div>
+        <div class="card add-card" style="margin-top:8px">
+          <input id="pracNew" type="text" placeholder="Add a practice item, e.g. Stretching (10 min)" />
+          <button id="pracAdd" class="btn ghost">Add practice item</button>
+        </div>
+      </section>
+
+      <!-- READING -->
+      <section id="tab-reading" class="tab-panel">
+        <h2>📚 Reading</h2>
+        <div id="rdStats" class="stats"></div>
+        <div id="rdToday"></div>
+        <h3 class="section-h">📖 Reading now</h3>
+        <div id="rdNow" class="list"></div>
+        <div class="card add-card" style="margin-top:8px">
+          <b>➕ Add a book</b>
+          <input id="bkTitle" type="text" placeholder="Title" style="margin-top:8px" />
+          <div class="grid2">
+            <input id="bkAuthor" type="text" placeholder="Author (optional)" />
+            <select id="bkStatus" class="select">
+              <option value="reading">Reading now</option>
+              <option value="want">Want to read</option>
+              <option value="finished">Finished</option>
+            </select>
+          </div>
+          <button id="bkAdd" class="btn primary">Add book</button>
+        </div>
+        <h3 class="section-h">🔖 Want to read</h3>
+        <div id="rdWant" class="list"></div>
+        <h3 class="section-h">✅ Finished</h3>
+        <div id="rdDone" class="list"></div>
+      </section>
+
+      <!-- PROGRESS -->
+      <section id="tab-progress" class="tab-panel">
+        <h2>⭐ Progress</h2>
+        <div id="progStats" class="stats"></div>
+        <div id="progDetail"></div>
+      </section>
+    </main>
+
+    <footer class="foot muted small">Shared with Christabel in real time · saved to your Firebase</footer>
+  </div>
+
+  <script type="module" src="app.js?v=1"></script>
+</body>
+</html>
