@@ -40,7 +40,7 @@ Two Firebase Auth (Email/Password) users: Gia and Christabel. Emails live in **o
 ## 🗂️ File map
 
 - `index.html`: markup, tabs, login screen, demo-mode import map, cache-busters.
-- `styles.css`: dragon plum and gold theme (CSS variables at the top), mobile-first.
+- `styles.css`: plum and gold (puppy 🐶 logo) theme (CSS variables at the top), mobile-first.
 - `app.js`: Firebase wiring, auth, live subscriptions, all tabs, dashboard, progress/badges, quotes.
 - `planner.js`: **pure** daily-plan builder (`dayTemplate()` = Gia's week). No Firebase.
 - `firebase-config.js`: Firebase web keys (empty until Part A is done; the login screen then shows a "not connected" note) + `PEOPLE`.
@@ -70,7 +70,7 @@ Two Firebase Auth (Email/Password) users: Gia and Christabel. Emails live in **o
 School 6:30am–4:15pm. Wushu Mon/Wed/Fri 5–6:30pm (a missed/cancelled/rescheduled class frees that slot for study). Reading + wind-down 9:15–9:45pm, lights out 10pm. Weekdays + Saturday morning for work; Saturday afternoon + Sunday free.
 
 ## ⭐ Progress rules
-Weekly targets: homework on time · 1 creation finished · Wushu = attended ≥ classes held that week (cancelled ones don't count; made-up ones do) · 2 revision rounds (counts as met until revision topics exist). Score /10 = 2.5 per target (partial credit for creations, Wushu, revision). Streak badges: First Bow, Steady Stance (3 wks), Perfect Form (10/10), Dragon Spirit (6 wks). Belts at 20/40/60/80/100% of overall goals: creations 29, homework on time 100, Wushu classes 60, revision 30.
+Weekly targets: homework on time · 1 creation finished · Wushu = attended ≥ classes held that week (cancelled ones don't count; made-up ones do) · 2 revision rounds (counts as met until revision topics exist). Score /10 = 2.5 per target (partial credit for creations, Wushu, revision). Streak badges: First Bow, Steady Stance (3 wks), Perfect Form (10/10), Top Dog (6 wks). Belts at 20/40/60/80/100% of overall goals: creations 29, homework on time 100, Wushu classes 60, revision 30.
 
 ## ⏳ Waiting on Christabel
 - Gia's subjects, exam (likely Cambridge Lower Secondary), revision goal and material → `revision/syllabus.js`

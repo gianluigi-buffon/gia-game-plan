@@ -1,4 +1,4 @@
-# 🐉 Gia's Game Plan
+# 🐶 Gia's Game Plan
 
 A personal planner web app for Gia: a daily plan, homework, revision, her Collection of Creations, Wushu classes and reading. Gia and Christabel both log in and see the **same data live**: when one of you ticks something, the other's screen updates straight away.
 

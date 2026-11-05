@@ -115,7 +115,7 @@ async function build() {
 
   let html = `<div style="font-family:Arial,sans-serif;max-width:560px;margin:auto;color:#221838">
     <div style="background:#2a1a4a;color:#f2b544;padding:16px 18px;border-radius:12px">
-      <div style="font-size:20px;font-weight:800">🐉 Gia's Game Plan — twice-weekly update</div>
+      <div style="font-size:20px;font-weight:800">🐶 Gia's Game Plan — twice-weekly update</div>
       <div style="opacity:.85;font-size:13px;color:#e8defa">${fmt(todayStr)}</div>
     </div>
     <div style="background:#f6f2fb;border:1px solid #e4dcef;border-radius:10px;padding:12px 14px;margin-top:14px;font-size:14px">
@@ -162,7 +162,7 @@ async function main() {
   const info = await transporter.sendMail({
     from: `"Gia's Game Plan" <${process.env.GMAIL_USER}>`,
     to: need("MAIL_TO"),
-    subject: `🐉 Game Plan update — ${summary}`,
+    subject: `🐶 Game Plan update — ${summary}`,
     html,
   });
   console.log("Sent:", info.messageId);

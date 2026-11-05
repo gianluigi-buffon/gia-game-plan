@@ -837,7 +837,7 @@ const BADGE_ART = {
   firstbow: { ring: "#f2b544", face: "#3a2363", em: "🥋" },
   stance: { ring: "#ff9a5a", face: "#4a1f10", em: "🔥" },
   perfect: { ring: "#a9c1ff", face: "#1f2350", em: "💯" },
-  dragon: { ring: "#c79bff", face: "#2a1052", em: "🐉" },
+  dragon: { ring: "#c79bff", face: "#2a1052", em: "🐶" },
   white: { belt: "#f4f1ea" }, yellow: { belt: "#f5d33a" }, green: { belt: "#3fbf6a" }, blue: { belt: "#3a7bf0" }, black: { belt: "#111111" },
 };
 function badgeSVG(key, on) {
@@ -910,7 +910,7 @@ async function loadProgress() {
     { key: "firstbow", name: "First Bow", on: recentWeeks.some(w => w.onTarget) || week.onTarget, meta: "first on-target week" },
     { key: "stance", name: "Steady Stance", on: streak >= 3, meta: `${Math.min(streak, 3)}/3 weeks` },
     { key: "perfect", name: "Perfect Form", on: recentWeeks.some(w => (w.rating || 0) >= 10) || week.rating >= 10, meta: "a 10/10 week" },
-    { key: "dragon", name: "Dragon Spirit", on: streak >= 6, meta: `${Math.min(streak, 6)}/6 weeks` },
+    { key: "dragon", name: "Top Dog", on: streak >= 6, meta: `${Math.min(streak, 6)}/6 weeks` },
   ];
   const ladder = [
     { p: 20, key: "white", name: "White belt" }, { p: 40, key: "yellow", name: "Yellow belt" },
@@ -938,11 +938,11 @@ function renderProgress() {
   const chip = (ok, label) => `<span class="chip ${ok ? "on" : ""}">${ok ? "✓" : "✗"} ${label}</span>`;
   const cell = (b, sub) => `<div class="bcell ${b.on ? "" : "lock"}" data-desc="${esc(b.name)}: ${esc(BADGE_DESC[b.key])} ${b.on ? "— unlocked ✓" : "— locked 🔒"}" title="${esc(BADGE_DESC[b.key])}">${badgeSVG(b.key, b.on)}<div class="bname">${b.name}</div><div class="bmeta muted small">${sub}</div></div>`;
   const nextTier = ladder.find(l => !l.on);
-  const ladderHeadline = overallPct >= 100 ? "🥋 Black belt: unlocked! 🐉"
+  const ladderHeadline = overallPct >= 100 ? "🥋 Black belt: unlocked! 🐶"
     : overallPct === 0 ? "🥋 Your climb to black belt starts here!"
       : `🥋 Just ${nextTier.p - overallPct}% to your ${nextTier.name}!`;
   detailEl.innerHTML = `
-    <div class="card"><b>🐉 How it works</b>
+    <div class="card"><b>🐶 How it works</b>
       <div class="muted small" style="margin-top:4px">Hit your <b>4 weekly targets</b> to push your score toward a perfect 10. Hit all four and the week is <b>on target</b>: stack those weeks for a <b>streak</b> and earn badges. Everything you finish also moves you up the belts, from white to black.</div>
     </div>
     <div class="card"><b>🎯 This week: ${week.pillarsMet}/4${week.pillarsMet === 4 ? " — on target! ✨" : ""}</b>
@@ -1013,7 +1013,7 @@ function renderDashboard() {
   html += card("today", "📅 Today's plan", DAY_NAMES[new Date().getDay()].slice(0, 3), true, "tap for your schedule");
   if (pg) {
     const nextName = (pg.ladder.find(l => !l.on) || {}).name || "Black belt";
-    const h2 = pg.overallPct >= 100 ? "🐉 Black belt unlocked — every goal achieved!"
+    const h2 = pg.overallPct >= 100 ? "🐶 Black belt unlocked — every goal achieved!"
       : pg.streak >= 1 ? `🔥 ${pg.streak}-week streak! Keep going for your ${nextName}!`
         : `Hit all 4 this week to start your streak — next up: ${nextName} 🥋`;
     html += `<div class="dash-h2">${esc(h2)}</div>`;

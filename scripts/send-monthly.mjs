@@ -63,7 +63,7 @@ async function build() {
 
   const sorted = [...weeklog].sort((a, b) => b.weekStart.localeCompare(a.weekStart));
   let streak = 0; for (const w of sorted) { if (w.onTarget) streak++; else break; }
-  const streakBadges = [["🥋 First Bow", weeklog.some((w) => w.onTarget)], ["🔥 Steady Stance", streak >= 3], ["💯 Perfect Form", weeklog.some((w) => (w.rating || 0) >= 10)], ["🐉 Dragon Spirit", streak >= 6]];
+  const streakBadges = [["🥋 First Bow", weeklog.some((w) => w.onTarget)], ["🔥 Steady Stance", streak >= 3], ["💯 Perfect Form", weeklog.some((w) => (w.rating || 0) >= 10)], ["🐶 Top Dog", streak >= 6]];
   const belts = [["White belt", 20], ["Yellow belt", 40], ["Green belt", 60], ["Blue belt", 80], ["Black belt", 100]];
   const belt = belts.filter(([, p]) => overall >= p).slice(-1)[0]?.[0] || "no belt yet";
 
@@ -73,7 +73,7 @@ async function build() {
 
   const html = `<div style="font-family:Arial,sans-serif;max-width:560px;margin:auto;color:#221838">
     <div style="background:#2a1a4a;color:#f2b544;padding:16px 18px;border-radius:12px">
-      <div style="font-size:20px;font-weight:800">🐉 Gia's monthly report — ${esc(monthName)}</div>
+      <div style="font-size:20px;font-weight:800">🐶 Gia's monthly report — ${esc(monthName)}</div>
       <div style="font-size:13px;color:#e8defa">How the month went</div>
     </div>
     <div style="background:#f6f2fb;border:1px solid #e4dcef;border-radius:10px;padding:12px 14px;margin-top:14px;font-size:14px">
@@ -96,7 +96,7 @@ async function build() {
     <p style="margin-top:18px;font-size:12px;color:#8a7aa6">Sent automatically from Gia's Game Plan.</p>
   </div>`;
 
-  return { html, subject: `🐉 Gia's monthly report — ${monthName} (${overall}% of goals)` };
+  return { html, subject: `🐶 Gia's monthly report — ${monthName} (${overall}% of goals)` };
 }
 
 async function main() {
