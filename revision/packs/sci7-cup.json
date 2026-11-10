@@ -1,0 +1,1082 @@
+{
+ "id": "sci7-cup",
+ "subject": "Science",
+ "title": "Science: Learner's Book 7",
+ "sub": "Cambridge Lower Secondary Science 7 (CUP, 2nd ed.) · practising the IGCSE way",
+ "units": [
+  {
+   "key": "u1",
+   "name": "U1 Cells"
+  },
+  {
+   "key": "u2",
+   "name": "U2 Materials and their structure"
+  },
+  {
+   "key": "u3",
+   "name": "U3 Forces and energy"
+  },
+  {
+   "key": "u4",
+   "name": "U4 Grouping and identifying organisms"
+  },
+  {
+   "key": "u5",
+   "name": "U5 Properties of materials"
+  },
+  {
+   "key": "u6",
+   "name": "U6 Earth physics"
+  },
+  {
+   "key": "u7",
+   "name": "U7 Microorganisms in the environment"
+  },
+  {
+   "key": "u8",
+   "name": "U8 Changes to materials"
+  },
+  {
+   "key": "u9",
+   "name": "U9 Electricity"
+  }
+ ],
+ "strategyIntro": "Science marks go to exact keywords and clear reasons. Close the book, answer from memory, then check.",
+ "strategy": [
+  {
+   "title": "Short answers (1–3 marks)",
+   "key": true,
+   "points": [
+    "Use the exact textbook word (e.g. 'condensation', not 'turns to water').",
+    "The number of marks = the number of points to make."
+   ]
+  },
+  {
+   "title": "Explain questions",
+   "key": true,
+   "points": [
+    "Say what happens, then why, using 'because' or 'so'.",
+    "Link to the science idea (particles, energy, gravity…)."
+   ]
+  },
+  {
+   "title": "Calculations",
+   "key": true,
+   "points": [
+    "Write the formula, substitute the numbers, give the answer with its unit."
+   ]
+  },
+  {
+   "title": "Practical questions",
+   "points": [
+    "Name the variable you change, the one you measure, and the ones you keep the same.",
+    "Tables: units in the column headings. Graphs: labelled axes, sensible scale, line of best fit."
+   ]
+  }
+ ],
+ "commandWords": [
+  [
+   "State",
+   "Give a short fact. No explanation needed."
+  ],
+  [
+   "Describe",
+   "Say what happens or what you see."
+  ],
+  [
+   "Explain",
+   "Say why, using a science reason."
+  ],
+  [
+   "Calculate",
+   "Show the formula, working and unit."
+  ]
+ ],
+ "quizTitle": "Quiz",
+ "quizIntro": "Pick a unit above, then answer. Each answer shows why it's right.",
+ "quiz": [
+  {
+   "q": "Which part is found in plant cells but NOT animal cells?",
+   "options": [
+    "Nucleus",
+    "Cell membrane",
+    "Cell wall",
+    "Cytoplasm"
+   ],
+   "answer": 2,
+   "why": "Plant cells also have chloroplasts and a large vacuole.",
+   "unit": "u1"
+  },
+  {
+   "q": "Where does respiration happen?",
+   "options": [
+    "Nucleus",
+    "Mitochondria",
+    "Chloroplast",
+    "Cell wall"
+   ],
+   "answer": 1,
+   "why": "Mitochondria release energy.",
+   "unit": "u1"
+  },
+  {
+   "q": "An eyepiece of ×10 and an objective of ×40 give a total magnification of…",
+   "options": [
+    "×50",
+    "×400",
+    "×4",
+    "×30"
+   ],
+   "answer": 1,
+   "why": "Multiply: 10 × 40 = 400.",
+   "unit": "u1"
+  },
+  {
+   "q": "A group of different tissues working together is…",
+   "options": [
+    "A cell",
+    "An organ",
+    "An organism",
+    "A species"
+   ],
+   "answer": 1,
+   "why": "E.g. the heart or a leaf.",
+   "unit": "u1"
+  },
+  {
+   "q": "In which state are particles far apart and moving fast?",
+   "options": [
+    "Solid",
+    "Liquid",
+    "Gas",
+    "All of them"
+   ],
+   "answer": 2,
+   "why": "Gas particles are far apart and move randomly.",
+   "unit": "u2"
+  },
+  {
+   "q": "Water vapour turning into water on a cold window is…",
+   "options": [
+    "Evaporation",
+    "Condensation",
+    "Melting",
+    "Sublimation"
+   ],
+   "answer": 1,
+   "why": "Gas → liquid = condensation.",
+   "unit": "u2"
+  },
+  {
+   "q": "Which of these is a compound?",
+   "options": [
+    "Oxygen",
+    "Iron",
+    "Carbon dioxide",
+    "Air"
+   ],
+   "answer": 2,
+   "why": "CO₂: carbon and oxygen chemically joined. Air is a mixture.",
+   "unit": "u2"
+  },
+  {
+   "q": "What is the symbol for sodium?",
+   "options": [
+    "S",
+    "So",
+    "Na",
+    "Sn"
+   ],
+   "answer": 2,
+   "why": "Na, from its Latin name natrium.",
+   "unit": "u2"
+  },
+  {
+   "q": "What is the unit of weight?",
+   "options": [
+    "kg",
+    "N",
+    "J",
+    "m/s"
+   ],
+   "answer": 1,
+   "why": "Weight is a force, measured in newtons.",
+   "unit": "u3"
+  },
+  {
+   "q": "An object has a mass of 6 kg. On the Moon (g = 1.6 N/kg) it weighs…",
+   "options": [
+    "6 N",
+    "9.6 N",
+    "60 N",
+    "3.75 N"
+   ],
+   "answer": 1,
+   "why": "6 × 1.6 = 9.6 N.",
+   "unit": "u3"
+  },
+  {
+   "q": "What causes the tides?",
+   "options": [
+    "The Sun's heat",
+    "The wind",
+    "The Moon's gravity",
+    "Earth's magnetism"
+   ],
+   "answer": 2,
+   "why": "Mostly the Moon's gravity.",
+   "unit": "u3"
+  },
+  {
+   "q": "In a battery, energy is stored as…",
+   "options": [
+    "Chemical energy",
+    "Kinetic energy",
+    "Sound energy",
+    "Elastic energy"
+   ],
+   "answer": 0,
+   "why": "Chemical store.",
+   "unit": "u3"
+  },
+  {
+   "q": "Which is NOT one of MRS GREN?",
+   "options": [
+    "Respiration",
+    "Excretion",
+    "Photosynthesis",
+    "Sensitivity"
+   ],
+   "answer": 2,
+   "why": "Photosynthesis is a type of nutrition in plants, not a separate characteristic.",
+   "unit": "u4"
+  },
+  {
+   "q": "A key where every question has two choices is…",
+   "options": [
+    "A food web",
+    "A dichotomous key",
+    "A Venn diagram",
+    "A pie chart"
+   ],
+   "answer": 1,
+   "why": "Dichotomous = splitting in two.",
+   "unit": "u4"
+  },
+  {
+   "q": "Organisms of the same species can…",
+   "options": [
+    "Look identical",
+    "Breed to produce fertile offspring",
+    "Live in the same place",
+    "Eat the same food"
+   ],
+   "answer": 1,
+   "why": "That is the definition of a species.",
+   "unit": "u4"
+  },
+  {
+   "q": "Which property do most metals have?",
+   "options": [
+    "Brittle",
+    "Dull",
+    "Good conductor of electricity",
+    "Low melting point"
+   ],
+   "answer": 2,
+   "why": "Metals conduct heat and electricity.",
+   "unit": "u5"
+  },
+  {
+   "q": "Best method to separate sand from water:",
+   "options": [
+    "Distillation",
+    "Filtration",
+    "Chromatography",
+    "Magnet"
+   ],
+   "answer": 1,
+   "why": "Sand is insoluble, so it stays in the filter paper.",
+   "unit": "u5"
+  },
+  {
+   "q": "A solution has pH 2. It is…",
+   "options": [
+    "Strongly acidic",
+    "Neutral",
+    "Weakly alkaline",
+    "Strongly alkaline"
+   ],
+   "answer": 0,
+   "why": "Low pH = strong acid.",
+   "unit": "u5"
+  },
+  {
+   "q": "Litmus turns ___ in an acid.",
+   "options": [
+    "Blue",
+    "Red",
+    "Green",
+    "Purple"
+   ],
+   "answer": 1,
+   "why": "Red in acid, blue in alkali.",
+   "unit": "u5"
+  },
+  {
+   "q": "A higher-pitched sound has a higher…",
+   "options": [
+    "Amplitude",
+    "Frequency",
+    "Speed",
+    "Wavelength"
+   ],
+   "answer": 1,
+   "why": "Pitch depends on frequency.",
+   "unit": "u6"
+  },
+  {
+   "q": "Which layer of the Earth is liquid?",
+   "options": [
+    "Crust",
+    "Inner core",
+    "Outer core",
+    "None"
+   ],
+   "answer": 2,
+   "why": "The outer core is liquid metal.",
+   "unit": "u6"
+  },
+  {
+   "q": "In a solar eclipse, what is in the middle?",
+   "options": [
+    "The Sun",
+    "The Earth",
+    "The Moon",
+    "Mars"
+   ],
+   "answer": 2,
+   "why": "Sun – Moon – Earth.",
+   "unit": "u6"
+  },
+  {
+   "q": "Sound travels fastest through…",
+   "options": [
+    "Solids",
+    "Liquids",
+    "Gases",
+    "A vacuum"
+   ],
+   "answer": 0,
+   "why": "Particles are closest in solids.",
+   "unit": "u6"
+  },
+  {
+   "q": "Which is a decomposer?",
+   "options": [
+    "Grass",
+    "Rabbit",
+    "Fungus",
+    "Fox"
+   ],
+   "answer": 2,
+   "why": "Fungi and bacteria are decomposers.",
+   "unit": "u7"
+  },
+  {
+   "q": "In grass → rabbit → fox, the rabbit is…",
+   "options": [
+    "A producer",
+    "A primary consumer",
+    "A secondary consumer",
+    "A decomposer"
+   ],
+   "answer": 1,
+   "why": "It eats the producer.",
+   "unit": "u7"
+  },
+  {
+   "q": "Arrows in a food chain point…",
+   "options": [
+    "From eater to eaten",
+    "From food to the eater",
+    "Upwards always",
+    "To the producer"
+   ],
+   "answer": 1,
+   "why": "Energy flows from food to eater.",
+   "unit": "u7"
+  },
+  {
+   "q": "Which is a chemical change?",
+   "options": [
+    "Ice melting",
+    "Sugar dissolving",
+    "Wood burning",
+    "Water boiling"
+   ],
+   "answer": 2,
+   "why": "Burning makes new substances.",
+   "unit": "u8"
+  },
+  {
+   "q": "Hydrochloric acid + sodium hydroxide → sodium chloride + …",
+   "options": [
+    "Hydrogen",
+    "Water",
+    "Carbon dioxide",
+    "Oxygen"
+   ],
+   "answer": 1,
+   "why": "Neutralisation makes a salt and water.",
+   "unit": "u8"
+  },
+  {
+   "q": "Limewater turning milky shows…",
+   "options": [
+    "Oxygen",
+    "Hydrogen",
+    "Carbon dioxide",
+    "Water"
+   ],
+   "answer": 2,
+   "why": "The test for CO₂.",
+   "unit": "u8"
+  },
+  {
+   "q": "Metal + acid gives off which gas?",
+   "options": [
+    "Oxygen",
+    "Hydrogen",
+    "Carbon dioxide",
+    "Nitrogen"
+   ],
+   "answer": 1,
+   "why": "Test: squeaky pop.",
+   "unit": "u8"
+  },
+  {
+   "q": "Current is measured in…",
+   "options": [
+    "Volts",
+    "Amps",
+    "Ohms",
+    "Newtons"
+   ],
+   "answer": 1,
+   "why": "Amps (A), with an ammeter.",
+   "unit": "u9"
+  },
+  {
+   "q": "Which is an insulator?",
+   "options": [
+    "Copper",
+    "Graphite",
+    "Plastic",
+    "Aluminium"
+   ],
+   "answer": 2,
+   "why": "Plastic does not let current flow.",
+   "unit": "u9"
+  },
+  {
+   "q": "Adding a bulb to a series circuit makes the bulbs…",
+   "options": [
+    "Brighter",
+    "Dimmer",
+    "Go out",
+    "Stay the same"
+   ],
+   "answer": 1,
+   "why": "The current decreases.",
+   "unit": "u9"
+  },
+  {
+   "q": "An ammeter is connected…",
+   "options": [
+    "In series",
+    "In parallel",
+    "Anywhere outside the circuit",
+    "Only to the cell"
+   ],
+   "answer": 0,
+   "why": "So the current flows through it.",
+   "unit": "u9"
+  }
+ ],
+ "flashIntro": "Pick a unit above. Answer out loud, then flip. 'Not yet' cards come back sooner.",
+ "flashcards": [
+  {
+   "front": "What does the nucleus do?",
+   "back": "Controls the cell's activities; contains the genetic information.",
+   "unit": "u1"
+  },
+  {
+   "front": "What does the cell membrane do?",
+   "back": "Controls what goes into and out of the cell.",
+   "unit": "u1"
+  },
+  {
+   "front": "Name three parts found in plant cells but not animal cells.",
+   "back": "Cell wall, chloroplasts and a large sap vacuole.",
+   "unit": "u1"
+  },
+  {
+   "front": "What happens in chloroplasts?",
+   "back": "Photosynthesis: they contain green chlorophyll that absorbs light.",
+   "unit": "u1"
+  },
+  {
+   "front": "What do mitochondria do?",
+   "back": "Release energy from food (respiration).",
+   "unit": "u1"
+  },
+  {
+   "front": "How is a root hair cell adapted?",
+   "back": "A long thin projection gives a large surface area to absorb water and minerals.",
+   "unit": "u1"
+  },
+  {
+   "front": "How is a red blood cell adapted?",
+   "back": "No nucleus and a dented (biconcave) shape, so more room for haemoglobin to carry oxygen.",
+   "unit": "u1"
+  },
+  {
+   "front": "Put in order: organ, cell, organ system, tissue, organism.",
+   "back": "Cell → tissue → organ → organ system → organism.",
+   "unit": "u1"
+  },
+  {
+   "front": "What is a tissue?",
+   "back": "A group of similar cells working together to do a job (e.g. muscle tissue).",
+   "unit": "u1"
+  },
+  {
+   "front": "How do you work out a microscope's total magnification?",
+   "back": "Eyepiece lens magnification × objective lens magnification (e.g. 10 × 40 = 400).",
+   "unit": "u1"
+  },
+  {
+   "front": "Describe particles in a solid.",
+   "back": "Packed closely in a regular arrangement; vibrate in fixed positions.",
+   "unit": "u2"
+  },
+  {
+   "front": "Describe particles in a liquid.",
+   "back": "Close together but irregular; can slide past each other.",
+   "unit": "u2"
+  },
+  {
+   "front": "Describe particles in a gas.",
+   "back": "Far apart, random, moving quickly in all directions.",
+   "unit": "u2"
+  },
+  {
+   "front": "What is the difference between boiling and evaporation?",
+   "back": "Boiling happens throughout the liquid at the boiling point; evaporation happens only at the surface, at any temperature.",
+   "unit": "u2"
+  },
+  {
+   "front": "What is condensation?",
+   "back": "A gas cooling and turning into a liquid.",
+   "unit": "u2"
+  },
+  {
+   "front": "What is sublimation?",
+   "back": "A solid changing straight into a gas (e.g. dry ice).",
+   "unit": "u2"
+  },
+  {
+   "front": "What is an element?",
+   "back": "A substance made of only one type of atom.",
+   "unit": "u2"
+  },
+  {
+   "front": "What is a compound?",
+   "back": "Two or more elements chemically joined, e.g. water (H₂O).",
+   "unit": "u2"
+  },
+  {
+   "front": "How is a mixture different from a compound?",
+   "back": "A mixture's parts are not chemically joined and can be separated physically; a compound's elements are chemically joined.",
+   "unit": "u2"
+  },
+  {
+   "front": "What does H₂O tell you?",
+   "back": "Each water particle has 2 hydrogen atoms and 1 oxygen atom.",
+   "unit": "u2"
+  },
+  {
+   "front": "What is the difference between mass and weight?",
+   "back": "Mass is the amount of matter (kg) and is the same everywhere. Weight is the force of gravity on it (N) and changes with gravity.",
+   "unit": "u3"
+  },
+  {
+   "front": "How do you calculate weight?",
+   "back": "Weight (N) = mass (kg) × gravitational field strength (N/kg). On Earth g ≈ 10 N/kg.",
+   "unit": "u3"
+  },
+  {
+   "front": "What is the weight of a 50 kg girl on Earth (g = 10 N/kg)?",
+   "back": "50 × 10 = 500 N.",
+   "unit": "u3"
+  },
+  {
+   "front": "How did the Solar System form?",
+   "back": "A huge cloud of gas and dust was pulled together by gravity; the centre became the Sun and the rest formed planets.",
+   "unit": "u3"
+  },
+  {
+   "front": "What keeps planets in orbit around the Sun?",
+   "back": "Gravity.",
+   "unit": "u3"
+  },
+  {
+   "front": "What causes tides?",
+   "back": "Mainly the Moon's gravity pulling on the Earth's oceans.",
+   "unit": "u3"
+  },
+  {
+   "front": "What is the law of conservation of energy?",
+   "back": "Energy cannot be made or destroyed, only stored or transferred.",
+   "unit": "u3"
+  },
+  {
+   "front": "Name four energy stores.",
+   "back": "Chemical, kinetic, gravitational potential, elastic, thermal (any four).",
+   "unit": "u3"
+  },
+  {
+   "front": "What is 'wasted' energy?",
+   "back": "Energy transferred to the surroundings in forms that are not useful, usually as heat (thermal) and sound. It is dissipated.",
+   "unit": "u3"
+  },
+  {
+   "front": "What are the seven characteristics of living things?",
+   "back": "MRS GREN: Movement, Respiration, Sensitivity, Growth, Reproduction, Excretion, Nutrition.",
+   "unit": "u4"
+  },
+  {
+   "front": "Why are viruses usually not counted as living?",
+   "back": "They cannot carry out life processes by themselves; they can only reproduce inside another living cell.",
+   "unit": "u4"
+  },
+  {
+   "front": "What is a species?",
+   "back": "A group of organisms that can breed together to produce fertile offspring.",
+   "unit": "u4"
+  },
+  {
+   "front": "What is a dichotomous key?",
+   "back": "A key that uses a series of questions, each with two choices, to identify an organism.",
+   "unit": "u4"
+  },
+  {
+   "front": "What makes a good key question?",
+   "back": "It has only two answers (yes/no) and uses a feature you can see, not size or colour that varies.",
+   "unit": "u4"
+  },
+  {
+   "front": "What is excretion?",
+   "back": "Getting rid of waste made inside the body (e.g. carbon dioxide).",
+   "unit": "u4"
+  },
+  {
+   "front": "List four properties of most metals.",
+   "back": "Good conductors of heat and electricity, shiny, malleable (can be hammered into shape), ductile, sonorous, high melting point.",
+   "unit": "u5"
+  },
+  {
+   "front": "List three properties of most non-metals.",
+   "back": "Poor conductors (insulators), dull, brittle when solid.",
+   "unit": "u5"
+  },
+  {
+   "front": "Which non-metal conducts electricity?",
+   "back": "Graphite (a form of carbon).",
+   "unit": "u5"
+  },
+  {
+   "front": "What is an alloy? Give an example.",
+   "back": "A mixture of a metal with other elements. Steel (iron + carbon), brass (copper + zinc).",
+   "unit": "u5"
+  },
+  {
+   "front": "How would you separate sand from water?",
+   "back": "Filtration.",
+   "unit": "u5"
+  },
+  {
+   "front": "How would you get salt from salt water?",
+   "back": "Evaporation (heat to evaporate the water, leaving salt).",
+   "unit": "u5"
+  },
+  {
+   "front": "How would you separate the colours in ink?",
+   "back": "Chromatography.",
+   "unit": "u5"
+  },
+  {
+   "front": "How would you get pure water from salt water?",
+   "back": "Distillation (evaporate, then condense the vapour).",
+   "unit": "u5"
+  },
+  {
+   "front": "What does the pH scale show?",
+   "back": "How acidic or alkaline something is: below 7 acid, 7 neutral, above 7 alkali.",
+   "unit": "u5"
+  },
+  {
+   "front": "What is an indicator?",
+   "back": "A substance that changes colour in acids and alkalis, e.g. litmus or universal indicator.",
+   "unit": "u5"
+  },
+  {
+   "front": "How is sound made?",
+   "back": "By vibrations.",
+   "unit": "u6"
+  },
+  {
+   "front": "Why can't sound travel through space?",
+   "back": "Sound needs particles to travel; space is a vacuum with no particles.",
+   "unit": "u6"
+  },
+  {
+   "front": "What does amplitude affect?",
+   "back": "Loudness: larger amplitude = louder.",
+   "unit": "u6"
+  },
+  {
+   "front": "What does frequency affect?",
+   "back": "Pitch: higher frequency = higher pitch. Measured in hertz (Hz).",
+   "unit": "u6"
+  },
+  {
+   "front": "What is an echo?",
+   "back": "A sound reflected off a hard surface.",
+   "unit": "u6"
+  },
+  {
+   "front": "Name the layers of the Earth from the outside.",
+   "back": "Crust, mantle, outer core (liquid), inner core (solid).",
+   "unit": "u6"
+  },
+  {
+   "front": "What are tectonic plates?",
+   "back": "Large pieces of the Earth's crust that move slowly on the mantle.",
+   "unit": "u6"
+  },
+  {
+   "front": "What happens where tectonic plates meet?",
+   "back": "Earthquakes, volcanoes and mountain building.",
+   "unit": "u6"
+  },
+  {
+   "front": "What is a solar eclipse?",
+   "back": "The Moon passes between the Sun and the Earth, blocking the Sun's light.",
+   "unit": "u6"
+  },
+  {
+   "front": "What is a lunar eclipse?",
+   "back": "The Earth passes between the Sun and the Moon, and Earth's shadow falls on the Moon.",
+   "unit": "u6"
+  },
+  {
+   "front": "Name three groups of microorganisms.",
+   "back": "Bacteria, fungi (e.g. yeast) and protoctists. (Viruses are also microscopic.)",
+   "unit": "u7"
+  },
+  {
+   "front": "Give two useful microorganisms.",
+   "back": "Yeast (bread, brewing); bacteria in yoghurt; decomposers that recycle nutrients.",
+   "unit": "u7"
+  },
+  {
+   "front": "What is a producer?",
+   "back": "An organism that makes its own food by photosynthesis, usually a green plant. Food chains start with one.",
+   "unit": "u7"
+  },
+  {
+   "front": "What do the arrows in a food chain show?",
+   "back": "The direction energy is transferred: from the food to the animal that eats it.",
+   "unit": "u7"
+  },
+  {
+   "front": "What is a food web?",
+   "back": "Several food chains joined together, showing all the feeding relationships in a habitat.",
+   "unit": "u7"
+  },
+  {
+   "front": "What do decomposers do?",
+   "back": "Break down dead organisms and waste, returning nutrients to the soil for plants to use.",
+   "unit": "u7"
+  },
+  {
+   "front": "What conditions help decomposers work fastest?",
+   "back": "Warmth, moisture and oxygen.",
+   "unit": "u7"
+  },
+  {
+   "front": "What is a physical change?",
+   "back": "A change where no new substance forms and it can usually be reversed, e.g. melting ice.",
+   "unit": "u8"
+  },
+  {
+   "front": "What is a chemical change?",
+   "back": "A change where a new substance forms and it is usually hard to reverse, e.g. burning.",
+   "unit": "u8"
+  },
+  {
+   "front": "Name four signs of a chemical reaction.",
+   "back": "Gas given off (fizzing), colour change, temperature change, a new solid forms (precipitate).",
+   "unit": "u8"
+  },
+  {
+   "front": "In a word equation, what are reactants and products?",
+   "back": "Reactants: substances at the start (left). Products: new substances made (right).",
+   "unit": "u8"
+  },
+  {
+   "front": "What is neutralisation?",
+   "back": "Acid + alkali → salt + water.",
+   "unit": "u8"
+  },
+  {
+   "front": "Acid + metal → ?",
+   "back": "A salt + hydrogen.",
+   "unit": "u8"
+  },
+  {
+   "front": "Acid + carbonate → ?",
+   "back": "A salt + water + carbon dioxide.",
+   "unit": "u8"
+  },
+  {
+   "front": "How do you test for carbon dioxide?",
+   "back": "Bubble it through limewater: it turns milky.",
+   "unit": "u8"
+  },
+  {
+   "front": "How do you test for hydrogen?",
+   "back": "A lit splint gives a squeaky pop.",
+   "unit": "u8"
+  },
+  {
+   "front": "What is electric current?",
+   "back": "A flow of charge (electrons) around a circuit, measured in amps (A).",
+   "unit": "u9"
+  },
+  {
+   "front": "What does a circuit need for current to flow?",
+   "back": "A complete loop and a source of energy such as a cell or battery.",
+   "unit": "u9"
+  },
+  {
+   "front": "How do you connect an ammeter?",
+   "back": "In series (in the loop) with the component.",
+   "unit": "u9"
+  },
+  {
+   "front": "Name two conductors and two insulators.",
+   "back": "Conductors: copper, iron (metals), graphite. Insulators: plastic, rubber, wood, glass.",
+   "unit": "u9"
+  },
+  {
+   "front": "In a series circuit, what is the current like?",
+   "back": "The same everywhere in the circuit.",
+   "unit": "u9"
+  },
+  {
+   "front": "What happens to bulbs in series if you add another bulb?",
+   "back": "They all get dimmer, because the current is smaller.",
+   "unit": "u9"
+  },
+  {
+   "front": "What happens if one bulb breaks in a series circuit?",
+   "back": "The circuit is broken, so all the bulbs go out.",
+   "unit": "u9"
+  },
+  {
+   "front": "In a parallel circuit, what happens if one bulb breaks?",
+   "back": "The other branches still have a complete loop, so the other bulbs stay on.",
+   "unit": "u9"
+  },
+  {
+   "front": "What happens if you add more cells?",
+   "back": "More current flows, so bulbs are brighter.",
+   "unit": "u9"
+  }
+ ],
+ "examIntro": "Write your answer first, then compare with the model. Check you used the keywords and gave reasons.",
+ "exam": [
+  {
+   "q": "State three differences between a plant cell and an animal cell.",
+   "marks": 3,
+   "unit": "u1",
+   "model": [
+    "A plant cell has a cell wall; an animal cell does not.",
+    "A plant cell has chloroplasts; an animal cell does not.",
+    "A plant cell has a large permanent sap vacuole; an animal cell has no large vacuole."
+   ],
+   "why": "One mark per difference. Always name the part AND say which cell has it."
+  },
+  {
+   "q": "Explain how a root hair cell is adapted to its function.",
+   "marks": 2,
+   "unit": "u1",
+   "model": [
+    "A root hair cell absorbs water and mineral ions from the soil.",
+    "It has a long, thin extension that gives it a large surface area, so it can absorb more water and minerals."
+   ],
+   "why": "Link the feature (large surface area) to the job (absorbing). 'Explain' needs the 'so'."
+  },
+  {
+   "q": "Use the particle model to explain why a solid has a fixed shape but a liquid does not.",
+   "marks": 4,
+   "unit": "u2",
+   "model": [
+    "In a solid the particles are held closely together in a regular pattern by strong forces. They can only vibrate in fixed positions, so the solid keeps its shape.",
+    "In a liquid the particles are still close together but the forces are weaker, so they can slide past each other. This lets the liquid flow and take the shape of its container."
+   ],
+   "why": "Describe the particles for each state, then link to the property with 'so'."
+  },
+  {
+   "q": "Describe the water cycle.",
+   "marks": 4,
+   "unit": "u2",
+   "model": [
+    "The Sun heats water in seas and lakes, and it evaporates into water vapour.",
+    "The water vapour rises, cools and condenses into tiny droplets, forming clouds.",
+    "The droplets join and fall as rain, snow or hail (precipitation).",
+    "The water runs into rivers and back to the sea, and the cycle starts again."
+   ],
+   "why": "Use the correct state-change words (evaporate, condense) in the right order."
+  },
+  {
+   "q": "A bag of flour has a mass of 2 kg. Calculate its weight on Earth (g = 10 N/kg). Show your working.",
+   "marks": 2,
+   "unit": "u3",
+   "model": [
+    "Weight = mass × g",
+    "= 2 kg × 10 N/kg = 20 N"
+   ],
+   "why": "Formula, substitution, answer with unit. The unit (N) earns marks."
+  },
+  {
+   "q": "Explain why an astronaut's weight is less on the Moon but their mass stays the same.",
+   "marks": 3,
+   "unit": "u3",
+   "model": [
+    "Mass is the amount of matter in the astronaut, which does not change when they move.",
+    "Weight is the force of gravity on that mass.",
+    "The Moon has weaker gravity than the Earth (about 1.6 N/kg instead of 10 N/kg), so the astronaut's weight is less."
+   ],
+   "why": "Define both terms, then explain the difference using gravity."
+  },
+  {
+   "q": "Explain why a virus is not usually classified as a living organism.",
+   "marks": 2,
+   "unit": "u4",
+   "model": [
+    "Living organisms carry out all seven life processes, such as respiration and nutrition.",
+    "A virus cannot do these by itself and can only reproduce inside a living cell, so it is not usually classed as living."
+   ],
+   "why": "Refer to the life processes, then say what a virus cannot do."
+  },
+  {
+   "q": "Describe how to obtain pure, dry salt crystals from a mixture of salt and sand.",
+   "marks": 4,
+   "unit": "u5",
+   "model": [
+    "Add water to the mixture and stir, so the salt dissolves.",
+    "Filter the mixture: the sand stays in the filter paper and the salt solution passes through as the filtrate.",
+    "Heat the salt solution in an evaporating basin to evaporate the water.",
+    "Leave it to cool so salt crystals form, then dry them."
+   ],
+   "why": "Each step in order with the correct method name."
+  },
+  {
+   "q": "Explain why astronauts on the Moon cannot hear each other speak without radios.",
+   "marks": 2,
+   "unit": "u6",
+   "model": [
+    "Sound is a vibration that travels by passing from particle to particle.",
+    "Space (and the Moon's surface) is a vacuum with no air particles, so the sound cannot travel."
+   ],
+   "why": "State how sound travels, then link it to the vacuum."
+  },
+  {
+   "q": "Describe the difference between a solar eclipse and a lunar eclipse.",
+   "marks": 4,
+   "unit": "u6",
+   "model": [
+    "In a solar eclipse, the Moon passes between the Sun and the Earth. The Moon blocks the Sun's light, so part of the Earth is in the Moon's shadow and the Sun seems to disappear.",
+    "In a lunar eclipse, the Earth passes between the Sun and the Moon. The Earth's shadow falls on the Moon, so the Moon looks dark or reddish."
+   ],
+   "why": "For each: the order of Sun, Earth and Moon, and whose shadow falls where."
+  },
+  {
+   "q": "In a food web, foxes eat rabbits and rabbits eat grass. Explain what might happen to the grass if all the foxes died.",
+   "marks": 3,
+   "unit": "u7",
+   "model": [
+    "Without foxes, fewer rabbits would be eaten, so the rabbit population would increase.",
+    "More rabbits would eat more grass,",
+    "so the amount of grass would decrease."
+   ],
+   "why": "Follow the chain step by step and give a reason at each step."
+  },
+  {
+   "q": "Explain why decomposers are important in an ecosystem.",
+   "marks": 2,
+   "unit": "u7",
+   "model": [
+    "Decomposers break down dead organisms and waste,",
+    "returning nutrients to the soil so that plants can use them to grow."
+   ],
+   "why": "What they do + why it matters."
+  },
+  {
+   "q": "Magnesium is added to hydrochloric acid. It fizzes. Write the word equation, and describe how to test the gas.",
+   "marks": 3,
+   "unit": "u8",
+   "model": [
+    "magnesium + hydrochloric acid → magnesium chloride + hydrogen",
+    "Collect the gas and hold a lit splint at the mouth of the test tube.",
+    "A squeaky pop shows the gas is hydrogen."
+   ],
+   "why": "One mark for the equation, two for the test and its result."
+  },
+  {
+   "q": "Describe two differences between a physical change and a chemical change.",
+   "marks": 2,
+   "unit": "u8",
+   "model": [
+    "In a chemical change a new substance is made; in a physical change no new substance is made.",
+    "A physical change is usually easy to reverse (e.g. melting), but a chemical change is usually hard to reverse (e.g. burning)."
+   ],
+   "why": "Compare both changes in each sentence."
+  },
+  {
+   "q": "Explain why houses use parallel circuits for their lights.",
+   "marks": 2,
+   "unit": "u9",
+   "model": [
+    "In a parallel circuit each light is on its own branch with a complete loop.",
+    "So if one bulb breaks or is switched off, the others stay on, and each can be switched separately."
+   ],
+   "why": "Name the feature, then say why it is useful."
+  },
+  {
+   "q": "A circuit has one cell and two bulbs in series. Describe and explain what happens if a third bulb is added in series.",
+   "marks": 3,
+   "unit": "u9",
+   "model": [
+    "The bulbs become dimmer.",
+    "Adding a bulb makes it harder for the current to flow around the series circuit,",
+    "so the current decreases and each bulb gets less energy."
+   ],
+   "why": "Describe (dimmer), then explain (less current, so less energy)."
+  }
+ ]
+}

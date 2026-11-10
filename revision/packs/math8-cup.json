@@ -1,0 +1,1365 @@
+{
+ "id": "math8-cup",
+ "subject": "Maths",
+ "title": "Maths: Learner's Book 8",
+ "sub": "Cambridge Lower Secondary Mathematics 8 (CUP, 2nd ed.) · practising the IGCSE way",
+ "units": [
+  {
+   "key": "u01",
+   "name": "U1 Integers"
+  },
+  {
+   "key": "u02",
+   "name": "U2 Expressions, formulae and equations"
+  },
+  {
+   "key": "u03",
+   "name": "U3 Place value and rounding"
+  },
+  {
+   "key": "u04",
+   "name": "U4 Decimals"
+  },
+  {
+   "key": "u05",
+   "name": "U5 Angles and constructions"
+  },
+  {
+   "key": "u06",
+   "name": "U6 Collecting data"
+  },
+  {
+   "key": "u07",
+   "name": "U7 Fractions"
+  },
+  {
+   "key": "u08",
+   "name": "U8 Shapes and symmetry"
+  },
+  {
+   "key": "u09",
+   "name": "U9 Sequences and functions"
+  },
+  {
+   "key": "u10",
+   "name": "U10 Percentages"
+  },
+  {
+   "key": "u11",
+   "name": "U11 Graphs"
+  },
+  {
+   "key": "u12",
+   "name": "U12 Ratio and proportion"
+  },
+  {
+   "key": "u13",
+   "name": "U13 Probability"
+  },
+  {
+   "key": "u14",
+   "name": "U14 Position and transformation"
+  },
+  {
+   "key": "u15",
+   "name": "U15 Distance, area and volume"
+  },
+  {
+   "key": "u16",
+   "name": "U16 Interpreting and discussing results"
+  }
+ ],
+ "strategyIntro": "In maths, method marks count even if the final answer is wrong, so always show your working. Try each question on paper before checking.",
+ "strategy": [
+  {
+   "title": "Show your working",
+   "key": true,
+   "points": [
+    "One step per line, with '=' lined up.",
+    "Write down what you're finding, e.g. 'Area = ½ × 6 × 4'."
+   ]
+  },
+  {
+   "title": "Check your answer",
+   "key": true,
+   "points": [
+    "Estimate first (round to 1 significant figure).",
+    "Substitute back into equations; check units and rounding."
+   ]
+  },
+  {
+   "title": "Non-calculator skills",
+   "points": [
+    "Half of IGCSE Maths is non-calculator: keep practising fractions, decimals and percentages by hand."
+   ]
+  }
+ ],
+ "commandWords": [
+  [
+   "Work out / Calculate",
+   "Find the value, showing working."
+  ],
+  [
+   "Show that",
+   "Give every step that leads to the answer given."
+  ],
+  [
+   "Explain",
+   "Give a reason in words, using the maths."
+  ]
+ ],
+ "quizTitle": "Quiz",
+ "quizIntro": "Pick a unit above. Work it out on paper first, then choose.",
+ "quiz": [
+  {
+   "q": "−6 − (−9) = ?",
+   "options": [
+    "−15",
+    "3",
+    "−3",
+    "15"
+   ],
+   "answer": 1,
+   "why": "Subtracting a negative is adding: −6 + 9 = 3.",
+   "unit": "u01"
+  },
+  {
+   "q": "HCF of 24 and 36?",
+   "options": [
+    "6",
+    "12",
+    "72",
+    "4"
+   ],
+   "answer": 1,
+   "why": "24 = 2³×3, 36 = 2²×3². HCF = 2²×3 = 12.",
+   "unit": "u01"
+  },
+  {
+   "q": "LCM of 6 and 8?",
+   "options": [
+    "48",
+    "24",
+    "14",
+    "2"
+   ],
+   "answer": 1,
+   "why": "Multiples of 8: 8, 16, 24… 24 is the first one 6 also goes into.",
+   "unit": "u01"
+  },
+  {
+   "q": "2³ × 3² = ?",
+   "options": [
+    "36",
+    "72",
+    "54",
+    "30"
+   ],
+   "answer": 1,
+   "why": "8 × 9 = 72.",
+   "unit": "u01"
+  },
+  {
+   "q": "Expand 3(x + 5).",
+   "options": [
+    "3x + 5",
+    "3x + 15",
+    "x + 15",
+    "3x + 8"
+   ],
+   "answer": 1,
+   "why": "Multiply both terms: 3×x and 3×5.",
+   "unit": "u02"
+  },
+  {
+   "q": "Solve 2(x − 3) = 10.",
+   "options": [
+    "x = 8",
+    "x = 6.5",
+    "x = 2",
+    "x = 13"
+   ],
+   "answer": 0,
+   "why": "2x − 6 = 10 → 2x = 16 → x = 8.",
+   "unit": "u02"
+  },
+  {
+   "q": "If y = 3, what is y² + 2y?",
+   "options": [
+    "15",
+    "12",
+    "9",
+    "21"
+   ],
+   "answer": 0,
+   "why": "9 + 6 = 15.",
+   "unit": "u02"
+  },
+  {
+   "q": "Simplify 7p − 2q − 3p + 5q.",
+   "options": [
+    "4p + 3q",
+    "10p + 3q",
+    "4p − 7q",
+    "4p + 7q"
+   ],
+   "answer": 0,
+   "why": "7p − 3p = 4p; −2q + 5q = 3q.",
+   "unit": "u02"
+  },
+  {
+   "q": "8 ÷ 0.1 = ?",
+   "options": [
+    "0.8",
+    "80",
+    "800",
+    "0.08"
+   ],
+   "answer": 1,
+   "why": "÷ 0.1 is × 10.",
+   "unit": "u03"
+  },
+  {
+   "q": "Round 52 780 to 2 significant figures.",
+   "options": [
+    "52 000",
+    "53 000",
+    "52 800",
+    "50 000"
+   ],
+   "answer": 1,
+   "why": "5 and 2 are the first two; the next digit 7 rounds up.",
+   "unit": "u03"
+  },
+  {
+   "q": "Which is the best estimate of 612 ÷ 19.7?",
+   "options": [
+    "3",
+    "30",
+    "300",
+    "0.3"
+   ],
+   "answer": 1,
+   "why": "600 ÷ 20 = 30.",
+   "unit": "u03"
+  },
+  {
+   "q": "0.4 × 0.03 = ?",
+   "options": [
+    "0.12",
+    "0.012",
+    "1.2",
+    "0.0012"
+   ],
+   "answer": 1,
+   "why": "4 × 3 = 12, with 3 decimal places in total: 0.012.",
+   "unit": "u04"
+  },
+  {
+   "q": "6.3 ÷ 0.7 = ?",
+   "options": [
+    "0.9",
+    "9",
+    "90",
+    "4.41"
+   ],
+   "answer": 1,
+   "why": "63 ÷ 7 = 9.",
+   "unit": "u04"
+  },
+  {
+   "q": "3.75 + 2.6 = ?",
+   "options": [
+    "6.35",
+    "4.01",
+    "6.81",
+    "5.35"
+   ],
+   "answer": 0,
+   "why": "3.75 + 2.60 = 6.35.",
+   "unit": "u04"
+  },
+  {
+   "q": "Two angles of a triangle are 47° and 68°. The third is…",
+   "options": [
+    "65°",
+    "75°",
+    "55°",
+    "85°"
+   ],
+   "answer": 0,
+   "why": "180 − 47 − 68 = 65.",
+   "unit": "u05"
+  },
+  {
+   "q": "Alternate angles are…",
+   "options": [
+    "Equal",
+    "Add to 180°",
+    "Add to 90°",
+    "Add to 360°"
+   ],
+   "answer": 0,
+   "why": "Z-angles are equal.",
+   "unit": "u05"
+  },
+  {
+   "q": "Three angles of a quadrilateral are 90°, 110° and 75°. The fourth is…",
+   "options": [
+    "85°",
+    "95°",
+    "75°",
+    "105°"
+   ],
+   "answer": 0,
+   "why": "360 − 275 = 85.",
+   "unit": "u05"
+  },
+  {
+   "q": "Height in cm is…",
+   "options": [
+    "Categorical",
+    "Discrete",
+    "Continuous",
+    "Biased"
+   ],
+   "answer": 2,
+   "why": "It is measured and can take any value.",
+   "unit": "u06"
+  },
+  {
+   "q": "Response boxes 0–5, 5–10, 10–15 are bad because…",
+   "options": [
+    "They overlap",
+    "They're too big",
+    "They're numbers",
+    "Nothing is wrong"
+   ],
+   "answer": 0,
+   "why": "5 and 10 fit in two boxes each.",
+   "unit": "u06"
+  },
+  {
+   "q": "Asking only the swimming club about favourite sport gives a sample that is…",
+   "options": [
+    "Random",
+    "Biased",
+    "Large",
+    "Fair"
+   ],
+   "answer": 1,
+   "why": "It favours swimming.",
+   "unit": "u06"
+  },
+  {
+   "q": "3/5 + 1/10 = ?",
+   "options": [
+    "4/15",
+    "7/10",
+    "4/10",
+    "1/2"
+   ],
+   "answer": 1,
+   "why": "6/10 + 1/10 = 7/10.",
+   "unit": "u07"
+  },
+  {
+   "q": "2/3 × 9/10 = ?",
+   "options": [
+    "3/5",
+    "18/13",
+    "11/13",
+    "2/5"
+   ],
+   "answer": 0,
+   "why": "18/30 = 3/5.",
+   "unit": "u07"
+  },
+  {
+   "q": "4/5 ÷ 2/3 = ?",
+   "options": [
+    "8/15",
+    "6/5",
+    "2/3",
+    "5/6"
+   ],
+   "answer": 1,
+   "why": "4/5 × 3/2 = 12/10 = 6/5.",
+   "unit": "u07"
+  },
+  {
+   "q": "2 1/4 − 1 2/3 = ?",
+   "options": [
+    "7/12",
+    "1 1/12",
+    "5/12",
+    "1 7/12"
+   ],
+   "answer": 0,
+   "why": "9/4 − 5/3 = 27/12 − 20/12 = 7/12.",
+   "unit": "u07"
+  },
+  {
+   "q": "Order of rotational symmetry of a rectangle?",
+   "options": [
+    "1",
+    "2",
+    "4",
+    "0"
+   ],
+   "answer": 1,
+   "why": "It fits onto itself twice in a full turn.",
+   "unit": "u08"
+  },
+  {
+   "q": "A line from the centre to the edge of a circle is the…",
+   "options": [
+    "Diameter",
+    "Radius",
+    "Chord",
+    "Arc"
+   ],
+   "answer": 1,
+   "why": "Radius.",
+   "unit": "u08"
+  },
+  {
+   "q": "Which quadrilateral has diagonals crossing at right angles?",
+   "options": [
+    "Rectangle",
+    "Parallelogram",
+    "Rhombus",
+    "Trapezium"
+   ],
+   "answer": 2,
+   "why": "Also the square and kite.",
+   "unit": "u08"
+  },
+  {
+   "q": "nth term of 7, 11, 15, 19, …",
+   "options": [
+    "4n + 3",
+    "4n + 7",
+    "7n + 4",
+    "n + 4"
+   ],
+   "answer": 0,
+   "why": "Difference 4 → 4n; 4(1) + 3 = 7.",
+   "unit": "u09"
+  },
+  {
+   "q": "First three terms of 2n + 5:",
+   "options": [
+    "7, 9, 11",
+    "5, 7, 9",
+    "2, 4, 6",
+    "7, 12, 17"
+   ],
+   "answer": 0,
+   "why": "n = 1, 2, 3.",
+   "unit": "u09"
+  },
+  {
+   "q": "Is 50 in the sequence 3n + 2?",
+   "options": [
+    "Yes",
+    "No"
+   ],
+   "answer": 0,
+   "why": "3n + 2 = 50 → n = 16, a whole number, so yes.",
+   "unit": "u09"
+  },
+  {
+   "q": "Increase 250 by 12%.",
+   "options": [
+    "262",
+    "280",
+    "30",
+    "220"
+   ],
+   "answer": 1,
+   "why": "250 × 1.12 = 280.",
+   "unit": "u10"
+  },
+  {
+   "q": "A $40 shirt is reduced by 25%. New price?",
+   "options": [
+    "$10",
+    "$30",
+    "$35",
+    "$15"
+   ],
+   "answer": 1,
+   "why": "40 × 0.75 = 30.",
+   "unit": "u10"
+  },
+  {
+   "q": "A price rises from $50 to $60. Percentage increase?",
+   "options": [
+    "10%",
+    "20%",
+    "16.7%",
+    "60%"
+   ],
+   "answer": 1,
+   "why": "10 ÷ 50 × 100 = 20%.",
+   "unit": "u10"
+  },
+  {
+   "q": "Which line is steepest?",
+   "options": [
+    "y = 2x + 5",
+    "y = 5x − 1",
+    "y = x + 10",
+    "y = 3x"
+   ],
+   "answer": 1,
+   "why": "The biggest gradient is 5.",
+   "unit": "u11"
+  },
+  {
+   "q": "Where does y = 2x + 7 cross the y-axis?",
+   "options": [
+    "(0, 2)",
+    "(0, 7)",
+    "(7, 0)",
+    "(2, 7)"
+   ],
+   "answer": 1,
+   "why": "c = 7.",
+   "unit": "u11"
+  },
+  {
+   "q": "Gradient between (1, 3) and (3, 11)?",
+   "options": [
+    "4",
+    "8",
+    "2",
+    "3"
+   ],
+   "answer": 0,
+   "why": "(11 − 3) ÷ (3 − 1) = 8 ÷ 2 = 4.",
+   "unit": "u11"
+  },
+  {
+   "q": "Simplify 15 : 45.",
+   "options": [
+    "1 : 3",
+    "3 : 1",
+    "5 : 15",
+    "1 : 5"
+   ],
+   "answer": 0,
+   "why": "Divide both by 15.",
+   "unit": "u12"
+  },
+  {
+   "q": "Share 56 in the ratio 3 : 5. The larger share is…",
+   "options": [
+    "21",
+    "35",
+    "40",
+    "30"
+   ],
+   "answer": 1,
+   "why": "8 parts → 7 each → 5 × 7 = 35.",
+   "unit": "u12"
+  },
+  {
+   "q": "5 apples cost $2. How much do 8 cost?",
+   "options": [
+    "$3.20",
+    "$4",
+    "$2.80",
+    "$3"
+   ],
+   "answer": 0,
+   "why": "1 apple = $0.40; × 8 = $3.20.",
+   "unit": "u12"
+  },
+  {
+   "q": "A bag has 3 red and 5 blue balls. P(red)?",
+   "options": [
+    "3/5",
+    "3/8",
+    "5/8",
+    "1/3"
+   ],
+   "answer": 1,
+   "why": "3 out of 8 balls.",
+   "unit": "u13"
+  },
+  {
+   "q": "P(two coins both heads)?",
+   "options": [
+    "1/2",
+    "1/4",
+    "1/3",
+    "3/4"
+   ],
+   "answer": 1,
+   "why": "HH, HT, TH, TT: 1 out of 4.",
+   "unit": "u13"
+  },
+  {
+   "q": "P(win) = 0.15. Expected wins in 200 games?",
+   "options": [
+    "15",
+    "30",
+    "20",
+    "45"
+   ],
+   "answer": 1,
+   "why": "0.15 × 200 = 30.",
+   "unit": "u13"
+  },
+  {
+   "q": "Translate (−2, 5) by the vector (4, −3).",
+   "options": [
+    "(2, 2)",
+    "(−6, 8)",
+    "(2, 8)",
+    "(−6, 2)"
+   ],
+   "answer": 0,
+   "why": "−2 + 4 = 2; 5 − 3 = 2.",
+   "unit": "u14"
+  },
+  {
+   "q": "An enlargement with scale factor 3 makes lengths…",
+   "options": [
+    "3 times longer",
+    "3 cm longer",
+    "One third as long",
+    "9 times longer"
+   ],
+   "answer": 0,
+   "why": "Every length is multiplied by 3.",
+   "unit": "u14"
+  },
+  {
+   "q": "Midpoint of (−4, 2) and (6, 8)?",
+   "options": [
+    "(1, 5)",
+    "(2, 10)",
+    "(5, 3)",
+    "(−1, 5)"
+   ],
+   "answer": 0,
+   "why": "(−4+6)/2 = 1; (2+8)/2 = 5.",
+   "unit": "u14"
+  },
+  {
+   "q": "Area of a trapezium with parallel sides 6 cm and 10 cm, height 5 cm?",
+   "options": [
+    "40 cm²",
+    "80 cm²",
+    "30 cm²",
+    "300 cm²"
+   ],
+   "answer": 0,
+   "why": "½ × 16 × 5 = 40.",
+   "unit": "u15"
+  },
+  {
+   "q": "3.5 m² = ? cm²",
+   "options": [
+    "350",
+    "3500",
+    "35 000",
+    "350 000"
+   ],
+   "answer": 2,
+   "why": "3.5 × 10 000 = 35 000.",
+   "unit": "u15"
+  },
+  {
+   "q": "Volume of a cuboid 4 cm × 5 cm × 6 cm?",
+   "options": [
+    "120 cm³",
+    "15 cm³",
+    "74 cm³",
+    "148 cm³"
+   ],
+   "answer": 0,
+   "why": "4 × 5 × 6 = 120.",
+   "unit": "u15"
+  },
+  {
+   "q": "Mean of 4, 7, 9, 10, 15?",
+   "options": [
+    "9",
+    "10",
+    "45",
+    "11"
+   ],
+   "answer": 0,
+   "why": "45 ÷ 5 = 9.",
+   "unit": "u16"
+  },
+  {
+   "q": "Median of 3, 8, 2, 9, 5, 6?",
+   "options": [
+    "5",
+    "5.5",
+    "6",
+    "8"
+   ],
+   "answer": 1,
+   "why": "Ordered: 2, 3, 5, 6, 8, 9; (5 + 6) ÷ 2 = 5.5.",
+   "unit": "u16"
+  },
+  {
+   "q": "In a pie chart for 60 people, 15 chose red. Angle?",
+   "options": [
+    "15°",
+    "60°",
+    "90°",
+    "45°"
+   ],
+   "answer": 2,
+   "why": "15/60 × 360 = 90°.",
+   "unit": "u16"
+  }
+ ],
+ "flashIntro": "Pick a unit above. Work out the answer, then flip to check the method.",
+ "flashcards": [
+  {
+   "front": "−3 × −4 = ?",
+   "back": "12 (negative × negative = positive)",
+   "unit": "u01"
+  },
+  {
+   "front": "−20 ÷ 5 = ?",
+   "back": "−4 (different signs give a negative)",
+   "unit": "u01"
+  },
+  {
+   "front": "Write 72 as a product of prime factors in index form.",
+   "back": "72 = 2 × 2 × 2 × 3 × 3 = 2³ × 3²",
+   "unit": "u01"
+  },
+  {
+   "front": "What is the HCF?",
+   "back": "Highest common factor: the biggest number that divides into both.",
+   "unit": "u01"
+  },
+  {
+   "front": "What is the LCM?",
+   "back": "Lowest common multiple: the smallest number both divide into.",
+   "unit": "u01"
+  },
+  {
+   "front": "What are the square roots of 49?",
+   "back": "7 and −7.",
+   "unit": "u01"
+  },
+  {
+   "front": "What is the cube root of 64?",
+   "back": "4 (because 4 × 4 × 4 = 64).",
+   "unit": "u01"
+  },
+  {
+   "front": "What is 5⁰?",
+   "back": "1. Any number (except 0) to the power 0 is 1.",
+   "unit": "u01"
+  },
+  {
+   "front": "Simplify 5a + 3b − 2a + b.",
+   "back": "3a + 4b",
+   "unit": "u02"
+  },
+  {
+   "front": "Expand 4(2x − 3).",
+   "back": "8x − 12",
+   "unit": "u02"
+  },
+  {
+   "front": "If a = 3 and b = −2, find 2a + 5b.",
+   "back": "6 + (−10) = −4",
+   "unit": "u02"
+  },
+  {
+   "front": "Solve 3x + 7 = 22.",
+   "back": "3x = 15, so x = 5.",
+   "unit": "u02"
+  },
+  {
+   "front": "Solve 5x − 4 = 2x + 11.",
+   "back": "3x − 4 = 11 → 3x = 15 → x = 5.",
+   "unit": "u02"
+  },
+  {
+   "front": "What does x > 3 look like on a number line?",
+   "back": "An open circle at 3 with an arrow to the right (3 is not included).",
+   "unit": "u02"
+  },
+  {
+   "front": "Rearrange P = 2l + 2w to make l the subject.",
+   "back": "l = (P − 2w) ÷ 2",
+   "unit": "u02"
+  },
+  {
+   "front": "35 × 0.1 = ?",
+   "back": "3.5 (multiplying by 0.1 is the same as dividing by 10)",
+   "unit": "u03"
+  },
+  {
+   "front": "4.2 ÷ 0.01 = ?",
+   "back": "420 (dividing by 0.01 is the same as multiplying by 100)",
+   "unit": "u03"
+  },
+  {
+   "front": "Round 0.04637 to 2 significant figures.",
+   "back": "0.046 (zeros at the start don't count)",
+   "unit": "u03"
+  },
+  {
+   "front": "Round 3846 to 1 significant figure.",
+   "back": "4000",
+   "unit": "u03"
+  },
+  {
+   "front": "Round 7.2849 to 2 decimal places.",
+   "back": "7.28",
+   "unit": "u03"
+  },
+  {
+   "front": "Estimate 49.8 × 3.1.",
+   "back": "50 × 3 = 150",
+   "unit": "u03"
+  },
+  {
+   "front": "0.3 × 0.2 = ?",
+   "back": "0.06 (3 × 2 = 6, and there are 2 decimal places in total)",
+   "unit": "u04"
+  },
+  {
+   "front": "2.4 × 1.5 = ?",
+   "back": "3.6",
+   "unit": "u04"
+  },
+  {
+   "front": "How do you work out 7.2 ÷ 0.4?",
+   "back": "Multiply both by 10: 72 ÷ 4 = 18.",
+   "unit": "u04"
+  },
+  {
+   "front": "12.5 − 3.68 = ?",
+   "back": "8.82 (line up the decimal points; write 12.50)",
+   "unit": "u04"
+  },
+  {
+   "front": "Why estimate first?",
+   "back": "To check the answer is the right size, e.g. 4.8 × 3.1 ≈ 5 × 3 = 15.",
+   "unit": "u04"
+  },
+  {
+   "front": "Angles on a straight line add up to…",
+   "back": "180°",
+   "unit": "u05"
+  },
+  {
+   "front": "Angles around a point add up to…",
+   "back": "360°",
+   "unit": "u05"
+  },
+  {
+   "front": "Angles in a quadrilateral add up to…",
+   "back": "360°",
+   "unit": "u05"
+  },
+  {
+   "front": "What are alternate angles?",
+   "back": "Equal angles on opposite sides of a line crossing two parallel lines (a Z shape).",
+   "unit": "u05"
+  },
+  {
+   "front": "What are corresponding angles?",
+   "back": "Equal angles in matching positions where a line crosses two parallel lines (an F shape).",
+   "unit": "u05"
+  },
+  {
+   "front": "What are co-interior angles?",
+   "back": "Angles between two parallel lines on the same side of the crossing line (a C/U shape). They add up to 180°.",
+   "unit": "u05"
+  },
+  {
+   "front": "Exterior angle of a triangle =",
+   "back": "The sum of the two opposite interior angles.",
+   "unit": "u05"
+  },
+  {
+   "front": "What is categorical data?",
+   "back": "Data in words or categories, e.g. favourite colour.",
+   "unit": "u06"
+  },
+  {
+   "front": "Discrete vs continuous data?",
+   "back": "Discrete: counted, exact values (number of pets). Continuous: measured, any value in a range (height).",
+   "unit": "u06"
+  },
+  {
+   "front": "What makes a good survey question?",
+   "back": "Clear, not leading, with response boxes that don't overlap and cover every answer.",
+   "unit": "u06"
+  },
+  {
+   "front": "What is a sample?",
+   "back": "A smaller group chosen from the whole population to collect data from.",
+   "unit": "u06"
+  },
+  {
+   "front": "What is bias?",
+   "back": "When a sample or question unfairly favours some answers, e.g. asking only football fans about favourite sports.",
+   "unit": "u06"
+  },
+  {
+   "front": "How do you add 2/3 + 1/4?",
+   "back": "Common denominator 12: 8/12 + 3/12 = 11/12.",
+   "unit": "u07"
+  },
+  {
+   "front": "How do you multiply fractions?",
+   "back": "Multiply the tops and multiply the bottoms, then simplify. 2/3 × 3/5 = 6/15 = 2/5.",
+   "unit": "u07"
+  },
+  {
+   "front": "How do you divide by a fraction?",
+   "back": "Multiply by its reciprocal (flip it). 3/4 ÷ 1/2 = 3/4 × 2/1 = 3/2 = 1 1/2.",
+   "unit": "u07"
+  },
+  {
+   "front": "How do you multiply mixed numbers?",
+   "back": "Change them to improper fractions first. 1 1/2 × 2 1/3 = 3/2 × 7/3 = 21/6 = 3 1/2.",
+   "unit": "u07"
+  },
+  {
+   "front": "What is 1/3 as a decimal?",
+   "back": "0.333… (0.3 recurring)",
+   "unit": "u07"
+  },
+  {
+   "front": "Write 5/8 as a decimal.",
+   "back": "0.625",
+   "unit": "u07"
+  },
+  {
+   "front": "Properties of a rhombus?",
+   "back": "4 equal sides, opposite angles equal, diagonals cross at right angles, 2 lines of symmetry, rotational symmetry order 2.",
+   "unit": "u08"
+  },
+  {
+   "front": "Properties of a parallelogram?",
+   "back": "Opposite sides equal and parallel, opposite angles equal, no lines of symmetry, rotational symmetry order 2.",
+   "unit": "u08"
+  },
+  {
+   "front": "What is the diameter of a circle?",
+   "back": "A straight line across the circle through the centre; it is twice the radius.",
+   "unit": "u08"
+  },
+  {
+   "front": "What is a chord? A tangent?",
+   "back": "Chord: a line joining two points on the circle. Tangent: a line touching the circle at one point.",
+   "unit": "u08"
+  },
+  {
+   "front": "What is order of rotational symmetry?",
+   "back": "How many times a shape fits onto itself in one full turn. A square: order 4.",
+   "unit": "u08"
+  },
+  {
+   "front": "Faces, edges and vertices of a cube?",
+   "back": "6 faces, 12 edges, 8 vertices.",
+   "unit": "u08"
+  },
+  {
+   "front": "Find the nth term of 5, 8, 11, 14, …",
+   "back": "Goes up by 3, so 3n; 3n + 2 (check: n = 1 gives 5 ✓).",
+   "unit": "u09"
+  },
+  {
+   "front": "Find the 20th term of the sequence with nth term 4n − 1.",
+   "back": "4 × 20 − 1 = 79",
+   "unit": "u09"
+  },
+  {
+   "front": "What is a term-to-term rule?",
+   "back": "How to get from one term to the next, e.g. 'add 3'.",
+   "unit": "u09"
+  },
+  {
+   "front": "Function machine: x → ×2 → +5 → y. What is the output for x = 6?",
+   "back": "6 × 2 + 5 = 17",
+   "unit": "u09"
+  },
+  {
+   "front": "How do you find the inverse of a function machine?",
+   "back": "Reverse the order and do the opposite operations: −5 then ÷2.",
+   "unit": "u09"
+  },
+  {
+   "front": "Find 15% of 80 without a calculator.",
+   "back": "10% = 8, 5% = 4, so 15% = 12.",
+   "unit": "u10"
+  },
+  {
+   "front": "What multiplier increases by 20%?",
+   "back": "1.2",
+   "unit": "u10"
+  },
+  {
+   "front": "What multiplier decreases by 15%?",
+   "back": "0.85",
+   "unit": "u10"
+  },
+  {
+   "front": "How do you write 18 out of 24 as a percentage?",
+   "back": "18 ÷ 24 × 100 = 75%",
+   "unit": "u10"
+  },
+  {
+   "front": "Percentage change formula?",
+   "back": "(change ÷ original) × 100",
+   "unit": "u10"
+  },
+  {
+   "front": "In y = mx + c, what are m and c?",
+   "back": "m is the gradient (steepness); c is where the line crosses the y-axis.",
+   "unit": "u11"
+  },
+  {
+   "front": "Gradient and y-intercept of y = 3x − 2?",
+   "back": "Gradient 3, y-intercept −2.",
+   "unit": "u11"
+  },
+  {
+   "front": "What does the line y = 4 look like?",
+   "back": "A horizontal line through 4 on the y-axis.",
+   "unit": "u11"
+  },
+  {
+   "front": "What does the line x = −1 look like?",
+   "back": "A vertical line through −1 on the x-axis.",
+   "unit": "u11"
+  },
+  {
+   "front": "On a distance–time graph, what does a flat line mean?",
+   "back": "The object is stopped (not moving).",
+   "unit": "u11"
+  },
+  {
+   "front": "How do you find the gradient between two points?",
+   "back": "Change in y ÷ change in x.",
+   "unit": "u11"
+  },
+  {
+   "front": "Simplify 24 : 36.",
+   "back": "2 : 3 (divide both by 12)",
+   "unit": "u12"
+  },
+  {
+   "front": "Divide $60 in the ratio 2 : 3.",
+   "back": "5 parts → $12 each → $24 and $36.",
+   "unit": "u12"
+  },
+  {
+   "front": "What is the unitary method?",
+   "back": "Find the value of one first, then multiply. 4 pens cost $6 → 1 costs $1.50 → 7 cost $10.50.",
+   "unit": "u12"
+  },
+  {
+   "front": "How do you find the best buy?",
+   "back": "Work out the cost per gram (or per item) for each, and compare.",
+   "unit": "u12"
+  },
+  {
+   "front": "What is the probability of an impossible event? A certain one?",
+   "back": "Impossible = 0; certain = 1.",
+   "unit": "u13"
+  },
+  {
+   "front": "P(rolling a 5 on a fair dice)?",
+   "back": "1/6",
+   "unit": "u13"
+  },
+  {
+   "front": "If P(rain) = 0.3, what is P(no rain)?",
+   "back": "1 − 0.3 = 0.7",
+   "unit": "u13"
+  },
+  {
+   "front": "What are mutually exclusive outcomes?",
+   "back": "Outcomes that can't happen at the same time; their probabilities add up.",
+   "unit": "u13"
+  },
+  {
+   "front": "How many outcomes when you roll two dice?",
+   "back": "6 × 6 = 36 (shown in a sample space table).",
+   "unit": "u13"
+  },
+  {
+   "front": "Expected frequency?",
+   "back": "Probability × number of trials. P = 0.2, 50 trials → expected 10.",
+   "unit": "u13"
+  },
+  {
+   "front": "Midpoint of (2, 3) and (8, 11)?",
+   "back": "((2+8)/2, (3+11)/2) = (5, 7)",
+   "unit": "u14"
+  },
+  {
+   "front": "What does the vector (3, −2) mean?",
+   "back": "Move 3 right and 2 down.",
+   "unit": "u14"
+  },
+  {
+   "front": "How do you describe a rotation fully?",
+   "back": "Angle, direction (clockwise or anticlockwise) and centre of rotation.",
+   "unit": "u14"
+  },
+  {
+   "front": "How do you describe an enlargement fully?",
+   "back": "Scale factor and centre of enlargement.",
+   "unit": "u14"
+  },
+  {
+   "front": "Reflecting (4, 1) in the line y = x gives?",
+   "back": "(1, 4): the coordinates swap.",
+   "unit": "u14"
+  },
+  {
+   "front": "How many cm² in 1 m²?",
+   "back": "10 000 (100 × 100)",
+   "unit": "u15"
+  },
+  {
+   "front": "Area of a parallelogram?",
+   "back": "Base × perpendicular height.",
+   "unit": "u15"
+  },
+  {
+   "front": "Area of a trapezium?",
+   "back": "½ × (a + b) × h, where a and b are the parallel sides.",
+   "unit": "u15"
+  },
+  {
+   "front": "Area of a triangle?",
+   "back": "½ × base × height.",
+   "unit": "u15"
+  },
+  {
+   "front": "Volume of a prism?",
+   "back": "Area of the cross-section × length.",
+   "unit": "u15"
+  },
+  {
+   "front": "Approximately how many miles is 40 km?",
+   "back": "8 km ≈ 5 miles, so 40 km ≈ 25 miles.",
+   "unit": "u15"
+  },
+  {
+   "front": "How do you find the median?",
+   "back": "Put the values in order; it is the middle one (or halfway between the two middle ones).",
+   "unit": "u16"
+  },
+  {
+   "front": "What does the range show?",
+   "back": "How spread out the data is: largest − smallest. A smaller range = more consistent.",
+   "unit": "u16"
+  },
+  {
+   "front": "When is the median better than the mean?",
+   "back": "When there are extreme values (outliers) that would distort the mean.",
+   "unit": "u16"
+  },
+  {
+   "front": "How do you compare two data sets?",
+   "back": "Compare an average (which is higher?) and the range (which is more consistent?), in context.",
+   "unit": "u16"
+  },
+  {
+   "front": "What does positive correlation look like on a scatter graph?",
+   "back": "Points going up from left to right: as one value increases, so does the other.",
+   "unit": "u16"
+  },
+  {
+   "front": "How do you find the angle for a pie chart sector?",
+   "back": "(frequency ÷ total) × 360°",
+   "unit": "u16"
+  }
+ ],
+ "examIntro": "Do the question on paper first, then compare with the worked answer line by line.",
+ "exam": [
+  {
+   "q": "Find the HCF and LCM of 60 and 84 using prime factors. Show your working.",
+   "marks": 4,
+   "unit": "u01",
+   "model": [
+    "60 = 2² × 3 × 5",
+    "84 = 2² × 3 × 7",
+    "HCF: multiply the prime factors they share (lowest powers): 2² × 3 = 12",
+    "LCM: multiply every prime factor (highest powers): 2² × 3 × 5 × 7 = 420"
+   ],
+   "why": "Write both as prime factors first; the method earns marks even if one step goes wrong."
+  },
+  {
+   "q": "Solve 4(x + 2) = 2x + 20. Show each step.",
+   "marks": 3,
+   "unit": "u02",
+   "model": [
+    "Expand: 4x + 8 = 2x + 20",
+    "Subtract 2x from both sides: 2x + 8 = 20",
+    "Subtract 8: 2x = 12, so x = 6"
+   ],
+   "why": "Do the same to both sides, one step per line. Check: 4(8) = 32 and 2(6) + 20 = 32 ✓."
+  },
+  {
+   "q": "Estimate the value of (38.6 × 4.9) ÷ 0.52 by rounding each number to 1 significant figure. Show your working.",
+   "marks": 2,
+   "unit": "u03",
+   "model": [
+    "38.6 ≈ 40, 4.9 ≈ 5, 0.52 ≈ 0.5",
+    "(40 × 5) ÷ 0.5 = 200 ÷ 0.5 = 400"
+   ],
+   "why": "Show the rounded numbers first, then the calculation."
+  },
+  {
+   "q": "A pen costs $1.35. Work out the cost of 24 pens without a calculator. Show your method.",
+   "marks": 2,
+   "unit": "u04",
+   "model": [
+    "1.35 × 24 = 135 × 24 ÷ 100",
+    "135 × 24 = 3240, so the cost is $32.40"
+   ],
+   "why": "Remove the decimal, multiply, then put it back. Check: 1.35 × 24 ≈ 1 × 25 = 25 to 1.5 × 24 = 36 ✓."
+  },
+  {
+   "q": "A line crosses two parallel lines. One angle is 72°. Find the alternate angle and the co-interior angle, giving reasons.",
+   "marks": 4,
+   "unit": "u05",
+   "model": [
+    "The alternate angle is 72°, because alternate angles are equal.",
+    "The co-interior angle is 180° − 72° = 108°, because co-interior angles add up to 180°."
+   ],
+   "why": "Every angle needs a reason using the correct name."
+  },
+  {
+   "q": "Gia wants to find out how much time students in her school spend reading. Describe two things she should do so her sample is fair.",
+   "marks": 2,
+   "unit": "u06",
+   "model": [
+    "Choose students from every year group and class, picked at random, not just her friends.",
+    "Use a large enough sample, e.g. at least 30 students, so the results are reliable."
+   ],
+   "why": "Each point should say what to do and why."
+  },
+  {
+   "q": "Work out 2 2/5 ÷ 1 1/5. Show your working and give your answer in its simplest form.",
+   "marks": 3,
+   "unit": "u07",
+   "model": [
+    "Change to improper fractions: 2 2/5 = 12/5 and 1 1/5 = 6/5",
+    "Multiply by the reciprocal: 12/5 × 5/6 = 60/30",
+    "= 2"
+   ],
+   "why": "Improper fractions, flip the second, multiply, simplify."
+  },
+  {
+   "q": "Describe two differences between a rectangle and a rhombus.",
+   "marks": 2,
+   "unit": "u08",
+   "model": [
+    "A rectangle has four right angles; a rhombus usually does not.",
+    "A rhombus has four equal sides; a rectangle has two pairs of equal sides. (Also: a rhombus's diagonals cross at right angles; a rectangle's do not.)"
+   ],
+   "why": "Compare the same property for both shapes in each sentence."
+  },
+  {
+   "q": "The sequence 6, 11, 16, 21, … continues. (a) Find the nth term. (b) Is 100 a term? Explain.",
+   "marks": 3,
+   "unit": "u09",
+   "model": [
+    "(a) The terms go up by 5, so the nth term is 5n + 1 (check: 5 × 1 + 1 = 6 ✓).",
+    "(b) 5n + 1 = 100 → 5n = 99 → n = 19.8.",
+    "n is not a whole number, so 100 is not in the sequence."
+   ],
+   "why": "Show the check, and solve an equation to justify 'yes' or 'no'."
+  },
+  {
+   "q": "A bike costs $320. Its price is increased by 15%, then the new price is reduced by 10% in a sale. Find the sale price.",
+   "marks": 3,
+   "unit": "u10",
+   "model": [
+    "After the increase: 320 × 1.15 = $368",
+    "After the 10% reduction: 368 × 0.9 = $331.20",
+    "Sale price = $331.20"
+   ],
+   "why": "Use multipliers one after the other; don't just do +15 − 10 = +5%."
+  },
+  {
+   "q": "Complete a table of values for y = 2x − 1 for x = −1, 0, 1, 2, 3, and describe the line.",
+   "marks": 3,
+   "unit": "u11",
+   "model": [
+    "x = −1 → y = −3; x = 0 → y = −1; x = 1 → y = 1; x = 2 → y = 3; x = 3 → y = 5",
+    "Plot the points and join them with a ruler: a straight line.",
+    "Its gradient is 2 and it crosses the y-axis at −1."
+   ],
+   "why": "Substitute each x carefully (especially negatives), then link the graph to m and c."
+  },
+  {
+   "q": "A 400 g box of cereal costs $3.20 and a 750 g box costs $5.70. Which is better value? Show your working.",
+   "marks": 3,
+   "unit": "u12",
+   "model": [
+    "400 g box: 320 cents ÷ 400 g = 0.8 cents per gram",
+    "750 g box: 570 cents ÷ 750 g = 0.76 cents per gram",
+    "The 750 g box is better value, because it costs less per gram."
+   ],
+   "why": "Compare like with like (cost per gram) and finish with a clear conclusion."
+  },
+  {
+   "q": "Two fair dice are rolled and the scores added. Use a sample space to find the probability of a total of 7.",
+   "marks": 3,
+   "unit": "u13",
+   "model": [
+    "Draw a 6 × 6 table of totals: 36 equally likely outcomes.",
+    "Totals of 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1): 6 outcomes.",
+    "P(7) = 6/36 = 1/6"
+   ],
+   "why": "Show the sample space and count; simplify the fraction."
+  },
+  {
+   "q": "Triangle A has vertices (1, 1), (3, 1) and (1, 2). It is enlarged by scale factor 2, centre (0, 0). Find the new vertices.",
+   "marks": 2,
+   "unit": "u14",
+   "model": [
+    "Multiply each coordinate by 2 (the centre is the origin):",
+    "(2, 2), (6, 2) and (2, 4)"
+   ],
+   "why": "With centre (0, 0), each coordinate is multiplied by the scale factor."
+  },
+  {
+   "q": "A triangular prism has a triangle cross-section with base 6 cm and height 4 cm. The prism is 10 cm long. Find its volume.",
+   "marks": 2,
+   "unit": "u15",
+   "model": [
+    "Area of cross-section = ½ × 6 × 4 = 12 cm²",
+    "Volume = 12 × 10 = 120 cm³"
+   ],
+   "why": "Cross-section area first, then multiply by length. Give units (cm³)."
+  },
+  {
+   "q": "Class A's test scores have mean 64 and range 12. Class B's have mean 70 and range 35. Compare the two classes.",
+   "marks": 2,
+   "unit": "u16",
+   "model": [
+    "Class B did better on average, because its mean (70) is higher than Class A's (64).",
+    "Class A was more consistent, because its range (12) is smaller than Class B's (35)."
+   ],
+   "why": "One comparison of the average and one of the range, each with numbers and in context."
+  }
+ ]
+}
