@@ -25,11 +25,11 @@ export const PACKS = {};
 
 // Gia's subjects (confirmed by Christabel, Nov 2026).
 // group "main": Maths, Science, Humanities, English. Gia is in Grade 7; these build
-//   towards Cambridge IGCSE (sat in Grade 10), so each has the IGCSE paper format and a
+//   towards Cambridge IGCSE at CORE tier (sat in Grade 10), so each has the IGCSE paper format and a
 //   set of IGCSE skills to practise now. Topic content gets added as school covers it.
 // group "other": Hindi and Kannada get a simple, steady language-practice plan.
 //   Art needs no revision help: it's in Homework only (revise: false).
-const IGCSE_NOTE = "Gia is in Grade 7, so these are the papers she'll sit in Grade 10. Build the skills below now; Grade 9–10 adds full past-paper practice. Check with school which syllabus and tier (Core or Extended) she'll take.";
+const IGCSE_NOTE = "Gia is in Grade 7 and will take IGCSE at Core level in Grade 10. These are the papers she'll sit. Build the skills below now; Grade 9–10 adds full past-paper practice.";
 const LANG_TIPS = [
   "Little and often: 15–20 minutes, 2–3 times a week beats one long session before a test.",
   "Read aloud for 5 minutes each session: it helps spelling, fluency and pronunciation.",
@@ -52,8 +52,8 @@ const ALL_SUBJECTS = [
     key: "Maths", name: "Maths", emoji: "📐", group: "main",
     guide: {
       papers: [
-        ["IGCSE Mathematics, Extended", "Paper 2: non-calculator, 2 hours, 100 marks · Paper 4: calculator, 2 hours, 100 marks"],
-        ["IGCSE Mathematics, Core", "Paper 1: non-calculator, 1h 30, 80 marks · Paper 3: calculator, 1h 30, 80 marks"],
+        ["IGCSE Mathematics (Core), Paper 1", "Non-calculator, 1h 30, 80 marks (50%)"],
+        ["IGCSE Mathematics (Core), Paper 3", "Calculator, 1h 30, 80 marks (50%)"],
       ],
       tips: [
         "About a minute per mark: if a question takes much longer, move on and come back.",
@@ -80,14 +80,16 @@ const ALL_SUBJECTS = [
     key: "Science", name: "Science", emoji: "🔬", group: "main",
     guide: {
       papers: [
-        ["IGCSE Biology, Chemistry and Physics (each)", "Multiple choice: 45 min, 40 marks · Theory: 1h 15, 80 marks · Practical skills (written): 1 hour, 40 marks"],
-        ["Or IGCSE Combined / Co-ordinated Sciences", "The same three kinds of paper, covering all three sciences together"],
+        ["Paper 1 (Core): multiple choice", "45 min, 40 questions, 40 marks (30%)"],
+        ["Paper 3 (Core): theory", "1h 15, short-answer and structured questions, 80 marks (50%)"],
+        ["Paper 6: practical skills (written)", "1 hour, 40 marks (20%): the same paper for Core and Extended"],
       ],
       tips: [
         "Marks go to exact keywords: learn the textbook definitions word for word.",
         "The number of marks tells you how many points to make.",
         "Calculations: write the formula, substitute the numbers, then give the answer with units.",
         "The practical paper repeats every year: tables, graphs, variables and improvements.",
+        "This format applies to each of IGCSE Biology, Chemistry and Physics (and Combined Science) at Core level.",
       ],
       note: IGCSE_NOTE,
     },
