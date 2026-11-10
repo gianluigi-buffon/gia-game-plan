@@ -3,8 +3,8 @@
 // =============================================================
 import { firebaseConfig, PEOPLE } from "./firebase-config.js";
 import { buildDayPlan, WUSHU_DAYS } from "./planner.js?v=1";
-import { initRevision, sessionsFor, upcomingTests, overdueSessions, paceSummary, revisionCount, progressHtml as revisionProgressHtml, subjectName, openSubject as openRevisionSubject, render as renderRevision } from "./revision/revision.js?v=5";
-import { HW_SUBJECTS as SUBJECTS, SUBJECT_GROUPS } from "./revision/syllabus.js?v=5";
+import { initRevision, sessionsFor, upcomingTests, overdueSessions, paceSummary, revisionCount, progressHtml as revisionProgressHtml, subjectName, openSubject as openRevisionSubject, render as renderRevision } from "./revision/revision.js?v=6";
+import { HW_SUBJECTS as SUBJECTS, SUBJECT_GROUPS } from "./revision/syllabus.js?v=6";
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import {
