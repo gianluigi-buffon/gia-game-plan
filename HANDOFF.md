@@ -29,7 +29,7 @@ Two Firebase Auth (Email/Password) users: Gia and Christabel. Emails live in **o
 3. After deploying, check the live `index.html` serves the new version numbers.
 
 ### Current cache-buster versions
-- `styles.css?v=3`, `app.js?v=8`, `planner.js?v=1`, `revision.js?v=6`, `syllabus.js?v=6`, `packview.js?v=1`
+- `styles.css?v=3`, `app.js?v=9`, `planner.js?v=1`, `revision.js?v=7`, `syllabus.js?v=7`, `packview.js?v=1`
 
 ## 🧪 Testing without logging in (demo mode)
 
@@ -45,7 +45,7 @@ Two Firebase Auth (Email/Password) users: Gia and Christabel. Emails live in **o
 - `planner.js`: **pure** daily-plan builder (`dayTemplate()` = Gia's week). No Firebase.
 - `firebase-config.js`: Firebase web keys (empty until Part A is done; the login screen then shows a "not connected" note) + `PEOPLE`.
 - `firestore.rules`: rules template with placeholder emails.
-- `revision/syllabus.js`: **edit this to add subjects and topics**. The subject list also feeds the Homework subject picker. Subjects (Nov 2026): main group Maths, Science, Humanities, English, planned around Cambridge IGCSE at Core tier (she is in Grade 7 and sits IGCSE in Grade 10): each has an IGCSE paper-format guide and an "IGCSE skills to build" unit of skill topics. Hindi and Kannada: a simple "Language practice" plan (vocabulary, grammar, reading, writing) with revision tips. Art: Homework only (`revise: false`), no revision. `HW_SUBJECTS` = all seven; `SUBJECTS` = revision subjects. Revision goal is still a PLACEHOLDER (2 rounds by 28 Feb). Add chapter topics to each subject as school covers them.
+- `revision/syllabus.js`: **edit this to add subjects and topics**. The subject list also feeds the Homework subject picker. Subjects (Nov 2026): main group Maths, Science, Humanities, English, planned around Cambridge IGCSE at Core tier (she is in Grade 7 and sits IGCSE in Grade 10): each has an IGCSE paper-format guide and an "IGCSE skills to build" unit of skill topics. Hindi and Kannada: a simple "Language practice" plan (vocabulary, grammar, reading, writing) with revision tips. Art: Homework only (`revise: false`), no revision. `HW_SUBJECTS` = all seven; `SUBJECTS` = revision subjects. Revision goal is still a PLACEHOLDER (2 rounds by 28 Feb). Add chapter topics to each subject as school covers them. Humanities History = NCERT Our Pasts II, older 10-chapter edition (ids hist7-ch01…ch10); Ch 5 checklist not yet checked against her book.
 - `revision/revision.js`, `revision/packview.js`: the Revision tab and practice-pack renderer, copied from Jake's app (local dates, "Gia" in the parent check, optional subject `guide`, a "no topics yet" pace card).
 - `scripts/send-digest.mjs`, `scripts/send-monthly.mjs` + `.github/workflows/digest.yml` (Wed & Sun 13:30 UTC = 7pm IST), `monthly.yml` (1st of month).
 - `dev/mock/`: demo-mode stand-ins for Firebase.
