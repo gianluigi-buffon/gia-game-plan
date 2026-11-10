@@ -29,7 +29,7 @@ Two Firebase Auth (Email/Password) users: Gia and Christabel. Emails live in **o
 3. After deploying, check the live `index.html` serves the new version numbers.
 
 ### Current cache-buster versions
-- `styles.css?v=1`, `app.js?v=1`, `planner.js?v=1`, `revision.js?v=1`, `syllabus.js?v=1`, `packview.js?v=1`
+- `styles.css?v=3`, `app.js?v=4`, `planner.js?v=1`, `revision.js?v=2`, `syllabus.js?v=2`, `packview.js?v=1`
 
 ## 🧪 Testing without logging in (demo mode)
 
@@ -45,7 +45,7 @@ Two Firebase Auth (Email/Password) users: Gia and Christabel. Emails live in **o
 - `planner.js`: **pure** daily-plan builder (`dayTemplate()` = Gia's week). No Firebase.
 - `firebase-config.js`: Firebase web keys (empty until Part A is done; the login screen then shows a "not connected" note) + `PEOPLE`.
 - `firestore.rules`: rules template with placeholder emails.
-- `revision/syllabus.js`: **edit this to add subjects and topics**. The subject list also feeds the Homework subject picker. Currently a PLACEHOLDER list (English, Maths, Science, Other) and a PLACEHOLDER goal (2 rounds by 28 Feb) until Christabel confirms.
+- `revision/syllabus.js`: **edit this to add subjects and topics**. The subject list also feeds the Homework subject picker. Subjects (Nov 2026): main group Humanities, English, Maths, Science; separate "Languages and Art" group Kannada, Hindi, Art (`group` field, shown as two sections in Revision and two option groups in Homework). Revision goal is still a PLACEHOLDER (2 rounds by 28 Feb), and no topics yet.
 - `revision/revision.js`, `revision/packview.js`: the Revision tab and practice-pack renderer, copied from Jake's app (local dates, "Gia" in the parent check, optional subject `guide`, a "no topics yet" pace card).
 - `scripts/send-digest.mjs`, `scripts/send-monthly.mjs` + `.github/workflows/digest.yml` (Wed & Sun 13:30 UTC = 7pm IST), `monthly.yml` (1st of month).
 - `dev/mock/`: demo-mode stand-ins for Firebase.
@@ -73,7 +73,7 @@ School 6:30am–4:15pm. Wushu Mon/Wed/Fri 5–6:30pm (a missed/cancelled/resched
 Weekly targets: homework on time · 1 creation finished · Wushu = attended ≥ classes held that week (cancelled ones don't count; made-up ones do) · 2 revision rounds (counts as met until revision topics exist). Score /10 = 2.5 per target (partial credit for creations, Wushu, revision). Streak badges: First Bow, Steady Stance (3 wks), Perfect Form (10/10), Top Dog (6 wks). Belts at 20/40/60/80/100% of overall goals: creations 29, homework on time 100, Wushu classes 60, revision 30.
 
 ## ⏳ Waiting on Christabel
-- Gia's subjects, exam (likely Cambridge Lower Secondary), revision goal and material → `revision/syllabus.js`
+- Gia's revision goal and topic lists for each subject → `revision/syllabus.js`
 - Firebase project keys → `firebase-config.js`; real emails into the console rules
 - Optional links: Next, weekly wins document, Substack
 

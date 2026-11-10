@@ -23,17 +23,26 @@ export const PACK_VERSION = 1;
 
 export const PACKS = {};
 
-// PLACEHOLDER subject list until Christabel confirms Gia's subjects.
+// Gia's subjects (confirmed by Christabel, Nov 2026).
+// group "main": revised for exams and shown first. group "other": languages and Art,
+// kept in their own section (still available for homework, tests and topics).
 const ALL_SUBJECTS = [
-  { key: "English", name: "English", emoji: "✍️", topics: [] },
-  { key: "Maths", name: "Maths", emoji: "📐", topics: [] },
-  { key: "Science", name: "Science", emoji: "🔬", topics: [] },
-  { key: "Other", name: "Other", emoji: "📘", topics: [] },
+  { key: "Humanities", name: "Humanities", emoji: "🏛️", group: "main", topics: [] },
+  { key: "English", name: "English", emoji: "✍️", group: "main", topics: [] },
+  { key: "Maths", name: "Maths", emoji: "📐", group: "main", topics: [] },
+  { key: "Science", name: "Science", emoji: "🔬", group: "main", topics: [] },
+  { key: "Kannada", name: "Kannada", emoji: "📗", group: "other", topics: [] },
+  { key: "Hindi", name: "Hindi", emoji: "📙", group: "other", topics: [] },
+  { key: "Art", name: "Art", emoji: "🎨", group: "other", topics: [] },
 ];
 
 // Display order on the Revision tab (by key) — put what's coming up first.
-const ORDER = ["English", "Maths", "Science", "Other"];
+const ORDER = ["Humanities", "English", "Maths", "Science", "Kannada", "Hindi", "Art"];
 export const SUBJECTS = ORDER.map(k => ALL_SUBJECTS.find(s => s.key === k));
+export const SUBJECT_GROUPS = [
+  { key: "main", label: "Main subjects" },
+  { key: "other", label: "Languages and Art" },
+];
 
 export const allTopics = () => SUBJECTS.flatMap(s => s.topics.map(t => ({ ...t, subject: s.key })));
 export const topicById = (id) => allTopics().find(t => t.id === id);

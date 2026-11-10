@@ -3,8 +3,8 @@
 // =============================================================
 import { firebaseConfig, PEOPLE } from "./firebase-config.js";
 import { buildDayPlan, WUSHU_DAYS } from "./planner.js?v=1";
-import { initRevision, sessionsFor, upcomingTests, overdueSessions, paceSummary, revisionCount, progressHtml as revisionProgressHtml, subjectName, openSubject as openRevisionSubject, render as renderRevision } from "./revision/revision.js?v=1";
-import { SUBJECTS } from "./revision/syllabus.js?v=1";
+import { initRevision, sessionsFor, upcomingTests, overdueSessions, paceSummary, revisionCount, progressHtml as revisionProgressHtml, subjectName, openSubject as openRevisionSubject, render as renderRevision } from "./revision/revision.js?v=2";
+import { SUBJECTS, SUBJECT_GROUPS } from "./revision/syllabus.js?v=2";
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import {
@@ -476,7 +476,9 @@ function renderHolidayBox(selDate) {
 
 // ---------- HOMEWORK ----------
 const HW_SUBJECTS = SUBJECTS.map(s => s.key);
-$("hwSubject").innerHTML = SUBJECTS.map(s => `<option value="${esc(s.key)}">${esc(s.name)}</option>`).join("");
+// Subject picker grouped like the Revision tab (main subjects, then languages and Art).
+const subjectOptions = () => SUBJECT_GROUPS.map(g => `<optgroup label="${esc(g.label)}">${SUBJECTS.filter(s => (s.group || "main") === g.key).map(s => `<option value="${esc(s.key)}">${esc(s.name)}</option>`).join("")}</optgroup>`).join("");
+$("hwSubject").innerHTML = subjectOptions();
 $("hwAdd").onclick = async () => {
   const task = $("hwTask").value.trim();
   if (!task) return;
@@ -519,7 +521,7 @@ function buildHwEl(h) {
 function editHwForm(el, h) {
   el.innerHTML = `<div class="item-main">
     <div class="grid2">
-      <select class="select" data-f="subject">${SUBJECTS.map(s => `<option value="${esc(s.key)}">${esc(s.name)}</option>`).join("")}</select>
+      <select class="select" data-f="subject">${subjectOptions()}</select>
       <input type="date" class="select" data-f="due" />
     </div>
     <input type="text" class="select" data-f="task" placeholder="Homework description" />

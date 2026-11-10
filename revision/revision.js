@@ -11,7 +11,7 @@
 //  app.js calls initRevision(...) after login and reads sessionsFor() /
 //  upcomingTests() / paceSummary() for the Today plan and dashboard.
 // =============================================================
-import { SUBJECTS, PACKS, PACK_VERSION, REVISION_GOAL, SEED_TESTS, SEED_SESSIONS, allTopics, topicById, subjectByKey } from "./syllabus.js?v=1";
+import { SUBJECTS, SUBJECT_GROUPS, PACKS, PACK_VERSION, REVISION_GOAL, SEED_TESTS, SEED_SESSIONS, allTopics, topicById, subjectByKey } from "./syllabus.js?v=2";
 import { renderPack, packModes } from "./packview.js?v=1";
 
 const esc = (s) => String(s ?? "").replace(/[<>&"]/g, (c) => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;", '"': "&quot;" }[c]));
@@ -169,7 +169,7 @@ export function render() {
   const host = root(); if (!host) return;
   // Subject switcher: always at the top of every Revision page.
   const current = view.name === "subject" ? view.key : view.name === "pack" ? view.back : null;
-  host.innerHTML = `<nav class="rv-nav"><button type="button" class="rv-navbtn ${view.name === "home" ? "on" : ""}" data-k="">📖 Overview</button>${SUBJECTS.map(s => `<button type="button" class="rv-navbtn ${current === s.key ? "on" : ""}" data-k="${s.key}">${s.emoji} ${esc(s.name)}</button>`).join("")}</nav><div id="rvView"></div>`;
+  host.innerHTML = `<nav class="rv-nav"><button type="button" class="rv-navbtn ${view.name === "home" ? "on" : ""}" data-k="">📖 Overview</button>${SUBJECTS.map((s, i) => `${i && s.group !== SUBJECTS[i - 1].group ? `<span class="rv-navsep"></span>` : ""}<button type="button" class="rv-navbtn ${current === s.key ? "on" : ""}" data-k="${s.key}">${s.emoji} ${esc(s.name)}</button>`).join("")}</nav><div id="rvView"></div>`;
   host.querySelectorAll(".rv-navbtn").forEach(b => b.onclick = () => go(b.dataset.k ? { name: "subject", key: b.dataset.k } : { name: "home" }));
   const tabs = document.querySelector(".tabs");
   if (tabs) host.querySelector(".rv-nav").style.top = Math.round(tabs.getBoundingClientRect().bottom) + "px"; // sit just under the app's tab bar
@@ -251,7 +251,7 @@ function paceCard() {
 function renderHome(el) {
   const t = todayStr();
   el.innerHTML = `<h2>📖 Revision</h2>
-    <h3 class="section-h">📚 Subjects: tap one for its topics, checklists and practice</h3><div id="rvSubj" class="rv-grid"></div>
+    ${SUBJECT_GROUPS.map(g => `<h3 class="section-h">${g.key === "main" ? "📚" : "🗣️"} ${esc(g.label)}: tap one for its topics and checklists</h3><div class="rv-grid" data-group="${g.key}"></div>`).join("")}
     ${paceCard()}<div id="rvParent"></div>
     <h3 class="section-h">📝 Tests</h3><div id="rvTests" class="list"></div>
     <h3 class="section-h">🗓️ Revision sessions</h3><div id="rvSess" class="list"></div>`;
@@ -289,8 +289,8 @@ function renderHome(el) {
   if (recent.length) { sl.insertAdjacentHTML("beforeend", `<div class="muted small" style="margin-top:6px">Recently done</div>`); recent.forEach(s => sl.appendChild(sessionEl(s))); }
 
   // Subjects grid
-  const grid = el.querySelector("#rvSubj");
   SUBJECTS.forEach(s => {
+    const grid = el.querySelector(`.rv-grid[data-group="${s.group || "main"}"]`);
     const n = s.topics.length;
     const r1 = s.topics.filter(x => R.progress[x.id]?.r1?.done).length;
     const r2 = s.topics.filter(x => R.progress[x.id]?.r2?.done).length;
