@@ -1,0 +1,1904 @@
+{
+ "id": "history7-our-pasts-2",
+ "subject": "Humanities",
+ "title": "History: Our Pasts II (Class 7)",
+ "sub": "NCERT Class 7 History, chapters 1–10 · practising the IGCSE way: facts, explanations, judgements",
+ "units": [
+  {
+   "key": "ch01",
+   "name": "Ch 1 Tracing changes"
+  },
+  {
+   "key": "ch02",
+   "name": "Ch 2 New kings"
+  },
+  {
+   "key": "ch03",
+   "name": "Ch 3 Delhi Sultans"
+  },
+  {
+   "key": "ch04",
+   "name": "Ch 4 Mughals"
+  },
+  {
+   "key": "ch05",
+   "name": "Ch 5 Buildings"
+  },
+  {
+   "key": "ch06",
+   "name": "Ch 6 Towns & traders"
+  },
+  {
+   "key": "ch07",
+   "name": "Ch 7 Tribes & nomads"
+  },
+  {
+   "key": "ch08",
+   "name": "Ch 8 Devotional paths"
+  },
+  {
+   "key": "ch09",
+   "name": "Ch 9 Regional cultures"
+  },
+  {
+   "key": "ch10",
+   "name": "Ch 10 18th-century states"
+  }
+ ],
+ "strategyIntro": "Every session should end with you writing or saying an answer, not just reading. Close the book, answer from memory, then check. These are the same moves IGCSE History rewards in Grade 10.",
+ "strategy": [
+  {
+   "title": "4 marks: Describe… / What were…",
+   "key": true,
+   "points": [
+    "Two points, each with a specific detail: a name, date, place or number.",
+    "No introduction or opinion needed. About 5 minutes."
+   ]
+  },
+  {
+   "title": "6 marks: Explain why…",
+   "key": true,
+   "points": [
+    "Two or three reasons, each in its own paragraph.",
+    "Each paragraph: Point → Evidence (a specific fact) → Explain how it caused the result (PEEL).",
+    "Start each with 'First… / Second… / Third…' so the examiner can see each reason."
+   ]
+  },
+  {
+   "title": "How to revise a chapter",
+   "points": [
+    "Read one section, close the book, write 3 key facts from memory.",
+    "Flashcards until every card is 'Got it'; 'Not yet' cards come back sooner.",
+    "Do the chapter quiz; aim for 5/5 or better.",
+    "Write one exam answer, then compare it with the model answer."
+   ]
+  }
+ ],
+ "commandWords": [
+  [
+   "Describe",
+   "Say what happened or what something was like, with specific details."
+  ],
+  [
+   "Explain why",
+   "Give reasons and show how each one caused the result."
+  ],
+  [
+   "How far / Do you agree",
+   "Argue both sides, then give a clear judgement with a reason."
+  ]
+ ],
+ "quizTitle": "Quiz",
+ "quizIntro": "Pick a chapter above, then answer. Each answer shows why it's right.",
+ "quiz": [
+  {
+   "q": "In which year did al-Idrisi make his map?",
+   "options": [
+    "1154",
+    "1318",
+    "1526",
+    "1720s"
+   ],
+   "answer": 0,
+   "why": "Al-Idrisi's map is from 1154; the French map is from the 1720s.",
+   "unit": "ch01"
+  },
+  {
+   "q": "What did Minhaj-i Siraj mean by 'Hindustan'?",
+   "options": [
+    "The whole subcontinent",
+    "South India",
+    "Punjab, Haryana and the Ganga–Yamuna lands",
+    "Bengal"
+   ],
+   "answer": 2,
+   "why": "For him it was a political term for the Delhi Sultan's lands, never south India.",
+   "unit": "ch01"
+  },
+  {
+   "q": "Why did historians struggle with copied manuscripts?",
+   "options": [
+    "They were in code",
+    "Scribes made small changes while copying",
+    "They were burnt",
+    "Only kings could read them"
+   ],
+   "answer": 1,
+   "why": "Hand-copying introduced changes that grew over centuries.",
+   "unit": "ch01"
+  },
+  {
+   "q": "Which of these was a NEW crop in this period?",
+   "options": [
+    "Rice",
+    "Wheat",
+    "Chillies",
+    "Barley"
+   ],
+   "answer": 2,
+   "why": "Potatoes, corn, chillies, tea and coffee came in this period.",
+   "unit": "ch01"
+  },
+  {
+   "q": "Who were the Kayasthas?",
+   "options": [
+    "Warriors",
+    "A caste of scribes and secretaries",
+    "Priests",
+    "Traders from Gujarat"
+   ],
+   "answer": 1,
+   "why": "Kayasthas were scribes and secretaries who became politically important.",
+   "unit": "ch01"
+  },
+  {
+   "q": "Which three dynasties fought the 'tripartite struggle'?",
+   "options": [
+    "Cholas, Pandyas, Pallavas",
+    "Gurjara-Pratiharas, Rashtrakutas, Palas",
+    "Khaljis, Tughluqs, Lodis",
+    "Chalukyas, Kadambas, Gangas"
+   ],
+   "answer": 1,
+   "why": "They fought for Kanauj in the Ganga valley.",
+   "unit": "ch02"
+  },
+  {
+   "q": "Which city was the prize in the tripartite struggle?",
+   "options": [
+    "Thanjavur",
+    "Delhi",
+    "Kanauj",
+    "Ghazni"
+   ],
+   "answer": 2,
+   "why": "Kanauj controlled the rich Ganga valley.",
+   "unit": "ch02"
+  },
+  {
+   "q": "Which Chola ruler built a navy to raid Sri Lanka and Southeast Asia?",
+   "options": [
+    "Vijayalaya",
+    "Rajaraja I",
+    "Rajendra I",
+    "Nagabhata"
+   ],
+   "answer": 2,
+   "why": "Rajendra I, Rajaraja's son.",
+   "unit": "ch02"
+  },
+  {
+   "q": "What was the most frequently mentioned Chola tax, taken as forced labour?",
+   "options": [
+    "Kadamai",
+    "Vetti",
+    "Jizyah",
+    "Kharaj"
+   ],
+   "answer": 1,
+   "why": "Vetti was forced labour; kadamai was land revenue.",
+   "unit": "ch02"
+  },
+  {
+   "q": "Who defeated Muhammad Ghori in 1191?",
+   "options": [
+    "Mahmud of Ghazni",
+    "Dantidurga",
+    "Prithviraja III",
+    "Rajendra I"
+   ],
+   "answer": 2,
+   "why": "Prithviraja III won in 1191 but lost in 1192.",
+   "unit": "ch02"
+  },
+  {
+   "q": "Which temple did Mahmud of Ghazni famously raid?",
+   "options": [
+    "Somnath",
+    "Thanjavur",
+    "Puri",
+    "Madurai"
+   ],
+   "answer": 0,
+   "why": "Somnath in Gujarat.",
+   "unit": "ch02"
+  },
+  {
+   "q": "In which language were the tawarikh written?",
+   "options": [
+    "Sanskrit",
+    "Arabic",
+    "Persian",
+    "Hindawi"
+   ],
+   "answer": 2,
+   "why": "Persian was the language of administration.",
+   "unit": "ch03"
+  },
+  {
+   "q": "Who was Iltutmish's daughter who became Sultan in 1236?",
+   "options": [
+    "Didda",
+    "Rudramadevi",
+    "Raziyya",
+    "Nur Jahan"
+   ],
+   "answer": 2,
+   "why": "Raziyya ruled 1236–1240.",
+   "unit": "ch03"
+  },
+  {
+   "q": "What was the holder of an iqta called?",
+   "options": [
+    "Zamindar",
+    "Muqti or iqtadar",
+    "Mansabdar",
+    "Samanta"
+   ],
+   "answer": 1,
+   "why": "Muqti or iqtadar.",
+   "unit": "ch03"
+  },
+  {
+   "q": "Which ruler controlled market prices to pay his large army?",
+   "options": [
+    "Muhammad Tughluq",
+    "Alauddin Khalji",
+    "Iltutmish",
+    "Sher Shah"
+   ],
+   "answer": 1,
+   "why": "Alauddin Khalji.",
+   "unit": "ch03"
+  },
+  {
+   "q": "Which ruler introduced token currency?",
+   "options": [
+    "Alauddin Khalji",
+    "Muhammad Tughluq",
+    "Balban",
+    "Ibrahim Lodi"
+   ],
+   "answer": 1,
+   "why": "Muhammad Tughluq.",
+   "unit": "ch03"
+  },
+  {
+   "q": "From which country did Ibn Battuta come?",
+   "options": [
+    "Iran",
+    "Morocco",
+    "Afghanistan",
+    "Egypt"
+   ],
+   "answer": 1,
+   "why": "Morocco.",
+   "unit": "ch03"
+  },
+  {
+   "q": "Whom did Babur defeat at Panipat in 1526?",
+   "options": [
+    "Rana Sanga",
+    "Ibrahim Lodi",
+    "Sher Khan",
+    "Hemu"
+   ],
+   "answer": 1,
+   "why": "Ibrahim Lodi, the last Lodi Sultan.",
+   "unit": "ch04"
+  },
+  {
+   "q": "What did the sawar rank show?",
+   "options": [
+    "Salary",
+    "Number of cavalrymen to maintain",
+    "Number of elephants",
+    "Size of the jagir"
+   ],
+   "answer": 1,
+   "why": "Zat = rank and salary; sawar = cavalrymen.",
+   "unit": "ch04"
+  },
+  {
+   "q": "Who was Akbar's revenue minister?",
+   "options": [
+    "Abul Fazl",
+    "Todar Mal",
+    "Bairam Khan",
+    "Man Singh"
+   ],
+   "answer": 1,
+   "why": "Todar Mal.",
+   "unit": "ch04"
+  },
+  {
+   "q": "Who wrote the Akbar Nama?",
+   "options": [
+    "Babur",
+    "Badauni",
+    "Abul Fazl",
+    "Jahangir"
+   ],
+   "answer": 2,
+   "why": "Abul Fazl.",
+   "unit": "ch04"
+  },
+  {
+   "q": "What does sulh-i kul mean?",
+   "options": [
+    "Universal peace",
+    "Holy war",
+    "Tax on land",
+    "Rule of the eldest son"
+   ],
+   "answer": 0,
+   "why": "'Universal peace'.",
+   "unit": "ch04"
+  },
+  {
+   "q": "Who defeated Humayun at Chausa and Kanauj?",
+   "options": [
+    "Babur",
+    "Sher Khan",
+    "Rana Sanga",
+    "Shivaji"
+   ],
+   "answer": 1,
+   "why": "Sher Khan (Sher Shah Sur).",
+   "unit": "ch04"
+  },
+  {
+   "q": "What holds up the roof in the trabeate style?",
+   "options": [
+    "Arches",
+    "Horizontal beams on pillars",
+    "Domes",
+    "Cables"
+   ],
+   "answer": 1,
+   "why": "Trabeate = beams; arcuate = arches.",
+   "unit": "ch05"
+  },
+  {
+   "q": "Who built the Hauz-i Sultani reservoir?",
+   "options": [
+    "Iltutmish",
+    "Alauddin Khalji",
+    "Akbar",
+    "Rajaraja I"
+   ],
+   "answer": 0,
+   "why": "Iltutmish, near Delhi.",
+   "unit": "ch05"
+  },
+  {
+   "q": "What is a chahar bagh?",
+   "options": [
+    "A four-part garden",
+    "A temple tower",
+    "A coin",
+    "A tax"
+   ],
+   "answer": 0,
+   "why": "A garden in four quarters.",
+   "unit": "ch05"
+  },
+  {
+   "q": "Who built the Taj Mahal?",
+   "options": [
+    "Akbar",
+    "Jahangir",
+    "Shah Jahan",
+    "Aurangzeb"
+   ],
+   "answer": 2,
+   "why": "Shah Jahan, as a tomb for Mumtaz Mahal.",
+   "unit": "ch05"
+  },
+  {
+   "q": "Which empire had Hampi as its capital?",
+   "options": [
+    "Mughal",
+    "Chola",
+    "Vijayanagara",
+    "Bahmani"
+   ],
+   "answer": 2,
+   "why": "Vijayanagara, founded 1336.",
+   "unit": "ch06"
+  },
+  {
+   "q": "What is Bidri work?",
+   "options": [
+    "Stone carving",
+    "Copper and silver inlay",
+    "Silk weaving",
+    "Bronze casting"
+   ],
+   "answer": 1,
+   "why": "Named after Bidar.",
+   "unit": "ch06"
+  },
+  {
+   "q": "Which port was called the 'gate to Mecca'?",
+   "options": [
+    "Masulipatnam",
+    "Calicut",
+    "Surat",
+    "Cambay"
+   ],
+   "answer": 2,
+   "why": "Surat, because pilgrim ships sailed from there.",
+   "unit": "ch06"
+  },
+  {
+   "q": "Which Sufi saint is linked with Ajmer?",
+   "options": [
+    "Nizamuddin Auliya",
+    "Khwaja Muinuddin Chishti",
+    "Baba Farid",
+    "Bandanawaz Gisudaraz"
+   ],
+   "answer": 1,
+   "why": "Khwaja Muinuddin Chishti settled there in the 12th century.",
+   "unit": "ch06"
+  },
+  {
+   "q": "Who built the fort at Masulipatnam?",
+   "options": [
+    "The English",
+    "The Portuguese",
+    "The Dutch",
+    "The French"
+   ],
+   "answer": 2,
+   "why": "The Dutch.",
+   "unit": "ch06"
+  },
+  {
+   "q": "In 'lost wax', what fills the space left by the wax?",
+   "options": [
+    "Clay",
+    "Molten metal",
+    "Water",
+    "Stone"
+   ],
+   "answer": 1,
+   "why": "Molten metal is poured into the clay mould.",
+   "unit": "ch06"
+  },
+  {
+   "q": "What was a Banjara caravan called?",
+   "options": [
+    "Khel",
+    "Tanda",
+    "Garh",
+    "Chaurasi"
+   ],
+   "answer": 1,
+   "why": "A tanda.",
+   "unit": "ch07"
+  },
+  {
+   "q": "How many villages made a chaurasi?",
+   "options": [
+    "12",
+    "50",
+    "84",
+    "100"
+   ],
+   "answer": 2,
+   "why": "Chaurasi = 84; barhot = 12.",
+   "unit": "ch07"
+  },
+  {
+   "q": "Which queen fought the Mughals in 1565?",
+   "options": [
+    "Raziyya",
+    "Rani Durgawati",
+    "Rudramadevi",
+    "Nur Jahan"
+   ],
+   "answer": 1,
+   "why": "Rani Durgawati of Garha Katanga.",
+   "unit": "ch07"
+  },
+  {
+   "q": "Where did the Ahoms come from?",
+   "options": [
+    "Afghanistan",
+    "Myanmar",
+    "Tibet",
+    "Iran"
+   ],
+   "answer": 1,
+   "why": "Present-day Myanmar, in the 13th century.",
+   "unit": "ch07"
+  },
+  {
+   "q": "What were buranjis?",
+   "options": [
+    "Ahom histories",
+    "Gond forts",
+    "Banjara songs",
+    "Tax records"
+   ],
+   "answer": 0,
+   "why": "Historical works written by the Ahoms.",
+   "unit": "ch07"
+  },
+  {
+   "q": "The Nayanars were devoted to…",
+   "options": [
+    "Vishnu",
+    "Shiva",
+    "Krishna",
+    "Durga"
+   ],
+   "answer": 1,
+   "why": "Nayanars = Shiva; Alvars = Vishnu.",
+   "unit": "ch08"
+  },
+  {
+   "q": "Which philosopher taught Advaita?",
+   "options": [
+    "Ramanuja",
+    "Shankara",
+    "Basavanna",
+    "Kabir"
+   ],
+   "answer": 1,
+   "why": "Shankara, 8th century, Kerala.",
+   "unit": "ch08"
+  },
+  {
+   "q": "Who led the Virashaiva movement?",
+   "options": [
+    "Basavanna",
+    "Tukaram",
+    "Ramanuja",
+    "Namdev"
+   ],
+   "answer": 0,
+   "why": "Basavanna, in Karnataka.",
+   "unit": "ch08"
+  },
+  {
+   "q": "Which temple was the centre of bhakti in Maharashtra?",
+   "options": [
+    "Jagannatha, Puri",
+    "Vitthala, Pandharpur",
+    "Somnath",
+    "Rajarajeshvara"
+   ],
+   "answer": 1,
+   "why": "Vitthala at Pandharpur.",
+   "unit": "ch08"
+  },
+  {
+   "q": "What is a khanqah?",
+   "options": [
+    "A Sufi hospice",
+    "A Sikh kitchen",
+    "A Gond fort",
+    "A temple tower"
+   ],
+   "answer": 0,
+   "why": "Where Sufi masters held their assemblies.",
+   "unit": "ch08"
+  },
+  {
+   "q": "Who started namghars in Assam?",
+   "options": [
+    "Chaitanya",
+    "Shankaradeva",
+    "Kabir",
+    "Surdas"
+   ],
+   "answer": 1,
+   "why": "Shankaradeva.",
+   "unit": "ch08"
+  },
+  {
+   "q": "Whose followers ate together in the langar?",
+   "options": [
+    "Kabir",
+    "Guru Nanak",
+    "Mirabai",
+    "Shankara"
+   ],
+   "answer": 1,
+   "why": "Guru Nanak, at Kartarpur.",
+   "unit": "ch08"
+  },
+  {
+   "q": "What does 'Manipravalam' mean?",
+   "options": [
+    "Diamonds and corals",
+    "Lord of the world",
+    "House of prayer",
+    "Universal peace"
+   ],
+   "answer": 0,
+   "why": "A mix of Sanskrit and the regional language.",
+   "unit": "ch09"
+  },
+  {
+   "q": "Which dynasty's ruler built the Jagannatha temple?",
+   "options": [
+    "Chola",
+    "Ganga",
+    "Pala",
+    "Chera"
+   ],
+   "answer": 1,
+   "why": "Anantavarman of the Ganga dynasty.",
+   "unit": "ch09"
+  },
+  {
+   "q": "Kathak comes from the word for…",
+   "options": [
+    "Dance",
+    "Story",
+    "Temple",
+    "King"
+   ],
+   "answer": 1,
+   "why": "Katha = story.",
+   "unit": "ch09"
+  },
+  {
+   "q": "Which painting style used soft colours and Vaishnavite themes?",
+   "options": [
+    "Basohli",
+    "Kangra",
+    "Mughal",
+    "Jaina"
+   ],
+   "answer": 1,
+   "why": "Kangra, mid-18th century.",
+   "unit": "ch09"
+  },
+  {
+   "q": "What made Mughal painters move to the hills?",
+   "options": [
+    "Babur's victory",
+    "Nadir Shah's invasion of 1739",
+    "Akbar's death",
+    "The British"
+   ],
+   "answer": 1,
+   "why": "The sack of Delhi in 1739.",
+   "unit": "ch09"
+  },
+  {
+   "q": "Who sacked Delhi in 1739?",
+   "options": [
+    "Ahmad Shah Abdali",
+    "Nadir Shah",
+    "Babur",
+    "Banda Bahadur"
+   ],
+   "answer": 1,
+   "why": "Nadir Shah, ruler of Iran.",
+   "unit": "ch10"
+  },
+  {
+   "q": "Who founded the state of Hyderabad?",
+   "options": [
+    "Murshid Quli Khan",
+    "Asaf Jah",
+    "Sa'adat Khan",
+    "Jai Singh"
+   ],
+   "answer": 1,
+   "why": "Nizam-ul-Mulk Asaf Jah.",
+   "unit": "ch10"
+  },
+  {
+   "q": "How much was chauth?",
+   "options": [
+    "9–10% of land revenue",
+    "20% of produce",
+    "25% of land revenue",
+    "50% of produce"
+   ],
+   "answer": 2,
+   "why": "Chauth 25%; sardeshmukhi 9–10%; Sikh rakhi 20%.",
+   "unit": "ch10"
+  },
+  {
+   "q": "When was the Khalsa founded?",
+   "options": [
+    "1526",
+    "1699",
+    "1739",
+    "1761"
+   ],
+   "answer": 1,
+   "why": "1699, by Guru Gobind Singh.",
+   "unit": "ch10"
+  },
+  {
+   "q": "Who reunited the Sikh groups and made Lahore his capital in 1799?",
+   "options": [
+    "Banda Bahadur",
+    "Guru Gobind Singh",
+    "Ranjit Singh",
+    "Suraj Mal"
+   ],
+   "answer": 2,
+   "why": "Maharaja Ranjit Singh.",
+   "unit": "ch10"
+  },
+  {
+   "q": "What is ijaradari?",
+   "options": [
+    "A Sikh tax",
+    "Revenue farming",
+    "A Maratha army",
+    "A Mughal title"
+   ],
+   "answer": 1,
+   "why": "Collecting revenue through contractors.",
+   "unit": "ch10"
+  }
+ ],
+ "flashIntro": "Pick a chapter above. Read the question, answer out loud, then tap to flip. Mark “Got it” or “Not yet”: “Not yet” cards come back sooner.",
+ "flashcards": [
+  {
+   "front": "Who made Map 1, and when?",
+   "back": "The Arab geographer al-Idrisi, in 1154. South India is at the top and place-names are in Arabic.",
+   "unit": "ch01"
+  },
+  {
+   "front": "Who made Map 2, and when?",
+   "back": "A French cartographer (Guillaume de l'Isle), in the 1720s. European sailors used it; the coast is very detailed, the interior less so.",
+   "unit": "ch01"
+  },
+  {
+   "front": "What did 'Hindustan' mean to Minhaj-i Siraj in the 13th century?",
+   "back": "Punjab, Haryana and the lands between the Ganga and Yamuna: the lands of the Delhi Sultan. It never included south India.",
+   "unit": "ch01"
+  },
+  {
+   "front": "How did Babur use the word 'Hindustan'?",
+   "back": "For the geography, animals and culture of the whole subcontinent.",
+   "unit": "ch01"
+  },
+  {
+   "front": "Who was a 'foreigner' in the medieval period?",
+   "back": "Any stranger who was not part of a village's society or culture, e.g. a forest-dweller in a city. Two villagers were never foreigners to each other.",
+   "unit": "ch01"
+  },
+  {
+   "front": "Why do manuscripts of the same text differ?",
+   "back": "Scribes copied by hand (no printing press) and made small changes. These grew over centuries of copying.",
+   "unit": "ch01"
+  },
+  {
+   "front": "What is an archive?",
+   "back": "A place where documents and manuscripts are stored.",
+   "unit": "ch01"
+  },
+  {
+   "front": "Name five new crops that reached the subcontinent in this period.",
+   "back": "Potatoes, corn (maize), chillies, tea and coffee.",
+   "unit": "ch01"
+  },
+  {
+   "front": "Where does the word 'Rajput' come from?",
+   "back": "'Rajaputra', son of a ruler. From the 8th–14th centuries it meant warriors claiming Kshatriya status.",
+   "unit": "ch01"
+  },
+  {
+   "front": "What was a jati panchayat?",
+   "back": "An assembly of elders that enforced a jati's own rules on its members.",
+   "unit": "ch01"
+  },
+  {
+   "front": "What did Amir Khusrau say about Sanskrit (1318)?",
+   "back": "Every region had its own language, but Sanskrit belonged to no region: an old language known only to Brahmanas, not common people.",
+   "unit": "ch01"
+  },
+  {
+   "front": "How did British historians divide Indian history, and why is it a problem?",
+   "back": "'Hindu', 'Muslim' and 'British' periods. It assumes the rulers' religion was the only important change and ignores the rich variety of the subcontinent.",
+   "unit": "ch01"
+  },
+  {
+   "front": "What were samantas?",
+   "back": "Big landlords or warrior chiefs whom kings recognised as subordinates. They brought gifts, attended court and gave military support.",
+   "unit": "ch02"
+  },
+  {
+   "front": "How did the Rashtrakutas become powerful?",
+   "back": "Dantidurga, a Rashtrakuta chief, overthrew his Chalukya overlord in the mid-8th century and performed the hiranya-garbha ritual.",
+   "unit": "ch02"
+  },
+  {
+   "front": "What was the hiranya-garbha ('golden womb') ritual?",
+   "back": "A ritual done with Brahmanas that was believed to make the performer 'reborn' as a Kshatriya, even if he was not one by birth.",
+   "unit": "ch02"
+  },
+  {
+   "front": "What were vetti and kadamai?",
+   "back": "Chola taxes: vetti was forced labour; kadamai was land revenue. Chola inscriptions mention over 400 taxes.",
+   "unit": "ch02"
+  },
+  {
+   "front": "What is a prashasti?",
+   "back": "A poem praising a ruler, written by learned Brahmanas. It may not be literally true but shows how rulers wanted to be seen (e.g. Nagabhata's prashasti).",
+   "unit": "ch02"
+  },
+  {
+   "front": "How were land grants recorded?",
+   "back": "On copper plates given to the person (often a Brahmana) who received the land.",
+   "unit": "ch02"
+  },
+  {
+   "front": "Who was Kalhana?",
+   "back": "A 12th-century writer who composed a long Sanskrit poem on the kings of Kashmir, using many sources and often criticising rulers.",
+   "unit": "ch02"
+  },
+  {
+   "front": "What was the 'tripartite struggle'?",
+   "back": "The long fight for control of Kanauj between the Gurjara-Pratiharas, Rashtrakutas and Palas.",
+   "unit": "ch02"
+  },
+  {
+   "front": "Who was Mahmud of Ghazni?",
+   "back": "Ruler of Ghazni, Afghanistan (997–1030). He raided the subcontinent almost every year, targeting rich temples like Somnath.",
+   "unit": "ch02"
+  },
+  {
+   "front": "Who wrote the Kitab al-Hind?",
+   "back": "Al-Biruni, a scholar sent by Mahmud of Ghazni, with help from Sanskrit scholars.",
+   "unit": "ch02"
+  },
+  {
+   "front": "What happened in 1191 and 1192?",
+   "back": "Prithviraja III (Chahamana/Chauhan) defeated Sultan Muhammad Ghori in 1191 but lost to him in 1192.",
+   "unit": "ch02"
+  },
+  {
+   "front": "How did the Cholas rise to power?",
+   "back": "Vijayalaya captured the Kaveri delta from the Muttaraiyar in the mid-9th century and built Thanjavur.",
+   "unit": "ch02"
+  },
+  {
+   "front": "Who was the most powerful Chola ruler?",
+   "back": "Rajaraja I (became king in 985). His son Rajendra I raided the Ganga valley, Sri Lanka and Southeast Asia with a navy.",
+   "unit": "ch02"
+  },
+  {
+   "front": "What were ur and nadu?",
+   "back": "Ur: a settlement of peasants. Nadu: a larger unit made of groups of villages. Both collected taxes and gave justice.",
+   "unit": "ch02"
+  },
+  {
+   "front": "What was a brahmadeya, and who ran it?",
+   "back": "Land gifted to Brahmanas. Each was run by a sabha (assembly) of prominent Brahmana landholders.",
+   "unit": "ch02"
+  },
+  {
+   "front": "How were sabha committee members chosen at Uttaramerur?",
+   "back": "Names of eligible men were written on palm-leaf tickets in a pot, and a young boy picked them out one by one.",
+   "unit": "ch02"
+  },
+  {
+   "front": "Who ruled Delhi before the Sultans?",
+   "back": "The Tomara Rajputs, then the Chauhans (Chahamanas) of Ajmer. Delhi became important only in the 12th century.",
+   "unit": "ch03"
+  },
+  {
+   "front": "Name the five Delhi Sultanate dynasties in order.",
+   "back": "Early Turkish rulers (Mamluks), Khaljis, Tughluqs, Sayyids, Lodis.",
+   "unit": "ch03"
+  },
+  {
+   "front": "What were tawarikh?",
+   "back": "Histories written in Persian, the language of the Sultans' administration, by learned men who lived in cities and wrote for the Sultans.",
+   "unit": "ch03"
+  },
+  {
+   "front": "What is the 'circle of justice'?",
+   "back": "Fakhr-i Mudabbir's idea: a king needs soldiers, soldiers need salaries, salaries come from peasants' revenue, and peasants pay only when the king rules justly.",
+   "unit": "ch03"
+  },
+  {
+   "front": "Who was Raziyya Sultan?",
+   "back": "Iltutmish's daughter, Sultan from 1236 to 1240. Able, but the nobles and the chronicler Minhaj-us-Siraj disliked a woman ruling, and she was removed.",
+   "unit": "ch03"
+  },
+  {
+   "front": "Who were Rudramadevi and Didda?",
+   "back": "Rudramadevi (1262–1289) of the Kakatiyas of Warangal pretended to be a man on inscriptions; Didda ruled Kashmir (980–1003).",
+   "unit": "ch03"
+  },
+  {
+   "front": "What was an iqta, and who held it?",
+   "back": "A territory given to a military commander (the iqtadar or muqti), who collected its revenue as salary and kept soldiers.",
+   "unit": "ch03"
+  },
+  {
+   "front": "Why did Sultans use special slaves (bandagan) as governors?",
+   "back": "They were trained and totally dependent on their master, so the Sultan could trust them.",
+   "unit": "ch03"
+  },
+  {
+   "front": "Why did Barani criticise Muhammad Tughluq?",
+   "back": "He gave high posts to people of humble birth (a wine distiller, a barber, a cook, gardeners).",
+   "unit": "ch03"
+  },
+  {
+   "front": "What were the 'internal' and 'external' frontiers?",
+   "back": "Internal: bringing the lands around the garrison towns under control (clearing forests, ruling chieftains). External: campaigns into distant regions, e.g. south India.",
+   "unit": "ch03"
+  },
+  {
+   "front": "How did Alauddin Khalji deal with the Mongols?",
+   "back": "Built a garrison town, Siri, raised a large army, paid soldiers in cash, and controlled market prices so soldiers could afford supplies.",
+   "unit": "ch03"
+  },
+  {
+   "front": "How did Muhammad Tughluq deal with the Mongols?",
+   "back": "He moved people from Delhi to Daulatabad, raised a huge army and introduced token currency (cheap metal coins).",
+   "unit": "ch03"
+  },
+  {
+   "front": "Who was Ibn Battuta?",
+   "back": "A 14th-century traveller from Morocco who described how chieftains defended themselves in forts.",
+   "unit": "ch03"
+  },
+  {
+   "front": "Why was Sher Shah Sur important?",
+   "back": "He defeated the Mughal Humayun and ruled 1540–1555. His administration became the model for Akbar.",
+   "unit": "ch03"
+  },
+  {
+   "front": "Who were the Mughals descended from?",
+   "back": "Genghis Khan on their mother's side and Timur on their father's side. They were proud of the Timurid link (Timur captured Delhi in 1398).",
+   "unit": "ch04"
+  },
+  {
+   "front": "Why didn't the Mughals like being called Mongol?",
+   "back": "Genghis Khan was linked with massacres, and with their rivals, the Uzbegs.",
+   "unit": "ch04"
+  },
+  {
+   "front": "What happened at Panipat in 1526?",
+   "back": "Babur defeated Ibrahim Lodi, the Sultan of Delhi, and took Delhi and Agra.",
+   "unit": "ch04"
+  },
+  {
+   "front": "Whom did Babur defeat at Khanua in 1527?",
+   "back": "Rana Sanga and his Rajput allies.",
+   "unit": "ch04"
+  },
+  {
+   "front": "What happened to Humayun?",
+   "back": "Sher Khan defeated him at Chausa (1539) and Kanauj (1540). He fled to Iran, got help from the Safavid Shah, and recaptured Delhi in 1555.",
+   "unit": "ch04"
+  },
+  {
+   "front": "What is coparcenary inheritance?",
+   "back": "Dividing the inheritance among all the sons, not just the eldest (primogeniture). It led to rebellions by Mughal princes.",
+   "unit": "ch04"
+  },
+  {
+   "front": "What was a mansabdar?",
+   "back": "A person holding a mansab (rank) in Mughal service, which fixed rank, salary and military duties.",
+   "unit": "ch04"
+  },
+  {
+   "front": "What do zat and sawar mean?",
+   "back": "Zat: a number setting rank and salary. Sawar: the number of cavalrymen the mansabdar had to keep.",
+   "unit": "ch04"
+  },
+  {
+   "front": "What was a jagir?",
+   "back": "Land whose revenue was assigned to a mansabdar as his salary (he was a jagirdar).",
+   "unit": "ch04"
+  },
+  {
+   "front": "Who was Todar Mal?",
+   "back": "Akbar's revenue minister, who surveyed crop yields and prices and set taxes in cash (the zabt system).",
+   "unit": "ch04"
+  },
+  {
+   "front": "Who were zamindars?",
+   "back": "The Mughal term for all intermediaries who collected taxes, from village headmen to powerful chieftains.",
+   "unit": "ch04"
+  },
+  {
+   "front": "What are the Akbar Nama and Ain-i Akbari?",
+   "back": "Abul Fazl's three-volume history of Akbar. The third volume, the Ain-i Akbari, covers administration, army, revenue and geography, with lots of statistics.",
+   "unit": "ch04"
+  },
+  {
+   "front": "What is sulh-i kul?",
+   "back": "'Universal peace': Akbar's idea of tolerance based on ethics (honesty, justice, peace) for people of all religions.",
+   "unit": "ch04"
+  },
+  {
+   "front": "What was the ibadat khana?",
+   "back": "Akbar's hall at Fatehpur Sikri where he held discussions with scholars of different faiths.",
+   "unit": "ch04"
+  },
+  {
+   "front": "Who was Nur Jahan?",
+   "back": "Jahangir's wife (married 1611). Coins were struck in her name and she issued orders (farmans).",
+   "unit": "ch04"
+  },
+  {
+   "front": "What is the trabeate style of building?",
+   "back": "Using horizontal beams placed across two vertical columns ('post and lintel') to make roofs, doors and windows.",
+   "unit": "ch05"
+  },
+  {
+   "front": "What is the arcuate style?",
+   "back": "Using arches, where the weight of the structure above is carried by the arch. It became common from the 12th century.",
+   "unit": "ch05"
+  },
+  {
+   "front": "Why did kings build large temples?",
+   "back": "To show their power, wealth and devotion. The king and his chosen deity were linked in the temple's name and rituals.",
+   "unit": "ch05"
+  },
+  {
+   "front": "Who built the Rajarajeshvara temple at Thanjavur?",
+   "back": "The Chola king Rajaraja I.",
+   "unit": "ch05"
+  },
+  {
+   "front": "What was the Hauz-i Sultani?",
+   "back": "A large reservoir built by Sultan Iltutmish just outside Delhi to supply water.",
+   "unit": "ch05"
+  },
+  {
+   "front": "Why were temples sometimes attacked by rival kings?",
+   "back": "Temples were symbols of a king's power and held great wealth, so destroying or looting them showed a rival's strength.",
+   "unit": "ch05"
+  },
+  {
+   "front": "What is a chahar bagh?",
+   "back": "A Mughal garden divided into four parts by walkways or water channels.",
+   "unit": "ch05"
+  },
+  {
+   "front": "Which Mughal tomb stands in the centre of a huge chahar bagh, with a tall central dome?",
+   "back": "Humayun's tomb in Delhi.",
+   "unit": "ch05"
+  },
+  {
+   "front": "What is pietra dura?",
+   "back": "Coloured, hard stones set into marble or sandstone to make designs, used in Shah Jahan's buildings.",
+   "unit": "ch05"
+  },
+  {
+   "front": "Name two of Shah Jahan's buildings.",
+   "back": "The Taj Mahal in Agra and the Red Fort (with the Diwan-i Am) in Delhi.",
+   "unit": "ch05"
+  },
+  {
+   "front": "Name four kinds of medieval towns.",
+   "back": "Temple towns, administrative centres, commercial towns and port towns. Many towns were several at once.",
+   "unit": "ch06"
+  },
+  {
+   "front": "Who was the architect of the Rajarajeshvara temple, and how do we know?",
+   "back": "Kunjaramallan Rajaraja Perunthachchan: he carved his name on the temple wall.",
+   "unit": "ch06"
+  },
+  {
+   "front": "How was water supplied to Thanjavur?",
+   "back": "From wells and tanks.",
+   "unit": "ch06"
+  },
+  {
+   "front": "Describe the 'lost wax' technique.",
+   "back": "Make a wax image, cover it in clay, heat it so the wax drains out through a hole, pour in molten metal, then break off the clay and polish.",
+   "unit": "ch06"
+  },
+  {
+   "front": "What is bell metal?",
+   "back": "A kind of bronze with more tin, which gives a bell-like sound.",
+   "unit": "ch06"
+  },
+  {
+   "front": "Why did towns grow around temples?",
+   "back": "Temples were rich and financed trade and banking; priests, workers, artisans and traders settled nearby to serve the temple and pilgrims.",
+   "unit": "ch06"
+  },
+  {
+   "front": "Name some temple and pilgrimage towns.",
+   "back": "Bhillasvamin (Vidisha), Somnath, Kanchipuram, Madurai, Tirupati, Vrindavan, and Ajmer (Sufi saint Khwaja Muinuddin Chishti).",
+   "unit": "ch06"
+  },
+  {
+   "front": "What were mandapika and hatta?",
+   "back": "Mandapika: a market (later 'mandi') where villagers sold produce. Hatta: market streets lined with shops (later 'haat').",
+   "unit": "ch06"
+  },
+  {
+   "front": "Name two big trading guilds of south India.",
+   "back": "Manigramam and Nanadesi. They traded within the peninsula and with Southeast Asia and China.",
+   "unit": "ch06"
+  },
+  {
+   "front": "Which Gujarati traders traded across the seas?",
+   "back": "Hindu Baniyas and Muslim Bohras, with the Red Sea, Persian Gulf, East Africa, Southeast Asia and China.",
+   "unit": "ch06"
+  },
+  {
+   "front": "What is Bidri work?",
+   "back": "Inlay work in copper and silver, named after Bidar where its craftspeople were famous.",
+   "unit": "ch06"
+  },
+  {
+   "front": "Who were the Panchalas or Vishwakarma community?",
+   "back": "Goldsmiths, bronzesmiths, blacksmiths, masons and carpenters, essential for building temples and palaces.",
+   "unit": "ch06"
+  },
+  {
+   "front": "What was Hampi?",
+   "back": "Capital of the Vijayanagara Empire (founded 1336), a fortified city with walls wedged together without mortar. It fell in 1565 to the Deccani Sultans.",
+   "unit": "ch06"
+  },
+  {
+   "front": "Why was Surat called the 'gate to Mecca'?",
+   "back": "Many pilgrim ships sailed from Surat. It was the emporium of western trade in the Mughal period.",
+   "unit": "ch06"
+  },
+  {
+   "front": "What is a hundi?",
+   "back": "A note recording a deposit, which could be claimed in another place by showing it.",
+   "unit": "ch06"
+  },
+  {
+   "front": "Why did Masulipatnam decline?",
+   "back": "After Aurangzeb annexed Golconda (1686–87), the European companies moved to Bombay, Calcutta and Madras.",
+   "unit": "ch06"
+  },
+  {
+   "front": "What were 'Black Towns'?",
+   "back": "Areas in the new European cities (e.g. Madras) where Indian ('black') traders and craftspeople had to live, apart from the 'white' rulers.",
+   "unit": "ch06"
+  },
+  {
+   "front": "How did the system of advances change weavers' lives?",
+   "back": "Weavers took advances from European agents and had to weave cloth already promised to them, in designs the agents supplied, losing their independence.",
+   "unit": "ch06"
+  },
+  {
+   "front": "How were tribal societies different from caste-based ones?",
+   "back": "They didn't follow Brahmana rules or varna, weren't split into unequal classes, were bound by kinship, and held land and pastures jointly.",
+   "unit": "ch07"
+  },
+  {
+   "front": "How do we know about tribal history?",
+   "back": "Tribes rarely kept written records, but preserved rich customs and oral traditions passed down the generations.",
+   "unit": "ch07"
+  },
+  {
+   "front": "Name tribes from three different regions.",
+   "back": "Gaddis (western Himalaya); Nagas and Ahoms (north-east); Cheros, Mundas, Santals (Bihar/Jharkhand); Bhils (western and central India); Gonds (central India).",
+   "unit": "ch07"
+  },
+  {
+   "front": "Who were the Banjaras?",
+   "back": "The most important trader-nomads. Their caravan was a tanda; they carried grain on bullocks to towns and for armies.",
+   "unit": "ch07"
+  },
+  {
+   "front": "Which rulers used the Banjaras?",
+   "back": "Alauddin Khalji (grain to city markets), Jahangir (wrote about them) and the Mughal army on campaign.",
+   "unit": "ch07"
+  },
+  {
+   "front": "What exchanges took place between nomads and farmers?",
+   "back": "Nomads traded wool, ghee and animals for grain, cloth and utensils.",
+   "unit": "ch07"
+  },
+  {
+   "front": "What are jatis?",
+   "back": "Smaller castes that emerged within varnas. Jatis, not varna, became the basis of society; many tribes and artisans became jatis.",
+   "unit": "ch07"
+  },
+  {
+   "front": "What were garh, chaurasi and barhot in the Gond kingdom?",
+   "back": "Garh: a unit under a Gond clan. Chaurasi: a group of 84 villages. Barhot: a group of 12 villages.",
+   "unit": "ch07"
+  },
+  {
+   "front": "Who was Rani Durgawati?",
+   "back": "Ruler of the Gond kingdom of Garha Katanga for her young son. She fought the Mughals under Asaf Khan in 1565 and died rather than surrender.",
+   "unit": "ch07"
+  },
+  {
+   "front": "Why did the Mughals want Garha Katanga?",
+   "back": "It was rich, earning wealth by trapping and exporting wild elephants.",
+   "unit": "ch07"
+  },
+  {
+   "front": "Where did the Ahoms come from, and when?",
+   "back": "From present-day Myanmar into the Brahmaputra valley in the 13th century. They defeated the bhuiyans (landlords).",
+   "unit": "ch07"
+  },
+  {
+   "front": "Who were paiks?",
+   "back": "People in the Ahom state who had to work for the state (forced labour) in return for land.",
+   "unit": "ch07"
+  },
+  {
+   "front": "What were khels and buranjis?",
+   "back": "Khels: Ahom clans. Buranjis: historical works written by the Ahoms, first in Ahom, then Assamese.",
+   "unit": "ch07"
+  },
+  {
+   "front": "When did the Mughals attack the Ahoms?",
+   "back": "In 1662, under Mir Jumla. The Ahoms lost, but Mughal control did not last.",
+   "unit": "ch07"
+  },
+  {
+   "front": "What is bhakti?",
+   "back": "Intense devotion or love of God. Bhakti saints taught that anyone, of any caste, could reach God through devotion.",
+   "unit": "ch08"
+  },
+  {
+   "front": "Who were the Nayanars?",
+   "back": "Saints devoted to Shiva (63 of them), from all castes. Best known: Appar, Sambandar, Sundarar, Manikkavasagar. Songs: Tevaram and Tiruvacakam.",
+   "unit": "ch08"
+  },
+  {
+   "front": "Who were the Alvars?",
+   "back": "Saints devoted to Vishnu (12 of them). Best known: Periyalvar, his daughter Andal, Tondaradippodi Alvar, Nammalvar. Songs: Divya Prabandham.",
+   "unit": "ch08"
+  },
+  {
+   "front": "What did Shankara teach?",
+   "back": "Advaita: the soul and the Supreme God are one. Brahman is formless; the world is maya (illusion); salvation through knowledge and renunciation. Born in Kerala, 8th century.",
+   "unit": "ch08"
+  },
+  {
+   "front": "What did Ramanuja teach?",
+   "back": "Vishishtadvaita (qualified oneness): salvation through intense devotion to Vishnu; the soul stays distinct even when united with God. Tamil Nadu, 11th century.",
+   "unit": "ch08"
+  },
+  {
+   "front": "What was Virashaivism?",
+   "back": "A movement in 12th-century Karnataka led by Basavanna, Allama Prabhu and Akkamahadevi. It argued for the equality of all and rejected rituals and idol worship.",
+   "unit": "ch08"
+  },
+  {
+   "front": "Name four saints of Maharashtra.",
+   "back": "Janeshwar, Namdev, Eknath, Tukaram (also Sakkubai and Chokhamela's family). Their focus: the Vitthala temple at Pandharpur.",
+   "unit": "ch08"
+  },
+  {
+   "front": "Who were the Nathpanthis, Siddhas and Yogis?",
+   "back": "Groups who criticised ritual and the social order, and sought salvation through meditation and yoga (yogasanas, breathing exercises).",
+   "unit": "ch08"
+  },
+  {
+   "front": "What do these Sufi words mean: zikr, sama, pir, silsila, khanqah, dargah?",
+   "back": "Zikr: chanting a sacred name. Sama: singing. Pir: master. Silsila: a line of Sufi teachers. Khanqah: hospice where the master met followers. Dargah: a saint's tomb.",
+   "unit": "ch08"
+  },
+  {
+   "front": "Name three Chishti Sufi masters.",
+   "back": "Khwaja Muinuddin Chishti (Ajmer), Qutbuddin Bakhtiar Kaki (Delhi), Baba Farid (Punjab), Nizamuddin Auliya (Delhi), Bandanawaz Gisudaraz (Gulbarga).",
+   "unit": "ch08"
+  },
+  {
+   "front": "Who was Shankaradeva?",
+   "back": "A late-15th-century saint of Assam devoted to Vishnu, who started namghars (houses of recitation and prayer).",
+   "unit": "ch08"
+  },
+  {
+   "front": "Who was Mirabai?",
+   "back": "A 16th-century Rajput princess married into Mewar, a disciple of Ravidas, who wrote bhajans to Krishna challenging 'upper' caste norms.",
+   "unit": "ch08"
+  },
+  {
+   "front": "What did Kabir teach?",
+   "back": "He rejected the outward worship of both Hinduism and Islam, priests and caste; he believed in a formless God reached through bhakti. He wrote sakhis and pads in spoken Hindi.",
+   "unit": "ch08"
+  },
+  {
+   "front": "What did Guru Nanak establish at Kartarpur?",
+   "back": "Regular worship with his hymns, and a common kitchen (langar) where all ate together. The space was called dharmsal (now gurdwara).",
+   "unit": "ch08"
+  },
+  {
+   "front": "What are nam, dan and isnan?",
+   "back": "Guru Nanak's teaching: right worship, welfare of others, and purity of conduct.",
+   "unit": "ch08"
+  },
+  {
+   "front": "Who compiled and who authenticated the Guru Granth Sahib?",
+   "back": "Guru Arjan compiled it in 1604; Guru Gobind Singh authenticated it in 1706.",
+   "unit": "ch08"
+  },
+  {
+   "front": "Where was the Chera kingdom of Mahodayapuram?",
+   "back": "In present-day Kerala, from the ninth century. Its rulers introduced Malayalam in their inscriptions.",
+   "unit": "ch09"
+  },
+  {
+   "front": "What is Manipravalam?",
+   "back": "'Diamonds and corals': writing that mixed Sanskrit and the regional language (Malayalam). The Lilatilakam (14th century) was written in it.",
+   "unit": "ch09"
+  },
+  {
+   "front": "Who built the Jagannatha temple at Puri?",
+   "back": "Anantavarman, of the Ganga dynasty, in the 12th century. In 1230 Anangabhima III dedicated his kingdom to Jagannatha.",
+   "unit": "ch09"
+  },
+  {
+   "front": "Why did conquerors want to control the Jagannatha temple?",
+   "back": "It was a powerful pilgrimage centre; controlling it made their rule acceptable to local people (Mughals, Marathas, East India Company).",
+   "unit": "ch09"
+  },
+  {
+   "front": "How were Rajput heroes remembered?",
+   "back": "In poems and songs recited by trained minstrels, to inspire others to follow their example.",
+   "unit": "ch09"
+  },
+  {
+   "front": "Where does the word Kathak come from?",
+   "back": "'Katha', story. Kathaks were story-tellers in north Indian temples.",
+   "unit": "ch09"
+  },
+  {
+   "front": "How did Kathak develop?",
+   "back": "With the bhakti movement (rasa lila, 15th–16th centuries), then at the Mughal court; later in two gharanas, Jaipur and Lucknow.",
+   "unit": "ch09"
+  },
+  {
+   "front": "Name the classical dances besides Kathak.",
+   "back": "Bharatanatyam (Tamil Nadu), Kathakali (Kerala), Odissi (Orissa), Kuchipudi (Andhra Pradesh), Manipuri (Manipur).",
+   "unit": "ch09"
+  },
+  {
+   "front": "What are miniatures?",
+   "back": "Small paintings, usually in water colour on cloth or paper. The earliest were on palm leaves or wood, illustrating Jaina texts.",
+   "unit": "ch09"
+  },
+  {
+   "front": "What are the Basohli and Kangra styles?",
+   "back": "Two schools of Himachal (Pahari) miniature painting: Basohli was bold and intense; Kangra (mid-18th century) used soft colours and Vaishnavite themes.",
+   "unit": "ch09"
+  },
+  {
+   "front": "Why did Mughal painters move to the hills after 1739?",
+   "back": "Nadir Shah's invasion and sack of Delhi made the plains unsafe, so artists found patrons in the hills.",
+   "unit": "ch09"
+  },
+  {
+   "front": "Who were pirs in Bengal?",
+   "back": "Community leaders, teachers and saints, given great respect and sometimes believed to have supernatural powers.",
+   "unit": "ch09"
+  },
+  {
+   "front": "What are dochala and chauchala?",
+   "back": "Bengal temple roofs copying thatched huts: double-roofed (dochala) and four-roofed (chauchala).",
+   "unit": "ch09"
+  },
+  {
+   "front": "Why were Bengal Brahmanas allowed to eat fish?",
+   "back": "Fish was so central to Bengal's diet that the Brihaddharma Purana permitted local Brahmanas to eat certain fish.",
+   "unit": "ch09"
+  },
+  {
+   "front": "What period does this chapter cover?",
+   "back": "From Aurangzeb's death in 1707 to the third battle of Panipat in 1761.",
+   "unit": "ch10"
+  },
+  {
+   "front": "Why did the Mughal empire weaken after Aurangzeb?",
+   "back": "His long Deccan war drained money and soldiers; later emperors couldn't control powerful mansabdars and governors; peasant and zamindar revolts; rival groups of nobles.",
+   "unit": "ch10"
+  },
+  {
+   "front": "What powers did governors (subadars) gain?",
+   "back": "They often controlled revenue (diwani) and military (faujdari) offices too, giving them huge power over their provinces.",
+   "unit": "ch10"
+  },
+  {
+   "front": "What did Nadir Shah do in 1739?",
+   "back": "The ruler of Iran sacked and plundered Delhi, taking immense wealth including the Peacock Throne.",
+   "unit": "ch10"
+  },
+  {
+   "front": "Who was Ahmad Shah Abdali?",
+   "back": "An Afghan ruler who invaded north India five times between 1748 and 1761.",
+   "unit": "ch10"
+  },
+  {
+   "front": "Into which groups were the Mughal nobles divided?",
+   "back": "Iranis and Turanis (nobles of Iranian and Turkish descent).",
+   "unit": "ch10"
+  },
+  {
+   "front": "What were the three kinds of 18th-century states?",
+   "back": "1) Old Mughal provinces (Awadh, Bengal, Hyderabad). 2) Rajput watan jagirs. 3) States won by fighting the Mughals (Marathas, Sikhs, Jats).",
+   "unit": "ch10"
+  },
+  {
+   "front": "Who founded Hyderabad state?",
+   "back": "Nizam-ul-Mulk Asaf Jah, governor of the Deccan, who ruled independently while still formally serving the Mughal emperor.",
+   "unit": "ch10"
+  },
+  {
+   "front": "Who founded Awadh state?",
+   "back": "Burhan-ul-Mulk Sa'adat Khan, made subadar in 1722. He held subadari, diwani and faujdari together.",
+   "unit": "ch10"
+  },
+  {
+   "front": "How did Bengal break away?",
+   "back": "Under Murshid Quli Khan, who moved Mughal jagirdars to Orissa and collected revenue strictly in cash. Under Alivardi Khan the banker Jagat Seth grew rich.",
+   "unit": "ch10"
+  },
+  {
+   "front": "What is ijaradari?",
+   "back": "Revenue farming: contracting with revenue-farmers (ijaradars) to collect taxes, instead of state officers.",
+   "unit": "ch10"
+  },
+  {
+   "front": "Who was Sawai Raja Jai Singh?",
+   "back": "Rajput ruler of Amber, who founded Jaipur and became subadar of Agra in 1722.",
+   "unit": "ch10"
+  },
+  {
+   "front": "When was the Khalsa founded, and by whom?",
+   "back": "In 1699, by Guru Gobind Singh, the tenth Sikh Guru.",
+   "unit": "ch10"
+  },
+  {
+   "front": "Who was Banda Bahadur?",
+   "back": "Leader of the Khalsa revolt after 1708. He struck coins and set up an administration; captured 1715, executed 1716.",
+   "unit": "ch10"
+  },
+  {
+   "front": "What were jathas, misls, dal khalsa and gurmatas?",
+   "back": "Jathas and misls: Sikh bands; dal khalsa: their combined 'grand army'; gurmatas: decisions taken together at Amritsar.",
+   "unit": "ch10"
+  },
+  {
+   "front": "What was rakhi?",
+   "back": "Sikh protection for cultivators in return for a tax of 20% of the produce.",
+   "unit": "ch10"
+  },
+  {
+   "front": "What were chauth and sardeshmukhi?",
+   "back": "Maratha taxes: chauth was 25% of land revenue; sardeshmukhi was 9–10% paid to the head revenue collector.",
+   "unit": "ch10"
+  },
+  {
+   "front": "Who were the Jat leaders?",
+   "back": "Churaman (controlled land west of Delhi) and Suraj Mal, under whom Bharatpur became strong.",
+   "unit": "ch10"
+  }
+ ],
+ "examIntro": "Write your own answer first, then open the model. Look for the same moves, not the same words: two specific facts for 4 marks, explained reasons for 6.",
+ "exam": [
+  {
+   "q": "Describe how the meaning of the word 'Hindustan' changed over time.",
+   "marks": 4,
+   "unit": "ch01",
+   "model": [
+    "In the thirteenth century, Minhaj-i Siraj used 'Hindustan' for Punjab, Haryana and the lands between the Ganga and Yamuna, the lands ruled by the Delhi Sultan. He used it in a political sense, and it never included south India.",
+    "In the early sixteenth century, Babur used 'Hindustan' to describe the geography, animals and culture of the whole subcontinent. Today it simply means India, the modern nation."
+   ],
+   "why": "Two clear points, each with a specific name and detail (who used the word, when, and what it covered)."
+  },
+  {
+   "q": "Explain why historians face problems when they divide the past into periods.",
+   "marks": 6,
+   "unit": "ch01",
+   "model": [
+    "First, the British division into 'Hindu', 'Muslim' and 'British' periods assumed that the religion of the rulers was the only important change. This ignores economic and social changes and the rich variety of the subcontinent, so most historians no longer use it.",
+    "Second, the thousand years from 700 to 1750 saw huge change: new crops and technologies, new groups like the Rajputs, new religions and empires. Calling all of it one 'medieval' period hides how different the eighth century was from the eighteenth.",
+    "Third, 'medieval' is often contrasted with 'modern', which suggests the medieval period had no progress at all. This is wrong, because societies and economies changed a great deal, enough to attract European trading companies."
+   ],
+   "why": "Three separate reasons, each explained with a 'because' or 'so' and backed by evidence from the chapter (PEEL)."
+  },
+  {
+   "q": "Describe how the members of the Chola sabha committees were chosen at Uttaramerur.",
+   "marks": 4,
+   "unit": "ch02",
+   "model": [
+    "Members had to own land that paid revenue, have their own home, be between 35 and 70 years old, know the Vedas, and be honest and skilled in administration. Anyone who had served on a committee in the last three years, or had not submitted his accounts, could not stand.",
+    "The names of those who were eligible were written on palm-leaf tickets and put in an earthenware pot. A young boy then picked the tickets out one by one, one for each committee."
+   ],
+   "why": "Two points: who was eligible (with specific rules) and how the lottery worked."
+  },
+  {
+   "q": "Explain why the Cholas became a powerful kingdom.",
+   "marks": 6,
+   "unit": "ch02",
+   "model": [
+    "First, they won land through conquest. Vijayalaya took the Kaveri delta from the Muttaraiyar and built Thanjavur, and later rulers added Pandya and Pallava lands. Rajaraja I and Rajendra I expanded even further, so the kingdom gained wealth and power.",
+    "Second, they developed agriculture. The Kaveri's channels left fertile soil, and the Cholas built embankments, canals, wells and tanks, so two crops a year were often possible. This produced the surplus that paid for armies and temples.",
+    "Third, their administration was well organised. Ur and nadu councils collected taxes and gave justice, rich Vellala peasants were given titles and offices, and Brahmana sabhas ran brahmadeyas efficiently. This kept the large kingdom under control."
+   ],
+   "why": "Three explained reasons (conquest, agriculture, administration), each with specific evidence."
+  },
+  {
+   "q": "Describe the 'circle of justice'.",
+   "marks": 4,
+   "unit": "ch03",
+   "model": [
+    "The 'circle of justice' was explained by Fakhr-i Mudabbir in the thirteenth century. A king cannot survive without soldiers, and soldiers need salaries.",
+    "Those salaries come from the revenue paid by peasants, but peasants can only pay when they are prosperous and happy. This happens only when the king rules justly and honestly, so justice keeps the whole circle working."
+   ],
+   "why": "Two clear points that show each link in the chain, with the writer's name."
+  },
+  {
+   "q": "Explain how Alauddin Khalji and Muhammad Tughluq responded to the Mongol threat.",
+   "marks": 6,
+   "unit": "ch03",
+   "model": [
+    "Both rulers had to raise a large standing army in Delhi because Mongol attacks increased in their reigns.",
+    "Alauddin Khalji built a new garrison town, Siri, for his soldiers. He paid them in cash and controlled the prices of goods in Delhi so they could live on their salaries. He collected land revenue directly (about 50% of the produce) to pay for this army. His measures worked: the Mongols were driven back.",
+    "Muhammad Tughluq also raised a huge army. He moved people from Delhi to Daulatabad and used token currency made of cheap metal. These measures failed: people were unhappy about the move and the token coins were easily copied, so he had to withdraw them."
+   ],
+   "why": "Explains each ruler's measures and why they mattered, and compares how well they worked."
+  },
+  {
+   "q": "Describe the mansabdari system.",
+   "marks": 4,
+   "unit": "ch04",
+   "model": [
+    "Those who joined Mughal service were enrolled as mansabdars, people holding a mansab or rank. The rank fixed their position, salary and military duties.",
+    "The zat was a number that set rank and salary, and the sawar was the number of cavalrymen the mansabdar had to keep. Mansabdars were paid through jagirs, assignments of land revenue, usually in another part of the empire."
+   ],
+   "why": "Two points with key terms used correctly (zat, sawar, jagir)."
+  },
+  {
+   "q": "Explain why Akbar's policies helped him rule a large and varied empire.",
+   "marks": 6,
+   "unit": "ch04",
+   "model": [
+    "First, he recruited nobles from many groups (Turanis, Iranis, Indian Muslims, Afghans, Rajputs, Marathas) as mansabdars. This gave many communities a stake in the empire, so they stayed loyal.",
+    "Second, he made alliances with Rajput rulers, including marriages, and treated defeated rulers with respect, giving their lands back as watan jagirs. This turned enemies into supporters.",
+    "Third, his idea of sulh-i kul, 'universal peace', came from discussions in the ibadat khana. It focused on honesty, justice and peace for everyone rather than favouring one religion, so people of many faiths could accept his rule. Todar Mal's careful revenue system also gave the state a steady income."
+   ],
+   "why": "Three explained policies, each linked to how it helped him rule (PEEL)."
+  },
+  {
+   "q": "Describe two ways in which rulers showed their power through buildings.",
+   "marks": 4,
+   "unit": "ch05",
+   "model": [
+    "Kings built huge temples, such as Rajaraja I's Rajarajeshvara temple at Thanjavur, to show their wealth and their close link with the gods.",
+    "Rulers also built useful works such as Iltutmish's Hauz-i Sultani reservoir near Delhi, and grand tombs and forts such as Shah Jahan's Taj Mahal and Red Fort, to show their power and care for their subjects."
+   ],
+   "why": "Two different kinds of building, each with a named example."
+  },
+  {
+   "q": "Describe the 'lost wax' technique used to make Chola bronzes.",
+   "marks": 4,
+   "unit": "ch06",
+   "model": [
+    "First an image was made of wax and covered with clay, which was allowed to dry. It was then heated and a tiny hole was made in the clay, so the melted wax drained out.",
+    "Molten metal was poured into the clay mould through the hole. When the metal cooled and hardened, the clay was carefully removed and the image was cleaned and polished."
+   ],
+   "why": "The steps in the right order, with specific details."
+  },
+  {
+   "q": "Explain why towns grew up around temples.",
+   "marks": 6,
+   "unit": "ch06",
+   "model": [
+    "First, temples were very rich. Rulers and others gave them land, and temple authorities used this wealth to finance trade and banking, which drew merchants to the area.",
+    "Second, temples needed many people to run them: priests, garland makers, cooks, musicians, dancers and craftspeople such as the Panchalas who built and repaired them. These workers settled nearby, so a town formed.",
+    "Third, temples attracted pilgrims, as at Somnath, Madurai and Tirupati. Traders and artisans settled close by to sell goods and services to them, and pilgrimage centres like Vrindavan slowly grew into townships."
+   ],
+   "why": "Three reasons, each explained and backed by named examples."
+  },
+  {
+   "q": "Describe the life of the Banjaras.",
+   "marks": 4,
+   "unit": "ch07",
+   "model": [
+    "The Banjaras were the most important trader-nomads. They travelled in caravans called tandas with their families, carrying grain on their bullocks from one area to sell in towns.",
+    "Rulers depended on them: Alauddin Khalji used them to bring grain to city markets, and they carried food grain for the Mughal army on campaign, sometimes with 100,000 bullocks."
+   ],
+   "why": "Two points with specific details (tanda, bullocks, named rulers)."
+  },
+  {
+   "q": "Explain how tribal societies changed when they formed states.",
+   "marks": 6,
+   "unit": "ch07",
+   "model": [
+    "First, society became less equal. In the Gond kingdom, a basically equal society divided into unequal classes as large states grew.",
+    "Second, Brahmanas gained influence. Gond rajas and Ahom kings gave land grants to Brahmanas and temples, and under the Ahom king Sib Singh Hinduism became the main religion.",
+    "Third, rulers wanted the status of Rajputs and built organised administrations. Gond chiefs wished to be recognised as Rajputs (Aman Das took the title Sangram Shah), and the Ahoms built a centralised state with the paik system. This also brought them into conflict with the Mughals, as at Garha Katanga in 1565 and in Assam in 1662."
+   ],
+   "why": "Three changes, each explained with an example from the Gonds or Ahoms."
+  },
+  {
+   "q": "Describe the beliefs and practices of the Sufis.",
+   "marks": 4,
+   "unit": "ch08",
+   "model": [
+    "Sufis were Muslim mystics who rejected outward religiosity. They emphasised love and devotion to God and compassion towards all human beings.",
+    "They trained the heart through zikr (chanting a sacred name), sama (singing), raqs (dancing), contemplation and breath control, under a master (pir). Masters met followers in khanqahs, and their tombs (dargahs) became places of pilgrimage for people of all faiths."
+   ],
+   "why": "Two points: their beliefs, then their practices, with the key terms."
+  },
+  {
+   "q": "Explain why many saints rejected the religious beliefs and practices of their time.",
+   "marks": 6,
+   "unit": "ch08",
+   "model": [
+    "First, they opposed inequality based on birth. Saints like Basavanna, Chokhamela and Kabir criticised the caste system, which made 'low' castes inferior and kept them from worship.",
+    "Second, they rejected empty ritual and outward show. Kabir mocked both the Brahmana's fasts and the Qazi's prayers, and the Virashaivas rejected idol worship, because they believed God is found in the heart.",
+    "Third, they wanted religion to be open to everyone. They composed in regional languages people could sing, like Tukaram in Marathi and Mirabai's bhajans, and Guru Nanak's langar brought all castes together. This made devotion personal and equal."
+   ],
+   "why": "Three reasons, each explained and backed by named saints."
+  },
+  {
+   "q": "Describe how Kathak developed as a dance form.",
+   "marks": 4,
+   "unit": "ch09",
+   "model": [
+    "Kathak comes from 'katha', story. The kathaks were a caste of story-tellers in north Indian temples who added gestures and songs to their performances. In the 15th and 16th centuries, with the bhakti movement, the Radha-Krishna legends were acted out in rasa lila, combining folk dance with kathak gestures.",
+    "Under the Mughal emperors and nobles, Kathak was performed at court, where it took its present form. It developed in two gharanas, Jaipur and Lucknow, and after independence was recognised as one of India's classical dances."
+   ],
+   "why": "Two clear stages, each with specific details (rasa lila, Mughal court, gharanas)."
+  },
+  {
+   "q": "Explain why rulers and conquerors tried to control the Jagannatha temple at Puri.",
+   "marks": 6,
+   "unit": "ch09",
+   "model": [
+    "First, the temple was linked to royal power. Anantavarman of the Ganga dynasty built it, and in 1230 Anangabhima III dedicated his kingdom to Jagannatha and called himself the god's deputy, so ruling the temple meant ruling with the god's authority.",
+    "Second, it was a huge pilgrimage centre, so it had great importance in social and political matters. Controlling it gave a ruler influence over many people.",
+    "Third, conquerors such as the Mughals, Marathas and the English East India Company believed that control of the temple would make their rule acceptable to the local people, so it helped them keep power in Orissa."
+   ],
+   "why": "Three explained reasons with named rulers and evidence."
+  },
+  {
+   "q": "Describe how the Sikhs were organised in the eighteenth century.",
+   "marks": 4,
+   "unit": "ch10",
+   "model": [
+    "Under several able leaders, the Sikhs organised themselves into bands called jathas, and later misls. Their combined forces were called the dal khalsa (grand army), and the whole body met at Amritsar at Baisakhi and Diwali to take collective decisions called gurmatas.",
+    "They introduced the rakhi system, protecting cultivators in return for a tax of 20% of the produce. Their well-knit organisation let them resist the Mughal governors and Ahmad Shah Abdali, and Ranjit Singh later united them with his capital at Lahore (1799)."
+   ],
+   "why": "Two points using the key terms correctly (misl, dal khalsa, gurmata, rakhi)."
+  },
+  {
+   "q": "Explain why the Mughal empire declined in the first half of the eighteenth century.",
+   "marks": 6,
+   "unit": "ch10",
+   "model": [
+    "First, Aurangzeb's long war in the Deccan drained the empire's military and financial resources, leaving his successors weaker.",
+    "Second, later emperors could not control their nobles. Governors (subadars) also took charge of revenue and the army, so provinces like Hyderabad, Awadh and Bengal became almost independent and sent less money to Delhi. Rival groups of nobles (Iranis and Turanis) fought each other, and some emperors were even killed or blinded.",
+    "Third, the empire was attacked from inside and outside. Peasant and zamindar revolts spread, the Marathas, Sikhs and Jats seized land, and Nadir Shah sacked Delhi in 1739, followed by Ahmad Shah Abdali's raids from 1748 to 1761."
+   ],
+   "why": "Three explained causes (finances, nobles and governors, attacks and revolts) with specific evidence."
+  }
+ ],
+ "timeline": [
+  {
+   "unit": "ch02",
+   "event": "Rajaraja I becomes Chola king",
+   "year": 985
+  },
+  {
+   "unit": "ch02",
+   "event": "Mahmud of Ghazni begins his rule",
+   "year": 997
+  },
+  {
+   "unit": "ch05",
+   "event": "Rajarajeshvara temple completed at Thanjavur",
+   "year": 1010
+  },
+  {
+   "unit": "ch01",
+   "event": "Al-Idrisi's map of the world",
+   "year": 1154
+  },
+  {
+   "unit": "ch02",
+   "event": "Prithviraja III defeats Muhammad Ghori",
+   "year": 1191
+  },
+  {
+   "unit": "ch02",
+   "event": "Muhammad Ghori defeats Prithviraja III",
+   "year": 1192
+  },
+  {
+   "unit": "ch03",
+   "event": "Qutbuddin Aybak becomes Sultan",
+   "year": 1206
+  },
+  {
+   "unit": "ch09",
+   "event": "Anangabhima III dedicates his kingdom to Jagannatha",
+   "year": 1230
+  },
+  {
+   "unit": "ch03",
+   "event": "Raziyya becomes Sultan",
+   "year": 1236
+  },
+  {
+   "unit": "ch03",
+   "event": "Raziyya removed from the throne",
+   "year": 1240
+  },
+  {
+   "unit": "ch01",
+   "event": "Amir Khusrau lists the languages of each region",
+   "year": 1318
+  },
+  {
+   "unit": "ch06",
+   "event": "Vijayanagara Empire founded",
+   "year": 1336
+  },
+  {
+   "unit": "ch08",
+   "event": "Guru Nanak is born",
+   "year": 1469
+  },
+  {
+   "unit": "ch06",
+   "event": "Vasco da Gama reaches Calicut",
+   "year": 1498
+  },
+  {
+   "unit": "ch07",
+   "event": "Ahoms annex the Chhutiya kingdom",
+   "year": 1523
+  },
+  {
+   "unit": "ch04",
+   "event": "First Battle of Panipat: Babur defeats Ibrahim Lodi",
+   "year": 1526
+  },
+  {
+   "unit": "ch04",
+   "event": "Battle of Khanua",
+   "year": 1527
+  },
+  {
+   "unit": "ch03",
+   "event": "Sher Shah Sur defeats Humayun",
+   "year": 1540
+  },
+  {
+   "unit": "ch04",
+   "event": "Akbar becomes emperor",
+   "year": 1556
+  },
+  {
+   "unit": "ch06",
+   "event": "Hampi falls to the Deccani Sultans",
+   "year": 1565
+  },
+  {
+   "unit": "ch07",
+   "event": "Mughals attack Garha Katanga; Rani Durgawati dies",
+   "year": 1565
+  },
+  {
+   "unit": "ch07",
+   "event": "Ahoms annex Koch-Hajo",
+   "year": 1581
+  },
+  {
+   "unit": "ch07",
+   "event": "Raja Man Singh defeats the Cheros",
+   "year": 1591
+  },
+  {
+   "unit": "ch08",
+   "event": "Guru Arjan compiles the Sikh scripture",
+   "year": 1604
+  },
+  {
+   "unit": "ch04",
+   "event": "Jahangir becomes emperor",
+   "year": 1605
+  },
+  {
+   "unit": "ch04",
+   "event": "Shah Jahan becomes emperor",
+   "year": 1627
+  },
+  {
+   "unit": "ch04",
+   "event": "Aurangzeb becomes emperor",
+   "year": 1658
+  },
+  {
+   "unit": "ch07",
+   "event": "Mir Jumla attacks the Ahom kingdom",
+   "year": 1662
+  },
+  {
+   "unit": "ch06",
+   "event": "English East India Company moves its headquarters to Bombay",
+   "year": 1668
+  },
+  {
+   "unit": "ch10",
+   "event": "Khalsa founded by Guru Gobind Singh",
+   "year": 1699
+  },
+  {
+   "unit": "ch08",
+   "event": "Guru Gobind Singh authenticates the Guru Granth Sahib",
+   "year": 1706
+  },
+  {
+   "unit": "ch04",
+   "event": "Death of Aurangzeb",
+   "year": 1707
+  },
+  {
+   "unit": "ch10",
+   "event": "Death of Aurangzeb",
+   "year": 1707
+  },
+  {
+   "unit": "ch10",
+   "event": "Banda Bahadur executed",
+   "year": 1716
+  },
+  {
+   "unit": "ch10",
+   "event": "Sa'adat Khan becomes subadar of Awadh",
+   "year": 1722
+  },
+  {
+   "unit": "ch09",
+   "event": "Nadir Shah sacks Delhi; painters move to the hills",
+   "year": 1739
+  },
+  {
+   "unit": "ch10",
+   "event": "Nadir Shah sacks Delhi",
+   "year": 1739
+  },
+  {
+   "unit": "ch10",
+   "event": "Third Battle of Panipat",
+   "year": 1761
+  },
+  {
+   "unit": "ch10",
+   "event": "Ranjit Singh makes Lahore his capital",
+   "year": 1799
+  }
+ ]
+}

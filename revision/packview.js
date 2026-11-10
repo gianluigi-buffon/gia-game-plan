@@ -215,7 +215,7 @@ export function renderPack(root, pack, store, opts = {}) {
   }
 
   function mcq() {
-    const qs = pack.quiz;
+    const qs = shuffle(pack.quiz.filter(inUnit)); // only the selected chapter, in a fresh order each time
     let right = 0, done = 0;
     body.appendChild(h("p", { class: "muted small" }, esc(pack.quizIntro || "")));
     const score = h("div", { class: "pk-big" }, "0 / 0");

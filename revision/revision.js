@@ -11,8 +11,8 @@
 //  app.js calls initRevision(...) after login and reads sessionsFor() /
 //  upcomingTests() / paceSummary() for the Today plan and dashboard.
 // =============================================================
-import { SUBJECTS, SUBJECT_GROUPS, PACKS, PACK_VERSION, REVISION_GOAL, SEED_TESTS, SEED_SESSIONS, allTopics, topicById, subjectByKey } from "./syllabus.js?v=7";
-import { renderPack, packModes } from "./packview.js?v=1";
+import { SUBJECTS, SUBJECT_GROUPS, PACKS, PACK_VERSION, REVISION_GOAL, SEED_TESTS, SEED_SESSIONS, allTopics, topicById, subjectByKey } from "./syllabus.js?v=8";
+import { renderPack, packModes } from "./packview.js?v=2";
 
 const esc = (s) => String(s ?? "").replace(/[<>&"]/g, (c) => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;", '"': "&quot;" }[c]));
 const ymd = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; // local date
