@@ -11,7 +11,7 @@
 //  app.js calls initRevision(...) after login and reads sessionsFor() /
 //  upcomingTests() / paceSummary() for the Today plan and dashboard.
 // =============================================================
-import { SUBJECTS, SUBJECT_GROUPS, PACKS, PACK_VERSION, REVISION_GOAL, SEED_TESTS, SEED_SESSIONS, allTopics, topicById, subjectByKey } from "./syllabus.js?v=2";
+import { SUBJECTS, SUBJECT_GROUPS, PACKS, PACK_VERSION, REVISION_GOAL, SEED_TESTS, SEED_SESSIONS, allTopics, topicById, subjectByKey } from "./syllabus.js?v=3";
 import { renderPack, packModes } from "./packview.js?v=1";
 
 const esc = (s) => String(s ?? "").replace(/[<>&"]/g, (c) => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;", '"': "&quot;" }[c]));
@@ -251,7 +251,7 @@ function paceCard() {
 function renderHome(el) {
   const t = todayStr();
   el.innerHTML = `<h2>📖 Revision</h2>
-    ${SUBJECT_GROUPS.map(g => `<h3 class="section-h">${g.key === "main" ? "📚" : "🗣️"} ${esc(g.label)}: tap one for its topics and checklists</h3><div class="rv-grid" data-group="${g.key}"></div>`).join("")}
+    ${SUBJECT_GROUPS.map(g => `<h3 class="section-h">${g.key === "main" ? "📚" : "🗣️"} ${esc(g.label)}</h3><div class="rv-grid" data-group="${g.key}"></div>`).join("")}
     ${paceCard()}<div id="rvParent"></div>
     <h3 class="section-h">📝 Tests</h3><div id="rvTests" class="list"></div>
     <h3 class="section-h">🗓️ Revision sessions</h3><div id="rvSess" class="list"></div>`;
@@ -325,7 +325,7 @@ async function renderParentCheck(box) {
 function renderSubject(el, s) {
   if (!s) return go({ name: "home" });
   el.innerHTML = `<button class="btn tiny ghost" id="rvBack">← Revision</button><h2>${s.emoji} ${esc(s.name)}</h2>
-    ${s.guide ? `<details class="card rv-guide" open><summary><b>📋 How it's marked</b></summary>
+    ${s.guide ? `<details class="card rv-guide" open><summary><b>${esc(s.guide.title || "📋 How it's marked at IGCSE")}</b></summary>
       <div class="list" style="margin-top:8px">${(s.guide.papers || []).map(([p, d]) => `<div class="item-sub"><b>${esc(p)}</b> · ${esc(d)}</div>`).join("")}</div>
       <ul class="pk-ul">${(s.guide.tips || []).map(x => `<li>${esc(x)}</li>`).join("")}</ul>${s.guide.note ? `<div class="muted small">${esc(s.guide.note)}</div>` : ""}</details>` : ""}
     <div id="rvTopics"></div>`;

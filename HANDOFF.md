@@ -29,7 +29,7 @@ Two Firebase Auth (Email/Password) users: Gia and Christabel. Emails live in **o
 3. After deploying, check the live `index.html` serves the new version numbers.
 
 ### Current cache-buster versions
-- `styles.css?v=3`, `app.js?v=4`, `planner.js?v=1`, `revision.js?v=2`, `syllabus.js?v=2`, `packview.js?v=1`
+- `styles.css?v=3`, `app.js?v=5`, `planner.js?v=1`, `revision.js?v=3`, `syllabus.js?v=3`, `packview.js?v=1`
 
 ## 🧪 Testing without logging in (demo mode)
 
@@ -45,7 +45,7 @@ Two Firebase Auth (Email/Password) users: Gia and Christabel. Emails live in **o
 - `planner.js`: **pure** daily-plan builder (`dayTemplate()` = Gia's week). No Firebase.
 - `firebase-config.js`: Firebase web keys (empty until Part A is done; the login screen then shows a "not connected" note) + `PEOPLE`.
 - `firestore.rules`: rules template with placeholder emails.
-- `revision/syllabus.js`: **edit this to add subjects and topics**. The subject list also feeds the Homework subject picker. Subjects (Nov 2026): main group Humanities, English, Maths, Science; separate "Languages and Art" group Kannada, Hindi, Art (`group` field, shown as two sections in Revision and two option groups in Homework). Revision goal is still a PLACEHOLDER (2 rounds by 28 Feb), and no topics yet.
+- `revision/syllabus.js`: **edit this to add subjects and topics**. The subject list also feeds the Homework subject picker. Subjects (Nov 2026): main group Maths, Science, Humanities, English, planned around Cambridge IGCSE (she is in Grade 7 and sits IGCSE in Grade 10): each has an IGCSE paper-format guide and an "IGCSE skills to build" unit of skill topics. Hindi and Kannada: a simple "Language practice" plan (vocabulary, grammar, reading, writing) with revision tips. Art: Homework only (`revise: false`), no revision. `HW_SUBJECTS` = all seven; `SUBJECTS` = revision subjects. Revision goal is still a PLACEHOLDER (2 rounds by 28 Feb). Add chapter topics to each subject as school covers them.
 - `revision/revision.js`, `revision/packview.js`: the Revision tab and practice-pack renderer, copied from Jake's app (local dates, "Gia" in the parent check, optional subject `guide`, a "no topics yet" pace card).
 - `scripts/send-digest.mjs`, `scripts/send-monthly.mjs` + `.github/workflows/digest.yml` (Wed & Sun 13:30 UTC = 7pm IST), `monthly.yml` (1st of month).
 - `dev/mock/`: demo-mode stand-ins for Firebase.

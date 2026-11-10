@@ -3,8 +3,8 @@
 // =============================================================
 import { firebaseConfig, PEOPLE } from "./firebase-config.js";
 import { buildDayPlan, WUSHU_DAYS } from "./planner.js?v=1";
-import { initRevision, sessionsFor, upcomingTests, overdueSessions, paceSummary, revisionCount, progressHtml as revisionProgressHtml, subjectName, openSubject as openRevisionSubject, render as renderRevision } from "./revision/revision.js?v=2";
-import { SUBJECTS, SUBJECT_GROUPS } from "./revision/syllabus.js?v=2";
+import { initRevision, sessionsFor, upcomingTests, overdueSessions, paceSummary, revisionCount, progressHtml as revisionProgressHtml, subjectName, openSubject as openRevisionSubject, render as renderRevision } from "./revision/revision.js?v=3";
+import { HW_SUBJECTS as SUBJECTS, SUBJECT_GROUPS } from "./revision/syllabus.js?v=3";
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import {
@@ -477,7 +477,7 @@ function renderHolidayBox(selDate) {
 // ---------- HOMEWORK ----------
 const HW_SUBJECTS = SUBJECTS.map(s => s.key);
 // Subject picker grouped like the Revision tab (main subjects, then languages and Art).
-const subjectOptions = () => SUBJECT_GROUPS.map(g => `<optgroup label="${esc(g.label)}">${SUBJECTS.filter(s => (s.group || "main") === g.key).map(s => `<option value="${esc(s.key)}">${esc(s.name)}</option>`).join("")}</optgroup>`).join("");
+const subjectOptions = () => SUBJECT_GROUPS.map(g => `<optgroup label="${esc(g.hwLabel || g.label)}">${SUBJECTS.filter(s => (s.group || "main") === g.key).map(s => `<option value="${esc(s.key)}">${esc(s.name)}</option>`).join("")}</optgroup>`).join("");
 $("hwSubject").innerHTML = subjectOptions();
 $("hwAdd").onclick = async () => {
   const task = $("hwTask").value.trim();
