@@ -1,7 +1,7 @@
 // =============================================================
 //  planner.js — pure schedule logic (no Firebase, fully testable)
 //  Builds Gia's day around: school 6:30am–4:15pm,
-//  Wushu Mon/Wed/Fri 5:00–6:30pm, lights out 9:30pm on school nights,
+//  Wushu Mon/Wed/Fri 5:00–6:30pm, wake 6am, lights out 9:30pm on school nights,
 //  weekdays + Saturday morning for work, Sat afternoon + Sunday free.
 //  Every evening ends with a reading + wind-down slot before lights out.
 // =============================================================
@@ -46,7 +46,7 @@ function dayTemplate(day, opts = {}) {
   }
   // Weekday
   const blocks = [
-    { start: T(6), end: T(6, 30), type: "fixed", label: "🍳 Breakfast + get ready" },
+    { start: T(6), end: T(6, 30), type: "fixed", label: "⏰ Wake up 6am · breakfast + get ready" },
     { start: T(6, 30), end: T(16, 15), type: "fixed", label: "🎒 School" },
     { start: T(16, 15), end: T(16, 45), type: "rest", label: "Snack & rest" },
   ];
@@ -67,7 +67,7 @@ function dayTemplate(day, opts = {}) {
     blocks.push({ start: T(19, 15), end: T(21, 15), type: "study", label: "Study (or a creation if you're caught up 🎨)" });
   }
   blocks.push({ start: T(21, 15), end: T(21, 30), type: "fixed", label: "📚 Reading + wind down" });
-  blocks.push({ start: T(21, 30), end: T(21, 31), type: "fixed", label: "😴 Lights out" });
+  blocks.push({ start: T(21, 30), end: T(21, 31), type: "fixed", label: "😴 Lights out (wake 6am = 8½ hours' sleep)" });
   return { windows: blocks.filter(b => b.type === "study"), fixed: blocks, note };
 }
 

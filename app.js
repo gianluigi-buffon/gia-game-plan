@@ -2,7 +2,7 @@
 //  app.js — Firebase wiring + UI for Gia's Game Plan
 // =============================================================
 import { firebaseConfig, PEOPLE } from "./firebase-config.js";
-import { buildDayPlan, WUSHU_DAYS } from "./planner.js?v=2";
+import { buildDayPlan, WUSHU_DAYS } from "./planner.js?v=3";
 import { TIMETABLE, lessonsOn, nextLessonDate } from "./timetable.js?v=1";
 import { initRevision, sessionsFor, upcomingTests, overdueSessions, paceSummary, revisionCount, progressHtml as revisionProgressHtml, subjectName, openSubject as openRevisionSubject, render as renderRevision } from "./revision/revision.js?v=9";
 import { HW_SUBJECTS as SUBJECTS, SUBJECT_GROUPS } from "./revision/syllabus.js?v=9";
@@ -115,7 +115,7 @@ function readingStreak() {
 const readDaysBetween = (from, to) => [...cache.reading.keys()].filter(d => d >= from && d <= to).length;
 
 // ---------- DAILY QUOTE ----------
-// Art, writing, reading and martial-arts quotes, plus a few short "wisdom" sayings.
+// Art, writing, reading and martial-arts quotes, women leaders encouraging girls, plus a few short "wisdom" sayings.
 const QUOTES = [
   ["Creativity takes courage.", "Henri Matisse"],
   ["You can't use up creativity. The more you use, the more you have.", "Maya Angelou"],
@@ -151,6 +151,28 @@ const QUOTES = [
   ["Fall seven times, stand up eight.", "Japanese proverb"],
   ["The journey of a thousand miles begins with one step.", "Lao Tzu"],
   ["One must still have chaos in oneself to be able to give birth to a dancing star.", "Friedrich Nietzsche"],
+  // Women leaders and pioneers: encouragement for girls
+  ["One child, one teacher, one book, one pen can change the world.", "Malala Yousafzai"],
+  ["We realise the importance of our voices only when we are silenced.", "Malala Yousafzai"],
+  ["There is no limit to what we, as women, can accomplish.", "Michelle Obama"],
+  ["Success isn't about how much money you make; it's about the difference you make in people's lives.", "Michelle Obama"],
+  ["The path from dreams to success does exist. May you have the vision to find it, the courage to get on to it, and the perseverance to follow it.", "Kalpana Chawla"],
+  ["You cannot shake hands with a clenched fist.", "Indira Gandhi"],
+  ["Nothing in life is to be feared, it is only to be understood.", "Marie Curie"],
+  ["The most effective way to do it, is to do it.", "Amelia Earhart"],
+  ["You must do the thing you think you cannot do.", "Eleanor Roosevelt"],
+  ["You must never be fearful about what you are doing when it is right.", "Rosa Parks"],
+  ["Women belong in all places where decisions are being made.", "Ruth Bader Ginsburg"],
+  ["Fight for the things that you care about, but do it in a way that will lead others to join you.", "Ruth Bader Ginsburg"],
+  ["You may be the first. Don't be the last.", "Kamala Harris"],
+  ["It takes courage and strength to be empathetic.", "Jacinda Ardern"],
+  ["What would you do if you weren't afraid?", "Sheryl Sandberg"],
+  ["A champion is defined not by their wins but by how they can recover when they fall.", "Serena Williams"],
+  ["I'd rather regret the risks that didn't work out than the chances I didn't take at all.", "Simone Biles"],
+  ["It took me quite a long time to develop a voice, and now that I have it, I am not going to be silent.", "Madeleine Albright"],
+  ["Never be limited by other people's limited imaginations.", "Mae Jemison"],
+  ["Like what you do, and then you will do your best.", "Katherine Johnson"],
+  ["You are never too small to make a difference.", "Greta Thunberg"],
   ["Make one thing today, even if it's small.", "Studio wisdom"],
   ["Feelings are paint. Use all the colours.", "Studio wisdom"],
   ["Done is better than perfect — finished pieces teach you more.", "Studio wisdom"],
