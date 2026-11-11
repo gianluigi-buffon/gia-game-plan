@@ -344,7 +344,7 @@ const VERSES = [
   ["She is clothed with strength and dignity; she can laugh at the days to come.", "Proverbs 31:25"],
 ];
 // Tue/Thu/Sat = verse days (3/week); the other 4 days = quotes.
-// Today's quote as a pop-up for 3.5 seconds when the app opens (once per visit; tap to close early).
+// Today's quote as a pop-up for 5 seconds when the app opens (once per visit; tap to close early).
 let quotePopupShown = false;
 function showQuotePopup() {
   if (quotePopupShown) return;
@@ -357,7 +357,7 @@ function showQuotePopup() {
   document.body.appendChild(el);
   const close = () => { if (!el.isConnected || el.classList.contains("out")) return; el.classList.add("out"); setTimeout(() => el.remove(), 400); };
   el.onclick = close;
-  setTimeout(close, 3500);
+  setTimeout(close, 5000);
 }
 function quoteOfDay() {
   const day = dayOfYear();
