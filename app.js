@@ -2,7 +2,7 @@
 //  app.js — Firebase wiring + UI for Gia's Game Plan
 // =============================================================
 import { firebaseConfig, PEOPLE } from "./firebase-config.js";
-import { buildDayPlan, WUSHU_DAYS } from "./planner.js?v=1";
+import { buildDayPlan, WUSHU_DAYS } from "./planner.js?v=2";
 import { TIMETABLE, lessonsOn, nextLessonDate } from "./timetable.js?v=1";
 import { initRevision, sessionsFor, upcomingTests, overdueSessions, paceSummary, revisionCount, progressHtml as revisionProgressHtml, subjectName, openSubject as openRevisionSubject, render as renderRevision } from "./revision/revision.js?v=9";
 import { HW_SUBJECTS as SUBJECTS, SUBJECT_GROUPS } from "./revision/syllabus.js?v=9";

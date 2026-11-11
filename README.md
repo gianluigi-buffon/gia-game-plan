@@ -8,7 +8,7 @@ Works on any device (phone, tablet, laptop) through a free web link.
 
 ## What it does
 
-- **Today**: an auto-built daily plan that fits homework and revision sessions around school, Wushu (Mon/Wed/Fri 5–6:30pm) and sleep (lights out 10pm), with a reading slot every evening and a daily quote.
+- **Today**: an auto-built daily plan that fits homework and revision sessions around school, Wushu (Mon/Wed/Fri 5–6:30pm) and sleep (lights out 9:30pm), with a reading slot every evening and a daily quote.
 - **Homework**: homework per subject with a due date and estimated time. It shows "do today" the school day before it's due.
 - **Revision**: subjects → topics with two revision rounds and confidence ratings, must-know checklists, tests and planned sessions.
 - **Creations**: Gia's 29 creations on the theme of feelings (23 by 13 Nov, 29 by 31 Dec), with a pace bar, her four "done" checks (Next, weekly wins, Substack, skill), creations grouped by month, and a list of skills she's grown.

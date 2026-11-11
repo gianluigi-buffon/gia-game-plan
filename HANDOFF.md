@@ -29,7 +29,7 @@ Two Firebase Auth (Email/Password) users: Gia and Christabel. Emails live in **o
 3. After deploying, check the live `index.html` serves the new version numbers.
 
 ### Current cache-buster versions
-- `styles.css?v=6`, `app.js?v=16`, `timetable.js?v=1`, `planner.js?v=1`, `revision.js?v=9`, `syllabus.js?v=9`, `packview.js?v=2`
+- `styles.css?v=6`, `app.js?v=17`, `timetable.js?v=1`, `planner.js?v=2`, `revision.js?v=9`, `syllabus.js?v=9`, `packview.js?v=2`
 
 ## 🧪 Testing without logging in (demo mode)
 
@@ -68,7 +68,7 @@ Two Firebase Auth (Email/Password) users: Gia and Christabel. Emails live in **o
 - `meta/seeded`: first-run flag; its timestamp is the app start date (Wushu classes before it only count if marked)
 
 ## ⏰ Gia's schedule rules (planner.js)
-School 6:30am–4:15pm. Wushu Mon/Wed/Fri 5–6:30pm (a missed/cancelled/rescheduled class frees that slot for study). Reading + wind-down 9:15–9:45pm, lights out 10pm. Weekdays + Saturday morning for work; Saturday afternoon + Sunday free.
+School 6:30am–4:15pm. Wushu Mon/Wed/Fri 5–6:30pm (a missed/cancelled/rescheduled class frees that slot for study). Reading + wind-down 9:15–9:30pm, lights out 9:30pm. Weekdays + Saturday morning for work; Saturday afternoon + Sunday free.
 
 ## ⭐ Progress rules
 Weekly targets: homework on time · 1 creation finished · Wushu = attended ≥ classes held that week (cancelled ones don't count; made-up ones do) · 2 revision rounds (counts as met until revision topics exist). Score /10 = 2.5 per target (partial credit for creations, Wushu, revision). Streak badges: First Bow, Steady Stance (3 wks), Perfect Form (10/10), Top Dog (6 wks). Belts at 20/40/60/80/100% of overall goals: creations 29, homework on time 100, Wushu classes 60, revision 30.
