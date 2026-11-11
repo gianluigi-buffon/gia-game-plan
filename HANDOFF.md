@@ -29,7 +29,7 @@ Two Firebase Auth (Email/Password) users: Gia and Christabel. Emails live in **o
 3. After deploying, check the live `index.html` serves the new version numbers.
 
 ### Current cache-buster versions
-- `styles.css?v=7`, `app.js?v=26`, `timetable.js?v=1`, `planner.js?v=3`, `revision.js?v=9`, `syllabus.js?v=9`, `packview.js?v=2`
+- `styles.css?v=7`, `app.js?v=27`, `timetable.js?v=1`, `planner.js?v=3`, `revision.js?v=9`, `syllabus.js?v=9`, `packview.js?v=2`
 
 ## 🧪 Testing without logging in (demo mode)
 

@@ -115,7 +115,7 @@ function readingStreak() {
 const readDaysBetween = (from, to) => [...cache.reading.keys()].filter(d => d >= from && d <= to).length;
 
 // ---------- DAILY QUOTE ----------
-// Art, writing, reading and martial-arts quotes, women leaders encouraging girls, literature and today's role models against complacency, plus a few short "wisdom" sayings.
+// Art, writing, reading and martial-arts quotes, women leaders encouraging girls, literature and today's role models against complacency.
 const QUOTES = [
   ["Creativity takes courage.", "Henri Matisse"],
   ["You can't use up creativity. The more you use, the more you have.", "Maya Angelou"],
@@ -298,10 +298,6 @@ const QUOTES = [
   ["Like what you do, and then you will do your best.", "Katherine Johnson"],
   ["You are never too small to make a difference.", "Greta Thunberg"],
   ["Even the smallest person can change the course of the future.", "Galadriel, The Lord of the Rings"],
-  ["One chapter a night adds up to a library.", "Reader's wisdom"],
-  ["Finish homework early; enjoy your evening twice.", "Planner's wisdom"],
-  ["Hard things get easier when you start them sooner.", "Planner's wisdom"],
-  ["Win the day, and the week takes care of itself.", "Planner's wisdom"],
 ];
 // Inspirational Bible verses (shown on 3 days/week; quotes on the other 4)
 const VERSES = [
