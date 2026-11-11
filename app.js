@@ -453,13 +453,15 @@ function renderToday() {
     tl.insertAdjacentHTML("beforeend", `<div class="block"><div class="t">⚠️ Spillover</div><div class="b">Couldn't fit: ${plan.overflow.map(h => esc(h.subject) + " (" + h.mins + "m left)").join(", ")}<div class="b-sub">Move some to Saturday morning or start earlier.</div></div></div>`);
   }
 }
-// Weekly school timetable card (Today tab); the selected day is highlighted.
+// Weekly school timetable (Today tab): one column per day, the selected day highlighted.
 function renderTimetable(selDay, holiday) {
   const box = $("ttBox"); if (!box) return;
-  const short = { "Mathematics": "Maths", "Comprehensive Sexuality Education": "CSE", "Coordinator time": "Coordinator", "Games & fitness": "Games", "Vaayu sessions": "Vaayu" };
-  box.innerHTML = `<div class="muted small" style="margin-bottom:8px">School 7:50am–2:50pm. Breakfast 9:10–10:00 · Lunch 12:00–12:30.</div>` +
-    [1, 2, 3, 4, 5].map(d => `<div class="tt-row ${d === selDay ? "on" : ""}"><div class="tt-day">${DAY_NAMES[d].slice(0, 3)}${d === selDay && holiday ? " 🎉" : ""}</div><div class="tt-lessons">${
-      lessonsOn(d).map(l => `<span class="tt-l ${l.hw ? "acad" : ""}" title="${esc(l.subject)} ${fmtT(l.from)}–${fmtT(l.to)}"><b>${esc(short[l.subject] || l.subject)}</b> ${fmtT(l.from)}</span>`).join("")}</div></div>`).join("");
+  const short = { "Comprehensive Sexuality Education": "CSE", "Coordinator time": "Coordinator", "Games & fitness": "Games & Fitness", "Vaayu sessions": "Vaayu S" };
+  const t12 = (hhmm) => { const [h, m] = hhmm.split(":").map(Number); return `${h % 12 || 12}:${String(m).padStart(2, "0")}`; };
+  box.innerHTML = [1, 2, 3, 4, 5].map(d => `<div class="tt-col ${d === selDay ? "on" : ""}">
+      <div class="tt-day">${DAY_NAMES[d].slice(0, 3)}${d === selDay && holiday ? " 🎉" : ""}</div>
+      ${lessonsOn(d).map(l => `<div class="tt-l"><span class="tt-t">${t12(l.from)}</span> ${esc(short[l.subject] || l.subject)}</div>`).join("")}
+    </div>`).join("");
 }
 
 function addAlert(parent, cls, txt) {
