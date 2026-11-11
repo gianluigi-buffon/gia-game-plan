@@ -301,13 +301,13 @@ details summary{list-style-position:inside}
 .dayrow span.on{background:var(--good-bg);color:var(--good);border-color:var(--good-line)}
 .setup-note{background:var(--amber-bg);border:1px solid var(--amber-line);color:var(--amber);border-radius:10px;padding:10px 12px;font-size:.85rem;margin-top:12px;text-align:left}
 .rv-navsep{flex:0 0 1px;background:var(--line);margin:4px 2px}
-.tt-card{padding:16px}
-.tt-title{font-size:1.05rem;margin:0 0 12px}
-.tt-cols{display:flex;gap:10px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
-.tt-col{flex:1 0 128px;min-width:128px;background:var(--card2);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+/* School timetable: same sizes and spacing as Jake's app */
+.tt-card b{display:block;margin-bottom:6px}
+.tt-scroll{overflow-x:auto}
+.tt-grid{display:grid;grid-template-columns:repeat(5,minmax(104px,1fr));gap:6px;margin-top:8px}
+.tt-col{background:var(--card2);border:1px solid var(--line);border-radius:9px;padding:6px}
 .tt-col.on{background:var(--good-bg);border-color:var(--good)}
-.tt-day{font-weight:700;padding-bottom:7px;border-bottom:1px solid var(--line)}
+.tt-day{font-weight:700;font-size:.8rem;margin-bottom:4px}
 .tt-col.on .tt-day{color:var(--good)}
-.tt-l{padding:7px 0;border-bottom:1px solid var(--line);font-size:.9rem;line-height:1.3}
-.tt-l:last-child{border-bottom:none}
-.tt-t{color:var(--muted)}
+.tt-cell{font-size:.76rem;padding:3px 0;border-top:1px solid var(--line)}
+.tt-cell.now{color:var(--good);font-weight:700}

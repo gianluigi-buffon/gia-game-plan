@@ -391,7 +391,7 @@ function renderToday() {
   const wl = wuLog(selDate);
   const noWushu = !!wl && ["missed", "cancelled", "rescheduled"].includes(wl.status);
   renderHolidayBox(selDate);
-  renderTimetable(day, isHoliday(selDate));
+  renderTimetable(day, isHoliday(selDate), selDate);
 
   const alerts = $("dueAlerts"); alerts.innerHTML = "";
   const t = todayStr();
@@ -456,15 +456,23 @@ function renderToday() {
 // Short lesson names for the timetable card and the School block.
 const LESSON_SHORT = { "Mathematics": "Math", "Games & fitness": "Fitness", "Coordinator time": "CT", "Comprehensive Sexuality Education": "CSE", "Vaayu sessions": "Vaayu S" };
 const lessonName = (l) => LESSON_SHORT[l.subject] || l.subject;
-// Weekly school timetable (Today tab): one column per day, the selected day highlighted.
-function renderTimetable(selDay, holiday) {
+// 🏫 School week (Today tab, under the alerts), styled like Jake's: the selected day
+// is highlighted, and the current lesson too when it's today.
+function renderTimetable(selDay, holiday, selDate) {
   const box = $("ttBox"); if (!box) return;
-
-  const t12 = (hhmm) => { const [h, m] = hhmm.split(":").map(Number); return `${h % 12 || 12}:${String(m).padStart(2, "0")}`; };
-  box.innerHTML = [1, 2, 3, 4, 5].map(d => `<div class="tt-col ${d === selDay ? "on" : ""}">
-      <div class="tt-day">${DAY_NAMES[d].slice(0, 3)}${d === selDay && holiday ? " 🎉" : ""}</div>
-      ${lessonsOn(d).map(l => `<div class="tt-l"><span class="tt-t">${t12(l.from)}</span> ${esc(lessonName(l))}</div>`).join("")}
-    </div>`).join("");
+  const t12 = (hhmm) => { const [h, m] = hhmm.split(":").map(Number); return `${h > 12 ? h - 12 : h}:${String(m).padStart(2, "0")}`; };
+  const nowHM = new Date().toTimeString().slice(0, 5);
+  const isToday = selDate === todayStr();
+  const grid = [1, 2, 3, 4, 5].map(d => {
+    const sel = d === selDay && !holiday;
+    const cells = lessonsOn(d).map(l => {
+      const now = sel && isToday && nowHM >= l.from && nowHM < l.to;
+      return `<div class="tt-cell ${now ? "now" : ""}"><span class="muted">${t12(l.from)}</span> ${esc(lessonName(l))}</div>`;
+    }).join("");
+    return `<div class="tt-col ${sel ? "on" : ""}"><div class="tt-day">${DAY_NAMES[d].slice(0, 3)}</div>${cells}</div>`;
+  }).join("");
+  const note = holiday ? "Holiday: no school" : !lessonsOn(selDay).length ? (isToday ? "No school today" : `No school on ${DAY_NAMES[selDay]}`) : "";
+  box.innerHTML = `<div class="card tt-card"><div class="row-between"><b>🏫 School timetable</b>${note ? `<span class="muted small">${note}</span>` : ""}</div><div class="tt-scroll"><div class="tt-grid">${grid}</div></div></div>`;
 }
 
 function addAlert(parent, cls, txt) {
