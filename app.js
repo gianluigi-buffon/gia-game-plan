@@ -336,6 +336,21 @@ const VERSES = [
   ["She is clothed with strength and dignity; she can laugh at the days to come.", "Proverbs 31:25"],
 ];
 // Tue/Thu/Sat = verse days (3/week); the other 4 days = quotes.
+// Today's quote as a pop-up for 2.5 seconds when the app opens (once per visit; tap to close early).
+let quotePopupShown = false;
+function showQuotePopup() {
+  if (quotePopupShown) return;
+  quotePopupShown = true;
+  const [qt, qa] = quoteOfDay();
+  const el = document.createElement("div");
+  el.className = "qpop";
+  el.setAttribute("role", "dialog");
+  el.innerHTML = `<div class="qpop-card quote">“${esc(qt)}”<span class="q-by">— ${esc(qa)}</span></div>`;
+  document.body.appendChild(el);
+  const close = () => { if (!el.isConnected || el.classList.contains("out")) return; el.classList.add("out"); setTimeout(() => el.remove(), 400); };
+  el.onclick = close;
+  setTimeout(close, 2500);
+}
 function quoteOfDay() {
   const day = dayOfYear();
   return [2, 4, 6].includes(new Date().getDay()) ? VERSES[day % VERSES.length] : QUOTES[day % QUOTES.length];
@@ -374,6 +389,7 @@ if (!CONFIGURED) {
       $("loginScreen").classList.add("hidden");
       $("app").classList.remove("hidden");
       $("whoami").textContent = MY_NAME;
+      showQuotePopup();
       await ensureSeed();
       subscribeAll();
       initRevision({

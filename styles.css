@@ -311,3 +311,11 @@ details summary{list-style-position:inside}
 .tt-col.on .tt-day{color:var(--good)}
 .tt-cell{font-size:.76rem;padding:3px 0;border-top:1px solid var(--line)}
 .tt-cell.now{color:var(--good);font-weight:700}
+/* Daily quote pop-up when the app opens */
+.qpop{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;padding:24px;
+  background:rgba(12,8,22,.72);animation:qpopIn .35s ease;cursor:pointer}
+.qpop.out{animation:qpopOut .4s ease forwards}
+.qpop-card{max-width:460px;font-size:1.25rem;line-height:1.4;padding:22px 24px;text-align:center}
+.qpop-card .q-by{margin-top:10px}
+@keyframes qpopIn{from{opacity:0}to{opacity:1}}
+@keyframes qpopOut{from{opacity:1}to{opacity:0}}
