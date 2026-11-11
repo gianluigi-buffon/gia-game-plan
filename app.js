@@ -441,7 +441,7 @@ function renderToday() {
   if (plan.note) tl.insertAdjacentHTML("beforeend", `<div class="block rest"><div class="t">Note</div><div class="b">${plan.note}</div></div>`);
   // Today's lessons go under the School block.
   const lessons = holiday ? [] : lessonsOn(day);
-  const lessonLine = lessons.map(l => `${l.subject} ${fmtT(l.from)}`).join(" · ");
+  const lessonLine = lessons.map(l => `${lessonName(l)} ${fmtT(l.from)}`).join(" · ");
   plan.blocks.forEach(b => {
     const el = document.createElement("div");
     el.className = "block " + (b.kind === "rest" ? "rest" : b.kind === "fixed" ? "fixed" : "");
@@ -453,14 +453,17 @@ function renderToday() {
     tl.insertAdjacentHTML("beforeend", `<div class="block"><div class="t">⚠️ Spillover</div><div class="b">Couldn't fit: ${plan.overflow.map(h => esc(h.subject) + " (" + h.mins + "m left)").join(", ")}<div class="b-sub">Move some to Saturday morning or start earlier.</div></div></div>`);
   }
 }
+// Short lesson names for the timetable card and the School block.
+const LESSON_SHORT = { "Mathematics": "Math", "Games & fitness": "Fitness", "Coordinator time": "CT", "Comprehensive Sexuality Education": "CSE", "Vaayu sessions": "Vaayu S" };
+const lessonName = (l) => LESSON_SHORT[l.subject] || l.subject;
 // Weekly school timetable (Today tab): one column per day, the selected day highlighted.
 function renderTimetable(selDay, holiday) {
   const box = $("ttBox"); if (!box) return;
-  const short = { "Comprehensive Sexuality Education": "CSE", "Coordinator time": "Coordinator", "Games & fitness": "Games & Fitness", "Vaayu sessions": "Vaayu S" };
+
   const t12 = (hhmm) => { const [h, m] = hhmm.split(":").map(Number); return `${h % 12 || 12}:${String(m).padStart(2, "0")}`; };
   box.innerHTML = [1, 2, 3, 4, 5].map(d => `<div class="tt-col ${d === selDay ? "on" : ""}">
       <div class="tt-day">${DAY_NAMES[d].slice(0, 3)}${d === selDay && holiday ? " 🎉" : ""}</div>
-      ${lessonsOn(d).map(l => `<div class="tt-l"><span class="tt-t">${t12(l.from)}</span> ${esc(short[l.subject] || l.subject)}</div>`).join("")}
+      ${lessonsOn(d).map(l => `<div class="tt-l"><span class="tt-t">${t12(l.from)}</span> ${esc(lessonName(l))}</div>`).join("")}
     </div>`).join("");
 }
 
