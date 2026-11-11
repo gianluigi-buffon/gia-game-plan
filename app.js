@@ -3,6 +3,7 @@
 // =============================================================
 import { firebaseConfig, PEOPLE } from "./firebase-config.js";
 import { buildDayPlan, WUSHU_DAYS } from "./planner.js?v=1";
+import { TIMETABLE, lessonsOn, nextLessonDate } from "./timetable.js?v=1";
 import { initRevision, sessionsFor, upcomingTests, overdueSessions, paceSummary, revisionCount, progressHtml as revisionProgressHtml, subjectName, openSubject as openRevisionSubject, render as renderRevision } from "./revision/revision.js?v=9";
 import { HW_SUBJECTS as SUBJECTS, SUBJECT_GROUPS } from "./revision/syllabus.js?v=9";
 
@@ -390,6 +391,7 @@ function renderToday() {
   const wl = wuLog(selDate);
   const noWushu = !!wl && ["missed", "cancelled", "rescheduled"].includes(wl.status);
   renderHolidayBox(selDate);
+  renderTimetable(day, isHoliday(selDate));
 
   const alerts = $("dueAlerts"); alerts.innerHTML = "";
   const t = todayStr();
@@ -437,16 +439,29 @@ function renderToday() {
     return;
   }
   if (plan.note) tl.insertAdjacentHTML("beforeend", `<div class="block rest"><div class="t">Note</div><div class="b">${plan.note}</div></div>`);
+  // Today's lessons go under the School block.
+  const lessons = holiday ? [] : lessonsOn(day);
+  const lessonLine = lessons.map(l => `${l.subject} ${fmtT(l.from)}`).join(" · ");
   plan.blocks.forEach(b => {
     const el = document.createElement("div");
     el.className = "block " + (b.kind === "rest" ? "rest" : b.kind === "fixed" ? "fixed" : "");
-    el.innerHTML = `<div class="t">${b.time}</div><div class="b">${esc(b.title)}${b.sub ? `<div class="b-sub">${esc(b.sub)}</div>` : ""}</div>`;
+    const sub = /School/.test(b.title) && lessonLine ? lessonLine : b.sub;
+    el.innerHTML = `<div class="t">${b.time}</div><div class="b">${esc(b.title)}${sub ? `<div class="b-sub">${esc(sub)}</div>` : ""}</div>`;
     tl.appendChild(el);
   });
   if (plan.overflow.length) {
     tl.insertAdjacentHTML("beforeend", `<div class="block"><div class="t">⚠️ Spillover</div><div class="b">Couldn't fit: ${plan.overflow.map(h => esc(h.subject) + " (" + h.mins + "m left)").join(", ")}<div class="b-sub">Move some to Saturday morning or start earlier.</div></div></div>`);
   }
 }
+// Weekly school timetable card (Today tab); the selected day is highlighted.
+function renderTimetable(selDay, holiday) {
+  const box = $("ttBox"); if (!box) return;
+  const short = { "Mathematics": "Maths", "Comprehensive Sexuality Education": "CSE", "Coordinator time": "Coordinator", "Games & fitness": "Games", "Vaayu sessions": "Vaayu" };
+  box.innerHTML = `<div class="muted small" style="margin-bottom:8px">School 7:50am–2:50pm. Breakfast 9:10–10:00 · Lunch 12:00–12:30.</div>` +
+    [1, 2, 3, 4, 5].map(d => `<div class="tt-row ${d === selDay ? "on" : ""}"><div class="tt-day">${DAY_NAMES[d].slice(0, 3)}${d === selDay && holiday ? " 🎉" : ""}</div><div class="tt-lessons">${
+      lessonsOn(d).map(l => `<span class="tt-l ${l.hw ? "acad" : ""}" title="${esc(l.subject)} ${fmtT(l.from)}–${fmtT(l.to)}"><b>${esc(short[l.subject] || l.subject)}</b> ${fmtT(l.from)}</span>`).join("")}</div></div>`).join("");
+}
+
 function addAlert(parent, cls, txt) {
   const d = document.createElement("div"); d.className = "alert " + cls; d.textContent = txt; parent.appendChild(d);
 }
@@ -479,6 +494,18 @@ const HW_SUBJECTS = SUBJECTS.map(s => s.key);
 // Subject picker grouped like the Revision tab (main subjects, then languages and Art).
 const subjectOptions = () => SUBJECT_GROUPS.map(g => `<optgroup label="${esc(g.hwLabel || g.label)}">${SUBJECTS.filter(s => (s.group || "main") === g.key).map(s => `<option value="${esc(s.key)}">${esc(s.name)}</option>`).join("")}</optgroup>`).join("");
 $("hwSubject").innerHTML = subjectOptions();
+// "Due next lesson" quick-pick, from the school timetable.
+function renderHwNext() {
+  const box = $("hwNext"); if (!box) return;
+  const subj = $("hwSubject").value;
+  const next = nextLessonDate(subj, todayStr(), isHoliday);
+  if (!next) { box.innerHTML = ""; return; }
+  const after = nextLessonDate(subj, next, isHoliday);
+  box.innerHTML = `<span class="muted small" style="align-self:center">Due:</span><button type="button" data-d="${next}">Next lesson · ${fmtDate(next)}</button>${after ? `<button type="button" data-d="${after}">The one after · ${fmtDate(after)}</button>` : ""}`;
+  box.querySelectorAll("button").forEach(b => b.onclick = () => { $("hwDue").value = b.dataset.d; box.querySelectorAll("button").forEach(x => x.classList.toggle("on", x === b)); });
+}
+$("hwSubject").onchange = renderHwNext;
+renderHwNext();
 $("hwAdd").onclick = async () => {
   const task = $("hwTask").value.trim();
   if (!task) return;

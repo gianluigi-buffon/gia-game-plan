@@ -301,3 +301,12 @@ details summary{list-style-position:inside}
 .dayrow span.on{background:var(--good-bg);color:var(--good);border-color:var(--good-line)}
 .setup-note{background:var(--amber-bg);border:1px solid var(--amber-line);color:var(--amber);border-radius:10px;padding:10px 12px;font-size:.85rem;margin-top:12px;text-align:left}
 .rv-navsep{flex:0 0 1px;background:var(--line);margin:4px 2px}
+.tt-row{display:flex;gap:10px;align-items:flex-start;padding:7px 6px;border-top:1px solid var(--line)}
+.tt-row:first-of-type{border-top:none}
+.tt-row.on{background:var(--accent-bg);border-radius:8px}
+.tt-day{flex:0 0 34px;font-weight:700;font-size:.8rem;color:var(--muted);padding-top:3px}
+.tt-row.on .tt-day{color:var(--accent)}
+.tt-lessons{display:flex;flex-wrap:wrap;gap:5px}
+.tt-l{font-size:.72rem;padding:3px 7px;border-radius:6px;background:var(--card2);border:1px solid var(--line);color:var(--muted)}
+.tt-l b{color:var(--text);font-weight:600}
+.tt-l.acad{border-color:#5a3d8f}

@@ -29,7 +29,7 @@ Two Firebase Auth (Email/Password) users: Gia and Christabel. Emails live in **o
 3. After deploying, check the live `index.html` serves the new version numbers.
 
 ### Current cache-buster versions
-- `styles.css?v=3`, `app.js?v=11`, `planner.js?v=1`, `revision.js?v=9`, `syllabus.js?v=9`, `packview.js?v=2`
+- `styles.css?v=4`, `app.js?v=12`, `timetable.js?v=1`, `planner.js?v=1`, `revision.js?v=9`, `syllabus.js?v=9`, `packview.js?v=2`
 
 ## 🧪 Testing without logging in (demo mode)
 
@@ -42,6 +42,7 @@ Two Firebase Auth (Email/Password) users: Gia and Christabel. Emails live in **o
 - `index.html`: markup, tabs, login screen, demo-mode import map, cache-busters.
 - `styles.css`: plum and gold (puppy 🐶 logo) theme (CSS variables at the top), mobile-first.
 - `app.js`: Firebase wiring, auth, live subscriptions, all tabs, dashboard, progress/badges, quotes.
+- `timetable.js`: Gia's Grade 7 school timetable (subjects and times only, no school or teacher names: public repo). Shown in the Today tab (lessons inside the School block + a weekly card) and used by Homework's 'Due: next lesson' buttons. `hw` links a lesson to a subject key.
 - `planner.js`: **pure** daily-plan builder (`dayTemplate()` = Gia's week). No Firebase.
 - `firebase-config.js`: Firebase web keys (empty until Part A is done; the login screen then shows a "not connected" note) + `PEOPLE`.
 - `firestore.rules`: rules template with placeholder emails.
