@@ -115,7 +115,7 @@ function readingStreak() {
 const readDaysBetween = (from, to) => [...cache.reading.keys()].filter(d => d >= from && d <= to).length;
 
 // ---------- DAILY QUOTE ----------
-// Art, writing, reading and martial-arts quotes, women leaders encouraging girls, plus a few short "wisdom" sayings.
+// Art, writing, reading and martial-arts quotes, women leaders encouraging girls, literature and today's role models against complacency, plus a few short "wisdom" sayings.
 const QUOTES = [
   ["Creativity takes courage.", "Henri Matisse"],
   ["You can't use up creativity. The more you use, the more you have.", "Maya Angelou"],
@@ -151,6 +151,38 @@ const QUOTES = [
   ["Fall seven times, stand up eight.", "Japanese proverb"],
   ["The journey of a thousand miles begins with one step.", "Lao Tzu"],
   ["One must still have chaos in oneself to be able to give birth to a dancing star.", "Friedrich Nietzsche"],
+  // Literature: keep going, don't settle
+  ["It's the job that's never started as takes longest to finish.", "Sam Gamgee, The Lord of the Rings (J.R.R. Tolkien)"],
+  ["The fault, dear Brutus, is not in our stars, but in ourselves.", "Shakespeare, Julius Caesar"],
+  ["Our doubts are traitors, and make us lose the good we oft might win by fearing to attempt.", "Shakespeare, Measure for Measure"],
+  ["Nothing will come of nothing.", "Shakespeare, King Lear"],
+  ["Be not afraid of greatness: some are born great, some achieve greatness, and some have greatness thrust upon 'em.", "Shakespeare, Twelfth Night"],
+  ["To strive, to seek, to find, and not to yield.", "Alfred Tennyson, Ulysses"],
+  ["Ah, but a man's reach should exceed his grasp, or what's a heaven for?", "Robert Browning, Andrea del Sarto"],
+  ["If you can fill the unforgiving minute with sixty seconds' worth of distance run, yours is the Earth and everything that's in it.", "Rudyard Kipling, If—"],
+  ["The woods are lovely, dark and deep, but I have promises to keep, and miles to go before I sleep.", "Robert Frost"],
+  ["Hold fast to dreams, for if dreams die, life is a broken-winged bird that cannot fly.", "Langston Hughes, Dreams"],
+  ["You may trample me in the very dirt, but still, like dust, I'll rise.", "Maya Angelou, Still I Rise"],
+  ["It is our choices that show what we truly are, far more than our abilities.", "Dumbledore, Harry Potter (J.K. Rowling)"],
+  ["Laziness may appear attractive, but work gives satisfaction.", "Anne Frank, The Diary of a Young Girl"],
+  ["How wonderful it is that nobody need wait a single moment before starting to improve the world.", "Anne Frank"],
+  ["Tomorrow is always fresh, with no mistakes in it yet.", "Anne of Green Gables (L.M. Montgomery)"],
+  ["Where the mind is without fear and the head is held high…", "Rabindranath Tagore, Gitanjali"],
+  ["Let me not pray to be sheltered from dangers, but to be fearless in facing them.", "Rabindranath Tagore"],
+  ["Do or do not. There is no try.", "Yoda, Star Wars"],
+  // Today's role models: keep learning, keep going
+  ["Don't be a know-it-all, be a learn-it-all.", "Satya Nadella"],
+  ["Just because you are CEO, don't think you have landed. You must continually increase your learning.", "Indra Nooyi"],
+  ["Rest at the end, not in the middle.", "Kobe Bryant"],
+  ["I've failed over and over and over again in my life. And that is why I succeed.", "Michael Jordan"],
+  ["Pressure is a privilege.", "Billie Jean King"],
+  ["Becoming is better than being.", "Carol Dweck"],
+  ["If not me, who? If not now, when?", "Emma Watson"],
+  ["Dream is not that which you see while sleeping, it is something that does not let you sleep.", "A.P.J. Abdul Kalam"],
+  ["Self-belief and hard work will always earn you success.", "Virat Kohli"],
+  ["Chase your dreams, but make sure you don't find shortcuts.", "Sachin Tendulkar"],
+  ["I don't believe in taking right decisions. I take decisions and then make them right.", "Ratan Tata"],
+  ["Wear your failure as a badge of honour.", "Sundar Pichai"],
   // Women leaders and pioneers: encouragement for girls
   ["One child, one teacher, one book, one pen can change the world.", "Malala Yousafzai"],
   ["We realise the importance of our voices only when we are silenced.", "Malala Yousafzai"],
@@ -173,6 +205,7 @@ const QUOTES = [
   ["Never be limited by other people's limited imaginations.", "Mae Jemison"],
   ["Like what you do, and then you will do your best.", "Katherine Johnson"],
   ["You are never too small to make a difference.", "Greta Thunberg"],
+  ["Even the smallest person can change the course of the future.", "Galadriel, The Lord of the Rings"],
   ["Make one thing today, even if it's small.", "Studio wisdom"],
   ["Feelings are paint. Use all the colours.", "Studio wisdom"],
   ["Done is better than perfect — finished pieces teach you more.", "Studio wisdom"],
