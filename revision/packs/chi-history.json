@@ -1,0 +1,3742 @@
+{
+ "id": "chi-history",
+ "subject": "Humanities",
+ "title": "A Children's History of India",
+ "sub": "Subhadra Sen Gupta · Ancient, Medieval, British and Independent India · practising the IGCSE way",
+ "units": [
+  {
+   "key": "a01",
+   "name": "Anc 1 A Land Called Jambudvipa"
+  },
+  {
+   "key": "a02",
+   "name": "Anc 2 A City Named Harappa"
+  },
+  {
+   "key": "a03",
+   "name": "Anc 3 The Poets of the Vedas"
+  },
+  {
+   "key": "a04",
+   "name": "Anc 4 The Rise of Magadha"
+  },
+  {
+   "key": "a05",
+   "name": "Anc 5 The Magnificent Mauryas"
+  },
+  {
+   "key": "a06",
+   "name": "Anc 6 Kingdoms, Culture and Trade"
+  },
+  {
+   "key": "a07",
+   "name": "Anc 7 The Golden Guptas"
+  },
+  {
+   "key": "a08",
+   "name": "Anc 8 Southern Sunrise"
+  },
+  {
+   "key": "a09",
+   "name": "Anc 9 A King and a Pilgrim"
+  },
+  {
+   "key": "m01",
+   "name": "Med 1 The Arrival of the Muslims"
+  },
+  {
+   "key": "m02",
+   "name": "Med 2 The Delhi Sultanates"
+  },
+  {
+   "key": "m03",
+   "name": "Med 3 New Kingdoms Rise"
+  },
+  {
+   "key": "m04",
+   "name": "Med 4 Life under the Sultans"
+  },
+  {
+   "key": "m05",
+   "name": "Med 5 Enter the Mughals"
+  },
+  {
+   "key": "m06",
+   "name": "Med 6 Akbar Builds an Empire"
+  },
+  {
+   "key": "m07",
+   "name": "Med 7 The Magnificent Mughals"
+  },
+  {
+   "key": "m08",
+   "name": "Med 8 An Emperor and His Enemies"
+  },
+  {
+   "key": "m09",
+   "name": "Med 9 Living in Mughal Times"
+  },
+  {
+   "key": "b01",
+   "name": "Brit 1 The East India Company"
+  },
+  {
+   "key": "b02",
+   "name": "Brit 2 The Company Bahadur"
+  },
+  {
+   "key": "b03",
+   "name": "Brit 3 A Time of Change"
+  },
+  {
+   "key": "b04",
+   "name": "Brit 4 The Great Uprising"
+  },
+  {
+   "key": "b05",
+   "name": "Brit 5 A Sleeping Giant Awakens"
+  },
+  {
+   "key": "b06",
+   "name": "Brit 6 Talking of Satyagraha"
+  },
+  {
+   "key": "b07",
+   "name": "Brit 7 A Long March to Dandi"
+  },
+  {
+   "key": "b08",
+   "name": "Brit 8 The Final March to Freedom"
+  },
+  {
+   "key": "b09",
+   "name": "Brit 9 Living in British Times"
+  },
+  {
+   "key": "i01",
+   "name": "Ind 1 Building a Nation"
+  },
+  {
+   "key": "i02",
+   "name": "Ind 2 The Constitution of India"
+  },
+  {
+   "key": "i03",
+   "name": "Ind 3 Making a Difference"
+  },
+  {
+   "key": "i04",
+   "name": "Ind 4 Growing up in a Free India"
+  }
+ ],
+ "strategyIntro": "Every session should end with you writing or saying an answer, not just reading. Close the book, answer from memory, then check. These are the same moves IGCSE History rewards in Grade 10.",
+ "strategy": [
+  {
+   "title": "4 marks: Describe… / What were…",
+   "key": true,
+   "points": [
+    "Two points, each with a specific detail: a name, date, place or number.",
+    "No introduction or opinion needed. About 5 minutes."
+   ]
+  },
+  {
+   "title": "6 marks: Explain why…",
+   "key": true,
+   "points": [
+    "Two or three reasons, each in its own paragraph.",
+    "Each paragraph: Point → Evidence (a specific fact) → Explain how it caused the result (PEEL).",
+    "Start each with 'First… / Second… / Third…' so the examiner can see each reason."
+   ]
+  },
+  {
+   "title": "How to revise a chapter",
+   "points": [
+    "Read one section, close the book, write 3 key facts from memory.",
+    "Flashcards until every card is 'Got it'; 'Not yet' cards come back sooner.",
+    "Do the chapter quiz; aim for 5/5 or better.",
+    "Write one exam answer, then compare it with the model answer."
+   ]
+  }
+ ],
+ "commandWords": [
+  [
+   "Describe",
+   "Say what happened or what something was like, with specific details."
+  ],
+  [
+   "Explain why",
+   "Give reasons and show how each one caused the result."
+  ],
+  [
+   "How far / Do you agree",
+   "Argue both sides, then give a clear judgement with a reason."
+  ]
+ ],
+ "quizTitle": "Quiz",
+ "quizIntro": "Pick one or more chapters above, then answer. Each answer shows why it's right.",
+ "quiz": [
+  {
+   "q": "'Jambudvipa' means…",
+   "options": [
+    "Land of rivers",
+    "Island of the rose apple",
+    "Land of the Aryans",
+    "Great mountain"
+   ],
+   "answer": 1,
+   "why": "The jambu or jamun fruit.",
+   "unit": "a01"
+  },
+  {
+   "q": "India gets its name from the river…",
+   "options": [
+    "Ganga",
+    "Indus",
+    "Brahmaputra",
+    "Narmada"
+   ],
+   "answer": 1,
+   "why": "The Indus.",
+   "unit": "a01"
+  },
+  {
+   "q": "Bhimbetka is famous for…",
+   "options": [
+    "Stone Age cave paintings",
+    "Harappan seals",
+    "Mauryan pillars",
+    "Chola temples"
+   ],
+   "answer": 0,
+   "why": "In Madhya Pradesh.",
+   "unit": "a01"
+  },
+  {
+   "q": "Which pass let in invaders like Alexander and Babur?",
+   "options": [
+    "Khyber",
+    "Rohtang",
+    "Zoji La",
+    "Nathu La"
+   ],
+   "answer": 0,
+   "why": "Khyber (and Bolan) in the north-west.",
+   "unit": "a01"
+  },
+  {
+   "q": "Mohenjo-daro means…",
+   "options": [
+    "City of bricks",
+    "Mound of the dead",
+    "Great bath",
+    "River city"
+   ],
+   "answer": 1,
+   "why": "Its local name.",
+   "unit": "a02"
+  },
+  {
+   "q": "Harappan seals were made of…",
+   "options": [
+    "Gold",
+    "Steatite",
+    "Iron",
+    "Marble"
+   ],
+   "answer": 1,
+   "why": "Soapstone.",
+   "unit": "a02"
+  },
+  {
+   "q": "Which Harappan site was a port?",
+   "options": [
+    "Kalibangan",
+    "Lothal",
+    "Rupar",
+    "Harappa"
+   ],
+   "answer": 1,
+   "why": "Lothal in Gujarat.",
+   "unit": "a02"
+  },
+  {
+   "q": "Harappans did NOT know the use of…",
+   "options": [
+    "Copper",
+    "Bronze",
+    "Iron",
+    "Gold"
+   ],
+   "answer": 2,
+   "why": "Their tools were copper and bronze.",
+   "unit": "a02"
+  },
+  {
+   "q": "The Great Bath is at…",
+   "options": [
+    "Harappa",
+    "Mohenjo-daro",
+    "Dholavira",
+    "Lothal"
+   ],
+   "answer": 1,
+   "why": "Mohenjo-daro.",
+   "unit": "a02"
+  },
+  {
+   "q": "The oldest Veda is the…",
+   "options": [
+    "Sama Veda",
+    "Rig Veda",
+    "Atharva Veda",
+    "Yajur Veda"
+   ],
+   "answer": 1,
+   "why": "Rig Veda.",
+   "unit": "a03"
+  },
+  {
+   "q": "Agni is the god of…",
+   "options": [
+    "Rain",
+    "Fire",
+    "Sun",
+    "Sky"
+   ],
+   "answer": 1,
+   "why": "Fire, most important at a yajna.",
+   "unit": "a03"
+  },
+  {
+   "q": "Sapta Sindhu means…",
+   "options": [
+    "Seven seas",
+    "Land of seven rivers",
+    "Seven kings",
+    "Seven Vedas"
+   ],
+   "answer": 1,
+   "why": "Land of the seven rivers.",
+   "unit": "a03"
+  },
+  {
+   "q": "The Vedas were first preserved by…",
+   "options": [
+    "Writing on stone",
+    "Memorising (oral tradition)",
+    "Printing",
+    "Paintings"
+   ],
+   "answer": 1,
+   "why": "Learnt by heart.",
+   "unit": "a03"
+  },
+  {
+   "q": "The general assembly of an Aryan tribe was the…",
+   "options": [
+    "Sabha",
+    "Samiti",
+    "Jana",
+    "Rajan"
+   ],
+   "answer": 1,
+   "why": "The samiti.",
+   "unit": "a03"
+  },
+  {
+   "q": "How many mahajanapadas were there?",
+   "options": [
+    "Eight",
+    "Sixteen",
+    "Twenty",
+    "Four"
+   ],
+   "answer": 1,
+   "why": "Sixteen.",
+   "unit": "a04"
+  },
+  {
+   "q": "The Buddha was born at…",
+   "options": [
+    "Vaishali",
+    "Lumbini",
+    "Sarnath",
+    "Kushinagar"
+   ],
+   "answer": 1,
+   "why": "Lumbini, in Nepal.",
+   "unit": "a04"
+  },
+  {
+   "q": "Mahavira's followers called him…",
+   "options": [
+    "Tathagata",
+    "Jina",
+    "Rishi",
+    "Rajan"
+   ],
+   "answer": 1,
+   "why": "'The great conqueror'.",
+   "unit": "a04"
+  },
+  {
+   "q": "Which Magadha king first kept a standing army?",
+   "options": [
+    "Ajatasatru",
+    "Bimbisara",
+    "Ashoka",
+    "Dhana Nanda"
+   ],
+   "answer": 1,
+   "why": "Bimbisara.",
+   "unit": "a04"
+  },
+  {
+   "q": "Who wrote the Arthashastra?",
+   "options": [
+    "Megasthenes",
+    "Chanakya",
+    "Ashoka",
+    "Kalidasa"
+   ],
+   "answer": 1,
+   "why": "Chanakya (Kautilya).",
+   "unit": "a05"
+  },
+  {
+   "q": "The Kalinga war was fought in…",
+   "options": [
+    "321 BCE",
+    "262 BCE",
+    "185 BCE",
+    "305 BCE"
+   ],
+   "answer": 1,
+   "why": "262 BCE.",
+   "unit": "a05"
+  },
+  {
+   "q": "Who wrote Indika?",
+   "options": [
+    "Megasthenes",
+    "Fa-Hien",
+    "Seleucus",
+    "Bindusara"
+   ],
+   "answer": 0,
+   "why": "The Greek ambassador.",
+   "unit": "a05"
+  },
+  {
+   "q": "Ashoka sent his son Mahendra to…",
+   "options": [
+    "China",
+    "Sri Lanka",
+    "Greece",
+    "Burma"
+   ],
+   "answer": 1,
+   "why": "To spread Buddhism.",
+   "unit": "a05"
+  },
+  {
+   "q": "Who killed the last Mauryan king?",
+   "options": [
+    "Pushyamitra Sunga",
+    "Kanishka",
+    "Samudragupta",
+    "Alexander"
+   ],
+   "answer": 0,
+   "why": "In 185 BCE.",
+   "unit": "a05"
+  },
+  {
+   "q": "The Saka Era began in…",
+   "options": [
+    "185 BCE",
+    "78 CE",
+    "320 CE",
+    "606 CE"
+   ],
+   "answer": 1,
+   "why": "When Kanishka came to power.",
+   "unit": "a06"
+  },
+  {
+   "q": "The greatest Satavahana king was…",
+   "options": [
+    "Kanishka",
+    "Gautamiputra Satakarni",
+    "Rudradaman",
+    "Menander"
+   ],
+   "answer": 1,
+   "why": "He ruled most of the Deccan.",
+   "unit": "a06"
+  },
+  {
+   "q": "Sangam assemblies were held at…",
+   "options": [
+    "Thanjavur",
+    "Madurai",
+    "Kanchipuram",
+    "Puhar"
+   ],
+   "answer": 1,
+   "why": "Organised by Pandya kings.",
+   "unit": "a06"
+  },
+  {
+   "q": "Which visitor came to Gondophares's court?",
+   "options": [
+    "Fa-Hien",
+    "St Thomas",
+    "Megasthenes",
+    "Marco Polo"
+   ],
+   "answer": 1,
+   "why": "A disciple of Jesus.",
+   "unit": "a06"
+  },
+  {
+   "q": "Samudragupta's achievements are recorded on a pillar at…",
+   "options": [
+    "Sarnath",
+    "Allahabad",
+    "Delhi",
+    "Vaishali"
+   ],
+   "answer": 1,
+   "why": "An old Ashokan pillar.",
+   "unit": "a07"
+  },
+  {
+   "q": "Which Gupta king took the title Vikramaditya?",
+   "options": [
+    "Chandragupta I",
+    "Samudragupta",
+    "Chandragupta II",
+    "Skandagupta"
+   ],
+   "answer": 2,
+   "why": "Chandragupta II.",
+   "unit": "a07"
+  },
+  {
+   "q": "Fa-Hien came from…",
+   "options": [
+    "Greece",
+    "China",
+    "Persia",
+    "Sri Lanka"
+   ],
+   "answer": 1,
+   "why": "A Chinese pilgrim.",
+   "unit": "a07"
+  },
+  {
+   "q": "Kalidasa was a…",
+   "options": [
+    "King",
+    "Poet-playwright",
+    "Pilgrim",
+    "General"
+   ],
+   "answer": 1,
+   "why": "At the court of Chandragupta II.",
+   "unit": "a07"
+  },
+  {
+   "q": "Who defeated Harsha on the Narmada?",
+   "options": [
+    "Mahendravarman I",
+    "Pulakeshin II",
+    "Raja Raja",
+    "Narasimhavarman I"
+   ],
+   "answer": 1,
+   "why": "The Chalukya king.",
+   "unit": "a08"
+  },
+  {
+   "q": "The Brihadishwara temple was built by…",
+   "options": [
+    "Rajendra",
+    "Raja Raja I",
+    "Rajasimha",
+    "Vijayalaya"
+   ],
+   "answer": 1,
+   "why": "At Thanjavur.",
+   "unit": "a08"
+  },
+  {
+   "q": "The Shore Temple is at…",
+   "options": [
+    "Madurai",
+    "Mamallapuram",
+    "Thanjavur",
+    "Aihole"
+   ],
+   "answer": 1,
+   "why": "Built by Narasimhavarman II.",
+   "unit": "a08"
+  },
+  {
+   "q": "The Pallava capital was…",
+   "options": [
+    "Vatapi",
+    "Kanchipuram",
+    "Madurai",
+    "Thanjavur"
+   ],
+   "answer": 1,
+   "why": "Kanchipuram.",
+   "unit": "a08"
+  },
+  {
+   "q": "The southern temple style is called…",
+   "options": [
+    "Nagara",
+    "Dravida",
+    "Vesara",
+    "Indo-Islamic"
+   ],
+   "answer": 1,
+   "why": "Dravida.",
+   "unit": "a08"
+  },
+  {
+   "q": "Hsuan Tsang studied at…",
+   "options": [
+    "Taxila",
+    "Nalanda",
+    "Vikramshila",
+    "Ujjaini"
+   ],
+   "answer": 1,
+   "why": "Under Silabhadra.",
+   "unit": "a09"
+  },
+  {
+   "q": "Who wrote Harshacharita?",
+   "options": [
+    "Kalidasa",
+    "Banabhatta",
+    "Hsuan Tsang",
+    "Harsha"
+   ],
+   "answer": 1,
+   "why": "Banabhatta.",
+   "unit": "a09"
+  },
+  {
+   "q": "Harsha's capital was…",
+   "options": [
+    "Pataliputra",
+    "Kanauj",
+    "Ujjaini",
+    "Vatapi"
+   ],
+   "answer": 1,
+   "why": "Kanauj.",
+   "unit": "a09"
+  },
+  {
+   "q": "In which school is the Buddha worshipped as a god?",
+   "options": [
+    "Theravada",
+    "Mahayana",
+    "Jainism",
+    "Vedic"
+   ],
+   "answer": 1,
+   "why": "Mahayana.",
+   "unit": "a09"
+  },
+  {
+   "q": "Mahmud of Ghazni famously looted…",
+   "options": [
+    "Somnath",
+    "Kanauj",
+    "Delhi",
+    "Madurai"
+   ],
+   "answer": 0,
+   "why": "In Gujarat.",
+   "unit": "m01"
+  },
+  {
+   "q": "Who won the second battle of Tarain (1192)?",
+   "options": [
+    "Prithviraj Chauhan",
+    "Muhammad of Ghur",
+    "Mahmud of Ghazni",
+    "Iltutmish"
+   ],
+   "answer": 1,
+   "why": "Prithviraj was captured.",
+   "unit": "m01"
+  },
+  {
+   "q": "The Slave dynasty began in…",
+   "options": [
+    "1192",
+    "1206",
+    "1290",
+    "1526"
+   ],
+   "answer": 1,
+   "why": "With Qutub-ud-din Aibak.",
+   "unit": "m01"
+  },
+  {
+   "q": "Delhi's only woman sultan was…",
+   "options": [
+    "Nur Jahan",
+    "Razia",
+    "Padmini",
+    "Rani Durgavati"
+   ],
+   "answer": 1,
+   "why": "Razia Sultan.",
+   "unit": "m01"
+  },
+  {
+   "q": "Who moved the capital to Daulatabad?",
+   "options": [
+    "Alauddin Khalji",
+    "Muhammad bin Tughlaq",
+    "Feroz Shah",
+    "Balban"
+   ],
+   "answer": 1,
+   "why": "Called 'the mad king' for his schemes.",
+   "unit": "m02"
+  },
+  {
+   "q": "Timur invaded Delhi in…",
+   "options": [
+    "1206",
+    "1398",
+    "1451",
+    "1526"
+   ],
+   "answer": 1,
+   "why": "1398.",
+   "unit": "m02"
+  },
+  {
+   "q": "Alauddin's new capital in Delhi was…",
+   "options": [
+    "Siri",
+    "Tughlaqabad",
+    "Jahanpanah",
+    "Agra"
+   ],
+   "answer": 0,
+   "why": "Siri.",
+   "unit": "m02"
+  },
+  {
+   "q": "The last sultan of Delhi was…",
+   "options": [
+    "Bahlul Lodi",
+    "Sikandar Lodi",
+    "Ibrahim Lodi",
+    "Khizr Khan"
+   ],
+   "answer": 2,
+   "why": "Defeated at Panipat.",
+   "unit": "m02"
+  },
+  {
+   "q": "Amir Khusro wrote in…",
+   "options": [
+    "Sanskrit",
+    "Hindawi",
+    "Tamil",
+    "Arabic only"
+   ],
+   "answer": 1,
+   "why": "A mix of Persian and Hindi.",
+   "unit": "m02"
+  },
+  {
+   "q": "Vijayanagar was founded in…",
+   "options": [
+    "1206",
+    "1336",
+    "1347",
+    "1565"
+   ],
+   "answer": 1,
+   "why": "By Harihara and Bukka.",
+   "unit": "m03"
+  },
+  {
+   "q": "Vijayanagar was defeated at…",
+   "options": [
+    "Panipat",
+    "Talikota",
+    "Tarain",
+    "Khanwa"
+   ],
+   "answer": 1,
+   "why": "In 1565.",
+   "unit": "m03"
+  },
+  {
+   "q": "Vasco da Gama landed at…",
+   "options": [
+    "Goa",
+    "Calicut",
+    "Surat",
+    "Chennai"
+   ],
+   "answer": 1,
+   "why": "In 1498.",
+   "unit": "m03"
+  },
+  {
+   "q": "The land fought over by Vijayanagar and the Bahmanis was the…",
+   "options": [
+    "Doab of the Ganga",
+    "Raichur Doab",
+    "Deccan plateau",
+    "Konkan"
+   ],
+   "answer": 1,
+   "why": "Between the Krishna and Tungabhadra.",
+   "unit": "m03"
+  },
+  {
+   "q": "Kabir was a…",
+   "options": [
+    "King",
+    "Weaver-poet",
+    "Sufi sultan",
+    "Priest"
+   ],
+   "answer": 1,
+   "why": "A Bhakti saint.",
+   "unit": "m04"
+  },
+  {
+   "q": "Amir Khusro was a devotee of…",
+   "options": [
+    "Guru Nanak",
+    "Nizamuddin Auliya",
+    "Kabir",
+    "Ramananda"
+   ],
+   "answer": 1,
+   "why": "The Sufi saint of Delhi.",
+   "unit": "m04"
+  },
+  {
+   "q": "Which building feature arrived in this period?",
+   "options": [
+    "The arch",
+    "The pillar",
+    "The stupa",
+    "The gopuram"
+   ],
+   "answer": 0,
+   "why": "With the dome and minaret.",
+   "unit": "m04"
+  },
+  {
+   "q": "Babur won the first battle of Panipat mainly because of his…",
+   "options": [
+    "Elephants",
+    "Artillery (cannons)",
+    "Navy",
+    "Larger army"
+   ],
+   "answer": 1,
+   "why": "His battle plan was built around guns.",
+   "unit": "m05"
+  },
+  {
+   "q": "Rana Sanga was defeated at…",
+   "options": [
+    "Panipat",
+    "Khanwa",
+    "Chausa",
+    "Talikota"
+   ],
+   "answer": 1,
+   "why": "In 1527.",
+   "unit": "m05"
+  },
+  {
+   "q": "Who drove Humayun out of India?",
+   "options": [
+    "Akbar",
+    "Sher Shah Sur",
+    "Hemu",
+    "Rana Sanga"
+   ],
+   "answer": 1,
+   "why": "In 1540.",
+   "unit": "m05"
+  },
+  {
+   "q": "Babur's autobiography is the…",
+   "options": [
+    "Akbarnama",
+    "Baburnama",
+    "Humayunnama",
+    "Tuzuk-i-Jahangiri"
+   ],
+   "answer": 1,
+   "why": "Baburnama.",
+   "unit": "m05"
+  },
+  {
+   "q": "Akbar defeated Himu at…",
+   "options": [
+    "Khanwa",
+    "Panipat (1556)",
+    "Talikota",
+    "Haldighati"
+   ],
+   "answer": 1,
+   "why": "The second battle of Panipat.",
+   "unit": "m06"
+  },
+  {
+   "q": "Akbar built the city of…",
+   "options": [
+    "Shahjahanabad",
+    "Fatehpur Sikri",
+    "Agra",
+    "Lahore"
+   ],
+   "answer": 1,
+   "why": "Around the Sufi saint Salim Chishti's seminary.",
+   "unit": "m06"
+  },
+  {
+   "q": "Akbar's new faith was called…",
+   "options": [
+    "Sulh-i-kul",
+    "Din-i-Ilahi",
+    "Bhakti",
+    "Ibadat"
+   ],
+   "answer": 1,
+   "why": "Din-i-Ilahi.",
+   "unit": "m06"
+  },
+  {
+   "q": "Who wrote the Akbarnama?",
+   "options": [
+    "Birbal",
+    "Abul Fazl",
+    "Badauni",
+    "Gulbadan"
+   ],
+   "answer": 1,
+   "why": "Abul Fazl.",
+   "unit": "m06"
+  },
+  {
+   "q": "Akbar's hall of public audience was the…",
+   "options": [
+    "Diwan-i-am",
+    "Ibadat Khana",
+    "Diwan-i-khas",
+    "Naubat khana"
+   ],
+   "answer": 0,
+   "why": "He met his subjects there daily.",
+   "unit": "m06"
+  },
+  {
+   "q": "Nur Jahan married Jahangir in…",
+   "options": [
+    "1605",
+    "1611",
+    "1627",
+    "1658"
+   ],
+   "answer": 1,
+   "why": "1611.",
+   "unit": "m07"
+  },
+  {
+   "q": "The first English ambassador to the Mughals was…",
+   "options": [
+    "Ralph Fitch",
+    "Thomas Roe",
+    "Robert Clive",
+    "Vasco da Gama"
+   ],
+   "answer": 1,
+   "why": "Sent by James I.",
+   "unit": "m07"
+  },
+  {
+   "q": "The Taj Mahal is the tomb of…",
+   "options": [
+    "Nur Jahan",
+    "Mumtaz Mahal",
+    "Jodh Bai",
+    "Gulbadan"
+   ],
+   "answer": 1,
+   "why": "Shah Jahan's wife.",
+   "unit": "m07"
+  },
+  {
+   "q": "Aurangzeb's title 'Alamgir' means…",
+   "options": [
+    "Great king",
+    "World seizer",
+    "Living saint",
+    "Lord of lords"
+   ],
+   "answer": 1,
+   "why": "'World seizer'.",
+   "unit": "m08"
+  },
+  {
+   "q": "Who founded the Khalsa?",
+   "options": [
+    "Guru Nanak",
+    "Guru Tegh Bahadur",
+    "Guru Gobind Singh",
+    "Banda Bahadur"
+   ],
+   "answer": 2,
+   "why": "The tenth guru.",
+   "unit": "m08"
+  },
+  {
+   "q": "Shivaji crowned himself in…",
+   "options": [
+    "1663",
+    "1674",
+    "1680",
+    "1707"
+   ],
+   "answer": 1,
+   "why": "Taking the title Chhatrapati.",
+   "unit": "m08"
+  },
+  {
+   "q": "Shivaji's style of war was…",
+   "options": [
+    "Elephant charges",
+    "Guerrilla warfare",
+    "Naval battles only",
+    "Trench warfare"
+   ],
+   "answer": 1,
+   "why": "Using the hills of the Western Ghats.",
+   "unit": "m08"
+  },
+  {
+   "q": "Mughal post runners were called…",
+   "options": [
+    "Harkaras",
+    "Mansabdars",
+    "Qazis",
+    "Ahadis"
+   ],
+   "answer": 0,
+   "why": "At dak chowkis.",
+   "unit": "m09"
+  },
+  {
+   "q": "The Taj Mahal took how long to build?",
+   "options": [
+    "5 years",
+    "16 years",
+    "30 years",
+    "2 years"
+   ],
+   "answer": 1,
+   "why": "16 years.",
+   "unit": "m09"
+  },
+  {
+   "q": "Akbar's population was about…",
+   "options": [
+    "18 million",
+    "180 million",
+    "1.8 billion",
+    "80 million"
+   ],
+   "answer": 1,
+   "why": "About 180 million.",
+   "unit": "m09"
+  },
+  {
+   "q": "The Battle of Plassey was fought in…",
+   "options": [
+    "1757",
+    "1764",
+    "1799",
+    "1803"
+   ],
+   "answer": 0,
+   "why": "Clive defeated Siraj-ud-daulah in 1757.",
+   "unit": "b01"
+  },
+  {
+   "q": "The English East India Company's first factory was at…",
+   "options": [
+    "Calcutta",
+    "Madras",
+    "Surat",
+    "Bombay"
+   ],
+   "answer": 2,
+   "why": "Surat, 1612.",
+   "unit": "b01"
+  },
+  {
+   "q": "The Carnatic Wars were fought between the English and the…",
+   "options": [
+    "Dutch",
+    "Portuguese",
+    "French",
+    "Marathas"
+   ],
+   "answer": 2,
+   "why": "Anglo-French rivalry in the south.",
+   "unit": "b01"
+  },
+  {
+   "q": "Tipu Sultan ruled…",
+   "options": [
+    "Mysore",
+    "Bengal",
+    "Awadh",
+    "Punjab"
+   ],
+   "answer": 0,
+   "why": "He died at Seringapatam in 1799.",
+   "unit": "b01"
+  },
+  {
+   "q": "After Buxar, the Company got the right to…",
+   "options": [
+    "Rule Delhi",
+    "Collect Bengal's revenue",
+    "Make coins for the Mughals",
+    "Trade with China"
+   ],
+   "answer": 1,
+   "why": "The diwani of Bengal.",
+   "unit": "b01"
+  },
+  {
+   "q": "The 'steel frame' of British rule was the…",
+   "options": [
+    "Army",
+    "Indian Civil Service",
+    "Railways",
+    "Police"
+   ],
+   "answer": 1,
+   "why": "The ICS.",
+   "unit": "b02"
+  },
+  {
+   "q": "The Permanent Settlement was made by…",
+   "options": [
+    "Clive",
+    "Cornwallis",
+    "Wellesley",
+    "Dalhousie"
+   ],
+   "answer": 1,
+   "why": "Cornwallis, 1793.",
+   "unit": "b02"
+  },
+  {
+   "q": "The Subsidiary Alliance was the idea of…",
+   "options": [
+    "Warren Hastings",
+    "Wellesley",
+    "Dalhousie",
+    "Curzon"
+   ],
+   "answer": 1,
+   "why": "Lord Wellesley.",
+   "unit": "b02"
+  },
+  {
+   "q": "The first Indian in the ICS was…",
+   "options": [
+    "Dadabhai Naoroji",
+    "Satyendranath Tagore",
+    "Rammohun Roy",
+    "Surendranath Banerjee"
+   ],
+   "answer": 1,
+   "why": "1863.",
+   "unit": "b02"
+  },
+  {
+   "q": "The Asiatic Society was founded by…",
+   "options": [
+    "Macaulay",
+    "William Jones",
+    "James Prinsep",
+    "Derozio"
+   ],
+   "answer": 1,
+   "why": "1784, Calcutta.",
+   "unit": "b03"
+  },
+  {
+   "q": "Who founded the Brahmo Samaj?",
+   "options": [
+    "Vidyasagar",
+    "Rammohun Roy",
+    "Derozio",
+    "Dayanand Saraswati"
+   ],
+   "answer": 1,
+   "why": "1828.",
+   "unit": "b03"
+  },
+  {
+   "q": "Vidyasagar is remembered for…",
+   "options": [
+    "Widow remarriage",
+    "The Asiatic Society",
+    "Reading Brahmi",
+    "The first railway"
+   ],
+   "answer": 0,
+   "why": "Also girls' schools.",
+   "unit": "b03"
+  },
+  {
+   "q": "The first three universities were set up in…",
+   "options": [
+    "1835",
+    "1853",
+    "1857",
+    "1885"
+   ],
+   "answer": 2,
+   "why": "Calcutta, Bombay, Madras.",
+   "unit": "b03"
+  },
+  {
+   "q": "The 1857 uprising began at…",
+   "options": [
+    "Delhi",
+    "Meerut",
+    "Kanpur",
+    "Lucknow"
+   ],
+   "answer": 1,
+   "why": "10 May 1857.",
+   "unit": "b04"
+  },
+  {
+   "q": "The Doctrine of Lapse was used by…",
+   "options": [
+    "Wellesley",
+    "Cornwallis",
+    "Dalhousie",
+    "Canning"
+   ],
+   "answer": 2,
+   "why": "Lord Dalhousie.",
+   "unit": "b04"
+  },
+  {
+   "q": "After 1858 India was ruled by…",
+   "options": [
+    "The Company",
+    "The British Crown",
+    "The Mughals",
+    "The Marathas"
+   ],
+   "answer": 1,
+   "why": "Through a Viceroy.",
+   "unit": "b04"
+  },
+  {
+   "q": "Which leader of 1857 ruled Jhansi?",
+   "options": [
+    "Begum Hazrat Mahal",
+    "Rani Lakshmibai",
+    "Nana Sahib",
+    "Kunwar Singh"
+   ],
+   "answer": 1,
+   "why": "She died fighting in 1858.",
+   "unit": "b04"
+  },
+  {
+   "q": "The first railway ran from Bombay to…",
+   "options": [
+    "Poona",
+    "Thane",
+    "Surat",
+    "Delhi"
+   ],
+   "answer": 1,
+   "why": "1853.",
+   "unit": "b04"
+  },
+  {
+   "q": "The Congress was founded in…",
+   "options": [
+    "1857",
+    "1885",
+    "1905",
+    "1906"
+   ],
+   "answer": 1,
+   "why": "In Bombay.",
+   "unit": "b05"
+  },
+  {
+   "q": "Who partitioned Bengal?",
+   "options": [
+    "Dalhousie",
+    "Curzon",
+    "Ripon",
+    "Minto"
+   ],
+   "answer": 1,
+   "why": "Lord Curzon, 1905.",
+   "unit": "b05"
+  },
+  {
+   "q": "Who said 'Swaraj is my birthright'?",
+   "options": [
+    "Gokhale",
+    "Tilak",
+    "Naoroji",
+    "Gandhi"
+   ],
+   "answer": 1,
+   "why": "Bal Gangadhar Tilak.",
+   "unit": "b05"
+  },
+  {
+   "q": "The 'drain of wealth' idea came from…",
+   "options": [
+    "Dadabhai Naoroji",
+    "A.O. Hume",
+    "Lala Lajpat Rai",
+    "Annie Besant"
+   ],
+   "answer": 0,
+   "why": "His book on poverty in India.",
+   "unit": "b05"
+  },
+  {
+   "q": "Jallianwala Bagh is in…",
+   "options": [
+    "Lahore",
+    "Amritsar",
+    "Delhi",
+    "Lucknow"
+   ],
+   "answer": 1,
+   "why": "13 April 1919.",
+   "unit": "b06"
+  },
+  {
+   "q": "Non-Cooperation was called off after…",
+   "options": [
+    "Jallianwala Bagh",
+    "Chauri Chaura",
+    "The Dandi March",
+    "The Simon Commission"
+   ],
+   "answer": 1,
+   "why": "February 1922.",
+   "unit": "b06"
+  },
+  {
+   "q": "The Rowlatt Act allowed the British to…",
+   "options": [
+    "Tax salt",
+    "Jail people without trial",
+    "Divide Bengal",
+    "Hold elections"
+   ],
+   "answer": 1,
+   "why": "1919.",
+   "unit": "b06"
+  },
+  {
+   "q": "Gandhiji's ashram near Ahmedabad was called…",
+   "options": [
+    "Sevagram",
+    "Sabarmati",
+    "Phoenix",
+    "Tolstoy Farm"
+   ],
+   "answer": 1,
+   "why": "Set up after he returned in 1915.",
+   "unit": "b06"
+  },
+  {
+   "q": "The Simon Commission was opposed because it had…",
+   "options": [
+    "Too many Indians",
+    "No Indian members",
+    "No British members",
+    "A Muslim leader"
+   ],
+   "answer": 1,
+   "why": "'Simon go back!'",
+   "unit": "b06"
+  },
+  {
+   "q": "The Dandi March began in…",
+   "options": [
+    "1920",
+    "1929",
+    "1930",
+    "1942"
+   ],
+   "answer": 2,
+   "why": "12 March 1930.",
+   "unit": "b07"
+  },
+  {
+   "q": "'Frontier Gandhi' was…",
+   "options": [
+    "Maulana Azad",
+    "Khan Abdul Ghaffar Khan",
+    "Jinnah",
+    "Shaukat Ali"
+   ],
+   "answer": 1,
+   "why": "Khudai Khidmatgars.",
+   "unit": "b07"
+  },
+  {
+   "q": "Purna Swaraj means…",
+   "options": [
+    "Self-rule in the provinces",
+    "Complete independence",
+    "Home rule",
+    "Non-cooperation"
+   ],
+   "answer": 1,
+   "why": "Lahore, 1929.",
+   "unit": "b07"
+  },
+  {
+   "q": "How many marchers set out with Gandhiji to Dandi?",
+   "options": [
+    "12",
+    "78",
+    "400",
+    "1,000"
+   ],
+   "answer": 1,
+   "why": "78.",
+   "unit": "b07"
+  },
+  {
+   "q": "Quit India began in…",
+   "options": [
+    "1930",
+    "1940",
+    "1942",
+    "1946"
+   ],
+   "answer": 2,
+   "why": "8 August 1942.",
+   "unit": "b08"
+  },
+  {
+   "q": "The Azad Hind Fauj was led by…",
+   "options": [
+    "Nehru",
+    "Subhas Chandra Bose",
+    "Patel",
+    "Bhagat Singh"
+   ],
+   "answer": 1,
+   "why": "'Delhi chalo!'",
+   "unit": "b08"
+  },
+  {
+   "q": "The slogan of Quit India was…",
+   "options": [
+    "Jai Hind",
+    "Do or die",
+    "Simon go back",
+    "Inquilab zindabad"
+   ],
+   "answer": 1,
+   "why": "Gandhiji's call.",
+   "unit": "b08"
+  },
+  {
+   "q": "How many princely states were there in 1947?",
+   "options": [
+    "11",
+    "200",
+    "562",
+    "1,000"
+   ],
+   "answer": 2,
+   "why": "562.",
+   "unit": "b08"
+  },
+  {
+   "q": "Polo came from the Mughal game called…",
+   "options": [
+    "Chaugan",
+    "Kabaddi",
+    "Chaupar",
+    "Gilli-danda"
+   ],
+   "answer": 0,
+   "why": "Played on horseback.",
+   "unit": "b09"
+  },
+  {
+   "q": "Which is a British hill station?",
+   "options": [
+    "Shimla",
+    "Agra",
+    "Lucknow",
+    "Surat"
+   ],
+   "answer": 0,
+   "why": "Also Darjeeling.",
+   "unit": "b09"
+  },
+  {
+   "q": "Queen Victoria visited India…",
+   "options": [
+    "Every year",
+    "Once",
+    "Never",
+    "In 1857"
+   ],
+   "answer": 2,
+   "why": "She ruled from London.",
+   "unit": "b09"
+  },
+  {
+   "q": "India's first Chief Election Commissioner was…",
+   "options": [
+    "Sukumar Sen",
+    "B.R. Ambedkar",
+    "V.P. Menon",
+    "Rajendra Prasad"
+   ],
+   "answer": 0,
+   "why": "An ICS officer and mathematician.",
+   "unit": "i01"
+  },
+  {
+   "q": "Princely states joined India by signing the…",
+   "options": [
+    "Constitution",
+    "Instrument of Accession",
+    "Cabinet Mission plan",
+    "Panchsheel Treaty"
+   ],
+   "answer": 1,
+   "why": "Patel convinced the rulers.",
+   "unit": "i01"
+  },
+  {
+   "q": "Gandhiji was killed on…",
+   "options": [
+    "15 August 1947",
+    "30 January 1948",
+    "26 January 1950",
+    "2 October 1948"
+   ],
+   "answer": 1,
+   "why": "30 January 1948.",
+   "unit": "i01"
+  },
+  {
+   "q": "Why did each party get its own ballot box with a symbol?",
+   "options": [
+    "To save paper",
+    "So voters who couldn't read could vote",
+    "To count faster",
+    "Because of computers"
+   ],
+   "answer": 1,
+   "why": "Most people could not read.",
+   "unit": "i01"
+  },
+  {
+   "q": "The Lok Sabha has…",
+   "options": [
+    "250 members",
+    "543 members",
+    "395 members",
+    "489 members"
+   ],
+   "answer": 1,
+   "why": "The Rajya Sabha has 250.",
+   "unit": "i02"
+  },
+  {
+   "q": "'Vande Mataram' first appeared in…",
+   "options": [
+    "Gitanjali",
+    "Anandamath",
+    "Discovery of India",
+    "Hind Swaraj"
+   ],
+   "answer": 1,
+   "why": "By Bankim Chandra Chatterjee, 1882.",
+   "unit": "i02"
+  },
+  {
+   "q": "'Socialist' and 'secular' were added in…",
+   "options": [
+    "1950",
+    "1952",
+    "1976",
+    "1947"
+   ],
+   "answer": 2,
+   "why": "The 42nd Amendment.",
+   "unit": "i02"
+  },
+  {
+   "q": "The courts are part of the…",
+   "options": [
+    "Legislature",
+    "Executive",
+    "Judiciary",
+    "Rajya Sabha"
+   ],
+   "answer": 2,
+   "why": "The judiciary.",
+   "unit": "i02"
+  },
+  {
+   "q": "The Green Revolution began in…",
+   "options": [
+    "Gujarat",
+    "Punjab",
+    "Bengal",
+    "Kerala"
+   ],
+   "answer": 1,
+   "why": "With high-yielding wheat.",
+   "unit": "i03"
+  },
+  {
+   "q": "Operation Flood was about…",
+   "options": [
+    "Rice",
+    "Milk",
+    "Rivers",
+    "Cotton"
+   ],
+   "answer": 1,
+   "why": "Verghese Kurien.",
+   "unit": "i03"
+  },
+  {
+   "q": "Bhoodan was started by…",
+   "options": [
+    "Vinoba Bhave",
+    "Verghese Kurien",
+    "Nehru",
+    "Patel"
+   ],
+   "answer": 0,
+   "why": "Gandhiji's 'spiritual successor'.",
+   "unit": "i03"
+  },
+  {
+   "q": "Bhoodan means…",
+   "options": [
+    "Gift of land",
+    "Gift of milk",
+    "Gift of food",
+    "Village council"
+   ],
+   "answer": 0,
+   "why": "Bhoo = land, daan = gift.",
+   "unit": "i03"
+  },
+  {
+   "q": "The Panchsheel Treaty was signed with…",
+   "options": [
+    "Pakistan",
+    "China",
+    "Britain",
+    "Nepal"
+   ],
+   "answer": 1,
+   "why": "1954.",
+   "unit": "i04"
+  },
+  {
+   "q": "K.D. Jadhav won bronze in…",
+   "options": [
+    "Hockey",
+    "Wrestling",
+    "Boxing",
+    "Shooting"
+   ],
+   "answer": 1,
+   "why": "1952.",
+   "unit": "i04"
+  },
+  {
+   "q": "Republic Day is…",
+   "options": [
+    "15 August",
+    "26 January",
+    "2 October",
+    "30 January"
+   ],
+   "answer": 1,
+   "why": "The Constitution came into force in 1950.",
+   "unit": "i04"
+  }
+ ],
+ "flashIntro": "Pick one or more chapters above. Read the question, answer out loud, then tap to flip. Mark “Got it” or “Not yet”: “Not yet” cards come back sooner.",
+ "flashcards": [
+  {
+   "front": "Why was India called Jambudvipa?",
+   "back": "'The island of the rose apple' (jambu, the jamun fruit).",
+   "unit": "a01"
+  },
+  {
+   "front": "Where do the names India and Bharatvarsha come from?",
+   "back": "India from the river Indus; Bharatvarsha from the Aryan tribe, the Bharatas.",
+   "unit": "a01"
+  },
+  {
+   "front": "How long is the Himalayan range?",
+   "back": "About 2,400 km. It protected India like a fortress wall.",
+   "unit": "a01"
+  },
+  {
+   "front": "Name two passes in the north-west used by traders and invaders.",
+   "back": "The Khyber and the Bolan passes.",
+   "unit": "a01"
+  },
+  {
+   "front": "Which three great rivers rise in the Himalayas?",
+   "back": "The Indus, the Ganga and the Brahmaputra.",
+   "unit": "a01"
+  },
+  {
+   "front": "How did the monsoon winds change history?",
+   "back": "Arab (and later European) sailors used them to sail to and from India.",
+   "unit": "a01"
+  },
+  {
+   "front": "How do archaeologists learn about the past?",
+   "back": "By digging at sites and studying pottery, tools, jewellery, inscriptions, coins and manuscripts.",
+   "unit": "a01"
+  },
+  {
+   "front": "Where are the finest Stone Age cave paintings?",
+   "back": "Bhimbetka, Madhya Pradesh.",
+   "unit": "a01"
+  },
+  {
+   "front": "When did the Harappan civilization flourish?",
+   "back": "About 2600 BCE to 1500 BCE.",
+   "unit": "a02"
+  },
+  {
+   "front": "How were the Harappan cities discovered?",
+   "back": "British engineers building a railway in Sindh found ancient bricks; archaeologists dug there from 1920.",
+   "unit": "a02"
+  },
+  {
+   "front": "What does Mohenjo-daro mean?",
+   "back": "'The mound of the dead'.",
+   "unit": "a02"
+  },
+  {
+   "front": "Name some Harappan sites in India.",
+   "back": "Kalibangan (Rajasthan), Rupar (Punjab), Lothal and Dholavira (Gujarat).",
+   "unit": "a02"
+  },
+  {
+   "front": "How were Harappan cities planned?",
+   "back": "Broad streets crossing at right angles, a walled citadel, same-size bricks, houses round courtyards, underground drains.",
+   "unit": "a02"
+  },
+  {
+   "front": "What was the Great Bath?",
+   "back": "A large pool at Mohenjo-daro with steps and a tar-lined floor; maybe part of a temple complex.",
+   "unit": "a02"
+  },
+  {
+   "front": "How do we date Harappa when we can't read its script?",
+   "back": "Harappan seals found in Mesopotamian cities, whose script we can read.",
+   "unit": "a02"
+  },
+  {
+   "front": "What were Harappan seals made of?",
+   "back": "Steatite (soapstone), with a line of script and an animal picture, e.g. the humped bull.",
+   "unit": "a02"
+  },
+  {
+   "front": "Which port traded with Mesopotamia?",
+   "back": "Lothal.",
+   "unit": "a02"
+  },
+  {
+   "front": "Why might the cities have declined?",
+   "back": "The Indus changing course, the Ghaggar drying up, droughts, floods, deforestation, and conflict with Aryan tribes.",
+   "unit": "a02"
+  },
+  {
+   "front": "Where did the Aryans come from?",
+   "back": "Probably Central Asia; nomadic tribes with cattle who entered India through Afghanistan around 1500 BCE.",
+   "unit": "a03"
+  },
+  {
+   "front": "What was Sapta Sindhu?",
+   "back": "'The land of the seven rivers': the Indus, its five tributaries, and the Saraswati.",
+   "unit": "a03"
+  },
+  {
+   "front": "Name the four Vedas.",
+   "back": "Rig Veda (oldest), Sama Veda (melodies), Atharva Veda (charms and spells), Yajur Veda (rules of rituals).",
+   "unit": "a03"
+  },
+  {
+   "front": "What is the oral tradition?",
+   "back": "Learning verses by heart and passing them on by memory before they were written down.",
+   "unit": "a03"
+  },
+  {
+   "front": "Name four Vedic gods.",
+   "back": "Indra (thunder and rain), Agni (fire), Varuna (sky), Surya (sun).",
+   "unit": "a03"
+  },
+  {
+   "front": "What was a yajna?",
+   "back": "A sacrifice ritual around a sacred fire, with priests chanting mantras.",
+   "unit": "a03"
+  },
+  {
+   "front": "Who were the sutas?",
+   "back": "Bards and storytellers who kept the Ramayana and Mahabharata alive.",
+   "unit": "a03"
+  },
+  {
+   "front": "What were janas, the rajan, the sabha and the samiti?",
+   "back": "Janas: tribes. Rajan: the chief. Sabha: a smaller council of seniors. Samiti: a general assembly.",
+   "unit": "a03"
+  },
+  {
+   "front": "What were the four varnas?",
+   "back": "Brahmins (priests), Kshatriyas (warriors), Vaishyas (farmers, traders), Shudras (labourers).",
+   "unit": "a03"
+  },
+  {
+   "front": "Name a woman sage of Vedic times.",
+   "back": "Gargi (also Visvavara, Apala, Ghosha).",
+   "unit": "a03"
+  },
+  {
+   "front": "What were janapadas and mahajanapadas?",
+   "back": "Kingdoms ('footsteps of the tribe'); the big ones were mahajanapadas, sixteen in all.",
+   "unit": "a04"
+  },
+  {
+   "front": "How were republics like the Licchavis ruled?",
+   "back": "By a group of tribal chiefs (an oligarchy), not by a king.",
+   "unit": "a04"
+  },
+  {
+   "front": "What was bhaga?",
+   "back": "The tax: a share of crops, earnings or sales, paid to the king.",
+   "unit": "a04"
+  },
+  {
+   "front": "When and where was the Buddha born?",
+   "back": "About 566 BCE at Lumbini (Nepal); son of Suddhodana of the Sakya clan.",
+   "unit": "a04"
+  },
+  {
+   "front": "Where did the Buddha gain enlightenment?",
+   "back": "Under a peepul tree at Uruvela (Bodh Gaya).",
+   "unit": "a04"
+  },
+  {
+   "front": "What did the Buddha teach?",
+   "back": "The Four Noble Truths and the Eight-Fold Path.",
+   "unit": "a04"
+  },
+  {
+   "front": "Who was Mahavira?",
+   "back": "Founder of Jainism, born 540 BCE in Vaishali; called Jina, the last of 24 tirthankaras.",
+   "unit": "a04"
+  },
+  {
+   "front": "Why did Magadha become powerful under Bimbisara?",
+   "back": "He kept a standing army, conquered nearby kingdoms and made marriage alliances.",
+   "unit": "a04"
+  },
+  {
+   "front": "Who was Ajatasatru?",
+   "back": "Bimbisara's son, who imprisoned him and took the throne; he used a giant catapult and the bladed chariot rathamusala.",
+   "unit": "a04"
+  },
+  {
+   "front": "Which city became Magadha's great capital?",
+   "back": "Pataliputra (modern Patna).",
+   "unit": "a04"
+  },
+  {
+   "front": "When did Chandragupta Maurya become king?",
+   "back": "321 BCE, with Chanakya's help; he ruled for 24 years.",
+   "unit": "a05"
+  },
+  {
+   "front": "Who was Chanakya?",
+   "back": "Chandragupta's adviser (also called Kautilya or Vishnugupta), who wrote the Arthashastra.",
+   "unit": "a05"
+  },
+  {
+   "front": "What happened between Chandragupta and Seleucus Nicator?",
+   "back": "They met at the Indus in 305 BCE; Seleucus withdrew, giving land up to Kandahar, with a treaty and a marriage alliance.",
+   "unit": "a05"
+  },
+  {
+   "front": "Who was Megasthenes?",
+   "back": "A Greek ambassador at Chandragupta's court who wrote Indika.",
+   "unit": "a05"
+  },
+  {
+   "front": "How did Chandragupta's life end?",
+   "back": "He became a Jain monk and went south to Shravanabelagola with Bhadrabahu.",
+   "unit": "a05"
+  },
+  {
+   "front": "Who ruled after Chandragupta?",
+   "back": "His son Bindusara (297–273 BCE), then Ashoka (268–232 BCE).",
+   "unit": "a05"
+  },
+  {
+   "front": "What changed Ashoka in 262 BCE?",
+   "back": "The bloody Kalinga war; he turned to non-violence and dhamma, inspired by the Buddha.",
+   "unit": "a05"
+  },
+  {
+   "front": "What was Ashoka's dhamma?",
+   "back": "A way of living: kindness, tolerance of all religions, respect for elders, no violence.",
+   "unit": "a05"
+  },
+  {
+   "front": "How did Ashoka spread Buddhism abroad?",
+   "back": "Missions after the council at Pataliputra (253 BCE); his son Mahendra went to Sri Lanka.",
+   "unit": "a05"
+  },
+  {
+   "front": "How did the Mauryan dynasty end?",
+   "back": "In 185 BCE Pushyamitra Sunga killed the last king, Brihadratha.",
+   "unit": "a05"
+  },
+  {
+   "front": "What were shrenis?",
+   "back": "Powerful guilds of craftsmen.",
+   "unit": "a05"
+  },
+  {
+   "front": "Who started the Sunga dynasty?",
+   "back": "Pushyamitra Sunga, at Pataliputra in 185 BCE.",
+   "unit": "a06"
+  },
+  {
+   "front": "What is the Periplus of the Erythraean Sea?",
+   "back": "A guide for sailors by an unknown Greek sailor, full of details on ships, ports and trade.",
+   "unit": "a06"
+  },
+  {
+   "front": "Who were the Indo-Greeks?",
+   "back": "Greek generals' kingdoms in Afghanistan and the north-west after Alexander; e.g. Menander (Milinda Panha).",
+   "unit": "a06"
+  },
+  {
+   "front": "Who were the Sakas?",
+   "back": "Tribes from the Caucasus who built kingdoms in western India; rulers called Satraps, e.g. Nahapana, Rudradaman.",
+   "unit": "a06"
+  },
+  {
+   "front": "Who was Gondophares?",
+   "back": "A Pahlava king; St Thomas visited his court.",
+   "unit": "a06"
+  },
+  {
+   "front": "Who was Kanishka?",
+   "back": "The greatest Kushan king; came to power in 78 CE, start of the Saka Era; built a giant stupa at Peshawar.",
+   "unit": "a06"
+  },
+  {
+   "front": "Who were the Satavahanas?",
+   "back": "The longest-ruling Deccan dynasty after the Mauryas (to 220 CE), capital Pratisthana; greatest king Gautamiputra Satakarni.",
+   "unit": "a06"
+  },
+  {
+   "front": "Name the three southern kingdoms of this time.",
+   "back": "Cholas, Pandyas, Cheras.",
+   "unit": "a06"
+  },
+  {
+   "front": "What is Sangam literature?",
+   "back": "Over 12,000 Tamil poems by 473 poets, recited at assemblies (sangams) in Madurai.",
+   "unit": "a06"
+  },
+  {
+   "front": "What is the Tolkappiyam?",
+   "back": "The first work on Tamil grammar.",
+   "unit": "a06"
+  },
+  {
+   "front": "Who was the first important Gupta king?",
+   "back": "Chandragupta I (321–335 CE), who married the Licchavi princess Kumaradevi.",
+   "unit": "a07"
+  },
+  {
+   "front": "Who was the greatest Gupta conqueror?",
+   "back": "Samudragupta (335–375 CE), praised in a prashasti on an Ashokan pillar at Allahabad.",
+   "unit": "a07"
+  },
+  {
+   "front": "Who was Chandragupta II?",
+   "back": "Samudragupta's son (375–415 CE), titled Vikramaditya; the empire's peak.",
+   "unit": "a07"
+  },
+  {
+   "front": "How did Chandragupta II deal with Deccan kings?",
+   "back": "Made them allies who paid tribute, and married his daughter Prabhavati to the Vakataka king.",
+   "unit": "a07"
+  },
+  {
+   "front": "Who was Fa-Hien?",
+   "back": "A Chinese Buddhist pilgrim who travelled in India 405–411 CE.",
+   "unit": "a07"
+  },
+  {
+   "front": "Who was Kalidasa?",
+   "back": "The great poet-playwright at Chandragupta II's court.",
+   "unit": "a07"
+  },
+  {
+   "front": "What was new in Gupta religion and building?",
+   "back": "Bhakti and puja grew; the first small stone temples were built.",
+   "unit": "a07"
+  },
+  {
+   "front": "Why did the Gupta empire decline?",
+   "back": "Trade fell with the collapse of Rome, Huns invaded, and Buddhism (the merchants' religion) waned.",
+   "unit": "a07"
+  },
+  {
+   "front": "Name the four southern dynasties in this chapter.",
+   "back": "Chalukyas of Vatapi, Pallavas of Kanchipuram, Pandyas of Madurai, Cholas of Thanjavur.",
+   "unit": "a08"
+  },
+  {
+   "front": "Who was Pulakeshin II?",
+   "back": "The greatest Chalukya king (608–642 CE), who defeated Harsha on the Narmada.",
+   "unit": "a08"
+  },
+  {
+   "front": "Where are Chalukya temples?",
+   "back": "Pattadakal and Aihole, Karnataka.",
+   "unit": "a08"
+  },
+  {
+   "front": "Who were the greatest Pallava kings?",
+   "back": "Mahendravarman I and his son Narasimhavarman I (who took Vatapi).",
+   "unit": "a08"
+  },
+  {
+   "front": "Why is Mamallapuram named so?",
+   "back": "After Narasimhavarman I, called 'Mahamalla' (great wrestler).",
+   "unit": "a08"
+  },
+  {
+   "front": "What did Narasimhavarman II (Rajasimha) build?",
+   "back": "The Shore Temple at Mamallapuram and the Kailasanatha temple at Kanchipuram.",
+   "unit": "a08"
+  },
+  {
+   "front": "Which temple is at the heart of Madurai?",
+   "back": "The Meenakshi Temple (Pandyas).",
+   "unit": "a08"
+  },
+  {
+   "front": "Who founded the Chola empire?",
+   "back": "Vijayalaya, in the 9th century, with his capital at Thanjavur.",
+   "unit": "a08"
+  },
+  {
+   "front": "Who were the greatest Chola kings?",
+   "back": "Raja Raja I (985–1016) and his son Rajendra (1016–1044).",
+   "unit": "a08"
+  },
+  {
+   "front": "What did Raja Raja and Rajendra build?",
+   "back": "The Brihadishwara temple at Thanjavur; Gangaikondacholapuram.",
+   "unit": "a08"
+  },
+  {
+   "front": "Where does the name Coromandel come from?",
+   "back": "Cholamandalam, the Chola region.",
+   "unit": "a08"
+  },
+  {
+   "front": "Dravida vs Nagara?",
+   "back": "Temple styles: Dravida in the south, Nagara in the north.",
+   "unit": "a08"
+  },
+  {
+   "front": "Who was Harshavardhana?",
+   "back": "King of Thaneshwar and later Kanauj (606–647 CE), younger brother of Rajyavardhana.",
+   "unit": "a09"
+  },
+  {
+   "front": "Whom did Harsha rescue?",
+   "back": "His sister Rajyashri, just before she walked into a fire.",
+   "unit": "a09"
+  },
+  {
+   "front": "Who defeated Harsha in the south?",
+   "back": "The Chalukya king Pulakeshin II.",
+   "unit": "a09"
+  },
+  {
+   "front": "Who was Hsuan Tsang (Xuanzang)?",
+   "back": "A Chinese pilgrim who came to India (from 630 CE) for Buddhist texts and studied at Nalanda.",
+   "unit": "a09"
+  },
+  {
+   "front": "What did Hsuan Tsang write?",
+   "back": "Si-Yu-Ki, an account of his travels.",
+   "unit": "a09"
+  },
+  {
+   "front": "What council did Harsha hold?",
+   "back": "The Buddhist council at Kanauj in 641 CE.",
+   "unit": "a09"
+  },
+  {
+   "front": "Who wrote Harshacharita?",
+   "back": "Banabhatta, Harsha's court poet (also Kadambari).",
+   "unit": "a09"
+  },
+  {
+   "front": "Theravada vs Mahayana Buddhism?",
+   "back": "Theravada: the Buddha a great human teacher. Mahayana: the Buddha worshipped as a god, with images.",
+   "unit": "a09"
+  },
+  {
+   "front": "What happened after Harsha died?",
+   "back": "He died in 648 CE with no heir; his minister Arunasva took the throne.",
+   "unit": "a09"
+  },
+  {
+   "front": "Who was Al-Biruni?",
+   "back": "A Persian scholar (970–1048) who came during Mahmud of Ghazni's invasions and wrote about India.",
+   "unit": "m01"
+  },
+  {
+   "front": "How many times did Mahmud of Ghazni invade India?",
+   "back": "Seventeen times, between 1000 and 1026 CE.",
+   "unit": "m01"
+  },
+  {
+   "front": "Which temple did Mahmud loot?",
+   "back": "Somnath, Gujarat. He used the loot to build up Ghazni.",
+   "unit": "m01"
+  },
+  {
+   "front": "What happened at Tarain in 1191 and 1192?",
+   "back": "1191: Prithviraj Chauhan defeated Muhammad of Ghur. 1192: Muhammad won and captured Prithviraj.",
+   "unit": "m01"
+  },
+  {
+   "front": "Who founded the Slave (Mamluk) dynasty?",
+   "back": "Qutub-ud-din Aibak, in 1206 CE, Muhammad of Ghur's deputy in Delhi.",
+   "unit": "m01"
+  },
+  {
+   "front": "Who was Iltutmish?",
+   "back": "Aibak's former slave and son-in-law (1211–1236), who set up a proper administration.",
+   "unit": "m01"
+  },
+  {
+   "front": "Who was Razia Sultan?",
+   "back": "Iltutmish's daughter, who ruled 1236–1240 and died fighting a rebellion.",
+   "unit": "m01"
+  },
+  {
+   "front": "Who was Balban?",
+   "back": "The last Mamluk sultan (1266–1287), a former slave who strengthened the army.",
+   "unit": "m01"
+  },
+  {
+   "front": "Name the five Delhi Sultanate dynasties in order.",
+   "back": "Slave (Mamluk), Khalji, Tughlaq, Sayyid, Lodi.",
+   "unit": "m02"
+  },
+  {
+   "front": "How did Alauddin Khalji become sultan?",
+   "back": "He killed his uncle Jalaluddin Khalji and took the throne (ruled 1296–1316).",
+   "unit": "m02"
+  },
+  {
+   "front": "Who was Malik Kafur?",
+   "back": "Alauddin's general, who raided south India as far as Madurai.",
+   "unit": "m02"
+  },
+  {
+   "front": "What is jauhar?",
+   "back": "Ritual suicide by fire by Rajput women, e.g. Padmini at Chittor.",
+   "unit": "m02"
+  },
+  {
+   "front": "Who was Amir Khusro?",
+   "back": "A Sufi poet who wrote in Hindawi (a mix of Persian and Hindi), an early form of Hindustani.",
+   "unit": "m02"
+  },
+  {
+   "front": "Name two of Muhammad bin Tughlaq's schemes.",
+   "back": "Moving the capital from Delhi to Daulatabad, and copper token coins (1329).",
+   "unit": "m02"
+  },
+  {
+   "front": "What did Feroz Shah Tughlaq do?",
+   "back": "Brought peace; founded towns (Jaunpur, Hisar, Firozabad); built madrasas; gave hereditary iqtas.",
+   "unit": "m02"
+  },
+  {
+   "front": "When did Timur invade?",
+   "back": "1398 CE, devastating Delhi.",
+   "unit": "m02"
+  },
+  {
+   "front": "Which Lodi king founded Agra?",
+   "back": "Sikandar Lodi.",
+   "unit": "m02"
+  },
+  {
+   "front": "How did the Sultanate end?",
+   "back": "Ibrahim Lodi was defeated and killed by Babur at Panipat in 1526.",
+   "unit": "m02"
+  },
+  {
+   "front": "Name the Sultanate officials.",
+   "back": "Wazir (prime minister), qazi (chief judge), bakshi (paymaster), ariz-i-mamalik (army head).",
+   "unit": "m02"
+  },
+  {
+   "front": "When and by whom was Vijayanagar founded?",
+   "back": "1336 CE, by the brothers Harihara and Bukka (Sangama dynasty).",
+   "unit": "m03"
+  },
+  {
+   "front": "What does Vijayanagar mean?",
+   "back": "'City of Victory'. It stood on the Tungabhadra (Hampi).",
+   "unit": "m03"
+  },
+  {
+   "front": "Name Vijayanagar's three dynasties.",
+   "back": "Sangama, Saluva, Tuluva.",
+   "unit": "m03"
+  },
+  {
+   "front": "Who was the greatest Vijayanagar king?",
+   "back": "Krishnadeva Raya (1509–1529).",
+   "unit": "m03"
+  },
+  {
+   "front": "Who were the ashtadiggajas?",
+   "back": "Krishnadeva Raya's eight talented court poets ('eight elephants'), including Tenali Rama.",
+   "unit": "m03"
+  },
+  {
+   "front": "Which temple did Krishnadeva Raya build at Hampi?",
+   "back": "The Vitthala temple.",
+   "unit": "m03"
+  },
+  {
+   "front": "What happened at Talikota in 1565?",
+   "back": "Vijayanagar was defeated by the Deccan sultanates (Bijapur, Golconda, Ahmednagar).",
+   "unit": "m03"
+  },
+  {
+   "front": "Who founded the Bahmani kingdom?",
+   "back": "Ala-ud-din Hasan (Hasan Gangu), in 1347, with his capital at Gulbarga.",
+   "unit": "m03"
+  },
+  {
+   "front": "What was the Raichur Doab?",
+   "back": "The fertile land between the Krishna and Tungabhadra that Vijayanagar and the Bahmanis fought over.",
+   "unit": "m03"
+  },
+  {
+   "front": "Who was Mahmud Gawan?",
+   "back": "A Persian prime minister of the Bahmanis who built a madrasa at Bidar; executed in 1481.",
+   "unit": "m03"
+  },
+  {
+   "front": "When did Vasco da Gama reach India?",
+   "back": "1498, at Calicut in Kerala, ruled by the Zamorin.",
+   "unit": "m03"
+  },
+  {
+   "front": "Which two religious movements grew under the Sultans?",
+   "back": "Hindu Bhakti and Islamic Sufi.",
+   "unit": "m04"
+  },
+  {
+   "front": "What did Bhakti and Sufi saints teach?",
+   "back": "God is one, everyone is equal, and love of God matters more than ritual or caste.",
+   "unit": "m04"
+  },
+  {
+   "front": "Who was Kabir?",
+   "back": "A weaver-poet and Bhakti saint who said Ram and Allah are the same.",
+   "unit": "m04"
+  },
+  {
+   "front": "Who was Guru Nanak?",
+   "back": "The founder of Sikhism, a wandering poet-teacher; 'a guru to Hindus and a pir to Muslims'.",
+   "unit": "m04"
+  },
+  {
+   "front": "Name a Sufi saint of Delhi.",
+   "back": "Sheikh Nizamuddin Auliya; Amir Khusro was his devotee.",
+   "unit": "m04"
+  },
+  {
+   "front": "What is sama?",
+   "back": "The singing of devotional songs by Sufis.",
+   "unit": "m04"
+  },
+  {
+   "front": "Who destroyed Nalanda and Vikramshila?",
+   "back": "Bakhtiyar Khalji, a general of the time.",
+   "unit": "m04"
+  },
+  {
+   "front": "What new features came into architecture?",
+   "back": "The arch, the dome and the minaret; Hindu and Islamic styles blended (e.g. the Qutub Minar complex).",
+   "unit": "m04"
+  },
+  {
+   "front": "What does Babur mean?",
+   "back": "Tiger.",
+   "unit": "m05"
+  },
+  {
+   "front": "Who were Babur's ancestors?",
+   "back": "Chenghiz Khan (mother's side) and Timur (father's side).",
+   "unit": "m05"
+  },
+  {
+   "front": "How long did the Mughals rule?",
+   "back": "1526 to 1858: 332 years.",
+   "unit": "m05"
+  },
+  {
+   "front": "What happened at Panipat on 21 April 1526?",
+   "back": "Babur, with about 25,000 men and cannons, defeated Ibrahim Lodi.",
+   "unit": "m05"
+  },
+  {
+   "front": "Whom did Babur defeat at Khanwa (1527)?",
+   "back": "Rana Sanga of Mewar, leader of the Rajputs.",
+   "unit": "m05"
+  },
+  {
+   "front": "What is the Baburnama?",
+   "back": "Babur's frank memoir, full of descriptions of India's plants and animals.",
+   "unit": "m05"
+  },
+  {
+   "front": "Who defeated Humayun?",
+   "back": "Sher Shah Sur, at Chausa (1539) and Kanauj (1540); Humayun fled to Persia.",
+   "unit": "m05"
+  },
+  {
+   "front": "Name Sher Shah's reforms.",
+   "back": "The silver rupiya, a road from Bengal to the Indus (Grand Trunk Road), inns, and a fair land tax.",
+   "unit": "m05"
+  },
+  {
+   "front": "When did Humayun return?",
+   "back": "He won back Delhi in 1555 and died in 1556 after falling down his library stairs.",
+   "unit": "m05"
+  },
+  {
+   "front": "Who wrote Humayunnama?",
+   "back": "His sister Gulbadan Begum.",
+   "unit": "m05"
+  },
+  {
+   "front": "Who helped young Akbar win the second battle of Panipat (1556)?",
+   "back": "His regent Bairam Khan; they defeated Himu (Hemu).",
+   "unit": "m06"
+  },
+  {
+   "front": "How big was the empire when Akbar died in 1605?",
+   "back": "From Bengal to Kabul, Kashmir to the Deccan.",
+   "unit": "m06"
+  },
+  {
+   "front": "Why did Akbar marry Rajput princesses?",
+   "back": "To win the support of the Hindu majority and the Rajputs; his wives kept their own religion.",
+   "unit": "m06"
+  },
+  {
+   "front": "Who was Jahangir's mother?",
+   "back": "The princess of Amber (traditionally called Jodh Bai).",
+   "unit": "m06"
+  },
+  {
+   "front": "What was jizya, and what did Akbar do about it?",
+   "back": "A tax on non-Muslims; Akbar abolished it.",
+   "unit": "m06"
+  },
+  {
+   "front": "What was the Ibadat Khana?",
+   "back": "Akbar's hall at Fatehpur Sikri for debates between scholars of all religions.",
+   "unit": "m06"
+  },
+  {
+   "front": "What was Din-i-Ilahi?",
+   "back": "Akbar's 'divine faith', mixing ideas he liked from all religions.",
+   "unit": "m06"
+  },
+  {
+   "front": "Who were mansabdars?",
+   "back": "Nobles who kept a fixed number of soldiers and horses, paid by a salary or land grant.",
+   "unit": "m06"
+  },
+  {
+   "front": "Name some of Akbar's courtiers.",
+   "back": "Birbal, Abul Fazl (Akbarnama, Ain-i-Akbari), Todar Mal (finance), Tansen (music).",
+   "unit": "m06"
+  },
+  {
+   "front": "When did Jahangir rule?",
+   "back": "1605–1627.",
+   "unit": "m07"
+  },
+  {
+   "front": "Who was Nur Jahan?",
+   "back": "Jahangir's wife (married 1611), who held real power in his last years with her family.",
+   "unit": "m07"
+  },
+  {
+   "front": "Who was Mumtaz Mahal?",
+   "back": "Arjumand Banu, Nur Jahan's niece, married to Prince Khurram (Shah Jahan).",
+   "unit": "m07"
+  },
+  {
+   "front": "Who was Sir Thomas Roe?",
+   "back": "The first English ambassador (1615), from James I to Jahangir's court; he kept a diary.",
+   "unit": "m07"
+  },
+  {
+   "front": "Why is Shah Jahan called the builder?",
+   "back": "He built the Taj Mahal, the Red Fort and Shahjahanabad, and sat on the Peacock Throne.",
+   "unit": "m07"
+  },
+  {
+   "front": "Why did Shah Jahan attack the Portuguese?",
+   "back": "They were the most aggressive Europeans; he attacked their settlements in Bengal.",
+   "unit": "m07"
+  },
+  {
+   "front": "How did Shah Jahan's reign end?",
+   "back": "His sons fought for the throne; Aurangzeb won and imprisoned him.",
+   "unit": "m07"
+  },
+  {
+   "front": "What title did Aurangzeb take?",
+   "back": "Alamgir, 'world seizer'. He ruled 1658–1707.",
+   "unit": "m08"
+  },
+  {
+   "front": "Why was Aurangzeb called 'zinda pir'?",
+   "back": "He lived very simply and strictly, like a 'living saint'.",
+   "unit": "m08"
+  },
+  {
+   "front": "Which unpopular policies did Aurangzeb bring in?",
+   "back": "He re-imposed the jizya and raised the land tax from a third to half of the produce.",
+   "unit": "m08"
+  },
+  {
+   "front": "Which Sikh guru did Aurangzeb execute?",
+   "back": "Guru Tegh Bahadur, in 1675.",
+   "unit": "m08"
+  },
+  {
+   "front": "What did Guru Gobind Singh create?",
+   "back": "The Khalsa, a military brotherhood of Sikhs.",
+   "unit": "m08"
+  },
+  {
+   "front": "Who was Shivaji's father and mother?",
+   "back": "Shahji Bhonsle and Jijabai.",
+   "unit": "m08"
+  },
+  {
+   "front": "How did Shivaji fight?",
+   "back": "Guerrilla warfare from hill forts in the Western Ghats; he also built a navy.",
+   "unit": "m08"
+  },
+  {
+   "front": "When did Shivaji crown himself?",
+   "back": "1674, as Chhatrapati; he ruled until 1680.",
+   "unit": "m08"
+  },
+  {
+   "front": "When did Aurangzeb conquer Bijapur and Golconda?",
+   "back": "1686 and 1687.",
+   "unit": "m08"
+  },
+  {
+   "front": "Where and when did Aurangzeb die?",
+   "back": "In the Deccan in 1707, never having returned to Delhi.",
+   "unit": "m08"
+  },
+  {
+   "front": "How many towns did Todar Mal's 1581 survey find?",
+   "back": "120 large towns (sheher) and 3,200 small towns (qasbas).",
+   "unit": "m09"
+  },
+  {
+   "front": "What was India's population under Akbar?",
+   "back": "About 180 million.",
+   "unit": "m09"
+  },
+  {
+   "front": "What were caravanserais?",
+   "back": "Inns for travellers along the roads.",
+   "unit": "m09"
+  },
+  {
+   "front": "What were dak chowkis and harkaras?",
+   "back": "Post stops on the roads, and the post runners stationed there.",
+   "unit": "m09"
+  },
+  {
+   "front": "Which was the first planned Mughal city?",
+   "back": "Shah Jahan's Shahjahanabad (Delhi).",
+   "unit": "m09"
+  },
+  {
+   "front": "How did the rich live?",
+   "back": "In havelis with many servants, horses and elephants.",
+   "unit": "m09"
+  },
+  {
+   "front": "Maktabs vs tols?",
+   "back": "Islamic schools attached to mosques vs Hindu schools held at temples.",
+   "unit": "m09"
+  },
+  {
+   "front": "How long did the Taj Mahal take to build?",
+   "back": "Sixteen years, with 20,000 workers.",
+   "unit": "m09"
+  },
+  {
+   "front": "Who was Tansen?",
+   "back": "Akbar's great court musician.",
+   "unit": "m09"
+  },
+  {
+   "front": "Who was the Gond queen who fought Akbar?",
+   "back": "Rani Durgavati of Garha-Katanga, in 1565.",
+   "unit": "m09"
+  },
+  {
+   "front": "Where did the English East India Company set up its first factory?",
+   "back": "Surat, in 1612.",
+   "unit": "b01"
+  },
+  {
+   "front": "Who was Sir Thomas Roe?",
+   "back": "The English ambassador who reached Jahangir's court in 1615 to win trading rights.",
+   "unit": "b01"
+  },
+  {
+   "front": "What were the Carnatic Wars?",
+   "back": "Wars in south India (1744–63) between the English and the French; the English won.",
+   "unit": "b01"
+  },
+  {
+   "front": "What happened at Plassey in 1757?",
+   "back": "Robert Clive defeated Siraj-ud-daulah, the Nawab of Bengal, helped by the traitor Mir Jafar.",
+   "unit": "b01"
+  },
+  {
+   "front": "Why was the Battle of Buxar (1764) important?",
+   "back": "The Company beat the Nawab of Bengal, the Nawab of Awadh and the Mughal emperor together, and won the right to collect Bengal's revenue (diwani).",
+   "unit": "b01"
+  },
+  {
+   "front": "Who were the 'nabobs'?",
+   "back": "Company officials who went home to England with huge fortunes made in India.",
+   "unit": "b01"
+  },
+  {
+   "front": "Which Mysore rulers fought the British?",
+   "back": "Hyder Ali and his son Tipu Sultan. Tipu died defending Seringapatam in 1799.",
+   "unit": "b01"
+  },
+  {
+   "front": "What was the Company's nickname?",
+   "back": "'John Company'.",
+   "unit": "b01"
+  },
+  {
+   "front": "When did the British occupy Delhi?",
+   "back": "1803. The Mughal emperor became a pensioner of the Company.",
+   "unit": "b01"
+  },
+  {
+   "front": "What was the 'dual government' in Bengal?",
+   "back": "The Company collected the revenue but the Nawab was left to run the government, with no money to do it.",
+   "unit": "b02"
+  },
+  {
+   "front": "What did the Regulating Act of 1773 do?",
+   "back": "It gave Parliament some control over the Company and made a Governor-General in Calcutta.",
+   "unit": "b02"
+  },
+  {
+   "front": "What were the three presidencies?",
+   "back": "Bengal (Calcutta), Madras and Bombay.",
+   "unit": "b02"
+  },
+  {
+   "front": "Why was the Indian Civil Service called the 'steel frame'?",
+   "back": "Its officers held British rule together. From 1853 it was chosen by an exam held in London.",
+   "unit": "b02"
+  },
+  {
+   "front": "Who was the first Indian to join the ICS?",
+   "back": "Satyendranath Tagore, in 1863.",
+   "unit": "b02"
+  },
+  {
+   "front": "What was the Permanent Settlement (1793)?",
+   "back": "Cornwallis fixed the land tax for ever; zamindars had to pay it on time or lose their land, so they squeezed the farmers.",
+   "unit": "b02"
+  },
+  {
+   "front": "What was the Subsidiary Alliance?",
+   "back": "Wellesley's system: a ruler kept a British army in his state and paid for it, had a British Resident at court, and could not make other alliances.",
+   "unit": "b02"
+  },
+  {
+   "front": "Why did Indian weaving decline?",
+   "back": "Cheap machine-made cloth from Britain flooded India, while Indian cloth was taxed heavily in Britain.",
+   "unit": "b02"
+  },
+  {
+   "front": "What was the famine of 1770?",
+   "back": "A terrible famine in Bengal; the Company still collected its taxes.",
+   "unit": "b02"
+  },
+  {
+   "front": "Who were the Orientalists?",
+   "back": "British scholars who studied India's languages and old texts, e.g. William Jones.",
+   "unit": "b03"
+  },
+  {
+   "front": "What did William Jones found in 1784?",
+   "back": "The Asiatic Society in Calcutta.",
+   "unit": "b03"
+  },
+  {
+   "front": "What did James Prinsep do?",
+   "back": "He read the Brahmi script, so Ashoka's inscriptions could be understood.",
+   "unit": "b03"
+  },
+  {
+   "front": "What was Macaulay's Minute (1835)?",
+   "back": "It said Indians should be taught in English, to make a class of English-educated Indians.",
+   "unit": "b03"
+  },
+  {
+   "front": "When were the first universities set up?",
+   "back": "1857, at Calcutta, Bombay and Madras.",
+   "unit": "b03"
+  },
+  {
+   "front": "What did Rammohun Roy found, and what did he fight against?",
+   "back": "The Brahmo Samaj (1828). He campaigned against sati, which was banned in 1829.",
+   "unit": "b03"
+  },
+  {
+   "front": "Who was Henry Derozio?",
+   "back": "A young teacher at Hindu College, Calcutta, who taught his students to question everything.",
+   "unit": "b03"
+  },
+  {
+   "front": "What did Ishwarchandra Vidyasagar fight for?",
+   "back": "Widow remarriage (allowed by law in 1856) and girls' education.",
+   "unit": "b03"
+  },
+  {
+   "front": "Name two tribal revolts before 1857.",
+   "back": "The Kols (1831) and the Santhals (1855).",
+   "unit": "b04"
+  },
+  {
+   "front": "What was the Doctrine of Lapse?",
+   "back": "Dalhousie's rule: if a ruler died without a son of his own, the Company took over his kingdom.",
+   "unit": "b04"
+  },
+  {
+   "front": "When was Awadh annexed?",
+   "back": "1856, on the excuse of bad government.",
+   "unit": "b04"
+  },
+  {
+   "front": "What was the immediate cause of the uprising?",
+   "back": "Rumours that the new Enfield rifle cartridges were greased with cow and pig fat, offending Hindu and Muslim sepoys.",
+   "unit": "b04"
+  },
+  {
+   "front": "Who was Mangal Pandey?",
+   "back": "A sepoy at Barrackpore who attacked his officers; he was hanged in April 1857.",
+   "unit": "b04"
+  },
+  {
+   "front": "Where did the uprising begin?",
+   "back": "Meerut, on 10 May 1857. The sepoys marched to Delhi and declared Bahadur Shah Zafar their leader.",
+   "unit": "b04"
+  },
+  {
+   "front": "Name three leaders of the uprising.",
+   "back": "Rani Lakshmibai of Jhansi, Nana Sahib, Tantia Tope (also Begum Hazrat Mahal and Kunwar Singh).",
+   "unit": "b04"
+  },
+  {
+   "front": "Why did the uprising fail?",
+   "back": "No central leader or plan, it didn't spread across all of India, and many rulers helped the British.",
+   "unit": "b04"
+  },
+  {
+   "front": "What changed after 1858?",
+   "back": "The Company was ended and India was ruled by the British Crown through a Viceroy.",
+   "unit": "b04"
+  },
+  {
+   "front": "What was Dadabhai Naoroji's 'drain of wealth'?",
+   "back": "His idea that Britain was draining India's wealth away through taxes, salaries and trade, making India poor.",
+   "unit": "b05"
+  },
+  {
+   "front": "When and where was the Indian National Congress founded?",
+   "back": "28 December 1885, in Bombay, with 72 delegates. A.O. Hume helped found it.",
+   "unit": "b05"
+  },
+  {
+   "front": "What did the moderates want?",
+   "back": "Reforms by peaceful means: petitions, speeches and more Indians in government.",
+   "unit": "b05"
+  },
+  {
+   "front": "Who were Lal, Bal and Pal?",
+   "back": "The radicals Lala Lajpat Rai, Bal Gangadhar Tilak and Bipin Chandra Pal.",
+   "unit": "b05"
+  },
+  {
+   "front": "What did Tilak say about swaraj?",
+   "back": "'Swaraj is my birthright and I shall have it.'",
+   "unit": "b05"
+  },
+  {
+   "front": "Why was Bengal partitioned in 1905?",
+   "back": "Curzon said it was too big to govern, but really it was to divide Hindus and Muslims and weaken nationalists. It was reversed in 1911.",
+   "unit": "b05"
+  },
+  {
+   "front": "What were swadeshi and boycott?",
+   "back": "Using Indian-made goods and refusing British goods, e.g. burning foreign cloth.",
+   "unit": "b05"
+  },
+  {
+   "front": "When was the Muslim League founded?",
+   "back": "1906, in Dhaka.",
+   "unit": "b05"
+  },
+  {
+   "front": "What was the Surat split?",
+   "back": "In 1907 the Congress split between the moderates and the radicals.",
+   "unit": "b05"
+  },
+  {
+   "front": "Where did Gandhiji first try satyagraha?",
+   "back": "In South Africa, fighting laws against Indians.",
+   "unit": "b06"
+  },
+  {
+   "front": "When did Gandhiji return to India?",
+   "back": "1915. He set up the Sabarmati Ashram near Ahmedabad.",
+   "unit": "b06"
+  },
+  {
+   "front": "What do satyagraha and ahimsa mean?",
+   "back": "Satyagraha: holding on to truth, resisting peacefully. Ahimsa: non-violence.",
+   "unit": "b06"
+  },
+  {
+   "front": "Name Gandhiji's first satyagrahas in India.",
+   "back": "Champaran (indigo farmers, 1917), Kheda (farmers' taxes) and Ahmedabad (mill workers), 1918.",
+   "unit": "b06"
+  },
+  {
+   "front": "What was the Rowlatt Act (1919)?",
+   "back": "A law letting the British jail people without a trial.",
+   "unit": "b06"
+  },
+  {
+   "front": "What happened at Jallianwala Bagh?",
+   "back": "On 13 April 1919 in Amritsar, General Dyer ordered troops to fire on a peaceful crowd trapped in the garden; hundreds were killed.",
+   "unit": "b06"
+  },
+  {
+   "front": "What was the Khilafat movement?",
+   "back": "Indian Muslims, led by the Ali brothers, protesting how Britain treated the Turkish Sultan (the Khalifa). Gandhiji supported them.",
+   "unit": "b06"
+  },
+  {
+   "front": "When did the Non-Cooperation movement begin, and what did people do?",
+   "back": "4 September 1920. They left government schools, courts and jobs, returned titles and burnt foreign cloth.",
+   "unit": "b06"
+  },
+  {
+   "front": "Why did Gandhiji stop Non-Cooperation?",
+   "back": "At Chauri Chaura on 4 February 1922 a mob set a police station on fire, killing policemen. He would not accept violence.",
+   "unit": "b06"
+  },
+  {
+   "front": "Why was the Simon Commission boycotted?",
+   "back": "It came in 1928 to suggest reforms but had no Indian members. People shouted 'Simon go back!'",
+   "unit": "b06"
+  },
+  {
+   "front": "What was Purna Swaraj?",
+   "back": "Complete independence, declared as the Congress's goal at Lahore in December 1929.",
+   "unit": "b07"
+  },
+  {
+   "front": "Why did Gandhiji choose salt?",
+   "back": "Everyone, rich or poor, needed salt, and the British taxed it and banned Indians from making it.",
+   "unit": "b07"
+  },
+  {
+   "front": "Describe the Dandi March.",
+   "back": "It began on 12 March 1930 at Sabarmati with 78 marchers, covered about 400 km in 25 days, and reached Dandi on 6 April, where Gandhiji made salt.",
+   "unit": "b07"
+  },
+  {
+   "front": "What happened at Dharasana?",
+   "back": "Peaceful satyagrahis marching on the salt works were beaten by police; they did not hit back, and the world read about it.",
+   "unit": "b07"
+  },
+  {
+   "front": "Who was the 'Frontier Gandhi'?",
+   "back": "Khan Abdul Ghaffar Khan, leader of the non-violent Khudai Khidmatgars.",
+   "unit": "b07"
+  },
+  {
+   "front": "What was the Gandhi-Irwin Pact (1931)?",
+   "back": "Prisoners were released and Gandhiji ended Civil Disobedience and went to the Second Round Table Conference in London.",
+   "unit": "b07"
+  },
+  {
+   "front": "What did the Government of India Act 1935 do?",
+   "back": "It gave the provinces elected governments of Indians (provincial autonomy).",
+   "unit": "b07"
+  },
+  {
+   "front": "Who first spoke of a separate Muslim state?",
+   "back": "The poet Muhammad Iqbal (1930); the name 'Pakistan' was coined in 1932.",
+   "unit": "b08"
+  },
+  {
+   "front": "What was the Lahore Resolution (1940)?",
+   "back": "The Muslim League, led by Jinnah, demanded separate Muslim states.",
+   "unit": "b08"
+  },
+  {
+   "front": "How many princely states were there?",
+   "back": "562 (and 11 British provinces).",
+   "unit": "b08"
+  },
+  {
+   "front": "What was the Cripps Mission (March 1942)?",
+   "back": "Britain offered dominion status after the war in return for help; Congress rejected it.",
+   "unit": "b08"
+  },
+  {
+   "front": "When did Quit India begin, and what was the slogan?",
+   "back": "8 August 1942, in Bombay: 'Do or die'. Leaders were arrested at once.",
+   "unit": "b08"
+  },
+  {
+   "front": "What was the Azad Hind Fauj?",
+   "back": "The Indian National Army led by Subhas Chandra Bose, which fought alongside Japan; its cry was 'Delhi chalo!'",
+   "unit": "b08"
+  },
+  {
+   "front": "What was the Cabinet Mission (1946)?",
+   "back": "British ministers who tried to keep India united; it failed.",
+   "unit": "b08"
+  },
+  {
+   "front": "Who was the last Viceroy?",
+   "back": "Lord Mountbatten. India became free on 15 August 1947 and was partitioned into India and Pakistan.",
+   "unit": "b08"
+  },
+  {
+   "front": "What did missionaries do in India?",
+   "back": "Built churches, schools and hospitals, printed books and helped the poor.",
+   "unit": "b09"
+  },
+  {
+   "front": "Who often exploited the poor in British times?",
+   "back": "Zamindars and moneylenders.",
+   "unit": "b09"
+  },
+  {
+   "front": "Where did the game of polo come from?",
+   "back": "A Mughal game on horseback called chaugan; the British named it polo.",
+   "unit": "b09"
+  },
+  {
+   "front": "Why did the British build hill stations?",
+   "back": "To escape the summer heat. Darjeeling and Shimla were built like small English towns with cottages, clubs and theatres.",
+   "unit": "b09"
+  },
+  {
+   "front": "What did Gandhiji call the Indian princes?",
+   "back": "'The greatest blot on British rule in India'.",
+   "unit": "b09"
+  },
+  {
+   "front": "Who was the head of the British Raj?",
+   "back": "Queen Victoria, who lived in London and never visited India.",
+   "unit": "b09"
+  },
+  {
+   "front": "What was life expectancy in India around 1947?",
+   "back": "Only about 32 years.",
+   "unit": "i01"
+  },
+  {
+   "front": "How many Indians could not read or write in 1951?",
+   "back": "84 per cent (92 per cent of women).",
+   "unit": "i01"
+  },
+  {
+   "front": "How many people died in the Bengal famine of the 1940s?",
+   "back": "About three million.",
+   "unit": "i01"
+  },
+  {
+   "front": "When and how did Gandhiji die?",
+   "back": "He was shot on 30 January 1948 on his way to prayers in Delhi.",
+   "unit": "i01"
+  },
+  {
+   "front": "When were India's first elections?",
+   "back": "1951–52, led by Chief Election Commissioner Sukumar Sen.",
+   "unit": "i01"
+  },
+  {
+   "front": "How big were the first elections?",
+   "back": "489 Lok Sabha seats, 224,000 polling booths, 2 million steel ballot boxes; each party had its own box with a symbol for voters who could not read.",
+   "unit": "i01"
+  },
+  {
+   "front": "What was 'one citizen, one vote'?",
+   "back": "Every adult, rich or poor, man or woman, got a vote: the greatest gift of the Constitution.",
+   "unit": "i01"
+  },
+  {
+   "front": "Who brought the princely states into India?",
+   "back": "Sardar Patel, the Home Minister, with V.P. Menon. Rulers signed the Instrument of Accession.",
+   "unit": "i01"
+  },
+  {
+   "front": "How did Nehru prepare people to vote?",
+   "back": "He travelled over 40,000 km explaining how to vote and their rights.",
+   "unit": "i01"
+  },
+  {
+   "front": "Who led the drafting of the Constitution?",
+   "back": "Dr B.R. Ambedkar, chairman of the Drafting Committee.",
+   "unit": "i02"
+  },
+  {
+   "front": "When did the Constitution come into force?",
+   "back": "26 January 1950, Republic Day.",
+   "unit": "i02"
+  },
+  {
+   "front": "How does the Preamble begin?",
+   "back": "'We, the people of India…'",
+   "unit": "i02"
+  },
+  {
+   "front": "How big is the Constitution?",
+   "back": "395 Articles in 22 Parts and 12 Schedules; the original had 117,369 words.",
+   "unit": "i02"
+  },
+  {
+   "front": "Which two words were added in 1976?",
+   "back": "'Socialist' and 'secular', by the 42nd Amendment.",
+   "unit": "i02"
+  },
+  {
+   "front": "What are the Directive Principles?",
+   "back": "Guidelines on what the government should do for its citizens.",
+   "unit": "i02"
+  },
+  {
+   "front": "Name the three branches of government.",
+   "back": "Legislature (makes laws), executive (carries them out), judiciary (the courts).",
+   "unit": "i02"
+  },
+  {
+   "front": "Name the two houses of Parliament.",
+   "back": "Lok Sabha (lower, 543 members) and Rajya Sabha (upper, 250 members).",
+   "unit": "i02"
+  },
+  {
+   "front": "Who wrote the national anthem and the national song?",
+   "back": "Jana Gana Mana: Rabindranath Tagore (first sung in 1911). Vande Mataram: Bankim Chandra Chatterjee, in Anandamath (1882).",
+   "unit": "i02"
+  },
+  {
+   "front": "What did India's first stamp show?",
+   "back": "The flag, the date 15 August 1947 and 'Jai Hind'. It cost three-and-a-half annas.",
+   "unit": "i02"
+  },
+  {
+   "front": "Who developed the high-yielding wheat used in the Green Revolution?",
+   "back": "Norman Borlaug, an American scientist (Mexican dwarf wheat).",
+   "unit": "i03"
+  },
+  {
+   "front": "Where did the Green Revolution start?",
+   "back": "Punjab. Between 1967 and 1971 foodgrain production rose by 35 per cent.",
+   "unit": "i03"
+  },
+  {
+   "front": "Where did India's milk revolution begin?",
+   "back": "Anand, Kaira district, Gujarat: Sardar Patel helped set up the Kaira milk cooperative in 1946.",
+   "unit": "i03"
+  },
+  {
+   "front": "Who led Operation Flood?",
+   "back": "Verghese Kurien. The cooperatives sold milk directly to cities so the profits stayed with farmers.",
+   "unit": "i03"
+  },
+  {
+   "front": "How much did the Kaira Union grow?",
+   "back": "From 250 litres a day to nearly a million, and from 100 members to 5 lakh.",
+   "unit": "i03"
+  },
+  {
+   "front": "What did SEWA do in Operation Flood?",
+   "back": "It set up over 6,000 dairy cooperatives run entirely by women.",
+   "unit": "i03"
+  },
+  {
+   "front": "What was Bhoodan?",
+   "back": "Vinoba Bhave's movement asking landowners to give their spare land to landless farmers.",
+   "unit": "i03"
+  },
+  {
+   "front": "What was Gramdan?",
+   "back": "Land owned together by the whole village.",
+   "unit": "i03"
+  },
+  {
+   "front": "Which film tells the story of Operation Flood?",
+   "back": "Manthan (1976), by Shyam Benegal.",
+   "unit": "i03"
+  },
+  {
+   "front": "What was a ration shop?",
+   "back": "A government shop selling subsidized rice, wheat, sugar, oil and kerosene; you queued with a ration card.",
+   "unit": "i04"
+  },
+  {
+   "front": "What feeling marked the first years of freedom?",
+   "back": "Optimism: hope for the future, even through shortages.",
+   "unit": "i04"
+  },
+  {
+   "front": "When did India become a republic?",
+   "back": "26 January 1950.",
+   "unit": "i04"
+  },
+  {
+   "front": "What was the Panchsheel Treaty (1954)?",
+   "back": "India and China's Five Principles of Peaceful Coexistence.",
+   "unit": "i04"
+  },
+  {
+   "front": "Who won India's first individual Olympic medal?",
+   "back": "K.D. Jadhav, bronze in bantam-weight wrestling, 1952.",
+   "unit": "i04"
+  },
+  {
+   "front": "When did India decide to stay in the Commonwealth?",
+   "back": "1949.",
+   "unit": "i04"
+  }
+ ],
+ "examIntro": "Write your own answer first, then open the model. Look for the same moves, not the same words: two specific facts for 4 marks, explained reasons for 6.",
+ "exam": [
+  {
+   "q": "Explain how geography shaped India's history.",
+   "marks": 4,
+   "unit": "a01",
+   "model": [
+    "The Himalayas acted like a fortress wall, keeping out most invaders, though passes like the Khyber and the Bolan let in traders and invaders such as Alexander and Babur.",
+    "Rivers like the Indus and the Ganga created fertile plains where civilizations and great cities grew.",
+    "The monsoon winds brought the rain farmers depended on, and sailors used them to trade with Arabia and later Europe."
+   ],
+   "why": "Three geographical features, each linked to an effect on history."
+  },
+  {
+   "q": "Describe the town planning of the Harappan cities.",
+   "marks": 4,
+   "unit": "a02",
+   "model": [
+    "The cities were planned on a grid: broad main streets crossed at right angles, with narrow lanes off them.",
+    "A walled citadel on higher ground probably housed rulers or nobles.",
+    "Houses were built of same-size bricks around courtyards, and many had bathrooms.",
+    "Underground brick drains with manholes carried away waste, and Mohenjo-daro had the Great Bath."
+   ],
+   "why": "Four specific features."
+  },
+  {
+   "q": "Explain why the Harappan cities declined. Give at least two reasons.",
+   "marks": 4,
+   "unit": "a02",
+   "model": [
+    "First, the river may have changed: the Indus may have changed course, or the Ghaggar dried up, so the river-based cities lost their water and farmland.",
+    "Second, natural disasters such as long droughts, floods or earthquakes could have destroyed them.",
+    "Third, cutting forests for brick-making may have damaged the land, and warlike Aryan tribes with iron weapons and chariots may have come into conflict with the peaceful Harappans."
+   ],
+   "why": "Several reasons, each explained. Historians are not sure, so 'may have' is fine."
+  },
+  {
+   "q": "Describe the daily life and society of the Vedic people.",
+   "marks": 4,
+   "unit": "a03",
+   "model": [
+    "The Aryans lived in tribes called janas, led by a chief (rajan), with two assemblies, the sabha and the samiti.",
+    "Their wealth was cattle, and tribes often fought over herds; later they cleared forests to farm and lived in villages.",
+    "Society was divided into four varnas, which at first were based on work and were flexible.",
+    "Women had some freedom: they did not wear veils, and some, like Gargi, were scholars."
+   ],
+   "why": "Four details: government, economy, varna, women."
+  },
+  {
+   "q": "Explain why Magadha became the most powerful mahajanapada.",
+   "marks": 4,
+   "unit": "a04",
+   "model": [
+    "First, Bimbisara kept a standing army, always ready to fight.",
+    "Second, he conquered smaller neighbours and made alliances with powerful kingdoms through marriages, e.g. to the sister of Prasenajit of Kosala.",
+    "Third, his son Ajatasatru continued the conquests with new weapons such as a giant catapult and the bladed chariot rathamusala.",
+    "Magadha also had a strong capital at Pataliputra by the Ganga, which later became the Mauryan capital."
+   ],
+   "why": "Several reasons with names and examples."
+  },
+  {
+   "q": "Compare the teachings of the Buddha and Mahavira.",
+   "marks": 3,
+   "unit": "a04",
+   "model": [
+    "Both rejected costly Vedic rituals and taught that people could escape sorrow and rebirth through their own effort and right living.",
+    "The Buddha taught the Four Noble Truths and the Eight-Fold Path, a middle way.",
+    "Mahavira, the last of 24 tirthankaras, taught very strict non-violence and self-discipline; his followers are Jains."
+   ],
+   "why": "One similarity, then a difference for each."
+  },
+  {
+   "q": "How did the Kalinga war change Ashoka?",
+   "marks": 4,
+   "unit": "a05",
+   "model": [
+    "In 262 BCE Ashoka invaded Kalinga and won, but thousands died on both sides.",
+    "Shocked by the suffering, he gave up war and followed the Buddha's teachings.",
+    "He spread dhamma: kindness, non-violence and tolerance of all religions, carved on rock edicts and pillars.",
+    "He did good works such as roads, shade trees and rest houses, and sent Buddhist missions abroad, e.g. his son Mahendra to Sri Lanka."
+   ],
+   "why": "Event, change, and specific examples of what he did next."
+  },
+  {
+   "q": "Explain how the Mauryas ran their large empire.",
+   "marks": 3,
+   "unit": "a05",
+   "model": [
+    "The empire had a proper bureaucracy, with officers called mahamatyas running departments.",
+    "Land was surveyed and farmers paid bhaga, a quarter to a sixth of their produce, the main income.",
+    "Chanakya's Arthashastra set out how to rule, and a large army and spies kept control."
+   ],
+   "why": "Three features with specific terms."
+  },
+  {
+   "q": "Describe the kingdoms that rose after the Mauryas.",
+   "marks": 4,
+   "unit": "a06",
+   "model": [
+    "In the north, Pushyamitra Sunga founded the Sunga dynasty at Pataliputra in 185 BCE.",
+    "In the north-west, foreign rulers came one after another: Indo-Greeks, Sakas, Pahlavas and the Kushans, whose great king Kanishka began the Saka Era in 78 CE.",
+    "In the Deccan the Satavahanas ruled the longest, under kings like Gautamiputra Satakarni.",
+    "In the far south the Cholas, Pandyas and Cheras ruled, and Tamil Sangam literature flourished."
+   ],
+   "why": "Cover north, north-west, Deccan and south with names."
+  },
+  {
+   "q": "Why is the Gupta period called a 'golden age'?",
+   "marks": 4,
+   "unit": "a07",
+   "model": [
+    "The empire was large and peaceful, especially under Chandragupta II Vikramaditya.",
+    "Literature flourished: Kalidasa wrote his great plays and poems, and others wrote plays like Mrichhakatika.",
+    "Science and maths advanced, with astronomers studying the stars.",
+    "The first stone temples were built, and trade brought wealth."
+   ],
+   "why": "Peace, literature, science, art, with examples."
+  },
+  {
+   "q": "Explain why the Gupta empire declined.",
+   "marks": 3,
+   "unit": "a07",
+   "model": [
+    "Trade fell after the collapse of the Roman empire, so the empire grew poorer.",
+    "Central Asian tribes like the Huns invaded.",
+    "Buddhism, the religion of the enterprising merchants, lost influence."
+   ],
+   "why": "Three causes, each explained."
+  },
+  {
+   "q": "Describe the achievements of the Chola kings Raja Raja I and Rajendra.",
+   "marks": 4,
+   "unit": "a08",
+   "model": [
+    "Raja Raja I (985–1016) defeated the Pandyas and Cheras and conquered parts of the Deccan.",
+    "He built the great Brihadishwara temple at Thanjavur.",
+    "His son Rajendra marched to the Ganga and built a new capital, Gangaikondacholapuram, with a temple and a tank filled with Ganga water.",
+    "Rajendra's navy defeated the Srivijaya kingdom to protect Indian merchants."
+   ],
+   "why": "Conquests and buildings for both kings."
+  },
+  {
+   "q": "Why is Hsuan Tsang important for historians of Harsha's reign?",
+   "marks": 3,
+   "unit": "a09",
+   "model": [
+    "He was a Chinese pilgrim who travelled across India and stayed at Harsha's court and at Nalanda.",
+    "He wrote Si-Yu-Ki, a first-hand account of the people, places and rulers he saw.",
+    "So we have an eyewitness record of Harsha's rule, his religion and the Kanauj council of 641 CE."
+   ],
+   "why": "Who he was, what he wrote, why it matters."
+  },
+  {
+   "q": "Describe how the Delhi Sultanate was founded.",
+   "marks": 4,
+   "unit": "m01",
+   "model": [
+    "Muhammad of Ghur led expeditions into India from 1175 CE.",
+    "He lost to Prithviraj Chauhan at the first battle of Tarain (1191) but defeated and captured him at the second (1192).",
+    "When Muhammad died in 1206, his deputy in Delhi, Qutub-ud-din Aibak, declared himself sultan, starting the Slave (Mamluk) dynasty.",
+    "Later rulers such as Iltutmish and Balban strengthened the kingdom's administration and army."
+   ],
+   "why": "Events in order with names and dates."
+  },
+  {
+   "q": "Why was Muhammad bin Tughlaq called 'the mad king'?",
+   "marks": 4,
+   "unit": "m02",
+   "model": [
+    "He had bold but badly planned schemes that failed.",
+    "He moved the capital from Delhi to Daulatabad, forcing people to travel far, and later had to move it back.",
+    "In 1329 he brought in copper token coins, but people forged them and the scheme collapsed.",
+    "His bad temper and unpredictable behaviour also angered the nobles and the ulema."
+   ],
+   "why": "Name the schemes and say why each failed."
+  },
+  {
+   "q": "Describe the achievements of Krishnadeva Raya.",
+   "marks": 3,
+   "unit": "m03",
+   "model": [
+    "He was Vijayanagar's greatest king (1509–1529); he defeated the king of Odisha and the sultan of Golconda, and occupied Bijapur.",
+    "He was a patron of literature, with eight court poets, the ashtadiggajas, including Tenali Rama.",
+    "He built the beautiful Vitthala temple at Hampi, and unlike many rulers he did not sack conquered cities."
+   ],
+   "why": "Conquests, culture and buildings."
+  },
+  {
+   "q": "Describe the ideas of the Bhakti and Sufi saints.",
+   "marks": 3,
+   "unit": "m04",
+   "model": [
+    "Both taught that God is one and can be reached through love and devotion, not costly rituals.",
+    "They said all people are equal, whatever their caste or religion; Ramananda took disciples from all castes.",
+    "They wrote poems and songs in people's own languages, like Kabir's dohas and Guru Nanak's verses, bringing communities together."
+   ],
+   "why": "Three ideas with examples."
+  },
+  {
+   "q": "Explain why Babur won the first battle of Panipat in 1526.",
+   "marks": 3,
+   "unit": "m05",
+   "model": [
+    "Babur had only about 25,000 soldiers against Ibrahim Lodi's much larger army.",
+    "But he planned the battle around his artillery: cannons frightened the elephants and broke the enemy lines.",
+    "He also used skilled horsemen and clever tactics, so Ibrahim Lodi was killed and Babur took Delhi and Agra."
+   ],
+   "why": "Show why the smaller army won."
+  },
+  {
+   "q": "Explain how Akbar won the support of his Hindu subjects.",
+   "marks": 4,
+   "unit": "m06",
+   "model": [
+    "Akbar realised he needed the support of the Hindu majority to build a lasting empire.",
+    "He married Rajput princesses and let them keep their own religion, with their own temples and kitchens, and gave Rajputs high posts.",
+    "He abolished the jizya tax on non-Muslims.",
+    "He held debates between all religions in the Ibadat Khana, preached tolerance and started Din-i-Ilahi."
+   ],
+   "why": "Several policies, each explained."
+  },
+  {
+   "q": "Describe Nur Jahan's power in Jahangir's court.",
+   "marks": 3,
+   "unit": "m07",
+   "model": [
+    "Jahangir married Nur Jahan in 1611, and she became very influential.",
+    "In his last years the real power lay with her group: her father Itmadud-Daula, her brother Asaf Khan and Prince Khurram.",
+    "Coins were struck in her name, and she arranged royal marriages, e.g. her niece to Khurram."
+   ],
+   "why": "Three specific details."
+  },
+  {
+   "q": "Explain why the Mughal empire weakened after Aurangzeb.",
+   "marks": 4,
+   "unit": "m08",
+   "model": [
+    "Aurangzeb spent his last 26 years fighting in the Deccan, which drained money and soldiers.",
+    "His harsh policies, such as re-imposing the jizya and raising land taxes, turned many subjects against him.",
+    "Revolts grew: the Sikhs under the Khalsa and the Marathas under Shivaji challenged Mughal power.",
+    "After 1707 the later Mughals were weak, so the empire broke apart."
+   ],
+   "why": "Several causes, each explained."
+  },
+  {
+   "q": "Describe how rich and poor people lived in Mughal times.",
+   "marks": 3,
+   "unit": "m09",
+   "model": [
+    "Rich nobles, merchants and officials lived in cities in large havelis with many servants, horses and elephants.",
+    "Most people were poor peasants in villages, paying heavy taxes and getting little help from the kings.",
+    "Most women were not educated; they married young and spent their lives running the home."
+   ],
+   "why": "Contrast rich and poor, with details."
+  },
+  {
+   "q": "Explain why the East India Company was able to take over much of India.",
+   "marks": 6,
+   "unit": "b01",
+   "model": [
+    "Indian rulers were divided and often fought each other, so the Company could make allies and defeat them one at a time, as at Plassey, where Mir Jafar changed sides.",
+    "The Company's army was well trained and disciplined, with modern guns and artillery, and paid sepoys regularly.",
+    "It had a lot of money from trade and, after Buxar in 1764, from Bengal's land revenue, which paid for more wars.",
+    "Its navy controlled the seas, so it could bring troops and supplies when needed, and it had beaten its European rival, France, in the Carnatic Wars."
+   ],
+   "why": "Four reasons, each explained with an example. A 6-mark answer should end with which reason mattered most."
+  },
+  {
+   "q": "Describe how Company rule harmed India's villages and industries.",
+   "marks": 4,
+   "unit": "b02",
+   "model": [
+    "The Permanent Settlement fixed a high land tax; zamindars squeezed the farmers, and many lost their land to moneylenders.",
+    "Famines such as the one in Bengal in 1770 killed millions while the Company kept collecting taxes.",
+    "Cheap machine-made British cloth ruined Indian weavers, and India became a supplier of raw cotton instead."
+   ],
+   "why": "Specific examples: a law, a date, a group of people."
+  },
+  {
+   "q": "Explain how Indian reformers tried to change society in the 1800s.",
+   "marks": 6,
+   "unit": "b03",
+   "model": [
+    "Rammohun Roy founded the Brahmo Samaj in 1828 and campaigned against sati, which was banned in 1829.",
+    "Ishwarchandra Vidyasagar fought for widows to be allowed to remarry, which became law in 1856, and opened schools for girls.",
+    "Henry Derozio taught his students at Hindu College to think for themselves and question old customs.",
+    "They used modern education and printed books and newspapers to spread new ideas; English education helped educated Indians share ideas of freedom and equality."
+   ],
+   "why": "Name the reformer, what they did, and how it changed things."
+  },
+  {
+   "q": "Explain the causes of the uprising of 1857.",
+   "marks": 6,
+   "unit": "b04",
+   "model": [
+    "Political: Dalhousie's Doctrine of Lapse took over states like Jhansi, and Awadh was annexed in 1856, angering rulers and their soldiers.",
+    "Economic: high land taxes ruined farmers, and weavers lost work to British cloth.",
+    "Social and religious: people feared the British wanted to change their customs and religion.",
+    "Military: sepoys were paid less than British soldiers, and the immediate cause was the greased cartridges, which offended both Hindus and Muslims."
+   ],
+   "why": "Group causes (political, economic, social, military) and finish with the immediate cause."
+  },
+  {
+   "q": "Why did the uprising of 1857 fail?",
+   "marks": 4,
+   "unit": "b04",
+   "model": [
+    "There was no single leader or common plan; each leader fought in his or her own area.",
+    "Large parts of India, like the south and Punjab, did not join, and many princes helped the British.",
+    "The British had better weapons, more money and the telegraph, and retook Delhi in September 1857."
+   ],
+   "why": "Two or three clear reasons."
+  },
+  {
+   "q": "Describe the differences between the moderates and the radicals in the Congress.",
+   "marks": 4,
+   "unit": "b05",
+   "model": [
+    "The moderates, like Naoroji and Gokhale, believed in British fair play and asked for reforms through petitions and speeches.",
+    "The radicals, like Lal, Bal and Pal, wanted swaraj and used protests, swadeshi and boycott of British goods.",
+    "The disagreement led to the Surat split in 1907."
+   ],
+   "why": "Contrast the two, with names and methods."
+  },
+  {
+   "q": "Explain why the Non-Cooperation movement was important.",
+   "marks": 6,
+   "unit": "b06",
+   "model": [
+    "It was the first mass movement across India: students, lawyers, farmers and workers joined.",
+    "Hindus and Muslims worked together, because Gandhiji joined it with the Khilafat movement.",
+    "People used non-violent methods: leaving government schools and courts, returning titles and burning foreign cloth, which hurt British trade.",
+    "Even though Gandhiji called it off after Chauri Chaura in 1922, it showed the British that ordinary Indians wanted freedom and made Congress a party of the people."
+   ],
+   "why": "Explain several ways it mattered, with examples."
+  },
+  {
+   "q": "Explain why the Salt March was a clever choice of protest.",
+   "marks": 4,
+   "unit": "b07",
+   "model": [
+    "Salt was used by every Indian, so everyone understood the unfairness of the salt tax.",
+    "Making salt was simple and legal for anyone to copy, so millions joined; about 90,000 were arrested.",
+    "The long, peaceful march drew newspapers from around the world, and the beatings at Dharasana turned world opinion against the British."
+   ],
+   "why": "Link each reason to why it worked."
+  },
+  {
+   "q": "Describe how India won independence between 1942 and 1947.",
+   "marks": 6,
+   "unit": "b08",
+   "model": [
+    "The Quit India movement of August 1942 ('Do or die') showed that Indians would no longer accept British rule, though leaders were jailed.",
+    "Subhas Chandra Bose's Azad Hind Fauj fought the British, and the trials of its soldiers made people angry.",
+    "World War II left Britain weak and short of money, so it could not keep holding India.",
+    "The Cabinet Mission (1946) failed to agree a united India, violence grew, and India became free on 15 August 1947, divided into India and Pakistan."
+   ],
+   "why": "A clear sequence with dates, plus why Britain left."
+  },
+  {
+   "q": "Describe how life was different for the British sahibs and ordinary Indians.",
+   "marks": 4,
+   "unit": "b09",
+   "model": [
+    "The sahibs lived in large bungalows, had many servants, joined clubs and went to hill stations like Shimla and Darjeeling in summer.",
+    "Most Indians were poor farmers, often exploited by zamindars and moneylenders, and suffered in famines."
+   ],
+   "why": "Contrast with specific examples."
+  },
+  {
+   "q": "Describe the problems India faced in 1947.",
+   "marks": 4,
+   "unit": "i01",
+   "model": [
+    "Partition caused violence and millions of refugees needed homes and work.",
+    "The 562 princely states had to be persuaded to join India.",
+    "Most people were poor, food production had fallen, and famines like Bengal's had killed millions.",
+    "Life expectancy was only about 32 and 84 per cent of people could not read or write."
+   ],
+   "why": "Specific numbers make this answer strong."
+  },
+  {
+   "q": "Explain why the first elections of 1951–52 were a great achievement.",
+   "marks": 6,
+   "unit": "i01",
+   "model": [
+    "It was a huge task for a poor new country: 224,000 polling booths and 2 million ballot boxes, with electoral rolls typed by hand.",
+    "Every adult could vote, including women and the poor, which many richer countries had not allowed at first.",
+    "Most voters could not read, so each party had its own box and symbol.",
+    "It showed that India would be a democracy, with people choosing their own government peacefully."
+   ],
+   "why": "Explain both the size of the task and why it mattered."
+  },
+  {
+   "q": "Describe how the Constitution protects the people of India.",
+   "marks": 4,
+   "unit": "i02",
+   "model": [
+    "It gives every citizen fundamental rights, such as equality before the law and freedom of speech and religion, which the courts can protect.",
+    "It gives every adult the vote ('one citizen, one vote').",
+    "It divides power between the legislature, the executive and the judiciary, so no one group has all the power."
+   ],
+   "why": "Two or three protections, each explained."
+  },
+  {
+   "q": "Explain how the Green Revolution and Operation Flood helped India.",
+   "marks": 6,
+   "unit": "i03",
+   "model": [
+    "The Green Revolution brought high-yielding wheat, developed by Norman Borlaug, to Punjab; foodgrain production rose 35 per cent between 1967 and 1971, so India no longer depended on food imports.",
+    "Operation Flood, led by Verghese Kurien, linked village milk cooperatives in Gujarat to the cities.",
+    "Because farmers owned the cooperatives, the profits stayed with them, and the Kaira Union grew from 100 to 5 lakh members.",
+    "Groups like SEWA set up over 6,000 women's dairy cooperatives, giving women their own income."
+   ],
+   "why": "Two movements, each with facts and an effect."
+  },
+  {
+   "q": "Describe what growing up in India was like in the 1950s and 1960s.",
+   "marks": 4,
+   "unit": "i04",
+   "model": [
+    "Many goods were scarce, so families queued at ration shops with ration cards for rice, wheat, sugar and kerosene.",
+    "It was the first generation born in a free India, and there was great optimism about the future, with films and fashion such as the Sadhana kurta popular."
+   ],
+   "why": "Two features with details."
+  }
+ ],
+ "timeline": [
+  {
+   "unit": "m01",
+   "event": "Second Battle of Tarain: Muhammad of Ghur defeats Prithviraj Chauhan",
+   "year": 1192
+  },
+  {
+   "unit": "m05",
+   "event": "First Battle of Panipat: Babur founds the Mughal empire",
+   "year": 1526
+  },
+  {
+   "unit": "m06",
+   "event": "Akbar becomes emperor",
+   "year": 1556
+  },
+  {
+   "unit": "b01",
+   "event": "East India Company's first factory at Surat",
+   "year": 1612
+  },
+  {
+   "unit": "m08",
+   "event": "Aurangzeb dies",
+   "year": 1707
+  },
+  {
+   "unit": "b01",
+   "event": "Battle of Plassey",
+   "year": 1757
+  },
+  {
+   "unit": "b01",
+   "event": "Battle of Buxar",
+   "year": 1764
+  },
+  {
+   "unit": "b03",
+   "event": "Asiatic Society founded",
+   "year": 1784
+  },
+  {
+   "unit": "b02",
+   "event": "Permanent Settlement",
+   "year": 1793
+  },
+  {
+   "unit": "b01",
+   "event": "Tipu Sultan dies at Seringapatam",
+   "year": 1799
+  },
+  {
+   "unit": "b03",
+   "event": "Brahmo Samaj founded",
+   "year": 1828
+  },
+  {
+   "unit": "b03",
+   "event": "Macaulay's Minute on English education",
+   "year": 1835
+  },
+  {
+   "unit": "b04",
+   "event": "First railway, Bombay to Thane",
+   "year": 1853
+  },
+  {
+   "unit": "b04",
+   "event": "The Great Uprising begins at Meerut",
+   "year": 1857
+  },
+  {
+   "unit": "b04",
+   "event": "Crown rule replaces the Company",
+   "year": 1858
+  },
+  {
+   "unit": "b05",
+   "event": "Indian National Congress founded",
+   "year": 1885
+  },
+  {
+   "unit": "b05",
+   "event": "Partition of Bengal",
+   "year": 1905
+  },
+  {
+   "unit": "b05",
+   "event": "Muslim League founded",
+   "year": 1906
+  },
+  {
+   "unit": "b05",
+   "event": "Surat split",
+   "year": 1907
+  },
+  {
+   "unit": "b05",
+   "event": "Partition of Bengal reversed",
+   "year": 1911
+  },
+  {
+   "unit": "b06",
+   "event": "Gandhiji returns to India",
+   "year": 1915
+  },
+  {
+   "unit": "b06",
+   "event": "Champaran satyagraha",
+   "year": 1917
+  },
+  {
+   "unit": "b06",
+   "event": "Jallianwala Bagh massacre",
+   "year": 1919
+  },
+  {
+   "unit": "b06",
+   "event": "Non-Cooperation begins",
+   "year": 1920
+  },
+  {
+   "unit": "b06",
+   "event": "Chauri Chaura",
+   "year": 1922
+  },
+  {
+   "unit": "b06",
+   "event": "Simon Commission",
+   "year": 1928
+  },
+  {
+   "unit": "b07",
+   "event": "Purna Swaraj declared at Lahore",
+   "year": 1929
+  },
+  {
+   "unit": "b07",
+   "event": "Dandi March",
+   "year": 1930
+  },
+  {
+   "unit": "b07",
+   "event": "Gandhi-Irwin Pact",
+   "year": 1931
+  },
+  {
+   "unit": "b07",
+   "event": "Government of India Act",
+   "year": 1935
+  },
+  {
+   "unit": "b08",
+   "event": "Lahore Resolution",
+   "year": 1940
+  },
+  {
+   "unit": "b08",
+   "event": "Quit India movement",
+   "year": 1942
+  },
+  {
+   "unit": "b08",
+   "event": "Cabinet Mission",
+   "year": 1946
+  },
+  {
+   "unit": "b08",
+   "event": "Independence and partition",
+   "year": 1947
+  },
+  {
+   "unit": "i01",
+   "event": "Gandhiji assassinated",
+   "year": 1948
+  },
+  {
+   "unit": "i02",
+   "event": "Constitution comes into force; India a republic",
+   "year": 1950
+  },
+  {
+   "unit": "i01",
+   "event": "First general elections",
+   "year": 1952
+  },
+  {
+   "unit": "i04",
+   "event": "Panchsheel Treaty with China",
+   "year": 1954
+  }
+ ]
+}
