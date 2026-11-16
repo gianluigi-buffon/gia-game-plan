@@ -257,11 +257,6 @@ async function startSession(subjects) {
     by: ME().email, date: todayStr(), start: new Date().toISOString(), subjects, status: "running", at: F.serverTimestamp(),
   });
 }
-async function addSessionSubjects(keys) {
-  const s = runningSession();
-  const add = keys.filter(k => s && !s.subjects.includes(k));
-  if (add.length) await F.updateDoc(F.doc(DB, "studysessions", s.id), { subjects: [...s.subjects, ...add] });
-}
 // New answers in these subjects, split into submitted and not-yet-submitted.
 async function sessionWork(keys) {
   const all = [];
@@ -370,11 +365,11 @@ function sessionControl(host) {
       return;
     }
     const c = document.createElement("div"); c.className = "card rv-sbar";
-    c.innerHTML = `<b>▶ Which subjects are you revising?</b><div class="muted small">Pick one or more. You can add more later.</div>`;
-    c.appendChild(chips(sessUI.picks, k => { sessUI.picks = sessUI.picks.includes(k) ? sessUI.picks.filter(x => x !== k) : [...sessUI.picks, k]; redraw(); }));
+    c.innerHTML = `<b>▶ Which subject are you revising?</b><div class="muted small">One subject per session, so the timing stays clear. You can mix chapters and books within it.</div>`;
+    c.appendChild(chips(sessUI.picks, k => { sessUI.picks = [k]; redraw(); }));
     const row = document.createElement("div"); row.className = "pk-btns";
     const go = document.createElement("button"); go.className = "btn primary"; go.type = "button"; go.textContent = "Start";
-    go.onclick = async () => { if (!sessUI.picks.length) return alert("Pick at least one subject."); go.disabled = true; await startSession(sessUI.picks); sessUI.mode = null; };
+    go.onclick = async () => { if (!sessUI.picks.length) return alert("Pick the subject you're revising."); go.disabled = true; await startSession(sessUI.picks); sessUI.mode = null; };
     const cancel = document.createElement("button"); cancel.className = "btn ghost"; cancel.type = "button"; cancel.textContent = "Cancel";
     cancel.onclick = () => { sessUI.mode = null; redraw(); };
     row.append(go, cancel); c.appendChild(row); box.appendChild(c);
@@ -382,13 +377,13 @@ function sessionControl(host) {
   }
   if (sessUI.mode !== "end" || sessUI.id !== run.id) {
     box.innerHTML = `<div class="card rv-sbar on"><div class="row-between"><div><b>⏱️ Session running · <span class="rv-timer" data-start="${run.start}">${minsSince(run.start)}</span> min</b><div class="muted small">${esc(shortNames(run.subjects))} · started ${hhmm(run.start)} · model answers hidden until you end it</div></div><button class="btn primary" type="button">■ End session</button></div></div>`;
-    box.querySelector("button").onclick = () => { sessUI = { ...sessUI, mode: "end", id: run.id, picks: [...run.subjects], conf: 0, notes: "", drafts: true, mins: Math.max(1, Math.min(minsSince(run.start), 240)) }; redraw(); };
+    box.querySelector("button").onclick = () => { sessUI = { ...sessUI, mode: "end", id: run.id, picks: run.subjects.slice(0, 1), conf: 0, notes: "", drafts: true, mins: Math.max(1, Math.min(minsSince(run.start), 240)) }; redraw(); };
     return;
   }
   // End panel
   const c = document.createElement("div"); c.className = "card rv-sbar on";
-  c.innerHTML = `<b>■ End session</b><div class="muted small">Started ${hhmm(run.start)}. Check the subjects you revised:</div>`;
-  c.appendChild(chips(sessUI.picks, k => { sessUI.picks = sessUI.picks.includes(k) ? sessUI.picks.filter(x => x !== k) : [...sessUI.picks, k]; redraw(); }));
+  c.innerHTML = `<b>■ End session</b><div class="muted small">Started ${hhmm(run.start)}. The subject you revised:</div>`;
+  c.appendChild(chips(sessUI.picks, k => { sessUI.picks = [k]; redraw(); }));
   const rest = document.createElement("div");
   rest.innerHTML = `<label class="rv-slab">Minutes revised <input type="number" min="1" max="600" class="mininput rv-smins" value="${sessUI.mins}"></label>
     <div class="muted small">How confident do you feel now? (1 = shaky, 5 = could teach it)</div>
@@ -409,7 +404,7 @@ function sessionControl(host) {
   const row = document.createElement("div"); row.className = "pk-btns";
   const fin = document.createElement("button"); fin.className = "btn primary"; fin.type = "button"; fin.textContent = "✓ Finish session";
   fin.onclick = async () => {
-    if (!sessUI.picks.length) return alert("Pick the subjects you revised.");
+    if (!sessUI.picks.length) return alert("Pick the subject you revised.");
     if (!sessUI.conf) return alert("Tap how confident you feel (1–5).");
     if (!(sessUI.mins > 0)) return alert("How many minutes did you revise?");
     fin.disabled = true; fin.textContent = "Saving…";
@@ -819,12 +814,14 @@ async function renderPackView(el) {
   // Chapter picks are kept as "<packId>::<unit>" so they survive adding or removing books.
   v.units ||= v.unit ? [PK(v.id, v.unit)] : [];
   const books = v.books;
+  const subj = subjectOfPack(v.id) || v.back; // books from this subject only: one subject per session
+  const sameSubject = allBooks().filter(b => b.subject === subj).length;
   el.innerHTML = `<button class="btn tiny ghost" id="rvBack">← ${esc(subjectByKey(v.back)?.name || "Revision")}</button>
-    <div class="card pk-books"><b>📚 Books</b> <span class="muted small">Tap one or more books, then pick chapters from each below.</span><div class="pk-bookrow"></div></div>
+    <div class="card pk-books"${sameSubject < 2 ? " hidden" : ""}><b>📚 Books</b> <span class="muted small">Tap one or more ${esc(subjectByKey(subj)?.name || "")} books, then pick chapters from each below.</span><div class="pk-bookrow"></div></div>
     <div id="rvPack"><p class="muted small">Loading…</p></div>`;
   el.querySelector("#rvBack").onclick = () => go(v.back ? { name: "subject", key: v.back } : { name: "home" });
   const row = el.querySelector(".pk-bookrow");
-  allBooks().forEach(b => {
+  allBooks().filter(b => b.subject === subj).forEach(b => {
     const on = books.includes(b.id);
     const c = document.createElement("button"); c.type = "button"; c.className = "chip pk-bookchip" + (on ? " on" : "");
     c.textContent = `${b.emoji} ${PACKS[b.id] || b.id}`;
@@ -850,7 +847,6 @@ async function renderPackView(el) {
       toLocal = (u) => u.split("::")[1]; toKey = (u) => PK(id, u);
     } else ({ pack, store } = mergeBooks(books, packs, stores));
     const gia = !IS_PARENT();
-    if (gia) addSessionSubjects([...new Set(books.map(subjectOfPack).filter(Boolean))]); // practising adds these subjects to the running session
     // Submit marks an answer finished; it goes to Mum when the session ends.
     const current = (key) => writtenWork(pack, store.state).find(w => w.key === key);
     const submit = async (key) => {
