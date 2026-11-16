@@ -15,8 +15,8 @@
 //  "How it's marked" card on the subject page.
 // =============================================================
 
-// PLACEHOLDER goal until Christabel confirms Gia's revision deadline.
-export const REVISION_GOAL = { start: "2026-11-09", by: "2027-02-28", rounds: 2 };
+// Gia's revision goal, confirmed by Christabel (Nov 2026): 2 rounds of every topic by 31 Jan.
+export const REVISION_GOAL = { start: "2026-11-09", by: "2027-01-31", rounds: 2 };
 
 // Bump when a pack JSON changes so browsers fetch the new copy.
 export const PACK_VERSION = 6;
