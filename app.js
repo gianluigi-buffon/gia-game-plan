@@ -299,7 +299,7 @@ const QUOTES = [
   ["You are never too small to make a difference.", "Greta Thunberg"],
   ["Even the smallest person can change the course of the future.", "Galadriel, The Lord of the Rings"],
 ];
-// Inspirational Bible verses (shown on 3 days/week; quotes on the other 4)
+// Inspirational Bible verses (mixed in with the quotes every day)
 const VERSES = [
   ["I can do all things through Christ who strengthens me.", "Philippians 4:13"],
   ["Be strong and courageous. Do not be afraid, for the Lord your God is with you wherever you go.", "Joshua 1:9"],
@@ -343,7 +343,7 @@ const VERSES = [
   ["I praise you because I am fearfully and wonderfully made.", "Psalm 139:14"],
   ["She is clothed with strength and dignity; she can laugh at the days to come.", "Proverbs 31:25"],
 ];
-// Tue/Thu/Sat = verse days (3/week); the other 4 days = quotes.
+// Quotes and verses are mixed together every day (one shared pool).
 // Today's quote as a pop-up for 5 seconds when the app opens (once per visit; tap to close early).
 let quotePopupShown = false;
 function showQuotePopup() {
@@ -359,12 +359,13 @@ function showQuotePopup() {
   el.onclick = close;
   setTimeout(close, 5000);
 }
-// A new random quote (or verse, on verse days) each time the app is opened or refreshed.
+// A new random quote or verse each time the app is opened or refreshed.
 // Picked once per page load so the pop-up and the Today card match; never the same as last time.
 let pickedQuote = null;
+const QUOTE_POOL = [...QUOTES, ...VERSES];
 function quoteOfDay() {
   if (pickedQuote) return pickedQuote;
-  const list = [2, 4, 6].includes(new Date().getDay()) ? VERSES : QUOTES;
+  const list = QUOTE_POOL;
   let last = null;
   try { last = localStorage.getItem("gia-last-quote"); } catch (_) {}
   let i, tries = 0;
