@@ -19,7 +19,7 @@
 export const REVISION_GOAL = { start: "2026-11-09", by: "2027-02-28", rounds: 2 };
 
 // Bump when a pack JSON changes so browsers fetch the new copy.
-export const PACK_VERSION = 5;
+export const PACK_VERSION = 6;
 
 export const PACKS = {
   "geo7-ncert": "Geography: Our Environment",
@@ -187,7 +187,7 @@ const ALL_SUBJECTS = [
       { id: "hist7-ch04", unit: "History: NCERT Our Pasts II (Class 7)", pack: "history7-our-pasts-2", packUnit: "ch04", name: "Ch 4: The Mughal Empire",
         points: ["Who the Mughals were: descended from Genghis Khan and Timur, and why they preferred their Timurid link", "Babur: Panipat 1526 (Ibrahim Lodi), Khanua 1527 (Rana Sanga); Humayun lost to Sher Khan and fled to Iran; the main campaigns of Akbar, Jahangir, Shah Jahan and Aurangzeb", "Succession by coparcenary (shared among sons), not primogeniture; Mughal marriages and relations with the Rajputs; Aurangzeb's insult to Shivaji", "Mansabdars and jagirdars: zat (rank and salary) and sawar (cavalry); why jagirs ran short under Aurangzeb", "Zabt and zamindars: Todar Mal's revenue survey; Abul Fazl's Akbar Nama and Ain-i Akbari", "Akbar's government (subas, subadars, bakhshi, sadr, faujdar, kotwal), the ibadat khana and sulh-i kul; Nur Jahan; wealth and poverty in the 17th century"] },
       { id: "hist7-ch05", unit: "History: NCERT Our Pasts II (Class 7)", pack: "history7-our-pasts-2", packUnit: "ch05", name: "Ch 5: Rulers and Buildings",
-        points: ["Building techniques: trabeate (beams) vs arcuate (arches)", "Temples, mosques and tanks (e.g. Hauz-i Sultani) as signs of royal power", "Why temples were sometimes attacked", "Gardens, tombs and forts: chahar bagh, Humayun's tomb, Taj Mahal, Red Fort", "How regional styles mixed together"] },
+        points: ["The Qutb Minar; two kinds of royal buildings (private and public)", "Engineering skills: trabeate vs arcuate (the keystone), limestone cement; Kandariya Mahadeva and the Thanjavur temple (shikhara, garbhagriha)", "Building temples, mosques and tanks: the king as god-like or the 'Shadow of God'; Iltutmish's Hauz-i Sultani", "Why temples were targeted: the Pandyas in Sri Lanka, Rajendra I, Mahmud of Ghazni at Somnath", "Gardens, tombs and forts: chahar bagh, Humayun's tomb (pishtaq, hasht bihisht), Shah Jahan's audience halls (qibla, pietra dura, Orpheus), the Taj Mahal and river-front gardens, Shahjahanabad", "Region and empire: styles shared across regions (Bangla dome, Fatehpur Sikri, Vrindavan); Elsewhere: Gothic churches"] },
       { id: "hist7-ch06", unit: "History: NCERT Our Pasts II (Class 7)", pack: "history7-our-pasts-2", packUnit: "ch06", name: "Ch 6: Towns, Traders and Craftspersons",
         points: ["Kinds of towns: administrative centres (Thanjavur and its Rajarajeshvara temple), temple towns and pilgrimage centres (Somnath, Madurai, Tirupati, Vrindavan, Ajmer)", "The 'lost wax' technique for bronze images", "Small towns: mandapika and hatta; taxes on markets", "Traders big and small: Banjaras, guilds (Manigramam, Nanadesi), Chettiars, Marwari Oswals, Gujarati Baniyas and Bohras; Kabul's trade", "Crafts: Bidri work, the Panchalas or Vishwakarma community, Saliyar weavers; why some towns grew and others shrank", "A closer look: Hampi (Vijayanagara, fell 1565), Surat ('gate to Mecca', hundis), Masulipatnam; European companies, the advance system and 'Black Towns'"] },
       { id: "hist7-ch07", unit: "History: NCERT Our Pasts II (Class 7)", pack: "history7-our-pasts-2", packUnit: "ch07", name: "Ch 7: Tribes, Nomads and Settled Communities",

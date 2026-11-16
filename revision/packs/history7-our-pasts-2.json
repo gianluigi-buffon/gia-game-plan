@@ -368,54 +368,6 @@
    "unit": "ch04"
   },
   {
-   "q": "What holds up the roof in the trabeate style?",
-   "options": [
-    "Arches",
-    "Horizontal beams on pillars",
-    "Domes",
-    "Cables"
-   ],
-   "answer": 1,
-   "why": "Trabeate = beams; arcuate = arches.",
-   "unit": "ch05"
-  },
-  {
-   "q": "Who built the Hauz-i Sultani reservoir?",
-   "options": [
-    "Iltutmish",
-    "Alauddin Khalji",
-    "Akbar",
-    "Rajaraja I"
-   ],
-   "answer": 0,
-   "why": "Iltutmish, near Delhi.",
-   "unit": "ch05"
-  },
-  {
-   "q": "What is a chahar bagh?",
-   "options": [
-    "A four-part garden",
-    "A temple tower",
-    "A coin",
-    "A tax"
-   ],
-   "answer": 0,
-   "why": "A garden in four quarters.",
-   "unit": "ch05"
-  },
-  {
-   "q": "Who built the Taj Mahal?",
-   "options": [
-    "Akbar",
-    "Jahangir",
-    "Shah Jahan",
-    "Aurangzeb"
-   ],
-   "answer": 2,
-   "why": "Shah Jahan, as a tomb for Mumtaz Mahal.",
-   "unit": "ch05"
-  },
-  {
    "q": "Which empire had Hampi as its capital?",
    "options": [
     "Mughal",
@@ -762,6 +714,162 @@
    "answer": 1,
    "why": "Collecting revenue through contractors.",
    "unit": "ch10"
+  },
+  {
+   "q": "In the trabeate style, roofs and doors rest on…",
+   "options": [
+    "Arches",
+    "Horizontal beams across columns",
+    "Domes",
+    "Keystones"
+   ],
+   "answer": 1,
+   "why": "Trabeate = beams; arcuate = arches.",
+   "unit": "ch05"
+  },
+  {
+   "q": "Which part of a true arch passes the weight to its base?",
+   "options": [
+    "Pishtaq",
+    "Keystone",
+    "Shikhara",
+    "Qibla"
+   ],
+   "answer": 1,
+   "why": "The keystone.",
+   "unit": "ch05"
+  },
+  {
+   "q": "The Kandariya Mahadeva temple was built by the…",
+   "options": [
+    "Cholas",
+    "Chandelas",
+    "Pandyas",
+    "Palas"
+   ],
+   "answer": 1,
+   "why": "King Dhangadeva, 999.",
+   "unit": "ch05"
+  },
+  {
+   "q": "The garbhagriha is…",
+   "options": [
+    "The main shrine",
+    "The dance hall",
+    "The gateway",
+    "The temple tank"
+   ],
+   "answer": 0,
+   "why": "Where the chief deity was kept.",
+   "unit": "ch05"
+  },
+  {
+   "q": "Which temple had the tallest shikhara of its time?",
+   "options": [
+    "Kandariya Mahadeva",
+    "Rajarajeshvara, Thanjavur",
+    "Somnath",
+    "Govind Deva"
+   ],
+   "answer": 1,
+   "why": "Twice as high as Kandariya Mahadeva's.",
+   "unit": "ch05"
+  },
+  {
+   "q": "Charupallam means…",
+   "options": [
+    "Village of the incline",
+    "Four gardens",
+    "Eight paradises",
+    "King's reservoir"
+   ],
+   "answer": 0,
+   "why": "Named after the ramp used to build the Thanjavur temple.",
+   "unit": "ch05"
+  },
+  {
+   "q": "Who built the Hauz-i Sultani?",
+   "options": [
+    "Iltutmish",
+    "Alauddin Khalji",
+    "Akbar",
+    "Rajendra I"
+   ],
+   "answer": 0,
+   "why": "The 'King's Reservoir'.",
+   "unit": "ch05"
+  },
+  {
+   "q": "Hasht bihisht means…",
+   "options": [
+    "Four gardens",
+    "Forty pillars",
+    "Eight paradises",
+    "Shadow of God"
+   ],
+   "answer": 2,
+   "why": "A central hall with eight rooms around it.",
+   "unit": "ch05"
+  },
+  {
+   "q": "Which building first showed the Mughal central dome and pishtaq?",
+   "options": [
+    "Taj Mahal",
+    "Humayun's tomb",
+    "Red Fort",
+    "Jami Masjid"
+   ],
+   "answer": 1,
+   "why": "Built 1562–1571.",
+   "unit": "ch05"
+  },
+  {
+   "q": "Pietra dura is…",
+   "options": [
+    "Inlaid coloured stones",
+    "Limestone cement",
+    "A temple tower",
+    "A painted manuscript"
+   ],
+   "answer": 0,
+   "why": "Used behind Shah Jahan's throne.",
+   "unit": "ch05"
+  },
+  {
+   "q": "In the Taj Mahal's layout, the tomb is…",
+   "options": [
+    "In the centre of the garden",
+    "At the river's edge",
+    "On a hill",
+    "Inside a fort"
+   ],
+   "answer": 1,
+   "why": "A river-front garden.",
+   "unit": "ch05"
+  },
+  {
+   "q": "The 'Bangla dome' was shaped like…",
+   "options": [
+    "A lotus",
+    "A thatched hut",
+    "An onion",
+    "A pointed arch"
+   ],
+   "answer": 1,
+   "why": "From Bengal.",
+   "unit": "ch05"
+  },
+  {
+   "q": "Notre Dame in Paris is an example of…",
+   "options": [
+    "Arcuate Mughal style",
+    "Gothic style",
+    "Trabeate style",
+    "Chahar bagh"
+   ],
+   "answer": 1,
+   "why": "Pointed arches, stained glass, flying buttresses.",
+   "unit": "ch05"
   }
  ],
  "flashIntro": "Pick one or more chapters above. Read the question, answer out loud, then tap to flip. Mark “Got it” or “Not yet”: “Not yet” cards come back sooner.",
@@ -1050,56 +1158,6 @@
    "front": "Who was Nur Jahan?",
    "back": "Jahangir's wife (married 1611). Coins were struck in her name and she issued orders (farmans).",
    "unit": "ch04"
-  },
-  {
-   "front": "What is the trabeate style of building?",
-   "back": "Using horizontal beams placed across two vertical columns ('post and lintel') to make roofs, doors and windows.",
-   "unit": "ch05"
-  },
-  {
-   "front": "What is the arcuate style?",
-   "back": "Using arches, where the weight of the structure above is carried by the arch. It became common from the 12th century.",
-   "unit": "ch05"
-  },
-  {
-   "front": "Why did kings build large temples?",
-   "back": "To show their power, wealth and devotion. The king and his chosen deity were linked in the temple's name and rituals.",
-   "unit": "ch05"
-  },
-  {
-   "front": "Who built the Rajarajeshvara temple at Thanjavur?",
-   "back": "The Chola king Rajaraja I.",
-   "unit": "ch05"
-  },
-  {
-   "front": "What was the Hauz-i Sultani?",
-   "back": "A large reservoir built by Sultan Iltutmish just outside Delhi to supply water.",
-   "unit": "ch05"
-  },
-  {
-   "front": "Why were temples sometimes attacked by rival kings?",
-   "back": "Temples were symbols of a king's power and held great wealth, so destroying or looting them showed a rival's strength.",
-   "unit": "ch05"
-  },
-  {
-   "front": "What is a chahar bagh?",
-   "back": "A Mughal garden divided into four parts by walkways or water channels.",
-   "unit": "ch05"
-  },
-  {
-   "front": "Which Mughal tomb stands in the centre of a huge chahar bagh, with a tall central dome?",
-   "back": "Humayun's tomb in Delhi.",
-   "unit": "ch05"
-  },
-  {
-   "front": "What is pietra dura?",
-   "back": "Coloured, hard stones set into marble or sandstone to make designs, used in Shah Jahan's buildings.",
-   "unit": "ch05"
-  },
-  {
-   "front": "Name two of Shah Jahan's buildings.",
-   "back": "The Taj Mahal in Agra and the Red Fort (with the Diwan-i Am) in Delhi.",
-   "unit": "ch05"
   },
   {
    "front": "Name four kinds of medieval towns.",
@@ -1500,6 +1558,166 @@
    "front": "Who were the Jat leaders?",
    "back": "Churaman (controlled land west of Delhi) and Suraj Mal, under whom Bharatpur became strong.",
    "unit": "ch10"
+  },
+  {
+   "front": "Who built the Qutb Minar?",
+   "back": "Qutbuddin Aybak built the first storey (around 1199); Iltutmish built the rest, around 1229.",
+   "unit": "ch05"
+  },
+  {
+   "front": "What is under the Qutb Minar's first balcony?",
+   "back": "Small arches and geometric patterns, and two bands of inscriptions in Arabic, carved on a curved surface.",
+   "unit": "ch05"
+  },
+  {
+   "front": "What two kinds of buildings did kings build (8th–18th centuries)?",
+   "back": "1) Forts, palaces, garden residences and tombs. 2) Public buildings: temples, mosques, tanks, wells, caravanserais and bazaars.",
+   "unit": "ch05"
+  },
+  {
+   "front": "What is the trabeate (corbelled) style?",
+   "back": "Roofs, doors and windows made by placing a horizontal beam across two vertical columns.",
+   "unit": "ch05"
+  },
+  {
+   "front": "What is the arcuate style?",
+   "back": "Arches carry the weight of the building above doors and windows. Common from the 12th century.",
+   "unit": "ch05"
+  },
+  {
+   "front": "What does the keystone do?",
+   "back": "It sits at the centre of a true arch and passes the weight above down to the base of the arch.",
+   "unit": "ch05"
+  },
+  {
+   "front": "What was limestone cement?",
+   "back": "High-quality cement that hardened into concrete when mixed with stone chips, making large buildings easier and faster to build.",
+   "unit": "ch05"
+  },
+  {
+   "front": "How many workers did Akbar's Agra Fort need?",
+   "back": "2,000 stone-cutters, 2,000 cement and lime-makers and 8,000 labourers.",
+   "unit": "ch05"
+  },
+  {
+   "front": "Who built the Kandariya Mahadeva temple, and when?",
+   "back": "King Dhangadeva of the Chandela dynasty, in 999. It is in Khajuraho and dedicated to Shiva.",
+   "unit": "ch05"
+  },
+  {
+   "front": "What are the mahamandapa and the garbhagriha?",
+   "back": "Mahamandapa: the main hall, where dances were performed. Garbhagriha: the main shrine with the chief deity, where only the king, his family and priests worshipped.",
+   "unit": "ch05"
+  },
+  {
+   "front": "What is a shikhara?",
+   "back": "The tower over a temple's main shrine. The Rajarajeshvara temple at Thanjavur had the tallest of its time.",
+   "unit": "ch05"
+  },
+  {
+   "front": "How was the 90-tonne top stone lifted onto the Thanjavur temple?",
+   "back": "It was rolled up an inclined path starting over 4 km away. A nearby village is still called Charupallam, 'Village of the Incline'.",
+   "unit": "ch05"
+  },
+  {
+   "front": "Why was the Thanjavur temple's god called Rajarajeshvaram?",
+   "back": "King Rajarajadeva gave the god a name like his own, because it was auspicious and he wanted to appear god-like.",
+   "unit": "ch05"
+  },
+  {
+   "front": "What did Persian chronicles call the Sultan?",
+   "back": "The 'Shadow of God'.",
+   "unit": "ch05"
+  },
+  {
+   "front": "What was the Hauz-i Sultani?",
+   "back": "The 'King's Reservoir', built by Iltutmish just outside Dehli-i Kuhna.",
+   "unit": "ch05"
+  },
+  {
+   "front": "Why did rulers build tanks and reservoirs?",
+   "back": "Water was precious; a just king's rule was believed to bring plenty. (Abad, 'prosperous', comes from ab, 'water'.)",
+   "unit": "ch05"
+  },
+  {
+   "front": "Why did kings attack each other's temples?",
+   "back": "Temples showed a king's devotion, power and wealth, so looting them showed the winner's might.",
+   "unit": "ch05"
+  },
+  {
+   "front": "Give two examples of temples or statues being taken in war.",
+   "back": "The Pandyan king Shrimara Shrivallabha took a gold Buddha from Sri Lanka; the Chola Rajendra I filled his Shiva temple with statues seized from defeated rulers.",
+   "unit": "ch05"
+  },
+  {
+   "front": "Why did Mahmud of Ghazni attack temples such as Somnath?",
+   "back": "To loot their wealth and win credit as a great hero of Islam.",
+   "unit": "ch05"
+  },
+  {
+   "front": "What is a chahar bagh?",
+   "back": "A Mughal garden in a walled rectangle, divided into four quarters by water channels. Babur described laying them out.",
+   "unit": "ch05"
+  },
+  {
+   "front": "What two features did Akbar's architects take from Timur's tombs?",
+   "back": "A tall central dome and a tall gateway (pishtaq), first seen in Humayun's tomb.",
+   "unit": "ch05"
+  },
+  {
+   "front": "What is hasht bihisht?",
+   "back": "'Eight paradises': a central hall surrounded by eight rooms, as in Humayun's tomb (built 1562–1571 of red sandstone edged with white marble).",
+   "unit": "ch05"
+  },
+  {
+   "front": "What is chihil sutun?",
+   "back": "'Forty-pillared hall': Shah Jahan's halls of public and private audience.",
+   "unit": "ch05"
+  },
+  {
+   "front": "Why was Shah Jahan's throne called the qibla?",
+   "back": "Everyone faced it when court was in session, as Muslims face the qibla at prayer: the king as God's representative.",
+   "unit": "ch05"
+  },
+  {
+   "front": "Why was Orpheus shown behind Shah Jahan's throne?",
+   "back": "Orpheus's music calmed wild beasts so all lived in peace: the king's justice would treat high and low equally.",
+   "unit": "ch05"
+  },
+  {
+   "front": "What is pietra dura?",
+   "back": "Coloured hard stones set into hollows carved in marble or sandstone to make ornate patterns.",
+   "unit": "ch05"
+  },
+  {
+   "front": "What is a river-front garden?",
+   "back": "A chahar bagh where the building is at the river's edge, not the centre. The Taj Mahal (completed 1643) uses it.",
+   "unit": "ch05"
+  },
+  {
+   "front": "How did Shah Jahan use the Yamuna at Shahjahanabad?",
+   "back": "The imperial palace held the river-front; only favoured nobles like Dara Shukoh could build by the river.",
+   "unit": "ch05"
+  },
+  {
+   "front": "Give two examples of regional styles mixing.",
+   "back": "Vijayanagara's elephant stables copied Bijapur and Golconda styles; Vrindavan temples looked like Mughal palaces at Fatehpur Sikri.",
+   "unit": "ch05"
+  },
+  {
+   "front": "What was the 'Bangla dome'?",
+   "back": "A Bengali roof shaped like a thatched hut, which the Mughals adopted.",
+   "unit": "ch05"
+  },
+  {
+   "front": "Which regions influenced Fatehpur Sikri?",
+   "back": "Gujarat and Malwa (e.g. the pillars of Jodh Bai's palace).",
+   "unit": "ch05"
+  },
+  {
+   "front": "What was Gothic architecture?",
+   "back": "A style from 12th-century France: high pointed arches, stained glass, flying buttresses, tall spires. Example: Notre Dame, Paris.",
+   "unit": "ch05"
   }
  ],
  "examIntro": "Write your own answer first, then open the model. Look for the same moves, not the same words: two specific facts for 4 marks, explained reasons for 6.",
@@ -1587,16 +1805,6 @@
     "Third, his idea of sulh-i kul, 'universal peace', came from discussions in the ibadat khana. It focused on honesty, justice and peace for everyone rather than favouring one religion, so people of many faiths could accept his rule. Todar Mal's careful revenue system also gave the state a steady income."
    ],
    "why": "Three explained policies, each linked to how it helped him rule (PEEL)."
-  },
-  {
-   "q": "Describe two ways in which rulers showed their power through buildings.",
-   "marks": 4,
-   "unit": "ch05",
-   "model": [
-    "Kings built huge temples, such as Rajaraja I's Rajarajeshvara temple at Thanjavur, to show their wealth and their close link with the gods.",
-    "Rulers also built useful works such as Iltutmish's Hauz-i Sultani reservoir near Delhi, and grand tombs and forts such as Shah Jahan's Taj Mahal and Red Fort, to show their power and care for their subjects."
-   ],
-   "why": "Two different kinds of building, each with a named example."
   },
   {
    "q": "Describe the 'lost wax' technique used to make Chola bronzes.",
@@ -1702,6 +1910,60 @@
     "Third, the empire was attacked from inside and outside. Peasant and zamindar revolts spread, the Marathas, Sikhs and Jats seized land, and Nadir Shah sacked Delhi in 1739, followed by Ahmad Shah Abdali's raids from 1748 to 1761."
    ],
    "why": "Three explained causes (finances, nobles and governors, attacks and revolts) with specific evidence."
+  },
+  {
+   "q": "How is the trabeate style of building different from the arcuate style?",
+   "marks": 4,
+   "unit": "ch05",
+   "model": [
+    "In the trabeate (corbelled) style, roofs, doors and windows were made by placing a horizontal beam across two vertical columns. It was used from the 8th to the 13th century in temples, mosques, tombs and stepwells.",
+    "In the arcuate style, used from the 12th century, the weight above doors and windows was carried by arches; in a true arch the keystone at the centre passed the weight to the base."
+   ],
+   "why": "Define each style and give one detail for each."
+  },
+  {
+   "q": "How did a temple communicate the importance of a king?",
+   "marks": 6,
+   "unit": "ch05",
+   "model": [
+    "The largest temples were built by kings to show their power, wealth and devotion, for example Rajarajadeva's Rajarajeshvara temple at Thanjavur, with the tallest shikhara of its time.",
+    "The king took a name like the god's (Rajarajeshvaram) so that he seemed god-like, and in the rituals one 'god' honoured another.",
+    "The lesser gods in the temple belonged to the king's allies and subordinates, so the temple was a model of the world ruled by the king and his allies.",
+    "Only the king, his family and priests could worship in the main shrine (garbhagriha), showing his special place."
+   ],
+   "why": "Several clear ways, each with an example from the chapter."
+  },
+  {
+   "q": "How did the Mughal court suggest that everyone received justice equally from the emperor?",
+   "marks": 4,
+   "unit": "ch05",
+   "model": [
+    "Shah Jahan's audience halls were built to resemble a mosque, and his throne was called the qibla because everyone faced it, suggesting the king was God's representative on earth.",
+    "Behind the throne in the Red Fort, pietra dura inlays showed Orpheus, whose music calmed wild beasts so they lived in peace, meaning the king's justice treated the high and the low as equals."
+   ],
+   "why": "Two features of the court, each linked to justice."
+  },
+  {
+   "q": "Describe the main features of Mughal gardens and tombs.",
+   "marks": 4,
+   "unit": "ch05",
+   "model": [
+    "The chahar bagh was a walled rectangular garden divided into four quarters by water channels; Babur laid them out and Jahangir and Shah Jahan built fine ones in Kashmir, Agra and Delhi.",
+    "Humayun's tomb (1562–1571) stood in the centre of a huge chahar bagh with a tall central dome, a pishtaq gateway and a hasht bihisht plan. The Taj Mahal used a river-front garden, with the tomb at the river's edge."
+   ],
+   "why": "Use the key terms correctly."
+  },
+  {
+   "q": "Explain why rulers built places of worship and tanks.",
+   "marks": 6,
+   "unit": "ch05",
+   "model": [
+    "New dynasties wanted to show their moral right to rule, and building places of worship showed their close relationship with God.",
+    "Grand temples and mosques also showed the ruler's power and wealth and brought fame to his capital.",
+    "A just king's rule was believed to bring plenty, and making water available was highly praised, as with Iltutmish's Hauz-i Sultani.",
+    "Tanks were also built as part of temples, mosques and gurdwaras, for ordinary people to use."
+   ],
+   "why": "Several reasons, each explained with an example."
   }
  ],
  "timeline": [
@@ -1714,6 +1976,11 @@
    "unit": "ch02",
    "event": "Mahmud of Ghazni begins his rule",
    "year": 997
+  },
+  {
+   "unit": "ch05",
+   "event": "Kandariya Mahadeva temple built by the Chandela king Dhangadeva",
+   "year": 999
   },
   {
    "unit": "ch05",
@@ -1736,9 +2003,19 @@
    "year": 1192
   },
   {
+   "unit": "ch05",
+   "event": "Qutbuddin Aybak builds the Qutb Minar's first storey",
+   "year": 1199
+  },
+  {
    "unit": "ch03",
    "event": "Qutbuddin Aybak becomes Sultan",
    "year": 1206
+  },
+  {
+   "unit": "ch05",
+   "event": "Iltutmish completes the Qutb Minar",
+   "year": 1229
   },
   {
    "unit": "ch09",
@@ -1811,6 +2088,11 @@
    "year": 1565
   },
   {
+   "unit": "ch05",
+   "event": "Humayun's tomb completed",
+   "year": 1571
+  },
+  {
    "unit": "ch07",
    "event": "Ahoms annex Koch-Hajo",
    "year": 1581
@@ -1834,6 +2116,21 @@
    "unit": "ch04",
    "event": "Shah Jahan becomes emperor",
    "year": 1627
+  },
+  {
+   "unit": "ch05",
+   "event": "Taj Mahal completed",
+   "year": 1643
+  },
+  {
+   "unit": "ch05",
+   "event": "Shah Jahan's throne balcony in the Delhi diwan-i am completed",
+   "year": 1648
+  },
+  {
+   "unit": "ch05",
+   "event": "Jami Masjid at Shahjahanabad completed",
+   "year": 1656
   },
   {
    "unit": "ch04",
