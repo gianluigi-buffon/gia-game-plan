@@ -1,0 +1,1341 @@
+{
+ "id": "geo7-ncert",
+ "subject": "Humanities",
+ "title": "Geography: Our Environment (Class 7)",
+ "sub": "NCERT Class 7 Geography, chapters 1–9 · practising the IGCSE way",
+ "units": [
+  {
+   "key": "ch01",
+   "name": "Ch 1 Environment"
+  },
+  {
+   "key": "ch02",
+   "name": "Ch 2 Inside our Earth"
+  },
+  {
+   "key": "ch03",
+   "name": "Ch 3 Changing Earth"
+  },
+  {
+   "key": "ch04",
+   "name": "Ch 4 Air"
+  },
+  {
+   "key": "ch05",
+   "name": "Ch 5 Water"
+  },
+  {
+   "key": "ch06",
+   "name": "Ch 6 Vegetation"
+  },
+  {
+   "key": "ch07",
+   "name": "Ch 7 Settlement & transport"
+  },
+  {
+   "key": "ch08",
+   "name": "Ch 8 Amazon & Ganga"
+  },
+  {
+   "key": "ch09",
+   "name": "Ch 9 Deserts"
+  }
+ ],
+ "strategyIntro": "Geography marks go to correct terms, real examples and clear reasons. Close the book, answer from memory, then check.",
+ "strategy": [
+  {
+   "title": "Short answers",
+   "key": true,
+   "points": [
+    "Use the exact term (e.g. 'epicentre', 'insolation').",
+    "Add a named example where you can (Bhuj 2001, the Sahara, the Deccan plateau)."
+   ]
+  },
+  {
+   "title": "Give reasons / Explain",
+   "key": true,
+   "points": [
+    "Say what happens, then why, with 'because' or 'so'.",
+    "The marks tell you how many points to make."
+   ]
+  },
+  {
+   "title": "Describe and compare",
+   "points": [
+    "Describe: where, what it is like, examples.",
+    "Compare: say what is the same, then what is different, using numbers."
+   ]
+  }
+ ],
+ "commandWords": [
+  [
+   "Describe",
+   "Say what something is like, with details and examples."
+  ],
+  [
+   "Give reasons / Explain",
+   "Say why, using 'because' or 'so'."
+  ],
+  [
+   "Compare",
+   "Say what is similar and what is different."
+  ]
+ ],
+ "quizTitle": "Quiz",
+ "quizIntro": "Pick one or more chapters above, then answer. Each answer shows why it's right.",
+ "quiz": [
+  {
+   "q": "Which is NOT a natural ecosystem?",
+   "options": [
+    "Desert",
+    "Aquarium",
+    "Forest",
+    "Pond"
+   ],
+   "answer": 1,
+   "why": "An aquarium is made by people.",
+   "unit": "ch01"
+  },
+  {
+   "q": "Which is a human-made environment?",
+   "options": [
+    "Mountain",
+    "Sea",
+    "Road",
+    "River"
+   ],
+   "answer": 2,
+   "why": "Roads are made by people.",
+   "unit": "ch01"
+  },
+  {
+   "q": "The narrow zone where land, water and air interact to support life is the…",
+   "options": [
+    "Lithosphere",
+    "Biosphere",
+    "Hydrosphere",
+    "Atmosphere"
+   ],
+   "answer": 1,
+   "why": "Biosphere = the living world.",
+   "unit": "ch01"
+  },
+  {
+   "q": "Which is a threat to the environment?",
+   "options": [
+    "Growing plants",
+    "Growing population",
+    "Growing crops",
+    "Rain"
+   ],
+   "answer": 1,
+   "why": "More people means more needs, so more change to nature.",
+   "unit": "ch01"
+  },
+  {
+   "q": "The innermost layer of the Earth is the…",
+   "options": [
+    "Crust",
+    "Mantle",
+    "Core",
+    "Sial"
+   ],
+   "answer": 2,
+   "why": "The core (nife).",
+   "unit": "ch02"
+  },
+  {
+   "q": "Rocks formed from molten magma are…",
+   "options": [
+    "Igneous",
+    "Sedimentary",
+    "Metamorphic",
+    "Fossils"
+   ],
+   "answer": 0,
+   "why": "Igneous = 'of fire'.",
+   "unit": "ch02"
+  },
+  {
+   "q": "Rocks that contain fossils are usually…",
+   "options": [
+    "Igneous",
+    "Sedimentary",
+    "Metamorphic",
+    "Basalt"
+   ],
+   "answer": 1,
+   "why": "Remains get trapped in the layers.",
+   "unit": "ch02"
+  },
+  {
+   "q": "Limestone changes into…",
+   "options": [
+    "Slate",
+    "Marble",
+    "Granite",
+    "Basalt"
+   ],
+   "answer": 1,
+   "why": "Heat and pressure turn limestone into marble.",
+   "unit": "ch02"
+  },
+  {
+   "q": "Gold, petroleum and coal are examples of…",
+   "options": [
+    "Rocks",
+    "Minerals",
+    "Fossils",
+    "Magma"
+   ],
+   "answer": 1,
+   "why": "Minerals.",
+   "unit": "ch02"
+  },
+  {
+   "q": "The point on the surface above an earthquake's focus is the…",
+   "options": [
+    "Crater",
+    "Epicentre",
+    "Vent",
+    "Delta"
+   ],
+   "answer": 1,
+   "why": "Epicentre.",
+   "unit": "ch03"
+  },
+  {
+   "q": "Which is a depositional feature of a glacier?",
+   "options": [
+    "Floodplain",
+    "Beach",
+    "Moraine",
+    "Sea cave"
+   ],
+   "answer": 2,
+   "why": "Moraines.",
+   "unit": "ch03"
+  },
+  {
+   "q": "Mushroom rocks are found in…",
+   "options": [
+    "Deserts",
+    "River valleys",
+    "Glaciers",
+    "Oceans"
+   ],
+   "answer": 0,
+   "why": "Shaped by wind.",
+   "unit": "ch03"
+  },
+  {
+   "q": "Ox-bow lakes are found in…",
+   "options": [
+    "Glaciers",
+    "River valleys",
+    "Deserts",
+    "Mountains"
+   ],
+   "answer": 1,
+   "why": "Formed from meanders.",
+   "unit": "ch03"
+  },
+  {
+   "q": "Which is NOT an erosional feature of sea waves?",
+   "options": [
+    "Cliff",
+    "Beach",
+    "Sea cave",
+    "Arch"
+   ],
+   "answer": 1,
+   "why": "Beaches are made by deposition.",
+   "unit": "ch03"
+  },
+  {
+   "q": "Which gas protects us from harmful sun rays?",
+   "options": [
+    "Carbon dioxide",
+    "Nitrogen",
+    "Ozone",
+    "Oxygen"
+   ],
+   "answer": 2,
+   "why": "The ozone layer in the stratosphere.",
+   "unit": "ch04"
+  },
+  {
+   "q": "Which layer is almost free from clouds?",
+   "options": [
+    "Troposphere",
+    "Stratosphere",
+    "Mesosphere",
+    "Exosphere"
+   ],
+   "answer": 1,
+   "why": "Ideal for aeroplanes.",
+   "unit": "ch04"
+  },
+  {
+   "q": "As we go up the atmosphere, air pressure…",
+   "options": [
+    "Increases",
+    "Decreases",
+    "Stays the same",
+    "Doubles"
+   ],
+   "answer": 1,
+   "why": "Highest at sea level.",
+   "unit": "ch04"
+  },
+  {
+   "q": "The loo is a…",
+   "options": [
+    "Permanent wind",
+    "Seasonal wind",
+    "Local wind",
+    "Trade wind"
+   ],
+   "answer": 2,
+   "why": "A hot, dry local wind of the northern plains.",
+   "unit": "ch04"
+  },
+  {
+   "q": "The monsoon is a…",
+   "options": [
+    "Permanent wind",
+    "Seasonal wind",
+    "Local wind",
+    "Westerly"
+   ],
+   "answer": 1,
+   "why": "It changes direction with the season.",
+   "unit": "ch04"
+  },
+  {
+   "q": "Average salinity of the oceans?",
+   "options": [
+    "3.5 per thousand",
+    "35 per thousand",
+    "340 per thousand",
+    "97 per cent"
+   ],
+   "answer": 1,
+   "why": "35 parts per thousand.",
+   "unit": "ch05"
+  },
+  {
+   "q": "The rhythmic rise and fall of ocean water twice a day is a…",
+   "options": [
+    "Wave",
+    "Tide",
+    "Current",
+    "Tsunami"
+   ],
+   "answer": 1,
+   "why": "Tide.",
+   "unit": "ch05"
+  },
+  {
+   "q": "Warm ocean currents usually start near the…",
+   "options": [
+    "Poles",
+    "Equator",
+    "Coasts",
+    "Deserts"
+   ],
+   "answer": 1,
+   "why": "The equator.",
+   "unit": "ch05"
+  },
+  {
+   "q": "Spring tides happen when…",
+   "options": [
+    "The Moon is in its first quarter",
+    "Sun, Moon and Earth are in a line",
+    "There is no Moon",
+    "It rains"
+   ],
+   "answer": 1,
+   "why": "At full moon and new moon.",
+   "unit": "ch05"
+  },
+  {
+   "q": "'Tsunami' is a Japanese word meaning…",
+   "options": [
+    "Big storm",
+    "Harbour waves",
+    "Sea monster",
+    "Deep water"
+   ],
+   "answer": 1,
+   "why": "Harbours get destroyed.",
+   "unit": "ch05"
+  },
+  {
+   "q": "Sal and teak grow in…",
+   "options": [
+    "Tropical evergreen forests",
+    "Tropical deciduous forests",
+    "Coniferous forests",
+    "Tundra"
+   ],
+   "answer": 1,
+   "why": "Monsoon forests.",
+   "unit": "ch06"
+  },
+  {
+   "q": "'Taiga' means…",
+   "options": [
+    "Hot forest",
+    "Pure or untouched",
+    "Grassland",
+    "Cold desert"
+   ],
+   "answer": 1,
+   "why": "Russian for pure or untouched.",
+   "unit": "ch06"
+  },
+  {
+   "q": "The temperate grassland of Argentina is the…",
+   "options": [
+    "Prairie",
+    "Veld",
+    "Pampas",
+    "Steppe"
+   ],
+   "answer": 2,
+   "why": "Pampas.",
+   "unit": "ch06"
+  },
+  {
+   "q": "Citrus fruits are grown in…",
+   "options": [
+    "Mediterranean regions",
+    "Tundra",
+    "Taiga",
+    "Deserts"
+   ],
+   "answer": 0,
+   "why": "Hot dry summers, mild wet winters.",
+   "unit": "ch06"
+  },
+  {
+   "q": "Softwood from coniferous forests is used for…",
+   "options": [
+    "Furniture only",
+    "Paper and matchboxes",
+    "Fuel only",
+    "Nothing"
+   ],
+   "answer": 1,
+   "why": "Pulp for paper and newsprint.",
+   "unit": "ch06"
+  },
+  {
+   "q": "Which is NOT a means of communication?",
+   "options": [
+    "Telephone",
+    "Books",
+    "Table",
+    "Radio"
+   ],
+   "answer": 2,
+   "why": "A table cannot carry a message.",
+   "unit": "ch07"
+  },
+  {
+   "q": "The fastest means of transport is…",
+   "options": [
+    "Roadways",
+    "Railways",
+    "Waterways",
+    "Airways"
+   ],
+   "answer": 3,
+   "why": "But also the most expensive.",
+   "unit": "ch07"
+  },
+  {
+   "q": "A road built under the ground is a…",
+   "options": [
+    "Flyover",
+    "Subway",
+    "Expressway",
+    "Highway"
+   ],
+   "answer": 1,
+   "why": "Subways or under-paths.",
+   "unit": "ch07"
+  },
+  {
+   "q": "Seasonal movement of herders is called…",
+   "options": [
+    "Migration",
+    "Transhumance",
+    "Settlement",
+    "Trade"
+   ],
+   "answer": 1,
+   "why": "In search of new pastures.",
+   "unit": "ch07"
+  },
+  {
+   "q": "The cheapest way to carry heavy goods over long distances is…",
+   "options": [
+    "Air",
+    "Road",
+    "Water",
+    "Rail"
+   ],
+   "answer": 2,
+   "why": "Waterways.",
+   "unit": "ch07"
+  },
+  {
+   "q": "Toucans are a type of…",
+   "options": [
+    "Bird",
+    "Fish",
+    "Crop",
+    "Snake"
+   ],
+   "answer": 0,
+   "why": "Brightly coloured rainforest birds.",
+   "unit": "ch08"
+  },
+  {
+   "q": "Manioc is the staple food of the…",
+   "options": [
+    "Ganga basin",
+    "Amazon basin",
+    "Sahara",
+    "Ladakh"
+   ],
+   "answer": 1,
+   "why": "Also called cassava.",
+   "unit": "ch08"
+  },
+  {
+   "q": "The one-horned rhinoceros is found in the…",
+   "options": [
+    "Amazon",
+    "Brahmaputra plain",
+    "Sahara",
+    "Ladakh"
+   ],
+   "answer": 1,
+   "why": "Brahmaputra plain.",
+   "unit": "ch08"
+  },
+  {
+   "q": "The main crop of the Ganga–Brahmaputra plains is…",
+   "options": [
+    "Wheat",
+    "Paddy",
+    "Cotton",
+    "Coffee"
+   ],
+   "answer": 1,
+   "why": "Paddy needs plenty of water.",
+   "unit": "ch08"
+  },
+  {
+   "q": "The Trans-Amazon highway was built in…",
+   "options": [
+    "1950",
+    "1970",
+    "1990",
+    "2004"
+   ],
+   "answer": 1,
+   "why": "1970.",
+   "unit": "ch08"
+  },
+  {
+   "q": "The Sahara is in which part of Africa?",
+   "options": [
+    "Eastern",
+    "Northern",
+    "Western",
+    "Southern"
+   ],
+   "answer": 1,
+   "why": "North Africa.",
+   "unit": "ch09"
+  },
+  {
+   "q": "Ladakh is mainly home to…",
+   "options": [
+    "Christians and Muslims",
+    "Buddhists and Muslims",
+    "Hindus and Sikhs",
+    "Jains"
+   ],
+   "answer": 1,
+   "why": "Buddhists and Muslims.",
+   "unit": "ch09"
+  },
+  {
+   "q": "Hemis in Ladakh is a famous…",
+   "options": [
+    "Temple",
+    "Church",
+    "Monastery",
+    "Fort"
+   ],
+   "answer": 2,
+   "why": "A gompa.",
+   "unit": "ch09"
+  },
+  {
+   "q": "Egypt is famous for growing…",
+   "options": [
+    "Wheat",
+    "Maize",
+    "Cotton",
+    "Tea"
+   ],
+   "answer": 2,
+   "why": "Egyptian cotton.",
+   "unit": "ch09"
+  },
+  {
+   "q": "Why does Ladakh get so little rain?",
+   "options": [
+    "It is near the sea",
+    "It is in the rain shadow of the Himalayas",
+    "It is on the equator",
+    "It is a hot desert"
+   ],
+   "answer": 1,
+   "why": "The mountains block the rain clouds.",
+   "unit": "ch09"
+  }
+ ],
+ "flashIntro": "Pick one or more chapters above. Answer out loud, then flip. 'Not yet' cards come back sooner.",
+ "flashcards": [
+  {
+   "front": "What is environment?",
+   "back": "The place, people, things and nature that surround any living organism: a mix of natural and human-made.",
+   "unit": "ch01"
+  },
+  {
+   "front": "Biotic vs abiotic?",
+   "back": "Biotic: the living world (plants, animals). Abiotic: the non-living world (land, water, air).",
+   "unit": "ch01"
+  },
+  {
+   "front": "What is the lithosphere?",
+   "back": "The solid crust or hard top layer of the Earth, made of rocks and minerals and covered by soil.",
+   "unit": "ch01"
+  },
+  {
+   "front": "What is the hydrosphere?",
+   "back": "The domain of water: rivers, lakes, seas, oceans.",
+   "unit": "ch01"
+  },
+  {
+   "front": "What is the atmosphere?",
+   "back": "The thin layer of air around the Earth, held by gravity. It protects us from harmful rays and heat.",
+   "unit": "ch01"
+  },
+  {
+   "front": "What is the biosphere?",
+   "back": "The narrow zone where land, water and air interact to support life: plants and animals.",
+   "unit": "ch01"
+  },
+  {
+   "front": "What is an ecosystem?",
+   "back": "The relationship between living organisms, and between organisms and their surroundings. E.g. a pond, forest, desert.",
+   "unit": "ch01"
+  },
+  {
+   "front": "Give four examples of the human-made environment.",
+   "back": "Buildings, roads, bridges, parks, industries, monuments (any four).",
+   "unit": "ch01"
+  },
+  {
+   "front": "Where does the word 'environment' come from?",
+   "back": "The French 'environner', meaning neighbourhood.",
+   "unit": "ch01"
+  },
+  {
+   "front": "Name the three layers of the Earth.",
+   "back": "Crust, mantle, core.",
+   "unit": "ch02"
+  },
+  {
+   "front": "Why is the continental crust called sial?",
+   "back": "It is mainly silica (si) and alumina (al).",
+   "unit": "ch02"
+  },
+  {
+   "front": "Why is the oceanic crust called sima?",
+   "back": "It is mainly silica (si) and magnesium (ma).",
+   "unit": "ch02"
+  },
+  {
+   "front": "How thick is the crust?",
+   "back": "About 35 km on continents and only 5 km on the ocean floors. It is the thinnest layer.",
+   "unit": "ch02"
+  },
+  {
+   "front": "What is the core made of, and what is it called?",
+   "back": "Nickel and iron: nife (ni + fe).",
+   "unit": "ch02"
+  },
+  {
+   "front": "How are extrusive igneous rocks formed? Example?",
+   "back": "Lava cools quickly on the surface; fine-grained. Basalt (the Deccan plateau).",
+   "unit": "ch02"
+  },
+  {
+   "front": "How are intrusive igneous rocks formed? Example?",
+   "back": "Magma cools slowly deep inside the crust; large grains. Granite.",
+   "unit": "ch02"
+  },
+  {
+   "front": "How are sedimentary rocks formed?",
+   "back": "Small pieces of rock are carried, deposited and pressed into layers. They may contain fossils.",
+   "unit": "ch02"
+  },
+  {
+   "front": "What are metamorphic rocks? Examples?",
+   "back": "Rocks changed by heat and pressure: clay → slate, limestone → marble.",
+   "unit": "ch02"
+  },
+  {
+   "front": "What is the rock cycle?",
+   "back": "Rocks changing from one type to another in a cycle: igneous → sedimentary → metamorphic → magma → igneous.",
+   "unit": "ch02"
+  },
+  {
+   "front": "What is a mineral?",
+   "back": "A naturally occurring substance with definite physical properties and chemical composition.",
+   "unit": "ch02"
+  },
+  {
+   "front": "Why do lithospheric plates move?",
+   "back": "Because of the circular movement of molten magma inside the Earth. They move a few millimetres each year.",
+   "unit": "ch03"
+  },
+  {
+   "front": "Endogenic vs exogenic forces?",
+   "back": "Endogenic act inside the Earth (earthquakes, volcanoes). Exogenic act on the surface (rivers, wind, glaciers, sea waves).",
+   "unit": "ch03"
+  },
+  {
+   "front": "What is a volcano?",
+   "back": "A vent in the Earth's crust through which molten material erupts suddenly.",
+   "unit": "ch03"
+  },
+  {
+   "front": "Focus vs epicentre?",
+   "back": "Focus: where the earthquake starts in the crust. Epicentre: the place on the surface directly above it.",
+   "unit": "ch03"
+  },
+  {
+   "front": "How is an earthquake measured?",
+   "back": "With a seismograph; its magnitude on the Richter scale.",
+   "unit": "ch03"
+  },
+  {
+   "front": "Weathering vs erosion?",
+   "back": "Weathering: rocks breaking up on the surface. Erosion: the wearing away of land by water, wind and ice.",
+   "unit": "ch03"
+  },
+  {
+   "front": "What is an ox-bow lake?",
+   "back": "A lake formed when a meander loop is cut off from the river.",
+   "unit": "ch03"
+  },
+  {
+   "front": "How is a floodplain formed?",
+   "back": "When a river floods, it deposits fine soil (sediments) on its banks, making flat fertile land.",
+   "unit": "ch03"
+  },
+  {
+   "front": "How does a delta form?",
+   "back": "Near the sea the river splits into distributaries and drops its load; the sediments from all the mouths form a delta.",
+   "unit": "ch03"
+  },
+  {
+   "front": "Sea cave → sea arch → stack: how?",
+   "back": "Waves widen cracks into caves; caves become arches; the roof falls leaving wall-like stacks.",
+   "unit": "ch03"
+  },
+  {
+   "front": "What are moraines?",
+   "back": "Rocks, sand and silt deposited by a glacier.",
+   "unit": "ch03"
+  },
+  {
+   "front": "How are mushroom rocks formed?",
+   "back": "Wind erodes the lower part of a rock more than the top, leaving a narrow base and wide top.",
+   "unit": "ch03"
+  },
+  {
+   "front": "What is loess?",
+   "back": "Very fine sand carried far by wind and deposited over large areas (e.g. China).",
+   "unit": "ch03"
+  },
+  {
+   "front": "Which two gases make up most of the air?",
+   "back": "Nitrogen (78%) and oxygen (21%).",
+   "unit": "ch04"
+  },
+  {
+   "front": "How do plants get nitrogen?",
+   "back": "Bacteria in the soil and roots take nitrogen from the air and change it so plants can use it.",
+   "unit": "ch04"
+  },
+  {
+   "front": "What is the greenhouse effect?",
+   "back": "Carbon dioxide traps heat radiated from the Earth, keeping it warm enough to live on.",
+   "unit": "ch04"
+  },
+  {
+   "front": "What is global warming?",
+   "back": "Extra carbon dioxide (factory smoke, car fumes) traps more heat and raises Earth's temperature, melting ice and raising sea levels.",
+   "unit": "ch04"
+  },
+  {
+   "front": "Name the five layers of the atmosphere in order.",
+   "back": "Troposphere, stratosphere, mesosphere, thermosphere, exosphere.",
+   "unit": "ch04"
+  },
+  {
+   "front": "Why is the troposphere the most important layer?",
+   "back": "We breathe its air, and almost all weather happens there. Average height 13 km.",
+   "unit": "ch04"
+  },
+  {
+   "front": "Why is the stratosphere good for flying planes?",
+   "back": "It is almost free of clouds and weather. It also has the ozone layer.",
+   "unit": "ch04"
+  },
+  {
+   "front": "What happens in the mesosphere? The thermosphere?",
+   "back": "Meteorites burn up in the mesosphere. The ionosphere in the thermosphere reflects radio waves.",
+   "unit": "ch04"
+  },
+  {
+   "front": "Weather vs climate?",
+   "back": "Weather: hour-to-hour, day-to-day condition of the atmosphere. Climate: the average weather over a long time.",
+   "unit": "ch04"
+  },
+  {
+   "front": "What is insolation?",
+   "back": "Incoming solar energy received by the Earth. It decreases from the equator to the poles.",
+   "unit": "ch04"
+  },
+  {
+   "front": "How does air pressure change with height?",
+   "back": "It is highest at sea level and falls as you go up.",
+   "unit": "ch04"
+  },
+  {
+   "front": "Three types of winds?",
+   "back": "Permanent (trade winds, westerlies, easterlies), seasonal (monsoons), local (land and sea breeze, loo).",
+   "unit": "ch04"
+  },
+  {
+   "front": "Three types of rainfall?",
+   "back": "Convectional, orographic (relief) and cyclonic.",
+   "unit": "ch04"
+  },
+  {
+   "front": "What is humidity?",
+   "back": "The moisture (water vapour) in the air.",
+   "unit": "ch04"
+  },
+  {
+   "front": "What is the water cycle?",
+   "back": "The process by which water keeps changing form and circulating between oceans, atmosphere and land.",
+   "unit": "ch05"
+  },
+  {
+   "front": "How much of Earth's water is in the oceans?",
+   "back": "About 97.3%. Ice caps hold about 2%; very little is usable fresh water.",
+   "unit": "ch05"
+  },
+  {
+   "front": "What is salinity?",
+   "back": "The amount of salt in grams in 1000 grams of water. Average ocean salinity: 35 parts per thousand.",
+   "unit": "ch05"
+  },
+  {
+   "front": "Why can swimmers float in the Dead Sea?",
+   "back": "Its very high salt content (340 g per litre) makes the water dense.",
+   "unit": "ch05"
+  },
+  {
+   "front": "When is World Water Day?",
+   "back": "22 March.",
+   "unit": "ch05"
+  },
+  {
+   "front": "How are waves formed?",
+   "back": "By wind scraping across the ocean surface; stronger wind, bigger waves.",
+   "unit": "ch05"
+  },
+  {
+   "front": "What is a tsunami?",
+   "back": "A huge 'harbour wave' caused by an earthquake, volcano or underwater landslide (e.g. Indian Ocean, 26 Dec 2004).",
+   "unit": "ch05"
+  },
+  {
+   "front": "What causes tides?",
+   "back": "The gravitational pull of the Moon (and Sun) on the Earth's water.",
+   "unit": "ch05"
+  },
+  {
+   "front": "Spring tide vs neap tide?",
+   "back": "Spring tides: highest, at full and new moon (Sun, Moon, Earth in a line). Neap tides: low, at the first and last quarter.",
+   "unit": "ch05"
+  },
+  {
+   "front": "How are high tides useful?",
+   "back": "They help ships reach harbour, bring fish closer to shore, and can make electricity.",
+   "unit": "ch05"
+  },
+  {
+   "front": "What are ocean currents?",
+   "back": "Streams of water moving along definite paths. Warm currents start near the equator; cold ones near the poles.",
+   "unit": "ch05"
+  },
+  {
+   "front": "What happens where warm and cold currents meet?",
+   "back": "Good fishing grounds (e.g. around Japan), but fog that makes navigation difficult.",
+   "unit": "ch05"
+  },
+  {
+   "front": "Which two factors mainly decide vegetation?",
+   "back": "Temperature and moisture (also slope and thickness of soil).",
+   "unit": "ch06"
+  },
+  {
+   "front": "Three broad kinds of natural vegetation?",
+   "back": "Forests, grasslands and shrubs.",
+   "unit": "ch06"
+  },
+  {
+   "front": "Where are tropical evergreen forests found? Trees?",
+   "back": "Near the equator; heavy rain all year. Hardwoods like rosewood, ebony, mahogany.",
+   "unit": "ch06"
+  },
+  {
+   "front": "Why are tropical deciduous forests called monsoon forests?",
+   "back": "They are in monsoon regions (much of India); trees shed leaves in the dry season to save water. Sal, teak, neem, shisham.",
+   "unit": "ch06"
+  },
+  {
+   "front": "Where are temperate evergreen forests found?",
+   "back": "Mid-latitude coasts on eastern margins (south-east USA, south China, south-east Brazil). Oak, pine, eucalyptus.",
+   "unit": "ch06"
+  },
+  {
+   "front": "Why are Mediterranean regions called 'orchards of the world'?",
+   "back": "Hot dry summers and mild rainy winters suit citrus fruits, figs, olives and grapes.",
+   "unit": "ch06"
+  },
+  {
+   "front": "What are coniferous forests (taiga)?",
+   "back": "Tall softwood evergreens at 50°–70°N and high altitudes. Used for pulp, paper, matchboxes. Chir, pine, cedar.",
+   "unit": "ch06"
+  },
+  {
+   "front": "Names of tropical grasslands?",
+   "back": "Savanna (East Africa), campos (Brazil), llanos (Venezuela).",
+   "unit": "ch06"
+  },
+  {
+   "front": "Names of temperate grasslands?",
+   "back": "Pampas (Argentina), prairie (N. America), veld (S. Africa), steppe (C. Asia), downs (Australia).",
+   "unit": "ch06"
+  },
+  {
+   "front": "What is tundra vegetation?",
+   "back": "Mosses, lichens and tiny shrubs in polar regions; animals have thick fur (seals, walruses, polar bears).",
+   "unit": "ch06"
+  },
+  {
+   "front": "What is a settlement?",
+   "back": "A place where people build their homes.",
+   "unit": "ch07"
+  },
+  {
+   "front": "Temporary vs permanent settlements?",
+   "back": "Temporary: occupied for a short time (forests, deserts, mountains). Permanent: homes built to stay.",
+   "unit": "ch07"
+  },
+  {
+   "front": "What is transhumance?",
+   "back": "Seasonal movement of herders in search of new pastures.",
+   "unit": "ch07"
+  },
+  {
+   "front": "Compact vs scattered settlements?",
+   "back": "Compact: houses built close together. Scattered: houses spread out.",
+   "unit": "ch07"
+  },
+  {
+   "front": "Why did early settlements grow near rivers?",
+   "back": "Water was available and the land was fertile.",
+   "unit": "ch07"
+  },
+  {
+   "front": "Four means of transport?",
+   "back": "Roadways, railways, waterways, airways.",
+   "unit": "ch07"
+  },
+  {
+   "front": "Metalled vs unmetalled roads?",
+   "back": "Metalled = pucca; unmetalled = kutcha.",
+   "unit": "ch07"
+  },
+  {
+   "front": "Two merits of railways?",
+   "back": "They carry heavy goods and people over long distances quickly and cheaply.",
+   "unit": "ch07"
+  },
+  {
+   "front": "Which transport is cheapest for heavy, bulky goods?",
+   "back": "Waterways.",
+   "unit": "ch07"
+  },
+  {
+   "front": "What are the drawbacks of airways?",
+   "back": "Most expensive (fuel costs) and affected by bad weather like fog and storms.",
+   "unit": "ch07"
+  },
+  {
+   "front": "What is the Golden Quadrilateral?",
+   "back": "Highways connecting Delhi, Mumbai, Chennai and Kolkata.",
+   "unit": "ch07"
+  },
+  {
+   "front": "What is the longest railway?",
+   "back": "The Trans-Siberian Railway, from St Petersburg to Vladivostok.",
+   "unit": "ch07"
+  },
+  {
+   "front": "What is mass media?",
+   "back": "Newspapers, radio and television, which communicate with many people at once.",
+   "unit": "ch07"
+  },
+  {
+   "front": "Where is the Amazon basin?",
+   "back": "South America, on the equator (10°N–10°S); the largest river basin in the world.",
+   "unit": "ch08"
+  },
+  {
+   "front": "Climate of the Amazon basin?",
+   "back": "Hot and wet all year; rain almost every day; very humid day and night.",
+   "unit": "ch08"
+  },
+  {
+   "front": "Why is the rainforest floor dark?",
+   "back": "The thick 'roof' of leaves and branches stops sunlight reaching the ground.",
+   "unit": "ch08"
+  },
+  {
+   "front": "Name birds and animals of the Amazon rainforest.",
+   "back": "Toucans, humming birds; monkeys, sloths, tapirs; anaconda, boa constrictor; piranha fish.",
+   "unit": "ch08"
+  },
+  {
+   "front": "What is slash-and-burn farming?",
+   "back": "Clearing land by cutting and burning trees, growing crops until the soil is used up, then moving to a new plot.",
+   "unit": "ch08"
+  },
+  {
+   "front": "Staple food of the Amazon people?",
+   "back": "Manioc (cassava). They also grow tapioca, pineapple, sweet potato.",
+   "unit": "ch08"
+  },
+  {
+   "front": "What is a maloca?",
+   "back": "A large apartment-like house with a steeply slanting roof.",
+   "unit": "ch08"
+  },
+  {
+   "front": "How is the Amazon changing?",
+   "back": "The Trans-Amazon highway (1970) opened up the forest, leading to deforestation and loss of tribal ways of life.",
+   "unit": "ch08"
+  },
+  {
+   "front": "Climate and crops of the Ganga–Brahmaputra basin?",
+   "back": "Monsoon climate (mid-June to mid-September). Paddy (main crop), wheat, maize, jute, sugarcane; tea on slopes.",
+   "unit": "ch08"
+  },
+  {
+   "front": "Wildlife of the Ganga–Brahmaputra basin?",
+   "back": "Elephants, tigers, one-horned rhino (Brahmaputra plain), Bengal tiger and crocodiles (delta), susu dolphin.",
+   "unit": "ch08"
+  },
+  {
+   "front": "What does the susu (blind dolphin) tell us?",
+   "back": "Its presence shows the river is healthy; pollution is killing it.",
+   "unit": "ch08"
+  },
+  {
+   "front": "Name big cities on the Ganga.",
+   "back": "Allahabad, Kanpur, Varanasi, Lucknow, Patna, Kolkata.",
+   "unit": "ch08"
+  },
+  {
+   "front": "Hot desert vs cold desert?",
+   "back": "Both have low rainfall and scanty vegetation. Hot: e.g. the Sahara. Cold: e.g. Ladakh.",
+   "unit": "ch09"
+  },
+  {
+   "front": "How big is the Sahara?",
+   "back": "The world's largest desert: about 8.54 million sq km, touching 11 countries in North Africa.",
+   "unit": "ch09"
+  },
+  {
+   "front": "Climate of the Sahara?",
+   "back": "Scorching hot days (up to 50°C; record 57.7°C at Al Azizia, Libya), cold nights near 0°C, short rainy season.",
+   "unit": "ch09"
+  },
+  {
+   "front": "What is an oasis?",
+   "back": "A green island around water in the desert, with date palms.",
+   "unit": "ch09"
+  },
+  {
+   "front": "Plants and animals of the Sahara?",
+   "back": "Cactus, date palms, acacia; camels, hyenas, jackals, foxes, scorpions, snakes, lizards.",
+   "unit": "ch09"
+  },
+  {
+   "front": "Who are the Bedouins and Tuaregs?",
+   "back": "Nomadic tribes of the Sahara who rear goats, sheep, camels and horses.",
+   "unit": "ch09"
+  },
+  {
+   "front": "Why do people in the Sahara wear heavy robes?",
+   "back": "To protect themselves from dust storms and hot winds.",
+   "unit": "ch09"
+  },
+  {
+   "front": "How is the Sahara changing?",
+   "back": "Oil in Algeria, Libya and Egypt; office buildings and highways; trucks replacing camels; Tuaregs working as tourist guides.",
+   "unit": "ch09"
+  },
+  {
+   "front": "What does 'Ladakh' mean?",
+   "back": "'La' = mountain pass, 'Dak' = country.",
+   "unit": "ch09"
+  },
+  {
+   "front": "Climate of Ladakh?",
+   "back": "Extremely cold and dry; below –40°C in winter; in the rain shadow of the Himalayas, under 10 cm of rain a year.",
+   "unit": "ch09"
+  },
+  {
+   "front": "Plants and animals of Ladakh?",
+   "back": "Grasses, shrubs, willows, poplars, apricots, apples, walnuts; yaks, wild goats and sheep; robins, raven, hoopoe.",
+   "unit": "ch09"
+  },
+  {
+   "front": "Name four monasteries (gompas) in Ladakh.",
+   "back": "Hemis, Thiksey, Shey, Lamayuru.",
+   "unit": "ch09"
+  },
+  {
+   "front": "What is Drass known for?",
+   "back": "One of the coldest inhabited places on Earth.",
+   "unit": "ch09"
+  }
+ ],
+ "examIntro": "Write your answer first, then compare with the model. Check you used the right terms and gave reasons.",
+ "exam": [
+  {
+   "q": "Give reasons: why do humans modify their environment?",
+   "marks": 2,
+   "unit": "ch01",
+   "model": [
+    "Human needs have grown and become more varied over time.",
+    "To meet them, people grow crops, build houses, roads and factories, and use more resources, which changes the natural surroundings."
+   ],
+   "why": "Need, then the action that follows from it."
+  },
+  {
+   "q": "Describe the four domains of the environment.",
+   "marks": 4,
+   "unit": "ch01",
+   "model": [
+    "The lithosphere is the solid crust of rocks and minerals, with soil and landforms like mountains and plains.",
+    "The hydrosphere is all the water: rivers, lakes, seas and oceans.",
+    "The atmosphere is the thin layer of air around the Earth that protects us from the sun's harmful rays.",
+    "The biosphere is the narrow zone where land, water and air meet to support plants and animals."
+   ],
+   "why": "One clear sentence for each domain."
+  },
+  {
+   "q": "Explain how extrusive and intrusive igneous rocks are formed.",
+   "marks": 4,
+   "unit": "ch02",
+   "model": [
+    "Both form when molten magma cools and becomes solid.",
+    "Extrusive rocks form when lava comes out onto the surface and cools quickly, so they have very fine grains. Basalt, which makes up the Deccan plateau, is an example.",
+    "Intrusive rocks form when magma cools slowly deep inside the crust, so they have large grains. Granite is an example."
+   ],
+   "why": "Where it cools, how fast, the grain size, and an example for each."
+  },
+  {
+   "q": "Describe the rock cycle.",
+   "marks": 3,
+   "unit": "ch02",
+   "model": [
+    "Molten magma cools and becomes igneous rock.",
+    "Igneous rocks break into small particles that are carried, deposited and pressed into sedimentary rocks.",
+    "Heat and pressure change igneous and sedimentary rocks into metamorphic rocks, which can melt back into magma, so the cycle starts again."
+   ],
+   "why": "The stages in order, using the three rock names."
+  },
+  {
+   "q": "Explain how an ox-bow lake is formed.",
+   "marks": 3,
+   "unit": "ch03",
+   "model": [
+    "As a river enters the plain it twists and turns, forming large bends called meanders.",
+    "Continuous erosion and deposition along the sides bring the ends of a meander loop closer and closer.",
+    "In time the loop is cut off from the river, forming an ox-bow (cut-off) lake."
+   ],
+   "why": "Three steps in order with the key terms."
+  },
+  {
+   "q": "Give reasons: why do buildings collapse during earthquakes?",
+   "marks": 2,
+   "unit": "ch03",
+   "model": [
+    "When lithospheric plates move, the Earth's surface vibrates in waves that travel out from the epicentre.",
+    "These strong vibrations shake buildings, and weak structures crack and collapse, especially near the epicentre (e.g. Bhuj, 2001)."
+   ],
+   "why": "Cause of the shaking, then its effect on buildings."
+  },
+  {
+   "q": "Give reasons: why do wet clothes take longer to dry on a humid day?",
+   "marks": 2,
+   "unit": "ch04",
+   "model": [
+    "On a humid day the air is already full of water vapour.",
+    "So it cannot take in much more moisture, and the water in the clothes evaporates slowly."
+   ],
+   "why": "Link humidity to slower evaporation."
+  },
+  {
+   "q": "Explain the greenhouse effect and how it leads to global warming.",
+   "marks": 4,
+   "unit": "ch04",
+   "model": [
+    "Carbon dioxide in the atmosphere traps some of the heat radiated from the Earth. This greenhouse effect keeps the Earth warm enough to live on.",
+    "Burning coal and oil, factory smoke and car fumes add more carbon dioxide, so more heat is trapped and the Earth's temperature rises: global warming.",
+    "This melts snow and ice in the coldest regions, so sea levels rise and coastal areas flood, and it may change climates and wipe out some plants and animals."
+   ],
+   "why": "The effect, its cause, and its consequences, in that order."
+  },
+  {
+   "q": "What are tides and how are they caused?",
+   "marks": 3,
+   "unit": "ch05",
+   "model": [
+    "Tides are the rhythmic rise and fall of ocean water, twice a day.",
+    "They are caused by the gravitational pull of the Moon and the Sun on the Earth's water; the water nearest the Moon is pulled up into a high tide.",
+    "At full and new moon the Sun, Moon and Earth are in a line, giving the highest (spring) tides; at the quarter moons they pull at an angle, giving low (neap) tides."
+   ],
+   "why": "Definition, cause, then the two kinds of tide."
+  },
+  {
+   "q": "Give reasons: why do so many countries face water shortages when most of the Earth is covered by water?",
+   "marks": 2,
+   "unit": "ch05",
+   "model": [
+    "About 97% of the Earth's water is salty ocean water and about 2% is frozen in ice caps.",
+    "Only a tiny fraction is fresh water in rivers, lakes and underground that people can use, and it is being polluted."
+   ],
+   "why": "Use the numbers from the distribution table."
+  },
+  {
+   "q": "Describe the tropical deciduous forests.",
+   "marks": 3,
+   "unit": "ch06",
+   "model": [
+    "They are the monsoon forests found in much of India, northern Australia and Central America.",
+    "The trees shed their leaves in the dry season to conserve water.",
+    "They have hardwoods like sal, teak, neem and shisham, and animals such as tigers, elephants and langurs."
+   ],
+   "why": "Where, a key feature, and examples of trees and animals."
+  },
+  {
+   "q": "Explain why Mediterranean trees can survive dry summers.",
+   "marks": 2,
+   "unit": "ch06",
+   "model": [
+    "Mediterranean regions have hot, dry summers.",
+    "The trees have thick bark and wax-coated leaves, which reduce water loss (transpiration)."
+   ],
+   "why": "The problem, then the adaptation."
+  },
+  {
+   "q": "Compare the advantages and disadvantages of airways and waterways.",
+   "marks": 4,
+   "unit": "ch07",
+   "model": [
+    "Airways are the fastest way to travel and can reach remote areas with no roads or railways; helicopters help in disasters.",
+    "But airways are the most expensive, because of fuel costs, and are affected by fog and storms.",
+    "Waterways are the cheapest way to carry heavy and bulky goods over long distances, using rivers, lakes and sea routes.",
+    "But they are slow and can only go where there is navigable water and ports."
+   ],
+   "why": "Advantages and disadvantages for both, with specific details."
+  },
+  {
+   "q": "Explain why the population is dense in the plains of the Ganga–Brahmaputra basin but thin in the mountains.",
+   "marks": 3,
+   "unit": "ch08",
+   "model": [
+    "The plains have flat land and fertile soil, so farming (especially paddy) is easy and supports many people.",
+    "The mountains have steep slopes and difficult terrain, so it is hard to farm and build.",
+    "So most people live on the plains and few live in the mountains."
+   ],
+   "why": "Compare both areas and give the reason for each."
+  },
+  {
+   "q": "Describe how life in the Amazon basin is changing.",
+   "marks": 3,
+   "unit": "ch08",
+   "model": [
+    "In the past the heart of the forest could only be reached by river.",
+    "The Trans-Amazon highway (1970) made all parts accessible, and forests are being cut down for land and wood.",
+    "This is destroying the rainforest and changing the traditional way of life of its people."
+   ],
+   "why": "Before, the change, and its effects."
+  },
+  {
+   "q": "Give reasons: why is there scanty vegetation in deserts?",
+   "marks": 2,
+   "unit": "ch09",
+   "model": [
+    "Deserts get very little rainfall, and in hot deserts the moisture evaporates faster than it collects.",
+    "Extreme temperatures (scorching heat, or freezing cold in cold deserts) also make it hard for plants to grow."
+   ],
+   "why": "Two reasons: water and temperature."
+  },
+  {
+   "q": "Compare the climate of the Sahara and Ladakh.",
+   "marks": 4,
+   "unit": "ch09",
+   "model": [
+    "Both are deserts with very low rainfall and scanty vegetation.",
+    "The Sahara is a hot desert: days can reach 50°C, but nights may be near 0°C.",
+    "Ladakh is a cold desert high in the Himalayas: winter temperatures fall below –40°C and summer days are only just above 0°C.",
+    "Ladakh gets under 10 cm of rain because it lies in the rain shadow of the Himalayas."
+   ],
+   "why": "A similarity, then the differences with numbers."
+  }
+ ]
+}
