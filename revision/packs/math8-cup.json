@@ -720,6 +720,30 @@
    "answer": 2,
    "why": "15/60 × 360 = 90°.",
    "unit": "u16"
+  },
+  {
+   "q": "Circumference of a circle with radius 5 cm (π ≈ 3.14)?",
+   "options": [
+    "15.7 cm",
+    "31.4 cm",
+    "78.5 cm",
+    "10 cm"
+   ],
+   "answer": 1,
+   "why": "C = 2πr = 2 × 3.14 × 5 = 31.4 cm.",
+   "unit": "u08"
+  },
+  {
+   "q": "Which bearing points south-west?",
+   "options": [
+    "045°",
+    "135°",
+    "225°",
+    "315°"
+   ],
+   "answer": 2,
+   "why": "South is 180°; halfway to west (270°) is 225°.",
+   "unit": "u14"
   }
  ],
  "flashIntro": "Pick one or more units above. Work out the answer, then flip to check the method.",
@@ -1188,6 +1212,31 @@
    "front": "How do you find the angle for a pie chart sector?",
    "back": "(frequency ÷ total) × 360°",
    "unit": "u16"
+  },
+  {
+   "front": "What is the circumference of a circle?",
+   "back": "The distance all the way round. C = π × d (or 2 × π × r).",
+   "unit": "u08"
+  },
+  {
+   "front": "Circumference of a circle with diameter 10 cm (π ≈ 3.14)?",
+   "back": "3.14 × 10 = 31.4 cm",
+   "unit": "u08"
+  },
+  {
+   "front": "What is a bearing?",
+   "back": "A direction measured clockwise from north, written with three digits (e.g. 045°).",
+   "unit": "u14"
+  },
+  {
+   "front": "What bearing is due east? Due south? Due west?",
+   "back": "090°, 180°, 270°.",
+   "unit": "u14"
+  },
+  {
+   "front": "The bearing of B from A is 060°. What is the bearing of A from B?",
+   "back": "060° + 180° = 240° (back bearings differ by 180°).",
+   "unit": "u14"
   }
  ],
  "examIntro": "Do the question on paper first, then compare with the worked answer line by line.",
@@ -1360,6 +1409,26 @@
     "Class A was more consistent, because its range (12) is smaller than Class B's (35)."
    ],
    "why": "One comparison of the average and one of the range, each with numbers and in context."
+  },
+  {
+   "q": "A circular pond has a diameter of 8 m. Calculate its circumference. Use π = 3.14 and show your working.",
+   "marks": 2,
+   "unit": "u08",
+   "model": [
+    "C = π × d",
+    "= 3.14 × 8 = 25.12 m"
+   ],
+   "why": "Formula, substitution, answer with unit."
+  },
+  {
+   "q": "A ship sails from port P on a bearing of 110°. On what bearing must it sail to return directly to P?",
+   "marks": 2,
+   "unit": "u14",
+   "model": [
+    "A back bearing differs by 180°.",
+    "110° + 180° = 290°"
+   ],
+   "why": "State the rule, then calculate. Bearings always have three digits."
   }
  ]
 }
