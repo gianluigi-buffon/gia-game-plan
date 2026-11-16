@@ -4,8 +4,8 @@
 import { firebaseConfig, PEOPLE } from "./firebase-config.js";
 import { buildDayPlan, WUSHU_DAYS } from "./planner.js?v=3";
 import { TIMETABLE, lessonsOn, nextLessonDate } from "./timetable.js?v=1";
-import { initRevision, sessionsFor, upcomingTests, overdueSessions, paceSummary, revisionCount, progressHtml as revisionProgressHtml, subjectName, openSubject as openRevisionSubject, render as renderRevision } from "./revision/revision.js?v=19";
-import { HW_SUBJECTS as SUBJECTS, SUBJECT_GROUPS } from "./revision/syllabus.js?v=18";
+import { initRevision, sessionsFor, upcomingTests, overdueSessions, paceSummary, revisionCount, progressHtml as revisionProgressHtml, subjectName, openSubject as openRevisionSubject, render as renderRevision, gradeQueue, mountStudyLog } from "./revision/revision.js?v=20";
+import { HW_SUBJECTS as SUBJECTS, SUBJECT_GROUPS } from "./revision/syllabus.js?v=19";
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import {
@@ -1152,6 +1152,8 @@ function renderProgress() {
       <div class="chips" style="margin-top:8px">${chip(p.hw, week.overdue ? `${week.overdue} homework overdue` : "homework on time")} ${chip(p.creation, `creation ${week.creations}/${REQ.creations}`)} ${chip(p.wushu, `Wushu ${week.wushu}/${week.wushuTarget}`)} ${chip(p.revision, week.revisionLive ? `revision ${week.revision}/${REQ.revision}` : "revision (starts when topics are added)")}</div>
       <div class="muted small" style="margin-top:8px">✓ = done · ✗ = still to do. Wushu counts the classes that ran this week (cancelled ones don't count against you; made-up ones count). 📚 Read on ${week.readingDays} day${week.readingDays === 1 ? "" : "s"} this week.</div>
     </div>
+    <h3 class="section-h">⏱️ Study sessions</h3>
+    <div id="progStudy"></div>
     <h3 class="section-h">📖 Revision</h3>
     <div id="progRevision">${revisionProgressHtml()}</div>
     <div id="badgeInfo" class="badge-info">👆 Tap any badge to see how to unlock it.</div>
@@ -1161,6 +1163,7 @@ function renderProgress() {
     <div class="progress"><div style="width:${overallPct}%"></div></div>
     <div class="muted small">Made from: creations ${season.creationsDone}/${SEASON.creations} · homework on time ${season.hwOnTime}/${SEASON.hw} · Wushu classes ${season.seasonWushu}/${SEASON.wushu} · revision ${season.seasonRevision}/${SEASON.revision}</div>
     <div class="badgegrid five">${ladder.map(b => cell(b, b.on ? "reached ✓" : `${b.p}%`)).join("")}</div>`;
+  mountStudyLog($("progStudy"));
   detailEl.querySelectorAll("[data-rvsub]").forEach(b => b.onclick = () => { activateTab("revision"); openRevisionSubject(b.dataset.rvsub); });
   const info = $("badgeInfo");
   detailEl.querySelectorAll(".bcell").forEach(c => c.onclick = () => {
@@ -1211,7 +1214,9 @@ function renderDashboard() {
     const nDays = nt ? Math.round((new Date(nt.date + "T12:00:00") - new Date(t + "T12:00:00")) / 864e5) : null;
     const sub = nt && nDays <= 7 ? `${esc(nt.name)} ${nDays === 0 ? "today" : nDays === 1 ? "tomorrow" : `in ${nDays} days`}`
       : !rp.total ? "topics coming soon" : rp.behind ? `behind pace by ${rp.behind}` : "on pace";
-    html += card("revision", "📖 Revision", rp.total ? `${rp.done}/${rp.total}` : "–", true, sub, (nt && nDays <= 2) || rp.behind ? "warn" : "");
+    const toGrade = gradeQueue().length;
+    const gradeNote = toGrade ? (isMum() ? `✍️ ${toGrade} to grade · ` : `✍️ ${toGrade} waiting for marking · `) : "";
+    html += card("revision", "📖 Revision", rp.total ? `${rp.done}/${rp.total}` : "–", true, gradeNote + sub, (nt && nDays <= 2) || rp.behind || (toGrade && isMum()) ? "warn" : "");
   }
   html += card("today", "📅 Today's plan", DAY_NAMES[new Date().getDay()].slice(0, 3), true, "tap for your schedule");
   if (pg) {

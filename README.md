@@ -10,12 +10,13 @@ Works on any device (phone, tablet, laptop) through a free web link.
 
 - **Today**: an auto-built daily plan that fits homework and revision sessions around school, Wushu (Mon/Wed/Fri 5–6:30pm) and sleep (lights out 9:30pm), with a reading slot every evening and a daily quote.
 - **Homework**: homework per subject with a due date and estimated time. It shows "do today" the school day before it's due.
-- **Revision**: subjects → topics with two revision rounds and confidence ratings, must-know checklists, tests and planned sessions.
+- **Revision**: subjects → topics with two revision rounds and confidence ratings, must-know checklists, tests and planned sessions. Practice (flashcards, quiz, exam questions) can mix chapters from several books at once.
+- **Study sessions**: Gia taps ▶ Start session before revising and ■ End session after. Model answers stay hidden while it runs; her submitted answers then go to Christabel (an email plus Revision ▸ Ready to grade) to paste into Claude for marking, and the feedback shows up for Gia.
 - **Creations**: Gia's 29 creations on the theme of feelings (23 by 13 Nov, 29 by 31 Dec), with a pace bar, her four "done" checks (Next, weekly wins, Substack, skill), creations grouped by month, and a list of skills she's grown.
 - **Wushu**: mark each class attended, missed, cancelled or rescheduled; monthly attendance; a missed-classes log with reasons and make-ups; gradings and competitions; a home practice checklist.
 - **Reading**: "I read today" with a streak, books reading now / want to read / finished, and star ratings.
 - **Progress**: a weekly score out of 10 from 4 targets (homework on time · 1 creation · Wushu classes · 2 revision rounds), streak badges, and a belt ladder from white to black.
-- **Emails**: a summary every Wednesday and Sunday at about 7pm IST, and a monthly report on the 1st (Part C).
+- **Emails**: a summary every Wednesday and Sunday at about 7pm IST, a monthly report on the 1st, and an email to Christabel within about 15 minutes of each finished study session (Part C).
 
 ---
 

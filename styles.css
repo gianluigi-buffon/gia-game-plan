@@ -320,3 +320,40 @@ details summary{list-style-position:inside}
 @keyframes qpopIn{from{opacity:0}to{opacity:1}}
 @keyframes qpopOut{from{opacity:1}to{opacity:0}}
 .pk-units-hint{flex-basis:100%;margin-bottom:2px}
+
+/* ===== Study sessions, Submit and marking (ported from Jake's app) ===== */
+.rv-grade{flex-direction:column;align-items:stretch}
+.rv-grade .row-between{gap:8px}
+.rv-pre{white-space:pre-wrap;font-size:.86rem;margin-top:4px}
+.rv-fb{margin-top:8px}
+.rv-gq{margin-top:6px}
+.rv-gq summary{cursor:pointer}
+.rv-gtools{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+.rv-gtools details{display:flex;flex-direction:column;gap:8px}
+.rv-gtools details[open] > *{margin-top:8px}
+.rv-gtools .rv-score{width:100%;box-sizing:border-box;margin:0}
+.pk-submit{display:block;width:100%;margin:8px 0}
+.pk-submit.done{background:var(--good-bg);color:var(--good);border:1px solid var(--good-line);cursor:default}
+.pk-locked{opacity:.75;cursor:not-allowed}
+.rv-sbar{border-left:4px solid var(--line)}
+.rv-sbar.on{border-left-color:var(--accent)}
+.rv-sbar .row-between{gap:10px}
+.rv-schips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.rv-schips .chip{cursor:pointer;background:transparent;color:var(--muted)}
+.rv-schips .chip.on{background:var(--good-bg);color:var(--good)}
+.rv-slab{display:flex;align-items:center;gap:8px;font-size:.85rem;margin:6px 0;white-space:nowrap}
+.rv-conf-row button.on{background:var(--accent-bg);color:var(--accent);border-color:var(--accent-line)}
+.rv-sbar .mininput{margin:8px 0;width:100%;box-sizing:border-box}
+.rv-sbar .rv-smins{width:90px;flex:0 0 90px;margin:0}
+.rv-tscroll{overflow-x:auto}
+.rv-stable td,.rv-stable th{white-space:nowrap}
+.rv-stable td.small{white-space:normal;min-width:110px}
+.rv-stable tr.rv-ssame td{border-top:1px dashed var(--line)}
+.rv-gdetail td{padding:8px 0}
+
+/* ===== Practising several books at once ===== */
+.pk-units-h{flex-basis:100%;margin-bottom:2px}
+.pk-books .pk-bookrow{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.pk-bookchip{cursor:pointer;background:transparent;color:var(--muted)}
+.pk-bookchip.on{background:var(--accent-bg);color:var(--accent);border-color:var(--accent-line)}
+.pk-book-h{flex-basis:100%;margin:8px 0 0;font-size:.8rem;font-weight:700;color:var(--accent)}

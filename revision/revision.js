@@ -5,14 +5,21 @@
 //    revprogress/{topicId}  {r1:{done,conf,at,by}, r2:{…}, pts:{index:true}}
 //    revsessions            {date, slot, subject, topics[], title, method, mins, done, conf, notes, doneBy}
 //    revtests               {subject, name, date, topics[]}
-//    revpractice/{packId}   practice state (answers, flashcards, quiz scores, drills)
+//    revpractice/{packId}   practice state (answers, flashcards, quiz scores, drills,
+//                           sent:{key:text} = answers already sent for grading,
+//                           done:{key:text} = answers Gia tapped Submit on)
+//    studysessions          {by, date, start, end (ISO), mins, subjects[], status:"running"|"done",
+//                           conf, notes, answers, gradeId, emailed} — Gia's timed study sessions
+//    revgrade               grading sets (one per finished session that had answers; older ones from "Grade this"): {subject, date, by, items[], status:"waiting"|"graded",
+//                           feedback, gradedAt, gradedBy}. Gia sends; Mum copies the text into
+//                           Claude, then pastes the feedback back for Gia to read.
 //    meta/revision_v1       one-time seed flag
 //
 //  app.js calls initRevision(...) after login and reads sessionsFor() /
 //  upcomingTests() / paceSummary() for the Today plan and dashboard.
 // =============================================================
-import { SUBJECTS, SUBJECT_GROUPS, PACKS, PACK_VERSION, REVISION_GOAL, SEED_TESTS, SEED_SESSIONS, allTopics, topicById, subjectByKey } from "./syllabus.js?v=18";
-import { renderPack, packModes } from "./packview.js?v=3";
+import { SUBJECTS, SUBJECT_GROUPS, PACKS, PACK_VERSION, REVISION_GOAL, SEED_TESTS, SEED_SESSIONS, allTopics, topicById, subjectByKey } from "./syllabus.js?v=19";
+import { renderPack, packModes, writtenWork } from "./packview.js?v=4";
 
 const esc = (s) => String(s ?? "").replace(/[<>&"]/g, (c) => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;", '"': "&quot;" }[c]));
 const ymd = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; // local date
@@ -22,7 +29,10 @@ const fmtDate = (s) => s ? new Date(s + "T00:00:00").toLocaleDateString("en-GB",
 const daysUntil = (s) => Math.round((new Date(s + "T00:00:00") - new Date(todayStr() + "T00:00:00")) / 864e5);
 
 let DB, F, ME, NAME_FOR, ON_CHANGE, IS_PARENT;
-const R = { progress: {}, sessions: [], tests: [] };
+const R = { progress: {}, sessions: [], tests: [], practice: {}, grades: [], study: [] };
+let packHandle = null; // { applyLocks } for the pack open on screen
+// packId -> { state, setSent(sent) } for the book(s) open on screen (they hold unsaved typing)
+const liveStores = new Map();
 let view = { name: "home" };
 const packCache = new Map();
 
@@ -32,9 +42,17 @@ export function initRevision({ db, fs, me, nameFor, onChange, isParent }) {
     F.onSnapshot(F.query(F.collection(DB, "revprogress")), s => { R.progress = Object.fromEntries(s.docs.map(d => [d.id, d.data()])); changed(); });
     F.onSnapshot(F.query(F.collection(DB, "revsessions")), s => { R.sessions = s.docs.map(d => ({ id: d.id, ...d.data() })); changed(); });
     F.onSnapshot(F.query(F.collection(DB, "revtests")), s => { R.tests = s.docs.map(d => ({ id: d.id, ...d.data() })); changed(); });
+    F.onSnapshot(F.query(F.collection(DB, "revpractice")), s => { R.practice = Object.fromEntries(s.docs.map(d => [d.id, d.data()])); changed(true); });
+    F.onSnapshot(F.query(F.collection(DB, "studysessions")), s => { R.study = s.docs.map(d => ({ id: d.id, ...d.data() })); changed(); });
+    F.onSnapshot(F.query(F.collection(DB, "revgrade")), s => { R.grades = s.docs.map(d => ({ id: d.id, ...d.data() })).sort((a, b) => (b.date || "").localeCompare(a.date || "") || (b.n || 0) - (a.n || 0)); changed(); });
   });
 }
-function changed() { if (view.name !== "pack") render(); ON_CHANGE(); }
+function changed(quiet) {
+  // Practice saves arrive while Gia types; don't redraw the page under her.
+  if (view.name !== "pack" && !(quiet && view.name === "home" && !IS_PARENT())) render();
+  else if (view.name === "pack" && !quiet) { const sb = document.getElementById("rvSess"); if (sb) { sb.innerHTML = ""; sessionControl(sb); } packHandle?.applyLocks(); }
+  if (!quiet) ON_CHANGE();
+}
 
 async function seed() {
   try {
@@ -60,14 +78,18 @@ export function overdueSessions() {
   return R.sessions.filter(s => !s.done && s.date < t);
 }
 // Revision done between two dates (YYYY-MM-DD, inclusive): topic-rounds ticked,
-// plus finished sessions that don't cover a topic (e.g. past papers).
+// plus finished planned sessions that don't cover a topic (e.g. past papers),
+// plus study sessions of 20+ minutes.
 // Drives the "revision" requirement in the weekly Form rating.
 export function revisionCount(from, to) {
   let n = 0;
   for (const p of Object.values(R.progress)) for (const r of ["r1", "r2"]) if (p[r]?.done && p[r].at >= from && p[r].at <= to) n++;
   n += R.sessions.filter(s => s.done && !(s.topics || []).length && s.doneAt >= from && s.doneAt <= to).length;
+  n += R.study.filter(s => s.status === "done" && (s.mins || 0) >= 20 && s.date >= from && s.date <= to).length;
   return n;
 }
+// Grading requests still waiting for Mum's feedback (dashboard badge).
+export const gradeQueue = () => R.grades.filter(g => g.status !== "graded");
 export function paceSummary() {
   const topics = allTopics();
   const total = topics.length * REVISION_GOAL.rounds;
@@ -123,6 +145,320 @@ async function practiceStore(packId) {
   return store;
 }
 
+// ---------- Grade this ----------
+const subjectPacks = (s) => [...new Set((s?.topics || []).map(t => t.pack).filter(Boolean))];
+const stateFor = (packId) => liveStores.get(packId)?.state || R.practice[packId] || {};
+// Written answers in a subject that are new or changed since they were last sent.
+async function newWork(s) {
+  const out = [];
+  for (const id of subjectPacks(s)) {
+    try {
+      const st = stateFor(id), sent = st.sent || {};
+      writtenWork(await loadPack(id), st).forEach(w => { if (sent[w.key] !== w.answer) out.push({ ...w, packId: id }); });
+    } catch (e) { /* pack unavailable */ }
+  }
+  return out;
+}
+export function gradePrompt(g) {
+  const keys = subjectsOf(g), many = keys.length > 1;
+  const notes = keys.map(k => subjectByKey(k)?.guide?.note).filter(Boolean).map(n => " " + n).join("");
+  const who = NAME_FOR(g.by);
+  const total = g.items.reduce((n, i) => n + (+i.marks || 0), 0);
+  const head = `Please mark ${who}'s revision answers like a kind but honest Cambridge examiner.
+Subject${many ? "s" : ""}: ${subjNames(keys)}. ${who} is 13.${notes}
+There ${g.items.length > 1 ? `are ${g.items.length} answers` : "is 1 answer"} (${total} mark${total > 1 ? "s" : ""} in total), each with its mark scheme or model answer below.
+
+For each answer: give a mark (e.g. 3/4), say what earned the marks, what was missing compared with the mark scheme, and one clear tip to improve it.
+Then finish with: total score, 2 things ${who} did well, and the 2 most important things to work on next.
+Write to ${who} directly. Keep it encouraging, plain, and easy to read on a phone.`;
+  const body = g.items.map((i, k) => `--- Question ${k + 1} of ${g.items.length} (${i.marks} mark${i.marks > 1 ? "s" : ""})${many && i.subject ? " · " + subjNames([i.subject]) : ""}${i.unit ? " · " + i.unit : ""} ---
+Question: ${i.q}
+
+${who}'s answer:
+${i.answer}
+
+${i.guide}`).join("\n\n");
+  const p = g.practice;
+  const extra = p ? `\n\n--- Also this session: flashcards and quizzes (already marked by the app) ---
+${(p.quizzes || []).map(q => `${quizLabel(q)} (${q.pack}): ${q.score}/${q.n}`).join("\n")}${p.cards?.seen ? `\nFlashcards: ${p.cards.seen} reviewed. ${p.cards.got} "Got it", ${p.cards.again} "Not yet".` : ""}${p.notYet?.length ? `\nStill "Not yet": ${p.notYet.join("; ")}` : ""}
+Add one short line of feedback on these too (they are not part of the written-answer total).` : "";
+  return head + "\n\n" + body + extra;
+}
+async function copyText(text, btn) {
+  try { await navigator.clipboard.writeText(text); }
+  catch (e) {
+    const t = document.createElement("textarea"); t.value = text; document.body.appendChild(t); t.select();
+    try { document.execCommand("copy"); } finally { t.remove(); }
+  }
+  const was = btn.textContent; btn.textContent = "✓ Copied"; setTimeout(() => { btn.textContent = was; }, 2000);
+}
+
+// One request: status, and either Mum's tools (copy + paste feedback) or the feedback itself.
+function gradeItem(g, showSubject) {
+  const el = document.createElement("div");
+  el.className = "item rv-grade";
+  const what = `${g.items.length} answer${g.items.length > 1 ? "s" : ""}${showSubject ? " · " + esc(shortNames(subjectsOf(g))) : ""}`;
+  const status = g.status === "graded"
+    ? `<span class="pill today" style="color:var(--accent);background:#13302a">✓ ${g.score ? esc(g.score) : "graded"}</span>`
+    : `<span class="pill soon">⏳ waiting for ${IS_PARENT() ? "you" : "Mum"}</span>`;
+  el.innerHTML = `<div class="item-main">
+    <div class="row-between"><div class="item-title">✍️ ${what}</div>${status}</div>
+    <div class="item-sub">Sent ${fmtDate(g.date)} by ${esc(NAME_FOR(g.by))}${g.gradedAt ? ` · feedback ${fmtDate(g.gradedAt)}` : ""}</div>
+    ${g.practice ? `<div class="item-sub">🃏 ${esc(practiceLine(g.practice))}</div>` : ""}
+    <details class="rv-gq"><summary class="muted small">See the questions and answers</summary><ol class="pk-ul small">${g.items.map(i => `<li><b>${esc(i.q)}</b> <span class="muted">(${i.marks})</span><div class="rv-pre">${esc(i.answer)}</div></li>`).join("")}</ol></details>
+    ${g.feedback ? `<div class="pk-ms rv-fb"><div class="pk-ms-h">Feedback</div><div class="rv-pre">${esc(g.feedback)}</div></div>` : ""}
+    <div class="rv-gtools"></div></div>`;
+  if (IS_PARENT()) {
+    const tools = el.querySelector(".rv-gtools");
+    const copy = document.createElement("button");
+    copy.className = "btn primary"; copy.type = "button"; copy.textContent = "📋 Copy for Claude";
+    copy.onclick = () => copyText(g.prompt || gradePrompt(g), copy);
+    const hint = document.createElement("div");
+    hint.className = "muted small"; hint.textContent = "Paste it into a Claude chat. When Claude has marked it, paste the feedback below so Gia can read it.";
+    const ta = document.createElement("textarea");
+    ta.className = "pk-text"; ta.placeholder = "Paste Claude's feedback here"; ta.value = g.feedback || "";
+    const sc = document.createElement("input");
+    sc.type = "text"; sc.className = "mininput rv-score"; sc.placeholder = "Score, e.g. 14/20 (Claude gives the total at the end)"; sc.value = g.score || "";
+    const save = document.createElement("button");
+    save.className = "btn"; save.type = "button"; save.textContent = g.feedback ? "Update feedback" : "Save feedback for Gia";
+    save.onclick = async () => {
+      const fb = ta.value.trim(); if (!fb) return;
+      await F.updateDoc(F.doc(DB, "revgrade", g.id), { feedback: fb, score: sc.value.trim(), status: "graded", gradedAt: todayStr(), gradedBy: ME().email });
+    };
+    const del = document.createElement("button");
+    del.className = "btn tiny ghost"; del.type = "button"; del.textContent = "Remove";
+    del.onclick = () => { if (confirm("Remove this grading request?")) F.deleteDoc(F.doc(DB, "revgrade", g.id)); };
+    if (g.status === "graded") {
+      const d = document.createElement("details"); d.innerHTML = `<summary class="muted small">Copy again or edit feedback</summary>`;
+      d.append(copy, ta, sc, save, del); tools.appendChild(d);
+    } else tools.append(copy, hint, ta, sc, save, del);
+  }
+  return el;
+}
+
+// ---------- Study sessions ----------
+// Gia taps Start, picks subjects, practises, then taps End. Every new answer
+// in those subjects (submitted ones, plus drafts if she ticks the box) is
+// copied into a grading set linked to the session. A GitHub Action emails Mum
+// within ~15 min (scripts/send-session-email.mjs); she pastes Claude's
+// feedback back and Gia sees it in the session row.
+const subjectsOf = (g) => g.subjects?.length ? g.subjects : [g.subject];
+const subjNames = (keys) => keys.map(k => subjectByKey(k)?.name || k).join(", ");
+// Subject names for the session table, chips and emails.
+const shortNames = (keys) => keys.map(k => subjectByKey(k)?.name || k).join(", ");
+const hhmm = (iso) => iso ? new Date(iso).toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" }) : "";
+const minsSince = (iso) => Math.max(0, Math.round((Date.now() - new Date(iso)) / 6e4));
+export const runningSession = () => R.study.find(s => s.status === "running" && s.by === ME().email);
+const anyRunning = () => R.study.find(s => s.status === "running");
+let sessUI = { mode: null, picks: [], conf: 0, notes: "", drafts: true, mins: null }; // survives re-renders
+
+async function startSession(subjects) {
+  await F.addDoc(F.collection(DB, "studysessions"), {
+    by: ME().email, date: todayStr(), start: new Date().toISOString(), subjects, status: "running", at: F.serverTimestamp(),
+  });
+}
+async function addSessionSubjects(keys) {
+  const s = runningSession();
+  const add = keys.filter(k => s && !s.subjects.includes(k));
+  if (add.length) await F.updateDoc(F.doc(DB, "studysessions", s.id), { subjects: [...s.subjects, ...add] });
+}
+// New answers in these subjects, split into submitted and not-yet-submitted.
+async function sessionWork(keys) {
+  const all = [];
+  for (const k of keys) (await newWork(subjectByKey(k))).forEach(w => all.push({ ...w, subject: k }));
+  const fin = all.filter(w => stateFor(w.packId).done?.[w.key] === w.answer);
+  return { fin, drafts: all.filter(w => !fin.includes(w)) };
+}
+// Flashcards and quizzes done since the session started (they mark themselves).
+// Returns { [subject]: { quizzes:[{pack, kind, score, n}], cards:{seen, got, again}, notYet:[front…] } }
+async function sessionPractice(keys, startISO) {
+  const out = {};
+  for (const k of keys) {
+    const p = { quizzes: [], cards: { seen: 0, got: 0, again: 0 }, notYet: [] };
+    for (const id of subjectPacks(subjectByKey(k))) {
+      try {
+        const st = stateFor(id), pack = await loadPack(id);
+        (st.quizzes || []).filter(q => q.at && q.at >= startISO && q.n > 0)
+          .forEach(q => {
+            // A quiz mixed across books is saved once per book: put it back together (same start time).
+            const same = p.quizzes.find(x => x.at === q.at && x.kind === (q.kind || "quiz"));
+            if (same) { same.score += q.score; same.n += q.n; same.pack += " + " + (PACKS[id] || pack.title); }
+            else p.quizzes.push({ at: q.at, pack: PACKS[id] || pack.title, kind: q.kind || "quiz", score: q.score, n: q.n });
+          });
+        const last = {};
+        (st.cardLog || []).filter(e => e.at >= startISO).forEach(e => { last[e.key] = e.r; });
+        for (const [key, r] of Object.entries(last)) {
+          p.cards.seen++; p.cards[r === "got" ? "got" : "again"]++;
+          if (r !== "got" && p.notYet.length < 10) { const c = pack.flashcards?.[+key.slice(1)]; if (c) p.notYet.push(c.front); }
+        }
+      } catch (e) { /* pack unavailable */ }
+    }
+    if (p.quizzes.length || p.cards.seen) out[k] = p;
+  }
+  return out;
+}
+const quizLabel = (q) => q.kind === "dates" ? "Date quiz" : "Quiz";
+// One short line, e.g. "Quiz 14/16 · Flashcards ✓9 ✗3"
+export function practiceLine(p) {
+  if (!p) return "";
+  const qs = (p.quizzes || []).map(q => `${quizLabel(q)} ${q.score}/${q.n}`);
+  const c = p.cards?.seen ? [`Flashcards ✓${p.cards.got} ✗${p.cards.again}`] : [];
+  return [...qs, ...c].join(" · ");
+}
+
+async function endSession(sess, { subjects, conf, notes, mins, drafts }) {
+  const work = await sessionWork(subjects);
+  const practice = await sessionPractice(subjects, sess.start);
+  const items = [...work.fin, ...(drafts ? work.drafts : [])];
+  // One grading set per subject, so each subject gets its own feedback and score.
+  const grades = {}, answersBy = {};
+  if (items.length) {
+    for (const k of subjects) {
+      const mine = items.filter(i => i.subject === k);
+      if (!mine.length) continue;
+      const g = {
+        sessionId: sess.id, subject: k, subjects: [k], date: todayStr(), n: Date.now(), by: sess.by, status: "waiting", at: F.serverTimestamp(),
+        items: mine.map(({ key, packId, subject, kind, pack, unit, q, marks, answer, guide }) => ({ key, packId, subject, kind, pack, unit, q, marks, answer, guide })),
+      };
+      if (practice[k]) g.practice = practice[k];
+      g.prompt = gradePrompt(g); // stored so the email script can send the same text
+      grades[k] = (await F.addDoc(F.collection(DB, "revgrade"), g)).id;
+      answersBy[k] = mine.length;
+    }
+    for (const id of new Set(items.map(i => i.packId))) {
+      const sent = { ...(stateFor(id).sent || {}) };
+      items.filter(i => i.packId === id).forEach(i => { sent[i.key] = i.answer; });
+      liveStores.get(id)?.setSent(sent); // so the open pack's next save keeps it
+      await F.setDoc(F.doc(DB, "revpractice", id), { sent }, { merge: true });
+    }
+  }
+  await F.updateDoc(F.doc(DB, "studysessions", sess.id), {
+    status: "done", end: new Date().toISOString(), doneAt: todayStr(), mins, subjects, conf, notes: notes || "",
+    answers: items.length, answersBy, grades, gradeId: Object.values(grades)[0] || null, practice, emailed: false,
+  });
+}
+
+// The start / running / end control. Used at the top of the Revision tab and in Progress.
+function sessionControl(host) {
+  const box = document.createElement("div");
+  host.appendChild(box);
+  const run = runningSession();
+  if (IS_PARENT()) {
+    const j = anyRunning();
+    if (j) box.innerHTML = `<div class="card rv-sbar"><b>⏱️ ${esc(NAME_FOR(j.by))} is revising now</b> · ${esc(shortNames(j.subjects))} · <span class="rv-timer" data-start="${j.start}">${minsSince(j.start)}</span> min</div>`;
+    return;
+  }
+  const chips = (picks, onToggle) => {
+    const row = document.createElement("div"); row.className = "rv-schips";
+    SUBJECTS.forEach(s => {
+      const b = document.createElement("button"); b.type = "button";
+      b.className = "chip" + (picks.includes(s.key) ? " on" : "");
+      b.textContent = `${s.emoji} ${s.name}`;
+      b.onclick = () => onToggle(s.key);
+      row.appendChild(b);
+    });
+    return row;
+  };
+  const redraw = () => { host.innerHTML = ""; sessionControl(host); };
+  if (!run) {
+    if (sessUI.mode !== "start") {
+      box.innerHTML = `<div class="card rv-sbar"><div class="row-between"><div><b>⏱️ Study session</b><div class="muted small">Start one before you revise. When you end it, your answers go to Mum to mark.</div></div><button class="btn primary" type="button">▶ Start session</button></div></div>`;
+      box.querySelector("button").onclick = () => {
+        const cur = view.name === "subject" ? view.key : view.name === "pack" ? view.back : null;
+        sessUI = { ...sessUI, mode: "start", picks: cur ? [cur] : [] }; redraw();
+      };
+      return;
+    }
+    const c = document.createElement("div"); c.className = "card rv-sbar";
+    c.innerHTML = `<b>▶ Which subjects are you revising?</b><div class="muted small">Pick one or more. You can add more later.</div>`;
+    c.appendChild(chips(sessUI.picks, k => { sessUI.picks = sessUI.picks.includes(k) ? sessUI.picks.filter(x => x !== k) : [...sessUI.picks, k]; redraw(); }));
+    const row = document.createElement("div"); row.className = "pk-btns";
+    const go = document.createElement("button"); go.className = "btn primary"; go.type = "button"; go.textContent = "Start";
+    go.onclick = async () => { if (!sessUI.picks.length) return alert("Pick at least one subject."); go.disabled = true; await startSession(sessUI.picks); sessUI.mode = null; };
+    const cancel = document.createElement("button"); cancel.className = "btn ghost"; cancel.type = "button"; cancel.textContent = "Cancel";
+    cancel.onclick = () => { sessUI.mode = null; redraw(); };
+    row.append(go, cancel); c.appendChild(row); box.appendChild(c);
+    return;
+  }
+  if (sessUI.mode !== "end" || sessUI.id !== run.id) {
+    box.innerHTML = `<div class="card rv-sbar on"><div class="row-between"><div><b>⏱️ Session running · <span class="rv-timer" data-start="${run.start}">${minsSince(run.start)}</span> min</b><div class="muted small">${esc(shortNames(run.subjects))} · started ${hhmm(run.start)} · model answers hidden until you end it</div></div><button class="btn primary" type="button">■ End session</button></div></div>`;
+    box.querySelector("button").onclick = () => { sessUI = { ...sessUI, mode: "end", id: run.id, picks: [...run.subjects], conf: 0, notes: "", drafts: true, mins: Math.max(1, Math.min(minsSince(run.start), 240)) }; redraw(); };
+    return;
+  }
+  // End panel
+  const c = document.createElement("div"); c.className = "card rv-sbar on";
+  c.innerHTML = `<b>■ End session</b><div class="muted small">Started ${hhmm(run.start)}. Check the subjects you revised:</div>`;
+  c.appendChild(chips(sessUI.picks, k => { sessUI.picks = sessUI.picks.includes(k) ? sessUI.picks.filter(x => x !== k) : [...sessUI.picks, k]; redraw(); }));
+  const rest = document.createElement("div");
+  rest.innerHTML = `<label class="rv-slab">Minutes revised <input type="number" min="1" max="600" class="mininput rv-smins" value="${sessUI.mins}"></label>
+    <div class="muted small">How confident do you feel now? (1 = shaky, 5 = could teach it)</div>
+    <div class="rv-conf-row">${[1, 2, 3, 4, 5].map(n => `<button type="button" data-c="${n}" class="${sessUI.conf === n ? "on" : ""}">${n}</button>`).join("")}</div>
+    <input type="text" class="mininput rv-snotes" placeholder="Notes: what did you do? anything to recheck? (optional)" value="${esc(sessUI.notes)}">
+    <div class="muted small rv-swork">Checking your answers…</div>`;
+  c.appendChild(rest);
+  rest.querySelector(".rv-smins").oninput = (e) => { sessUI.mins = +e.target.value; };
+  rest.querySelector(".rv-snotes").oninput = (e) => { sessUI.notes = e.target.value; };
+  rest.querySelectorAll("[data-c]").forEach(b => b.onclick = () => { sessUI.conf = +b.dataset.c; rest.querySelectorAll("[data-c]").forEach(x => x.classList.toggle("on", x === b)); });
+  const workEl = rest.querySelector(".rv-swork");
+  Promise.all([sessionWork(sessUI.picks), sessionPractice(sessUI.picks, run.start)]).then(([{ fin, drafts }, prac]) => {
+    const pl = Object.entries(prac).map(([k, p]) => `${esc(shortNames([k]))}: ${esc(practiceLine(p))}`).join("<br>");
+    workEl.innerHTML = `${pl ? `🃏 Recorded with this session:<br>${pl}<br>` : ""}${fin.length ? `✅ <b>${fin.length}</b> submitted answer${fin.length > 1 ? "s" : ""} will go to Mum to mark.` : "No submitted answers this time."}
+      ${drafts.length ? `<label class="rv-pt" style="margin-top:6px"><input type="checkbox" ${sessUI.drafts ? "checked" : ""}> <span>Also send ${drafts.length} answer${drafts.length > 1 ? "s" : ""} you didn't submit</span></label>` : ""}`;
+    const cb = workEl.querySelector("input"); if (cb) cb.onchange = () => { sessUI.drafts = cb.checked; };
+  });
+  const row = document.createElement("div"); row.className = "pk-btns";
+  const fin = document.createElement("button"); fin.className = "btn primary"; fin.type = "button"; fin.textContent = "✓ Finish session";
+  fin.onclick = async () => {
+    if (!sessUI.picks.length) return alert("Pick the subjects you revised.");
+    if (!sessUI.conf) return alert("Tap how confident you feel (1–5).");
+    if (!(sessUI.mins > 0)) return alert("How many minutes did you revise?");
+    fin.disabled = true; fin.textContent = "Saving…";
+    try { await endSession(run, { subjects: sessUI.picks, conf: sessUI.conf, notes: sessUI.notes, mins: Math.round(sessUI.mins), drafts: sessUI.drafts }); sessUI.mode = null; }
+    catch (e) { alert("Couldn't save: " + e.message); fin.disabled = false; fin.textContent = "✓ Finish session"; }
+  };
+  const back = document.createElement("button"); back.className = "btn ghost"; back.type = "button"; back.textContent = "Keep going";
+  back.onclick = () => { sessUI.mode = null; redraw(); };
+  const del = document.createElement("button"); del.className = "btn tiny ghost"; del.type = "button"; del.textContent = "Delete this session";
+  del.onclick = () => { if (confirm("Delete this session? (Started by mistake)")) { sessUI.mode = null; F.deleteDoc(F.doc(DB, "studysessions", run.id)); } };
+  row.append(fin, back); c.append(row, del); box.appendChild(c);
+}
+setInterval(() => document.querySelectorAll(".rv-timer").forEach(t => { t.textContent = minsSince(t.dataset.start); }), 30000);
+
+// Progress tab: session control + the table of sessions.
+export function mountStudyLog(el) {
+  if (!el || !DB) return;
+  el.innerHTML = "";
+  sessionControl(el);
+  const done = R.study.filter(s => s.status === "done").sort((a, b) => (b.start || "").localeCompare(a.start || ""));
+  const weekAgo = addDays(todayStr(), -6);
+  const wk = done.filter(s => s.date >= weekAgo);
+  const wkMins = wk.reduce((n, s) => n + (s.mins || 0), 0);
+  const card = document.createElement("div"); card.className = "card";
+  if (!done.length) { card.innerHTML = `<b>📒 Study sessions</b><div class="muted small" style="margin-top:4px">No sessions yet. Tap ▶ Start session before revising.</div>`; el.appendChild(card); return; }
+  const gById = Object.fromEntries(R.grades.map(g => [g.id, g]));
+  // One row per subject in each session (time, minutes and confidence are the session's).
+  const rows = done.slice(0, 20).flatMap(s => (s.subjects?.length ? s.subjects : ["?"]).map((k, i) => {
+    const gid = s.grades ? s.grades[k] : (s.gradeId && (gById[s.gradeId]?.subjects || []).includes(k) ? s.gradeId : null);
+    const n = s.answersBy ? (s.answersBy[k] || 0) : (gid ? gById[gid]?.items?.length || 0 : 0);
+    return { s, k, gid, n, first: i === 0 };
+  }));
+  const mark = (gid, n) => {
+    const g = gid && gById[gid];
+    if (!g) return `<span class="muted">${n ? "–" : "no answers"}</span>`;
+    return g.status === "graded" ? `<button class="rv-link" data-g="${g.id}">✓ ${g.score ? esc(g.score) : "feedback"} ▸</button>` : `<button class="rv-link" data-g="${g.id}">⏳ waiting ▸</button>`;
+  };
+  card.innerHTML = `<div class="row-between"><b>📒 Study sessions</b><span class="muted small">last 7 days: ${wk.length} session${wk.length === 1 ? "" : "s"} · ${Math.floor(wkMins / 60)}h ${wkMins % 60}m</span></div>
+    <div class="rv-tscroll"><table class="rv-table rv-stable"><thead><tr><th>Date</th><th>Time</th><th>Mins</th><th>Subject</th><th>Conf.</th><th>Answers</th><th>Score</th><th>Quiz &amp; cards</th></tr></thead><tbody>
+    ${rows.map(({ s, k, gid, n, first }) => `<tr class="${first ? "rv-snew" : "rv-ssame"}"><td>${fmtDate(s.date)}</td><td class="small">${hhmm(s.start)}–${hhmm(s.end)}</td><td>${s.mins || "–"}</td><td class="small">${esc(shortNames([k]))}${first && s.notes ? `<div class="muted">“${esc(s.notes)}”</div>` : ""}</td><td>${s.conf ? s.conf + "/5" : "–"}</td><td>${n}</td><td class="small">${mark(gid, n)}</td><td class="small">${esc(practiceLine(s.practice?.[k])) || "–"}</td></tr>${gid ? `<tr class="rv-gdetail" data-for="${gid}" hidden><td colspan="8"></td></tr>` : ""}`).join("")}
+    </tbody></table></div>`;
+  card.querySelectorAll("[data-g]").forEach(b => b.onclick = () => {
+    const tr = card.querySelector(`.rv-gdetail[data-for="${b.dataset.g}"]`);
+    tr.hidden = !tr.hidden;
+    if (!tr.hidden && !tr.firstElementChild.childElementCount) tr.firstElementChild.appendChild(gradeItem(gById[b.dataset.g], true));
+  });
+  el.appendChild(card);
+}
+
 // ---------- Progress tab section (app.js puts this HTML in the Progress tab) ----------
 export function openSubject(key) { view = key ? { name: "subject", key } : { name: "home" }; render(); }
 export function progressHtml() {
@@ -163,17 +499,18 @@ export function progressHtml() {
 
 // ---------- rendering ----------
 const root = () => document.getElementById("revRoot");
-function go(v) { view = v; render(); window.scrollTo(0, 0); }
+function go(v) { if (v.name !== "pack") liveStores.clear(); view = v; render(); window.scrollTo(0, 0); }
 
 export function render() {
   const host = root(); if (!host) return;
   // Subject switcher: always at the top of every Revision page.
   const current = view.name === "subject" ? view.key : view.name === "pack" ? view.back : null;
-  host.innerHTML = `<nav class="rv-nav"><button type="button" class="rv-navbtn ${view.name === "home" ? "on" : ""}" data-k="">📖 Overview</button>${SUBJECTS.map((s, i) => `${i && s.group !== SUBJECTS[i - 1].group ? `<span class="rv-navsep"></span>` : ""}<button type="button" class="rv-navbtn ${current === s.key ? "on" : ""}" data-k="${s.key}">${s.emoji} ${esc(s.name)}</button>`).join("")}</nav><div id="rvView"></div>`;
+  host.innerHTML = `<nav class="rv-nav"><button type="button" class="rv-navbtn ${view.name === "home" ? "on" : ""}" data-k="">📖 Overview</button>${SUBJECTS.map((s, i) => `${i && s.group !== SUBJECTS[i - 1].group ? `<span class="rv-navsep"></span>` : ""}<button type="button" class="rv-navbtn ${current === s.key ? "on" : ""}" data-k="${s.key}">${s.emoji} ${esc(s.name)}</button>`).join("")}</nav><div id="rvSess"></div><div id="rvView"></div>`;
   host.querySelectorAll(".rv-navbtn").forEach(b => b.onclick = () => go(b.dataset.k ? { name: "subject", key: b.dataset.k } : { name: "home" }));
   const tabs = document.querySelector(".tabs");
   if (tabs) host.querySelector(".rv-nav").style.top = Math.round(tabs.getBoundingClientRect().bottom) + "px"; // sit just under the app's tab bar
   const on = host.querySelector(".rv-navbtn.on"); if (on) on.parentElement.scrollLeft = on.offsetLeft - 40;
+  sessionControl(host.querySelector("#rvSess"));
   const el = host.querySelector("#rvView");
   if (view.name === "subject") return renderSubject(el, subjectByKey(view.key));
   if (view.name === "pack") return renderPackView(el);
@@ -251,10 +588,11 @@ function paceCard() {
 function renderHome(el) {
   const t = todayStr();
   el.innerHTML = `<h2>📖 Revision</h2>
+    <div id="rvGrades"></div>
     ${SUBJECT_GROUPS.map(g => `<h3 class="section-h">${g.key === "main" ? "📚" : "🗣️"} ${esc(g.label)}</h3><div class="rv-grid" data-group="${g.key}"></div>`).join("")}
     ${paceCard()}<div id="rvParent"></div>
     <h3 class="section-h">📝 Tests</h3><div id="rvTests" class="list"></div>
-    <h3 class="section-h">🗓️ Revision sessions</h3><div id="rvSess" class="list"></div>`;
+    <h3 class="section-h">🗓️ Planned revision sessions</h3><div id="rvPlanned" class="list"></div>`;
 
   // Tests
   const tl = el.querySelector("#rvTests");
@@ -280,7 +618,7 @@ function renderHome(el) {
   };
 
   // Sessions: missed + next 7 days, then recently done
-  const sl = el.querySelector("#rvSess");
+  const sl = el.querySelector("#rvPlanned");
   const horizon = addDays(t, 7);
   const open = R.sessions.filter(s => !s.done && s.date <= horizon).sort((a, b) => (a.date + a.slot).localeCompare(b.date + b.slot));
   const recent = R.sessions.filter(s => s.done).sort((a, b) => (b.doneAt || b.date).localeCompare(a.doneAt || a.date)).slice(0, 3);
@@ -303,6 +641,19 @@ function renderHome(el) {
   });
 
   renderParentCheck(el.querySelector("#rvParent"));
+
+  // Grading: Mum sees everything waiting; Gia sees her latest requests and feedback.
+  const gb = el.querySelector("#rvGrades");
+  const waiting = gradeQueue();
+  const list = IS_PARENT() ? waiting : R.grades.slice(0, 3);
+  if (list.length) {
+    gb.innerHTML = `<h3 class="section-h">✍️ ${IS_PARENT() ? `Ready to grade (${waiting.length})` : "Marking"}</h3>`;
+    const l = document.createElement("div"); l.className = "list";
+    list.forEach(g => l.appendChild(gradeItem(g, true)));
+    gb.appendChild(l);
+  } else if (IS_PARENT()) {
+    gb.innerHTML = `<h3 class="section-h">✍️ Ready to grade (0)</h3><div class="card muted small">Nothing to mark yet. When Gia ends a study session with written answers, they appear here (and you get an email), with a 📋 Copy for Claude button, a box to paste the feedback and a Score box.</div>`;
+  }
 }
 
 // Christabel only: three quick questions on the most recent session's pack.
@@ -328,11 +679,16 @@ function renderSubject(el, s) {
     ${s.guide ? `<details class="card rv-guide" open><summary><b>${esc(s.guide.title || "📋 How it's marked at IGCSE")}</b></summary>
       <div class="list" style="margin-top:8px">${(s.guide.papers || []).map(([p, d]) => `<div class="item-sub"><b>${esc(p)}</b> · ${esc(d)}</div>`).join("")}</div>
       <ul class="pk-ul">${(s.guide.tips || []).map(x => `<li>${esc(x)}</li>`).join("")}</ul>${s.guide.note ? `<div class="muted small">${esc(s.guide.note)}</div>` : ""}</details>` : ""}
-    <div id="rvTopics"></div>`;
+    <div id="rvGrade"></div><div id="rvTopics"></div>`;
   el.querySelector("#rvBack").onclick = () => go({ name: "home" });
+  if (subjectPacks(s).length) {
+    const gbox = el.querySelector("#rvGrade");
+    const mine = R.grades.filter(g => subjectsOf(g).includes(s.key)).slice(0, 3);
+    if (mine.length) { gbox.insertAdjacentHTML("beforeend", `<h3 class="section-h">✍️ Marking</h3>`); const l = document.createElement("div"); l.className = "list"; mine.forEach(g => l.appendChild(gradeItem(g))); gbox.appendChild(l); }
+  }
   const list = el.querySelector("#rvTopics");
   if (!s.topics.length) {
-    list.innerHTML = `<div class="card muted small">No topics listed for ${esc(s.name)} yet. Send Claude the chapter list (a photo of the textbook contents page is fine) and they'll be added here.</div>`;
+    list.innerHTML = `<div class="card muted small">No topics listed for ${esc(s.name)} yet. Send Claude the chapter list (a photo of the textbook contents page is fine) and they'll appear here.</div>`;
     return;
   }
   let unit = null;
@@ -384,15 +740,135 @@ function unitPracticeCard(packId, subjectKey, unitName) {
   return c;
 }
 
+// ---------- practising one or several books at once ----------
+// Every book (practice pack) in subject order, with its subject.
+const allBooks = () => SUBJECTS.flatMap(s => subjectPacks(s).map(id => ({ id, subject: s.key, emoji: s.emoji })));
+const subjectOfPack = (id) => allBooks().find(b => b.id === id)?.subject;
+const PK = (id, k) => `${id}::${k}`;
+const FIELDS = ["answers", "cards", "done", "sent", "drills"]; // key → value maps in a practice state
+
+// Several books shown as one pack: chapters grouped under each book, every item
+// tagged "<packId>::<key>". Progress still saves to each book's own practice
+// record, so sessions, marking and single-book practice all see it.
+function mergeBooks(ids, packs, stores) {
+  const units = [], flashcards = [], quiz = [], exam = [], timeline = [], strategy = [], cw = new Map();
+  ids.forEach((id, n) => {
+    const p = packs[n], book = PACKS[id] || p.title;
+    const U = (u) => PK(id, u || "");
+    (p.units || []).forEach(u => units.push({ key: U(u.key), name: u.name, book, label: `${book} · ${u.name}` }));
+    (p.flashcards || []).forEach((c, i) => flashcards.push({ ...c, unit: U(c.unit), key: PK(id, "c" + i) }));
+    (p.quiz || []).forEach(q => quiz.push({ ...q, unit: U(q.unit) }));
+    (p.exam || []).forEach((q, i) => exam.push({ ...q, unit: U(q.unit), key: PK(id, "eq" + i) }));
+    (p.timeline || []).forEach(e => timeline.push({ ...e, unit: U(e.unit) }));
+    (p.strategy || []).forEach(x => strategy.push({ ...x, title: `${book}: ${x.title}` }));
+    (p.commandWords || []).forEach(([w, m]) => { if (!cw.has(w)) cw.set(w, m); });
+  });
+  const pack = {
+    id: "mix", title: `Mixed practice · ${ids.length} books`, sub: ids.map(id => PACKS[id] || id).join(" + "),
+    units, flashcards, quiz, exam, timeline, strategy, commandWords: [...cw],
+    strategyIntro: "You're mixing books. Here are each book's tips.",
+    quizIntro: "Questions from all the chapters you picked, shuffled. Each answer shows why it's right.",
+    flashIntro: "Cards from all the chapters you picked, shuffled. Answer out loud, then tap to flip.",
+    examIntro: "Write your own answer first, then compare. Questions from every chapter you picked, shuffled.",
+  };
+  // One shared state for the screen, split back into each book's state on every save.
+  const M = { quizzes: [], cardLog: [] };
+  FIELDS.forEach(f => { M[f] = {}; });
+  ids.forEach((id, n) => FIELDS.forEach(f => Object.entries(stores[n].state[f] || {}).forEach(([k, v]) => { M[f][PK(id, k)] = v; })));
+  let logged = 0;
+  const filed = new Map(); // mixed quiz attempt -> { packId: that book's entry }
+  const split = () => {
+    ids.forEach((id, n) => {
+      const st = stores[n].state, pre = id + "::";
+      FIELDS.forEach(f => { const o = {}; for (const [k, v] of Object.entries(M[f])) if (k.startsWith(pre)) o[k.slice(pre.length)] = v; st[f] = o; });
+    });
+    M.cardLog.slice(logged).forEach(e => {
+      const n = ids.indexOf(e.key.split("::")[0]); if (n < 0) return;
+      const st = stores[n].state; st.cardLog ||= [];
+      st.cardLog.push({ ...e, key: e.key.split("::")[1], unit: "mix" });
+    });
+    logged = M.cardLog.length;
+    M.quizzes.forEach(q => {
+      const per = {};
+      for (const [u, [sc, nn]] of Object.entries(q.byUnit || {})) { const id = u.split("::")[0]; per[id] ||= [0, 0]; per[id][0] += sc; per[id][1] += nn; }
+      const mine = filed.get(q) || {}; filed.set(q, mine);
+      for (const [id, [sc, nn]] of Object.entries(per)) {
+        const n = ids.indexOf(id); if (n < 0) continue;
+        if (!mine[id]) { mine[id] = { d: q.d, at: q.at, kind: q.kind, unit: "mix", score: 0, n: 0 }; (stores[n].state.quizzes ||= []).push(mine[id]); }
+        mine[id].score = sc; mine[id].n = nn;
+      }
+    });
+  };
+  const store = { state: M, save: () => { split(); stores.forEach(st => st.save()); } };
+  ids.forEach((id, n) => liveStores.set(id, {
+    get state() { split(); return stores[n].state; },
+    setSent(sent) {
+      stores[n].state.sent = sent;
+      const pre = id + "::";
+      Object.keys(M.sent).forEach(k => { if (k.startsWith(pre)) delete M.sent[k]; });
+      Object.entries(sent).forEach(([k, v]) => { M.sent[pre + k] = v; });
+    },
+  }));
+  return { pack, store };
+}
+
+let packRun = 0; // newest pack-view render wins
 async function renderPackView(el) {
-  const v = view;
-  el.innerHTML = `<button class="btn tiny ghost" id="rvBack">← ${esc(subjectByKey(v.back)?.name || "Revision")}</button><div id="rvPack"><p class="muted small">Loading ${esc(PACKS[v.id] || "pack")}…</p></div>`;
+  const v = view, run = ++packRun;
+  v.books ||= [v.id];
+  // Chapter picks are kept as "<packId>::<unit>" so they survive adding or removing books.
+  v.units ||= v.unit ? [PK(v.id, v.unit)] : [];
+  const books = v.books;
+  el.innerHTML = `<button class="btn tiny ghost" id="rvBack">← ${esc(subjectByKey(v.back)?.name || "Revision")}</button>
+    <div class="card pk-books"><b>📚 Books</b> <span class="muted small">Tap one or more books, then pick chapters from each below.</span><div class="pk-bookrow"></div></div>
+    <div id="rvPack"><p class="muted small">Loading…</p></div>`;
   el.querySelector("#rvBack").onclick = () => go(v.back ? { name: "subject", key: v.back } : { name: "home" });
+  const row = el.querySelector(".pk-bookrow");
+  allBooks().forEach(b => {
+    const on = books.includes(b.id);
+    const c = document.createElement("button"); c.type = "button"; c.className = "chip pk-bookchip" + (on ? " on" : "");
+    c.textContent = `${b.emoji} ${PACKS[b.id] || b.id}`;
+    c.onclick = () => {
+      if (on) {
+        if (books.length === 1) return; // keep at least one book
+        v.books = books.filter(x => x !== b.id);
+        v.units = v.units.filter(u => !u.startsWith(b.id + "::"));
+      } else v.books = [...books, b.id];
+      renderPackView(el);
+    };
+    row.appendChild(c);
+  });
   try {
-    const [pack, store] = await Promise.all([loadPack(v.id), practiceStore(v.id)]);
-    if (view !== v) return; // navigated away while loading
-    renderPack(el.querySelector("#rvPack"), pack, store, { unit: v.unit, mode: v.mode });
+    const [packs, stores] = await Promise.all([Promise.all(books.map(loadPack)), Promise.all(books.map(practiceStore))]);
+    if (view !== v || run !== packRun) return; // navigated away (or changed books) while loading
+    liveStores.clear();
+    let pack, store, toLocal = (u) => u, toKey = (u) => u;
+    if (books.length === 1) {
+      const id = books[0];
+      pack = packs[0]; store = stores[0];
+      liveStores.set(id, { get state() { return store.state; }, setSent(sent) { store.state.sent = sent; } });
+      toLocal = (u) => u.split("::")[1]; toKey = (u) => PK(id, u);
+    } else ({ pack, store } = mergeBooks(books, packs, stores));
+    const gia = !IS_PARENT();
+    if (gia) addSessionSubjects([...new Set(books.map(subjectOfPack).filter(Boolean))]); // practising adds these subjects to the running session
+    // Submit marks an answer finished; it goes to Mum when the session ends.
+    const current = (key) => writtenWork(pack, store.state).find(w => w.key === key);
+    const submit = async (key) => {
+      const w = current(key);
+      if (!w) { alert("Write a bit more first, then submit."); return; }
+      store.state.done = { ...(store.state.done || {}), [key]: w.answer };
+      store.save();
+    };
+    const submitted = (key) => { const w = current(key); return !!w && (store.state.done?.[key] === w.answer || store.state.sent?.[key] === w.answer); };
+    const locked = () => !!runningSession(); // model answers hidden while her session runs
+    const unit = v.units.map(toLocal).filter(Boolean);
+    const opts = {
+      unit, mode: v.mode,
+      onUnits: (keys) => { v.units = keys.map(toKey); },
+      onMode: (m) => { v.mode = m; },
+    };
+    packHandle = renderPack(el.querySelector("#rvPack"), pack, store, gia ? { ...opts, submit, submitted, locked } : opts);
   } catch (e) {
-    el.querySelector("#rvPack").innerHTML = `<p class="error">Couldn't load this pack (${esc(e.message)}). Check your connection and try again.</p>`;
+    if (run === packRun) el.querySelector("#rvPack").innerHTML = `<p class="error">Couldn't load this practice (${esc(e.message)}). Check your connection and try again.</p>`;
   }
 }

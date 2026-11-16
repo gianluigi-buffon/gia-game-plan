@@ -6,9 +6,19 @@
 //    store = { state, save() }  — state is a plain object this module reads
 //            and mutates; call save() after each change (caller persists it).
 //            state: { answers:{key:text}, cards:{key:"got"|"again"},
-//                     quizzes:[{d, unit, score, n}], drills:{key:date} }
-//    opts  = { unit }  — pre-select a unit chip (e.g. "kq4"). Several units can then be
-//            selected together; their questions are mixed and shuffled.
+//                     cardLog:[{at, unit, key, r}]  (every Got it / Not yet, newest last),
+//                     quizzes:[{d, at, unit, kind, score, n, byUnit:{unit:[score, n]}}]  (saved after every answer),
+//                     drills:{key:date} }
+//    opts  = { unit }  — pre-select a chapter (e.g. "kq4", or an array of chapters).
+//            Chapters ("units") are multi-select; none selected = all chapters.
+//            { submit(key), submitted(key) } — optional: shows a Submit button
+//            under each written answer (Gia only)
+//            { onUnits(keys[]), onMode(mode) } — optional: told when the chapter picks or the mode change.
+//    Several books at once: revision.js merges packs into one. Items may then carry
+//    their own `key` (e.g. "geo7-ncert::c3"), units may carry `book` (shown as a
+//    heading over that book's chapters) and `label` (shown on mixed questions).
+//            { locked() } — optional: true hides model answers / mark schemes
+//            (during a study session). Call the returned applyLocks() when it changes.
 // =============================================================
 
 const esc = (s) => String(s ?? "").replace(/[<>&"]/g, (c) => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;", '"': "&quot;" }[c]));
@@ -42,26 +52,60 @@ export function packModes(pack) {
 // Summary numbers for progress displays.
 export function packStats(pack, state, unit) {
   const inUnit = (x) => !unit || !x.unit || x.unit === unit;
-  const cards = (pack.flashcards || []).map((c, i) => ({ ...c, key: "c" + i })).filter(inUnit);
+  const cards = (pack.flashcards || []).map((c, i) => ({ ...c, key: c.key || "c" + i })).filter(inUnit);
   const got = cards.filter(c => state.cards?.[c.key] === "got").length;
-  const exam = (pack.exam || []).map((q, i) => ({ ...q, key: "eq" + i })).filter(inUnit);
+  const exam = (pack.exam || []).map((q, i) => ({ ...q, key: q.key || "eq" + i })).filter(inUnit);
   const written = exam.filter(q => (state.answers?.[q.key] || "").trim().length > 20).length;
-  const qz = (state.quizzes || []).filter(q => !unit || q.unit === unit || q.unit === "all");
+  const qz = (state.quizzes || []).filter(q => (!unit || q.unit === unit || q.unit === "all") && q.n >= 5); // ignore barely-started attempts
   const best = qz.length ? Math.max(...qz.map(q => Math.round(100 * q.score / q.n))) : null;
   return { cards: cards.length, got, exam: exam.length, written, bestQuizPct: best };
 }
 
+// Every written answer Gia has typed in this pack (exam, data and 6-mark
+// plan questions), with the question and its mark scheme / model answer, so
+// the work can be sent for grading. `key` matches state.answers (plans: "pl<i>").
+export function writtenWork(pack, state) {
+  const A = state.answers || {};
+  const unitName = (k) => { const u = (pack.units || []).find(u => u.key === k); return u ? u.label || u.name : ""; };
+  const out = [];
+  const exam = (q, key, kind) => {
+    const answer = (A[key] || "").trim();
+    if (answer.length < 15) return;
+    const guide = q.model
+      ? "Model answer: " + q.model.join(" ") + (q.why ? "\nWhy it scores: " + q.why : "")
+      : "Mark scheme points: " + (q.points || []).join("; ") + (q.note ? "\nNote: " + q.note : "");
+    out.push({ key, kind, pack: pack.title, unit: unitName(q.unit), q: q.q, marks: q.marks, answer, guide });
+  };
+  (pack.exam || []).forEach((q, i) => exam(q, q.key || "eq" + i, "exam"));
+  (pack.dataPractice?.questions || []).forEach((q, i) => exam({ ...q, q: (pack.dataPractice.chartTitle ? `[Chart: ${pack.dataPractice.chartTitle}] ` : "") + q.q }, "dp" + i, "data"));
+  const p = pack.planner;
+  (p?.statements || []).forEach((st, i) => {
+    const labs = ["For 1", "For 2", "Against 1", "Against 2", "Conclusion"];
+    const parts = labs.map((l, j) => [l, (A[`pl${i}-${j}`] || "").trim()]).filter(([, t]) => t);
+    if (parts.map(([, t]) => t).join("").length < 15) return;
+    out.push({
+      key: "pl" + i, kind: "plan", pack: pack.title, unit: "", q: `“${st.text}” ${p.task}`, marks: 6,
+      answer: parts.map(([l, t]) => `${l}: ${t}`).join("\n"),
+      guide: `Points that would score. For: ${st.for.join("; ")}. Against: ${st.against.join("; ")}. Example conclusion: ${st.conclusion}`,
+    });
+  });
+  return out;
+}
+
 export function renderPack(root, pack, store, opts = {}) {
   const S = store.state;
-  S.answers ||= {}; S.cards ||= {}; S.quizzes ||= []; S.drills ||= {};
+  S.answers ||= {}; S.cards ||= {}; S.quizzes ||= []; S.drills ||= {}; S.cardLog ||= [];
+  const nowISO = () => new Date().toISOString();
+  // Each Got it / Not yet is logged with a time, so a study session can report what was done in it.
+  const logCard = (key, r) => { S.cardLog.push({ at: nowISO(), unit: unitKey(), key, r }); if (S.cardLog.length > 1500) S.cardLog.splice(0, S.cardLog.length - 1500); };
   const modeKeys = packModes(pack).map(([k]) => k);
   let mode = modeKeys.includes(opts.mode) ? opts.mode : modeKeys.includes("cards") ? "cards" : "learn";
-  // Selected units: empty = all. Tap chips to add or remove units and mix them.
-  const sel = new Set(opts.unit && opts.unit !== "all" ? [opts.unit] : []);
+  // Chapters: pick any number (none = all). Quiz, exam and flashcard order is shuffled.
+  const sel = new Set(opts.unit ? [].concat(opts.unit) : []);
+  const unitKey = () => sel.size ? [...sel].sort().join("+") : "all"; // stored with quiz/flashcard logs
   const inUnit = (x) => !sel.size || !x.unit || sel.has(x.unit);
-  const mixed = () => sel.size !== 1;            // show which unit each item comes from
-  const unitKey = () => sel.size ? [...sel].sort().join("+") : "all";
-  const unitName = (k) => (pack.units || []).find(u => u.key === k)?.name || "";
+  const oneChapter = () => sel.size === 1;
+  const unitName = (k) => { const u = (pack.units || []).find(u => u.key === k); return u ? u.label || u.name : ""; };
 
   root.innerHTML = "";
   root.classList.add("pk");
@@ -72,16 +116,18 @@ export function renderPack(root, pack, store, opts = {}) {
   root.append(head, modesBar, unitsBar, body);
 
   packModes(pack).forEach(([k, label]) => {
-    const b = h("button", { class: "pk-mode", type: "button", "data-m": k, on: { click: () => { mode = k; draw(); } } }, esc(label));
+    const b = h("button", { class: "pk-mode", type: "button", "data-m": k, on: { click: () => { mode = k; opts.onMode?.(k); draw(); } } }, esc(label));
     modesBar.appendChild(b);
   });
   if (pack.units?.length) {
-    unitsBar.appendChild(h("div", { class: "muted small pk-units-hint" }, "Tap one or more chapters to mix them (questions are shuffled):"));
-    [{ key: "all", name: "All" }, ...pack.units].forEach(u => {
+    unitsBar.appendChild(h("div", { class: "muted small pk-units-h" }, "Chapters: tap one or more"));
+    let book = null;
+    [{ key: "all", name: "All chapters" }, ...pack.units].forEach(u => {
+      if (u.book && u.book !== book) { book = u.book; unitsBar.appendChild(h("div", { class: "pk-book-h" }, esc(book))); }
       unitsBar.appendChild(h("button", { class: "chip", type: "button", "data-u": u.key, on: { click: () => {
-        if (u.key === "all") sel.clear();
-        else if (sel.has(u.key)) sel.delete(u.key);
-        else sel.add(u.key);
+        if (u.key === "all") sel.clear(); else if (sel.has(u.key)) sel.delete(u.key); else sel.add(u.key);
+        if (sel.size === pack.units.length) sel.clear(); // every chapter picked = all
+        opts.onUnits?.([...sel]);
         draw();
       } } }, esc(u.name)));
     });
@@ -90,8 +136,8 @@ export function renderPack(root, pack, store, opts = {}) {
   function draw() {
     modesBar.querySelectorAll(".pk-mode").forEach(b => b.classList.toggle("on", b.dataset.m === mode));
     unitsBar.querySelectorAll(".chip").forEach(b => b.classList.toggle("on", b.dataset.u === "all" ? !sel.size : sel.has(b.dataset.u)));
-    unitsBar.classList.toggle("hidden", !pack.units?.length || mode === "learn");
-    body.innerHTML = "";
+    unitsBar.classList.toggle("hidden", !pack.units?.length || mode === "learn" || mode === "data");
+    body.innerHTML = ""; lockBtns = [];
     ({ learn, cards, quiz, exam, data, plan, drill, timeline })[mode]();
   }
 
@@ -102,11 +148,43 @@ export function renderPack(root, pack, store, opts = {}) {
     t.addEventListener("input", () => { S.answers[key] = t.value; store.save(); });
     return t;
   }
+  // "Submit answer": marks this answer finished; it goes to Mum when the study
+  // session ends. Goes back to "Submit" if Gia edits the answer afterwards.
+  function submitBtn(card, key) {
+    if (!opts.submit) return;
+    const b = h("button", { class: "btn primary pk-submit", type: "button" });
+    const set = () => { const done = opts.submitted(key); b.textContent = done ? "✓ Submitted · goes to Mum when you end your session" : "Submit answer"; b.classList.toggle("done", done); };
+    b.addEventListener("click", async () => {
+      if (opts.submitted(key)) return set();
+      b.disabled = true; b.textContent = "Sending…";
+      try { await opts.submit(key); } catch (e) { alert("Couldn't submit: " + e.message); }
+      b.disabled = false; set();
+    });
+    card.addEventListener("input", set);
+    set();
+    card.appendChild(b);
+  }
+  // Model answers / mark schemes. Locked (hidden) while Gia has a study
+  // session running, so the answers he sends for marking are his own.
+  const isLocked = () => !!opts.locked?.();
+  let lockBtns = [];
   function reveal(label, target) {
     target.hidden = true;
-    const b = h("button", { class: "btn tiny ghost", type: "button", on: { click: () => { target.hidden = !target.hidden; b.textContent = target.hidden ? label : "Hide"; } } }, esc(label));
+    const b = h("button", { class: "btn tiny ghost", type: "button", on: { click: () => {
+      if (isLocked()) return applyLocks();
+      target.hidden = !target.hidden; b.textContent = target.hidden ? label : "Hide";
+    } } }, esc(label));
+    lockBtns.push({ b, label, target });
+    if (isLocked()) setLock(b, label, target);
     return b;
   }
+  function setLock(b, label, target) {
+    const locked = isLocked();
+    if (locked) { target.hidden = true; b.textContent = "🔒 Hidden during your session: end it to see this"; }
+    else if (target.hidden) b.textContent = label;
+    b.disabled = locked; b.classList.toggle("pk-locked", locked);
+  }
+  function applyLocks() { lockBtns.forEach(x => setLock(x.b, x.label, x.target)); }
   function msBox(title, items, note, paras) {
     let html = `<div class="pk-ms-h">${esc(title)}</div>`;
     if (items?.length) html += `<ul>${items.map(p => `<li>${esc(p)}</li>`).join("")}</ul>`;
@@ -117,8 +195,9 @@ export function renderPack(root, pack, store, opts = {}) {
   function examCard(q, key) {
     const c = h("div", { class: "card pk-eq" });
     c.appendChild(h("div", { class: "row-between" }, `<div class="pk-q">${esc(q.q)}</div><span class="pill soon">${q.marks} mark${q.marks > 1 ? "s" : ""}</span>`));
-    if (q.unit && mixed()) c.appendChild(h("div", { class: "tag" }, esc(unitName(q.unit))));
+    if (q.unit && !oneChapter()) c.appendChild(h("div", { class: "tag" }, esc(unitName(q.unit))));
     c.appendChild(textBox(key, `Write your answer first (${q.marks} mark${q.marks > 1 ? "s" : ""}), then check`));
+    submitBtn(c, key);
     const ms = q.model
       ? msBox("Model answer", null, q.why ? "Why it scores: " + q.why : "", q.model)
       : msBox("Mark scheme points", q.points, q.note);
@@ -138,7 +217,7 @@ export function renderPack(root, pack, store, opts = {}) {
   }
 
   function cards() {
-    const all = (pack.flashcards || []).map((c, i) => ({ ...c, key: "c" + i })).filter(inUnit);
+    const all = (pack.flashcards || []).map((c, i) => ({ ...c, key: c.key || "c" + i })).filter(inUnit);
     let deck = shuffle(all.filter(c => S.cards[c.key] !== "got"));
     const known = () => all.filter(c => S.cards[c.key] === "got").length;
     body.appendChild(h("p", { class: "muted small" }, esc(pack.flashIntro || "Answer out loud, then flip.")));
@@ -159,7 +238,7 @@ export function renderPack(root, pack, store, opts = {}) {
         again.disabled = got.disabled = true;
       } else {
         const c = deck[0];
-        card.innerHTML = `<div class="pk-face"><div class="pk-front">${esc(c.front)}</div><div class="muted small">${c.unit && mixed() ? esc(unitName(c.unit)) + " · " : ""}tap to flip</div></div>`;
+        card.innerHTML = `<div class="pk-face"><div class="pk-front">${esc(c.front)}</div><div class="muted small">${c.unit && !oneChapter() ? esc(unitName(c.unit)) + " · " : ""}tap to flip</div></div>`;
         again.disabled = got.disabled = false;
       }
       meta.textContent = `${deck.length} left this round · ${known()} / ${all.length} known`;
@@ -174,16 +253,23 @@ export function renderPack(root, pack, store, opts = {}) {
     };
     card.addEventListener("click", flip);
     card.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); flip(); } });
-    got.onclick = () => { const c = deck.shift(); S.cards[c.key] = "got"; store.save(); show(); };
+    got.onclick = () => { const c = deck.shift(); S.cards[c.key] = "got"; logCard(c.key, "got"); store.save(); show(); };
     again.onclick = () => {
-      const c = deck.shift(); S.cards[c.key] = "again"; store.save();
+      const c = deck.shift(); S.cards[c.key] = "again"; logCard(c.key, "again"); store.save();
       deck.splice(Math.min(deck.length, 3 + Math.floor(Math.random() * 3)), 0, c); show();
     };
     restart.onclick = () => { all.forEach(c => delete S.cards[c.key]); store.save(); deck = shuffle(all); show(); };
     show();
   }
 
-  function logQuiz(score, n) { S.quizzes.push({ d: today(), unit: unitKey(), score, n }); store.save(); }
+  // One entry per attempt, updated after every answer, so a half-finished quiz still counts.
+  // byUnit keeps the score per chapter, so a quiz mixed across books can be filed under each book.
+  function startQuiz(kind) { const q = { d: today(), at: nowISO(), unit: unitKey(), kind, score: 0, n: 0, byUnit: {} }; let saved = false;
+    return (score, n, u, ok) => {
+      q.score = score; q.n = n;
+      if (u) { const b = q.byUnit[u] ||= [0, 0]; b[1]++; if (ok) b[0]++; }
+      if (!saved) { S.quizzes.push(q); saved = true; } store.save();
+    }; }
 
   function quiz() {
     if (pack.quiz?.length) return mcq();
@@ -192,13 +278,13 @@ export function renderPack(root, pack, store, opts = {}) {
     const years = [...new Set((pack.timeline || []).map(e => e.year))].sort();
     const qs = shuffle(events).slice(0, 10);
     let i = 0, score = 0;
+    const record = startQuiz("dates");
     body.appendChild(h("p", { class: "muted small" }, esc(pack.quizIntro || "Pick the year.")));
     const box = h("div", { class: "card" });
     const next = h("button", { class: "btn primary", type: "button" }, "Next");
     body.append(box, next);
     function show() {
       if (i >= qs.length) {
-        logQuiz(score, qs.length);
         box.innerHTML = `<div class="pk-big">${score} / ${qs.length}</div><div>${score >= 8 ? "Strong. Dates are locked in." : score >= 5 ? "Good base. Go again and beat it." : "Worth another go. Check the Timeline first."}</div>`;
         next.textContent = "Play again"; next.onclick = () => { body.innerHTML = ""; quiz(); };
         return;
@@ -215,6 +301,7 @@ export function renderPack(root, pack, store, opts = {}) {
             if (grid.dataset.done) return; grid.dataset.done = 1;
             if (y === e.year) { score++; ev.currentTarget.classList.add("right"); fb.textContent = "Correct."; }
             else { ev.currentTarget.classList.add("wrong"); fb.textContent = `It was ${e.year}.`; [...grid.children].forEach(b => { if (+b.textContent === e.year) b.classList.add("right"); }); }
+            record(score, i + 1, e.unit, y === e.year);
           }
         }
       }, String(y))));
@@ -225,8 +312,10 @@ export function renderPack(root, pack, store, opts = {}) {
   }
 
   function mcq() {
-    const qs = shuffle(pack.quiz.filter(inUnit)); // only the selected chapter, in a fresh order each time
+    const qs = shuffle(pack.quiz.filter(inUnit));
+    if (!qs.length) { body.appendChild(h("p", { class: "muted" }, "No quiz questions for these chapters. Pick other chapters.")); return; }
     let right = 0, done = 0;
+    const record = startQuiz("mcq");
     body.appendChild(h("p", { class: "muted small" }, esc(pack.quizIntro || "")));
     const score = h("div", { class: "pk-big" }, "0 / 0");
     body.appendChild(score);
@@ -241,7 +330,7 @@ export function renderPack(root, pack, store, opts = {}) {
             [...grid.children][q.answer].classList.add("right");
             if (j !== q.answer) ev.currentTarget.classList.add("wrong"); else right++;
             done++; why.hidden = false; score.textContent = `${right} / ${done}`;
-            if (done === qs.length) logQuiz(right, done);
+            record(right, done, q.unit, j === q.answer);
           }
         }
       }, `<b>${"ABCD"[j]}</b> ${esc(o)}`)));
@@ -252,10 +341,9 @@ export function renderPack(root, pack, store, opts = {}) {
 
   function exam() {
     body.appendChild(h("p", { class: "muted small" }, esc(pack.examIntro || "")));
-    // One chapter: book order. Several (or all): shuffled, so mixed revision isn't predictable.
-    const qs = (pack.exam || []).map((q, i) => ({ q, key: "eq" + i })).filter(x => inUnit(x.q));
-    (mixed() ? shuffle(qs) : qs).forEach(x => body.appendChild(examCard(x.q, x.key)));
-    if (mixed() && qs.length) body.appendChild(h("button", { class: "btn ghost", type: "button", on: { click: () => { body.innerHTML = ""; exam(); } } }, "Shuffle again"));
+    const qs = shuffle((pack.exam || []).map((q, i) => ({ q, key: q.key || "eq" + i })).filter(x => inUnit(x.q)));
+    if (!qs.length) body.appendChild(h("p", { class: "muted" }, "No exam questions for these chapters. Pick other chapters."));
+    qs.forEach(x => body.appendChild(examCard(x.q, x.key)));
   }
 
   function data() {
@@ -287,11 +375,13 @@ export function renderPack(root, pack, store, opts = {}) {
     const p = pack.planner;
     body.appendChild(h("p", { class: "muted small" }, esc(p.intro)));
     p.statements.forEach((st, i) => {
+      if (!inUnit(st)) return;
       const c = h("div", { class: "card pk-eq" }, `<div class="row-between"><div class="pk-q">“${esc(st.text)}” ${esc(p.task)}</div><span class="pill soon">6 marks</span></div>`);
       [["For, point 1", "for"], ["For, point 2", "for"], ["Against, point 1", "against"], ["Against, point 2", "against"], ["Conclusion: your judgement and what it depends on", "concl"]].forEach(([lab, cls], j) => {
         c.appendChild(h("div", { class: "pk-lab " + cls }, esc(lab)));
         c.appendChild(textBox(`pl${i}-${j}`, j < 4 ? "Point + why it matters" : "Overall I think… because… but it depends on…"));
       });
+      submitBtn(c, "pl" + i);
       const ms = msBox("Points that would score", null, null, [`For: ${st.for.join("; ")}.`, `Against: ${st.against.join("; ")}.`, `Conclusion example: ${st.conclusion}`]);
       c.append(reveal("Compare with model points", ms), ms);
       body.appendChild(c);
@@ -325,7 +415,7 @@ export function renderPack(root, pack, store, opts = {}) {
       else { rev.textContent = "Your verdict can differ"; rev.disabled = true; S.drills[ds[i].key] = today(); store.save(); }
     };
     nxt.onclick = () => { i = (i + 1) % ds.length; show(); };
-    if (ds.length) show(); else c.textContent = "No drills for this unit.";
+    if (ds.length) show(); else c.textContent = "No drills for these chapters.";
   }
 
   function timeline() {
@@ -334,4 +424,5 @@ export function renderPack(root, pack, store, opts = {}) {
   }
 
   draw();
+  return { applyLocks };
 }

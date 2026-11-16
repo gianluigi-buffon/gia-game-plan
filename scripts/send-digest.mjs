@@ -53,6 +53,8 @@ async function build() {
     getAll("books"), getAll("readinglog"), getAll("holidays"),
     getAll("revsessions"), getAll("revtests"), getAll("revprogress"),
   ]);
+  const toGrade = (await getAll("revgrade")).filter((g) => g.status !== "graded").sort((a, b) => (a.date || "").localeCompare(b.date || ""));
+  const studyWeek = (await getAll("studysessions")).filter((x) => x.status === "done");
   const weekAgo = addDays(todayStr, -6);
   const isHoliday = (s) => holidays.some((h) => h.from && h.to && s >= h.from && s <= h.to);
 
@@ -109,6 +111,7 @@ async function build() {
     classes.length ? `🥋 Wushu: ${classes.length - missedWeek.length}/${classes.length} classes attended this week${missedWeek.length ? ` · ❌ ${missedWeek.length} missed` : ""}` : null,
     `📚 Read on ${readWeek}/7 days · ${streak}-day streak`,
     `📖 ${roundsWeek} revision round(s) and ${sessDoneWeek.length} session(s) this week${sessMissed.length ? ` · ⚠️ ${sessMissed.length} missed` : ""}`,
+    toGrade.length ? `✍️ ${toGrade.length} set(s) of written answers waiting for you to grade` : null,
     testsNext.length ? `📝 Next test: ${esc(testsNext[0].name)} (${fmt(testsNext[0].date)})` : null,
     nextEvent ? `🏅 ${esc(nextEvent.name)} on ${fmt(nextEvent.date)}` : null,
   ].filter(Boolean);
@@ -147,7 +150,14 @@ async function build() {
   let rBody = `<p>This week: <b>${roundsWeek}</b> topic round(s), <b>${sessDoneWeek.length}</b> planned session(s) done.</p>`;
   if (sessMissed.length) rBody += `<p style="color:#c0392b;font-weight:700">⚠️ Missed: ${sessMissed.map((x) => `${esc(x.title)} (${fmt(x.date)})`).join("; ")}</p>`;
   if (testsNext.length) rBody += `<p>📝 Tests: ${testsNext.slice(0, 4).map((t) => `${esc(t.name)} (${fmt(t.date)})`).join("; ")}</p>`;
+  const sessWeek = studyWeek.filter((x) => x.date >= weekAgo && x.date <= todayStr);
+  if (sessWeek.length) rBody += `<p>⏱️ Study sessions: <b>${sessWeek.length}</b> this week, ${sessWeek.reduce((n, x) => n + (x.mins || 0), 0)} minutes in total.</p>`;
   html += section("📖 Revision", rBody);
+  if (toGrade.length) {
+    const gBody = toGrade.map((g) => `<p><b>${esc((g.subjects?.length ? g.subjects : [g.subject]).join(", "))}</b> · ${(g.items || []).length} answer(s) sent ${fmt(g.date)}</p>
+        <pre style="white-space:pre-wrap;font-family:Arial,sans-serif;font-size:13px;background:#f6f2fb;border:1px solid #e4dcef;border-radius:8px;padding:10px">${esc(g.prompt || "")}</pre>`).join("");
+    html += section("✍️ Ready to grade", `<p>Copy each block below into a Claude chat. Then paste Claude's feedback into the app (Revision ▸ Ready to grade) so Gia can read it.</p>${gBody}`);
+  }
 
   html += `<p style="margin-top:20px;font-size:12px;color:#8a7aa6">Sent automatically from Gia's Game Plan. Open the app to update anything.</p></div>`;
   return { html, summary: `${pending.length} HW pending, ${finished.length}/${CREATIONS.goal} creations, read ${readWeek}/7 days` };
