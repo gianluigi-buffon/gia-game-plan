@@ -1,0 +1,1126 @@
+{
+ "id": "eng7-cup",
+ "subject": "English",
+ "title": "English: Learner's Book 7",
+ "sub": "Cambridge Lower Secondary English 7 (CUP, 2nd ed.) · language, text types and writing, the IGCSE way",
+ "units": [
+  {
+   "key": "u1",
+   "name": "U1 Adventure"
+  },
+  {
+   "key": "u2",
+   "name": "U2 'Hey, You Down There'"
+  },
+  {
+   "key": "u3",
+   "name": "U3 Film and fame"
+  },
+  {
+   "key": "u4",
+   "name": "U4 Small but perfect"
+  },
+  {
+   "key": "u5",
+   "name": "U5 Unusual education"
+  },
+  {
+   "key": "u6",
+   "name": "U6 Life stories"
+  },
+  {
+   "key": "u7",
+   "name": "U7 'The Travel Agency'"
+  },
+  {
+   "key": "u8",
+   "name": "U8 In the city"
+  },
+  {
+   "key": "u9",
+   "name": "U9 Dangers of the sea"
+  }
+ ],
+ "strategyIntro": "English marks come from showing HOW language works, not just spotting it. Learn the terms, then practise using them in your own writing.",
+ "strategy": [
+  {
+   "title": "Language questions: PEE",
+   "key": true,
+   "points": [
+    "Point: name the technique or idea.",
+    "Evidence: quote the exact words (short!).",
+    "Explain: the effect on the reader, and why the writer chose those words."
+   ]
+  },
+  {
+   "title": "Writing tasks",
+   "key": true,
+   "points": [
+    "Plan for 5 minutes: purpose, audience, form (PAF).",
+    "Use the features of the text type, vary sentences, choose precise words.",
+    "Leave 5 minutes to proofread spelling and punctuation."
+   ]
+  }
+ ],
+ "commandWords": [
+  [
+   "Explain",
+   "Say how or why, with evidence and the effect."
+  ],
+  [
+   "Describe",
+   "Say what something is like, with details."
+  ],
+  [
+   "Analyse",
+   "Look closely at words and techniques and explain their effects."
+  ],
+  [
+   "Write / Compose",
+   "Produce your own text in the form asked for."
+  ]
+ ],
+ "quizTitle": "Quiz",
+ "quizIntro": "Pick one or more units above, then answer. Each answer shows why it's right.",
+ "quiz": [
+  {
+   "q": "'Run!' is which type of sentence?",
+   "options": [
+    "Statement",
+    "Question",
+    "Command",
+    "Exclamation"
+   ],
+   "answer": 2,
+   "why": "It tells someone to do something.",
+   "unit": "u1"
+  },
+  {
+   "q": "'The snake slid silently over the stones' uses…",
+   "options": [
+    "Rhyme",
+    "Sibilance",
+    "A simile",
+    "Onomatopoeia"
+   ],
+   "answer": 1,
+   "why": "Repeated 's' sounds.",
+   "unit": "u1"
+  },
+  {
+   "q": "Which is the most powerful verb?",
+   "options": [
+    "Went",
+    "Moved",
+    "Hurtled",
+    "Got"
+   ],
+   "answer": 2,
+   "why": "It shows speed and force.",
+   "unit": "u1"
+  },
+  {
+   "q": "Travel writing is usually written in the…",
+   "options": [
+    "First person",
+    "Third person",
+    "Second person",
+    "Passive voice"
+   ],
+   "answer": 0,
+   "why": "The writer tells their own journey.",
+   "unit": "u1"
+  },
+  {
+   "q": "'Although she was scared, she climbed on.' is a…",
+   "options": [
+    "Simple sentence",
+    "Compound sentence",
+    "Complex sentence",
+    "Command"
+   ],
+   "answer": 2,
+   "why": "Main clause + subordinate clause ('Although…').",
+   "unit": "u1"
+  },
+  {
+   "q": "Which sentence opening is an adverb?",
+   "options": [
+    "At dawn,",
+    "Carefully,",
+    "Under the stars,",
+    "The boy"
+   ],
+   "answer": 1,
+   "why": "Adverbs often end in -ly.",
+   "unit": "u2"
+  },
+  {
+   "q": "Which is formal?",
+   "options": [
+    "Gonna be late, sorry!",
+    "I apologise for my late arrival.",
+    "Can't wait!",
+    "Hey, what's up?"
+   ],
+   "answer": 1,
+   "why": "No slang or contractions.",
+   "unit": "u2"
+  },
+  {
+   "q": "In a playscript, stage directions tell actors…",
+   "options": [
+    "What to say",
+    "How to move or speak",
+    "The theme",
+    "The ending"
+   ],
+   "answer": 1,
+   "why": "They go in brackets or italics.",
+   "unit": "u2"
+  },
+  {
+   "q": "'When the hole appeared, people threw rubbish in and nobody asked questions.' is…",
+   "options": [
+    "Simple",
+    "Compound",
+    "Complex",
+    "Compound-complex"
+   ],
+   "answer": 3,
+   "why": "Two main clauses + a subordinate clause.",
+   "unit": "u2"
+  },
+  {
+   "q": "Which is punctuated correctly?",
+   "options": [
+    "'Stop he shouted.'",
+    "'Stop!' he shouted.",
+    "Stop! 'he shouted'.",
+    "'Stop'! he shouted."
+   ],
+   "answer": 1,
+   "why": "Punctuation inside the speech marks.",
+   "unit": "u3"
+  },
+  {
+   "q": "A film review should NOT…",
+   "options": [
+    "Give an opinion",
+    "Reveal the ending",
+    "Mention the actors",
+    "Give a rating"
+   ],
+   "answer": 1,
+   "why": "No spoilers.",
+   "unit": "u3"
+  },
+  {
+   "q": "'We can, we must, we will' is an example of…",
+   "options": [
+    "Rule of three",
+    "A simile",
+    "Sibilance",
+    "A noun phrase"
+   ],
+   "answer": 0,
+   "why": "Three parts, for impact.",
+   "unit": "u3"
+  },
+  {
+   "q": "Which is an expanded noun phrase?",
+   "options": [
+    "She ran.",
+    "The ancient, crumbling castle on the hill",
+    "Quickly",
+    "Because it rained"
+   ],
+   "answer": 1,
+   "why": "Noun (castle) + description.",
+   "unit": "u3"
+  },
+  {
+   "q": "How many syllables are in a haiku?",
+   "options": [
+    "14",
+    "17",
+    "20",
+    "10"
+   ],
+   "answer": 1,
+   "why": "5 + 7 + 5.",
+   "unit": "u4"
+  },
+  {
+   "q": "Which is a time connective?",
+   "options": [
+    "Because",
+    "Meanwhile",
+    "Although",
+    "But"
+   ],
+   "answer": 1,
+   "why": "It shows when.",
+   "unit": "u4"
+  },
+  {
+   "q": "'Mis-' in 'misunderstand' means…",
+   "options": [
+    "Again",
+    "Wrongly",
+    "Before",
+    "Small"
+   ],
+   "answer": 1,
+   "why": "Understand wrongly.",
+   "unit": "u4"
+  },
+  {
+   "q": "Imagist poems focus on…",
+   "options": [
+    "Long stories",
+    "One clear image",
+    "Rhyme",
+    "Arguments"
+   ],
+   "answer": 1,
+   "why": "Precise images, few words.",
+   "unit": "u4"
+  },
+  {
+   "q": "Flash fiction is…",
+   "options": [
+    "A long novel",
+    "A very short complete story",
+    "A news report",
+    "A play"
+   ],
+   "answer": 1,
+   "why": "Often under a few hundred words.",
+   "unit": "u4"
+  },
+  {
+   "q": "Which connective shows contrast?",
+   "options": [
+    "Furthermore",
+    "However",
+    "Also",
+    "Firstly"
+   ],
+   "answer": 1,
+   "why": "It introduces a different view.",
+   "unit": "u5"
+  },
+  {
+   "q": "Where does a colon go?",
+   "options": [
+    "Before a list",
+    "At the end of a question",
+    "Between two adjectives",
+    "After a greeting only"
+   ],
+   "answer": 0,
+   "why": "Also before an explanation.",
+   "unit": "u5"
+  },
+  {
+   "q": "A discussion article should be…",
+   "options": [
+    "One-sided",
+    "Balanced",
+    "Fiction",
+    "A poem"
+   ],
+   "answer": 1,
+   "why": "For and against, then a conclusion.",
+   "unit": "u5"
+  },
+  {
+   "q": "If you start 'Dear Sir or Madam', you end…",
+   "options": [
+    "Yours sincerely",
+    "Yours faithfully",
+    "Love from",
+    "Cheers"
+   ],
+   "answer": 1,
+   "why": "You don't know their name.",
+   "unit": "u5"
+  },
+  {
+   "q": "The rhyme scheme of night / day / light / play is…",
+   "options": [
+    "AABB",
+    "ABAB",
+    "ABBA",
+    "ABCD"
+   ],
+   "answer": 1,
+   "why": "night/light = A, day/play = B.",
+   "unit": "u6"
+  },
+  {
+   "q": "An autobiography is written…",
+   "options": [
+    "By someone else",
+    "By the person themselves",
+    "As a poem",
+    "As a play"
+   ],
+   "answer": 1,
+   "why": "Auto = self.",
+   "unit": "u6"
+  },
+  {
+   "q": "'My brother, who hates mornings, overslept.' The embedded clause is…",
+   "options": [
+    "My brother",
+    "who hates mornings",
+    "overslept",
+    "My brother overslept"
+   ],
+   "answer": 1,
+   "why": "Between the commas.",
+   "unit": "u6"
+  },
+  {
+   "q": "Malala Yousafzai campaigns for…",
+   "options": [
+    "Girls' education",
+    "Ocean safety",
+    "Space travel",
+    "Film-making"
+   ],
+   "answer": 0,
+   "why": "Nobel Peace Prize, 2014.",
+   "unit": "u6"
+  },
+  {
+   "q": "'Show, don't tell' means…",
+   "options": [
+    "Describe actions that reveal feelings",
+    "Use lots of pictures",
+    "Write only dialogue",
+    "Avoid description"
+   ],
+   "answer": 0,
+   "why": "Let the reader work out the feeling.",
+   "unit": "u7"
+  },
+  {
+   "q": "Which feature belongs in a brochure?",
+   "options": [
+    "Stage directions",
+    "Persuasive adjectives",
+    "A rhyme scheme",
+    "Footnotes"
+   ],
+   "answer": 1,
+   "why": "To make the reader want to go.",
+   "unit": "u7"
+  },
+  {
+   "q": "The setting of a story is…",
+   "options": [
+    "The main character",
+    "Where and when it happens",
+    "The ending",
+    "The theme"
+   ],
+   "answer": 1,
+   "why": "Place and time.",
+   "unit": "u7"
+  },
+  {
+   "q": "Which is most exciting?",
+   "options": [
+    "There was a dragon in the cave suddenly.",
+    "Suddenly, from the cave, a dragon.",
+    "A dragon was in the cave.",
+    "The cave had a dragon in it."
+   ],
+   "answer": 1,
+   "why": "Word order and a short, punchy fragment build excitement.",
+   "unit": "u7"
+  },
+  {
+   "q": "'The traffic lights winked at us' is…",
+   "options": [
+    "A simile",
+    "Personification",
+    "Alliteration",
+    "A metaphor"
+   ],
+   "answer": 1,
+   "why": "Lights can't really wink.",
+   "unit": "u8"
+  },
+  {
+   "q": "The noun form of 'decide' is…",
+   "options": [
+    "Decisive",
+    "Decision",
+    "Decidedly",
+    "Decided"
+   ],
+   "answer": 1,
+   "why": "Decision is the noun.",
+   "unit": "u8"
+  },
+  {
+   "q": "Who wrote A Christmas Carol?",
+   "options": [
+    "Charles Dickens",
+    "Arthur Conan Doyle",
+    "Neil Gaiman",
+    "Aravind Adiga"
+   ],
+   "answer": 0,
+   "why": "Published 1843.",
+   "unit": "u8"
+  },
+  {
+   "q": "An argument article…",
+   "options": [
+    "Gives one side strongly",
+    "Gives both sides equally",
+    "Tells a story",
+    "Lists instructions"
+   ],
+   "answer": 0,
+   "why": "A discussion is balanced; an argument persuades.",
+   "unit": "u8"
+  },
+  {
+   "q": "'The shark was a torpedo' is…",
+   "options": [
+    "A simile",
+    "A metaphor",
+    "Onomatopoeia",
+    "Alliteration"
+   ],
+   "answer": 1,
+   "why": "No like or as.",
+   "unit": "u9"
+  },
+  {
+   "q": "Which word has the most sinister connotations?",
+   "options": [
+    "Swam",
+    "Moved",
+    "Lurked",
+    "Floated"
+   ],
+   "answer": 2,
+   "why": "It suggests hidden danger.",
+   "unit": "u9"
+  },
+  {
+   "q": "In The Rime of the Ancient Mariner, the sailor kills…",
+   "options": [
+    "A whale",
+    "A shark",
+    "An albatross",
+    "A seagull"
+   ],
+   "answer": 2,
+   "why": "It brings a curse.",
+   "unit": "u9"
+  },
+  {
+   "q": "'Splash' is an example of…",
+   "options": [
+    "Onomatopoeia",
+    "Personification",
+    "A metaphor",
+    "Sibilance"
+   ],
+   "answer": 0,
+   "why": "It sounds like its meaning.",
+   "unit": "u9"
+  }
+ ],
+ "flashIntro": "Pick one or more units above. Say the answer out loud with an example, then tap to flip.",
+ "flashcards": [
+  {
+   "front": "Name the four sentence types.",
+   "back": "Statement (tells), question (asks), command (instructs), exclamation (shows strong feeling!).",
+   "unit": "u1"
+  },
+  {
+   "front": "What is a simple sentence?",
+   "back": "One main clause with one verb: 'The train stopped.'",
+   "unit": "u1"
+  },
+  {
+   "front": "What is a compound sentence?",
+   "back": "Two main clauses joined by and, but, or, so: 'The train stopped, but nobody got off.'",
+   "unit": "u1"
+  },
+  {
+   "front": "What is a complex sentence?",
+   "back": "A main clause plus a subordinate clause: 'Although it was late, the train kept going.'",
+   "unit": "u1"
+  },
+  {
+   "front": "What is alliteration?",
+   "back": "Words close together starting with the same sound: 'wild wind whipped'.",
+   "unit": "u1"
+  },
+  {
+   "front": "What is sibilance?",
+   "back": "Repeated 's' and 'sh' sounds, often to suggest hissing, whispering or the sea: 'the silent sea sighed'.",
+   "unit": "u1"
+  },
+  {
+   "front": "What is a powerful verb?",
+   "back": "A precise verb that shows HOW something is done: 'sprinted' or 'staggered' instead of 'went'.",
+   "unit": "u1"
+  },
+  {
+   "front": "What are the features of an adventure story?",
+   "back": "A brave main character, danger and challenges, a fast pace, tension and cliffhangers, an exciting setting.",
+   "unit": "u1"
+  },
+  {
+   "front": "What is travel writing?",
+   "back": "Non-fiction about real journeys: first person, vivid description of places and people, the writer's feelings and opinions.",
+   "unit": "u1"
+  },
+  {
+   "front": "What is a monologue?",
+   "back": "A long speech by one character, showing their thoughts and feelings, usually in the first person.",
+   "unit": "u1"
+  },
+  {
+   "front": "What is an anecdote?",
+   "back": "A short, interesting true story about something that happened to you.",
+   "unit": "u1"
+  },
+  {
+   "front": "What is science fiction?",
+   "back": "Stories based on imagined science or technology, often set in the future, that explore 'what if?' ideas.",
+   "unit": "u2"
+  },
+  {
+   "front": "Why vary sentence openings?",
+   "back": "To keep writing interesting. Start with an adverb (Slowly,…), a time phrase (At midnight,…), a preposition (Under the bridge,…) or an -ing word (Running,…).",
+   "unit": "u2"
+  },
+  {
+   "front": "What is a compound-complex sentence?",
+   "back": "Two main clauses plus at least one subordinate clause: 'When the alarm rang, Sam jumped up and Mia hid.'",
+   "unit": "u2"
+  },
+  {
+   "front": "What is formal language?",
+   "back": "Serious, polite language for unfamiliar readers: full words, no slang, e.g. 'I would like to request…'",
+   "unit": "u2"
+  },
+  {
+   "front": "What is informal language?",
+   "back": "Relaxed, chatty language for friends: contractions (don't), slang, exclamations.",
+   "unit": "u2"
+  },
+  {
+   "front": "What are the features of a playscript?",
+   "back": "Character names on the left, dialogue without speech marks, stage directions in brackets or italics, scene headings.",
+   "unit": "u2"
+  },
+  {
+   "front": "What is an unusual (twist) ending?",
+   "back": "An ending the reader doesn't expect, but that makes sense when they look back at clues.",
+   "unit": "u2"
+  },
+  {
+   "front": "What is the theme of a story?",
+   "back": "The big idea or message it explores, e.g. greed, friendship, the dangers of technology.",
+   "unit": "u2"
+  },
+  {
+   "front": "How do you punctuate direct speech?",
+   "back": "Speech marks around the words spoken; punctuation inside the marks; new speaker = new line. 'Help!' she cried.",
+   "unit": "u3"
+  },
+  {
+   "front": "What is a noun phrase?",
+   "back": "A noun plus words that describe it: 'the tall, nervous boy in the red cap'.",
+   "unit": "u3"
+  },
+  {
+   "front": "What is an adjective-noun combination?",
+   "back": "An adjective before a noun to make description precise: 'golden sunset', 'shaky voice'.",
+   "unit": "u3"
+  },
+  {
+   "front": "What are the features of a film review?",
+   "back": "Title, short plot summary (no spoilers), opinions on acting, story, effects and music, a star rating or recommendation.",
+   "unit": "u3"
+  },
+  {
+   "front": "What are the features of an informative article?",
+   "back": "Headline, subheadings, facts and figures, quotes from experts, clear paragraphs, third person.",
+   "unit": "u3"
+  },
+  {
+   "front": "What are the features of a good speech?",
+   "back": "Speaking directly to the audience (you, we), rhetorical questions, repetition, the rule of three, a strong ending.",
+   "unit": "u3"
+  },
+  {
+   "front": "What is the rule of three?",
+   "back": "Listing three things for impact: 'brave, determined and kind'.",
+   "unit": "u3"
+  },
+  {
+   "front": "What happened in the 2018 Thai cave rescue?",
+   "back": "A young football team and their coach were trapped in a flooded cave in Thailand and were rescued by divers after more than two weeks.",
+   "unit": "u3"
+  },
+  {
+   "front": "What is flash fiction?",
+   "back": "A complete, very short story (often under 100–300 words) with a beginning, a middle and a twist or punchy end.",
+   "unit": "u4"
+  },
+  {
+   "front": "What is a haiku?",
+   "back": "A Japanese poem of three lines with 5, 7 and 5 syllables, often about nature or a moment in time.",
+   "unit": "u4"
+  },
+  {
+   "front": "What is imagist poetry?",
+   "back": "Short poems that focus on one clear, precise image in everyday language, without explaining it. Ezra Pound was an imagist.",
+   "unit": "u4"
+  },
+  {
+   "front": "Name some time connectives.",
+   "back": "First, next, then, after that, meanwhile, eventually, finally, suddenly, later.",
+   "unit": "u4"
+  },
+  {
+   "front": "What is a prefix?",
+   "back": "Letters added to the start of a word to change its meaning: un-, dis-, micro-, re-, pre-, mis-.",
+   "unit": "u4"
+  },
+  {
+   "front": "What does the prefix micro- mean?",
+   "back": "Very small: microscope, micro-artist.",
+   "unit": "u4"
+  },
+  {
+   "front": "Who is Willard Wigan?",
+   "back": "A British micro-sculptor who makes tiny sculptures small enough to fit in the eye of a needle.",
+   "unit": "u4"
+  },
+  {
+   "front": "What were shabtis?",
+   "back": "Small figures placed in ancient Egyptian tombs to do work for the dead person in the afterlife.",
+   "unit": "u4"
+  },
+  {
+   "front": "What are the features of an explanatory text?",
+   "back": "Explains how or why: an introduction, steps or causes in order, time and cause connectives (because, so, therefore), technical words, sometimes diagrams.",
+   "unit": "u4"
+  },
+  {
+   "front": "How is an interview set out?",
+   "back": "An introduction to the person, then questions and answers, often with the names or initials of the speakers.",
+   "unit": "u4"
+  },
+  {
+   "front": "What are the features of a descriptive account?",
+   "back": "A real experience told in the first person, past tense, with vivid sensory detail (sight, sound, smell, touch, taste) and feelings.",
+   "unit": "u5"
+  },
+  {
+   "front": "What is a blog?",
+   "back": "An online article or diary written in a personal, chatty style, often giving opinions and inviting comments.",
+   "unit": "u5"
+  },
+  {
+   "front": "What is a discussion article?",
+   "back": "A balanced text giving arguments for and against an issue, then a conclusion.",
+   "unit": "u5"
+  },
+  {
+   "front": "Name connectives for adding, contrasting and concluding.",
+   "back": "Adding: also, furthermore, in addition. Contrasting: however, on the other hand, whereas. Concluding: overall, in conclusion.",
+   "unit": "u5"
+  },
+  {
+   "front": "When do you use a colon?",
+   "back": "Before a list ('You need three things: a pen, paper and time.'), or before an explanation ('She was exhausted: she had run ten miles.').",
+   "unit": "u5"
+  },
+  {
+   "front": "How is a formal letter set out?",
+   "back": "Your address, the date, the recipient's address, Dear…, clear paragraphs, Yours sincerely (if you know their name) or Yours faithfully (if you don't).",
+   "unit": "u5"
+  },
+  {
+   "front": "What is homeschooling?",
+   "back": "Children being educated at home, usually by parents, instead of at school.",
+   "unit": "u5"
+  },
+  {
+   "front": "Which novel follows Auggie Pullman starting school?",
+   "back": "Wonder, by R.J. Palacio.",
+   "unit": "u5"
+  },
+  {
+   "front": "What is rhythm in poetry?",
+   "back": "The pattern of stressed and unstressed beats in a line, like a beat in music.",
+   "unit": "u6"
+  },
+  {
+   "front": "What is rhyme, and what is a rhyme scheme?",
+   "back": "Rhyme: words ending in the same sound (night/light). Rhyme scheme: the pattern of rhymes, shown with letters (ABAB).",
+   "unit": "u6"
+  },
+  {
+   "front": "What is voice in writing?",
+   "back": "The personality and attitude of the speaker or narrator that comes through the words.",
+   "unit": "u6"
+  },
+  {
+   "front": "What is an embedded clause?",
+   "back": "A clause put in the middle of a sentence, usually between commas: 'Malala, who spoke up for girls' education, won the Nobel Peace Prize.'",
+   "unit": "u6"
+  },
+  {
+   "front": "What is the difference between biography and autobiography?",
+   "back": "Biography: someone's life written by another person (third person). Autobiography: written by the person themselves (first person).",
+   "unit": "u6"
+  },
+  {
+   "front": "What are the features of a diary?",
+   "back": "First person, dated entries, personal thoughts and feelings, informal, often past tense.",
+   "unit": "u6"
+  },
+  {
+   "front": "Who is Malala Yousafzai?",
+   "back": "A Pakistani campaigner for girls' education who was shot by the Taliban in 2012, survived, and won the Nobel Peace Prize in 2014.",
+   "unit": "u6"
+  },
+  {
+   "front": "Who was Captain Robert Scott?",
+   "back": "A British explorer who reached the South Pole in 1912 and died on the way back; his diary records the expedition.",
+   "unit": "u6"
+  },
+  {
+   "front": "Who was Nelson Mandela?",
+   "back": "A South African leader who fought apartheid, spent 27 years in prison, and became South Africa's first Black president in 1994.",
+   "unit": "u6"
+  },
+  {
+   "front": "Name three features of a persuasive speech.",
+   "back": "Direct address (you, we), emotive language, rhetorical questions, repetition, the rule of three, facts or examples.",
+   "unit": "u6"
+  },
+  {
+   "front": "What is fantasy fiction?",
+   "back": "Stories with magic or impossible things, often in imagined worlds, but with real human feelings.",
+   "unit": "u7"
+  },
+  {
+   "front": "What are the three building blocks of a narrative?",
+   "back": "Characters, events (plot) and setting.",
+   "unit": "u7"
+  },
+  {
+   "front": "How can you show a character instead of telling?",
+   "back": "Through actions, speech and reactions: 'She slammed the door' shows anger without saying 'she was angry'.",
+   "unit": "u7"
+  },
+  {
+   "front": "How does word order create excitement?",
+   "back": "Putting the key word first or last, or using short sentences: 'Silence. Then, from the dark, a scream.'",
+   "unit": "u7"
+  },
+  {
+   "front": "What is a brochure?",
+   "back": "A persuasive leaflet advertising a place or service: headings, appealing adjectives, direct address, short paragraphs, facts.",
+   "unit": "u7"
+  },
+  {
+   "front": "What is a diary entry written in role?",
+   "back": "Writing as a character, in the first person, to show their private feelings about events in the story.",
+   "unit": "u7"
+  },
+  {
+   "front": "What makes a strong narrative?",
+   "back": "A hook at the start, a clear problem, rising tension, a climax and a satisfying resolution.",
+   "unit": "u7"
+  },
+  {
+   "front": "What is personification?",
+   "back": "Giving human qualities to something non-human: 'The city breathed', 'The wind whispered'.",
+   "unit": "u8"
+  },
+  {
+   "front": "What are related word forms?",
+   "back": "Words from the same root in different word classes: create (verb), creation (noun), creative (adjective), creatively (adverb).",
+   "unit": "u8"
+  },
+  {
+   "front": "What is perspective (point of view)?",
+   "back": "Whose eyes the story or article is seen through: first person (I), third person (he/she), or a particular group's view.",
+   "unit": "u8"
+  },
+  {
+   "front": "What are the features of an argument article?",
+   "back": "One clear viewpoint, evidence and examples, persuasive language, a counter-argument dismissed, a strong conclusion.",
+   "unit": "u8"
+  },
+  {
+   "front": "Name three classic novels about city life in Unit 8, and their authors.",
+   "back": "A Christmas Carol (Charles Dickens), The Sign of Four (Arthur Conan Doyle, a Sherlock Holmes story), Neverwhere (Neil Gaiman, set in a hidden London).",
+   "unit": "u8"
+  },
+  {
+   "front": "What is The White Tiger?",
+   "back": "A novel by Aravind Adiga about a poor man from a village who moves to the city; it won the Booker Prize in 2008.",
+   "unit": "u8"
+  },
+  {
+   "front": "What makes a good travel article?",
+   "back": "An engaging opening, vivid description of sights, sounds and food, practical tips, the writer's personal experience and opinions.",
+   "unit": "u8"
+  },
+  {
+   "front": "How does a semicolon differ from a comma?",
+   "back": "A semicolon joins two closely linked main clauses: 'The streets were busy; horns blared everywhere.' A comma alone can't do this.",
+   "unit": "u8"
+  },
+  {
+   "front": "What is poetic language?",
+   "back": "Language that creates images and sound effects: similes, metaphors, personification, alliteration, onomatopoeia, rhythm.",
+   "unit": "u9"
+  },
+  {
+   "front": "What is the difference between a simile and a metaphor?",
+   "back": "Simile: compares using like or as ('teeth like knives'). Metaphor: says something IS something else ('the sea was a monster').",
+   "unit": "u9"
+  },
+  {
+   "front": "What is onomatopoeia?",
+   "back": "Words that sound like what they mean: crash, splash, hiss.",
+   "unit": "u9"
+  },
+  {
+   "front": "How do you choose words for effect?",
+   "back": "Pick precise, vivid words with the right connotations: 'lurked' (sinister) instead of 'waited'.",
+   "unit": "u9"
+  },
+  {
+   "front": "What are connotations?",
+   "back": "The feelings or ideas a word suggests beyond its meaning: 'home' suggests safety and warmth.",
+   "unit": "u9"
+  },
+  {
+   "front": "Who wrote Jaws, Moby-Dick and The Rime of the Ancient Mariner?",
+   "back": "Jaws: Peter Benchley. Moby-Dick: Herman Melville. The Rime of the Ancient Mariner: Samuel Taylor Coleridge (a long ballad poem).",
+   "unit": "u9"
+  },
+  {
+   "front": "What is Moby-Dick about?",
+   "back": "Captain Ahab's obsessive hunt for the great white whale that took his leg.",
+   "unit": "u9"
+  },
+  {
+   "front": "What happens in The Rime of the Ancient Mariner?",
+   "back": "A sailor shoots an albatross, a bird of good luck, and he and his crew are cursed at sea.",
+   "unit": "u9"
+  },
+  {
+   "front": "How do you analyse a character?",
+   "back": "Say what they're like, back it with a quotation, then explain what the words show and how the writer wants us to feel.",
+   "unit": "u9"
+  }
+ ],
+ "examIntro": "Do the task on paper first, then open the model. Check you used the same features, not the same words.",
+ "exam": [
+  {
+   "q": "Write the opening paragraph of an adventure story (about 80 words). Use a powerful verb, alliteration and at least two sentence types.",
+   "marks": 6,
+   "unit": "u1",
+   "model": [
+    "Model: The wind howled. Maya gripped the rope, her fingers frozen and raw, as the bridge swayed above the roaring river. Somewhere behind her, footsteps thudded closer. Could she make it across in time? She risked one glance down at the dark, churning water. Then she ran.",
+    "Why it works: it starts with a short, dramatic sentence; powerful verbs (gripped, swayed, thudded, churning); alliteration ('roaring river'); a question builds tension; it ends on a cliffhanger."
+   ],
+   "why": "Aim for tension from the very first line, and check you used each feature asked for."
+  },
+  {
+   "q": "Explain how the writer creates excitement in this line: 'The boat bucked and bounced as black waves battered its sides.'",
+   "marks": 4,
+   "unit": "u1",
+   "model": [
+    "Alliteration of 'b' (bucked, bounced, black, battered) makes harsh, banging sounds, like waves hitting the boat.",
+    "Powerful verbs 'bucked' and 'battered' make the boat seem out of control, like a wild animal, and the sea seem violent, so the reader feels the danger."
+   ],
+   "why": "Name the technique, quote it, then explain its effect on the reader."
+  },
+  {
+   "q": "Rewrite this informal message formally: 'Hey! Can't come to the meeting tomorrow, sorry. Something came up.'",
+   "marks": 4,
+   "unit": "u2",
+   "model": [
+    "Model: Dear Mrs Rao, I am sorry to tell you that I will be unable to attend the meeting tomorrow, as I have an unexpected commitment. Please accept my apologies. Yours sincerely, Gia",
+    "Changes: a formal greeting and sign-off, full words instead of contractions (cannot, I am), no slang or exclamation marks, a polite and clear reason."
+   ],
+   "why": "Formal = full sentences, polite, no slang or contractions."
+  },
+  {
+   "q": "What makes a good twist ending? Give two tips.",
+   "marks": 4,
+   "unit": "u2",
+   "model": [
+    "Plant small clues earlier in the story so the twist feels fair, not random.",
+    "Keep the reader focused elsewhere until the end, then reveal the twist in a short, punchy final sentence that makes them see the whole story differently."
+   ],
+   "why": "Two clear tips, each explained."
+  },
+  {
+   "q": "Write the opening of a film review for a film you like (about 80 words).",
+   "marks": 6,
+   "unit": "u3",
+   "model": [
+    "Model: Packed with jaw-dropping action and genuine heart, 'The Incredibles' is a superhero film the whole family will love. It follows a family of secret superheroes forced to hide their powers, until a mysterious villain drags them back into action. The voice acting is sharp and funny, and the animation is bursting with colour. Have you ever wished your family had superpowers? After this, you will.",
+    "Why it works: a catchy opening opinion, a brief plot summary with no spoilers, specific praise, a rhetorical question to involve the reader."
+   ],
+   "why": "Mix facts with opinions, and talk to your reader."
+  },
+  {
+   "q": "Write three lines of dialogue between two characters, punctuated correctly.",
+   "marks": 4,
+   "unit": "u3",
+   "model": [
+    "'Did you see that?' whispered Arjun.",
+    "'See what?' asked Priya, turning around.",
+    "'The light in the window,' he said. 'Someone's up there.'",
+    "Check: new line for each speaker, speech marks around spoken words, punctuation inside the marks, a capital letter at the start of speech."
+   ],
+   "why": "Every new speaker starts on a new line."
+  },
+  {
+   "q": "Write a haiku about something small. Then explain how you counted the syllables.",
+   "marks": 4,
+   "unit": "u4",
+   "model": [
+    "Model: A drop on a leaf (5) / holds the whole sky in its curve (7) / then falls, and is gone (5)",
+    "Count each beat: a-drop-on-a-leaf = 5; holds-the-whole-sky-in-its-curve = 7; then-falls-and-is-gone = 5. A haiku captures one moment, often from nature."
+   ],
+   "why": "Clap the syllables as you say each line."
+  },
+  {
+   "q": "Explain how a poet can make a tiny thing seem important.",
+   "marks": 4,
+   "unit": "u4",
+   "model": [
+    "By zooming in on precise details, with exact adjectives and nouns, so the reader notices what they usually miss.",
+    "By comparing it to something big or powerful with a metaphor or simile (a raindrop 'holds the whole sky'), which shows its hidden importance."
+   ],
+   "why": "Name the technique and explain its effect."
+  },
+  {
+   "q": "Write a balanced paragraph on whether students should wear school uniform.",
+   "marks": 6,
+   "unit": "u5",
+   "model": [
+    "Model: Supporters of school uniform argue that it makes everyone equal, because nobody is judged on their clothes, and it saves time each morning. Furthermore, it can build pride in the school. On the other hand, many students feel uniforms stop them from expressing their personality, and some families find them expensive. Overall, uniforms seem to bring real benefits, but schools could allow some choice to keep everyone happy.",
+    "Why it works: points for, then against, with linking connectives (Furthermore, On the other hand, Overall), and a fair conclusion."
+   ],
+   "why": "Balanced = both sides, then your conclusion."
+  },
+  {
+   "q": "Describe your first day at a new school in two or three sentences, using the senses.",
+   "marks": 4,
+   "unit": "u5",
+   "model": [
+    "Model: The corridor smelt of fresh paint and floor polish, and my new shoes squeaked with every nervous step. Hundreds of voices echoed off the walls, but I didn't recognise a single one. My hands felt clammy as I pushed open the classroom door.",
+    "Why it works: smell, sound and touch, plus feelings, in the first person and past tense."
+   ],
+   "why": "Use at least three senses."
+  },
+  {
+   "q": "Write the opening of a short persuasive speech on why every child should be able to go to school.",
+   "marks": 6,
+   "unit": "u6",
+   "model": [
+    "Model: Imagine waking up every morning knowing you will never open a book. For millions of children, that is real life. Education is not a luxury; it is a right. It gives us knowledge, confidence and a voice. Malala Yousafzai risked her life so that girls could learn. Surely the least we can do is speak up too. Together, we can make sure every child has a classroom.",
+    "Why it works: direct address and 'we', a vivid opening, a fact, the rule of three, a real example, a rhetorical tone, a rousing end."
+   ],
+   "why": "Persuade with feelings AND facts."
+  },
+  {
+   "q": "Combine these using an embedded clause: 'Captain Scott reached the South Pole. He kept a diary.'",
+   "marks": 2,
+   "unit": "u6",
+   "model": [
+    "Model: Captain Scott, who kept a diary, reached the South Pole.",
+    "The extra information sits in the middle, between commas, and starts with 'who'."
+   ],
+   "why": "Use who/which/whose between commas."
+  },
+  {
+   "q": "Write the introduction to a travel agency brochure for an imaginary place.",
+   "marks": 4,
+   "unit": "u7",
+   "model": [
+    "Model: Escape to the Floating Isles, where waterfalls tumble into the clouds and every sunset glows violet! Explore crystal caves, ride gentle sky-whales and feast on fruit that tastes of moonlight. Your adventure of a lifetime is waiting. Book today!",
+    "Why it works: direct address (your), persuasive and vivid adjectives, exclamations, a command to finish."
+   ],
+   "why": "Make the reader WANT to go."
+  },
+  {
+   "q": "Show (don't tell) that a character is nervous, in two sentences.",
+   "marks": 2,
+   "unit": "u7",
+   "model": [
+    "Model: Kiran twisted the strap of her bag round and round her finger. When the teacher called her name, her voice came out as a whisper.",
+    "Actions and voice reveal the nerves; the word 'nervous' isn't needed."
+   ],
+   "why": "Use actions, body language and speech."
+  },
+  {
+   "q": "Write four lines of a poem about a city using personification.",
+   "marks": 4,
+   "unit": "u8",
+   "model": [
+    "Model: The city wakes and stretches its concrete arms, / its windows blink away the night, / the streets yawn as buses rumble by, / and the river hums its morning song.",
+    "Why it works: each line gives the city a human action (wakes, stretches, blinks, yawns, hums), making it feel alive."
+   ],
+   "why": "Every line should give the city a human action."
+  },
+  {
+   "q": "What would make a city child-friendly? Write a short argument paragraph.",
+   "marks": 6,
+   "unit": "u8",
+   "model": [
+    "Model: A truly child-friendly city must put young people first. Firstly, safe cycle lanes and wide pavements would let children travel independently. Secondly, parks and playgrounds should be within walking distance of every home. Some say this costs too much; however, healthier, happier children save money on healthcare in the long run. Surely our children deserve cities built for them?",
+    "Why it works: a clear viewpoint, ordered points, a counter-argument answered with 'however', a rhetorical question to end."
+   ],
+   "why": "One clear view, with reasons and a counter-argument dismissed."
+  },
+  {
+   "q": "Describe a sea snake in three sentences using at least one simile, one metaphor and a powerful verb.",
+   "marks": 6,
+   "unit": "u9",
+   "model": [
+    "Model: The sea snake glided through the water like a ribbon of black silk. Its striped body was a warning sign, painted by nature. It flicked its tongue, tasting the current, then vanished into the reef.",
+    "Why it works: a simile (like a ribbon of silk), a metaphor (body was a warning sign), powerful verbs (glided, flicked, vanished), precise detail."
+   ],
+   "why": "Label each technique you use when you check your work."
+  },
+  {
+   "q": "Explain the effect of this line: 'The ocean swallowed the boat whole.'",
+   "marks": 4,
+   "unit": "u9",
+   "model": [
+    "It is personification or a metaphor: the ocean is described as a giant creature that eats.",
+    "The verb 'swallowed' suggests the sea is powerful, hungry and unstoppable, and 'whole' shows the boat vanished completely and quickly, so the reader feels fear and how small humans are against the sea."
+   ],
+   "why": "Name the technique, zoom in on key words, explain the effect."
+  }
+ ]
+}

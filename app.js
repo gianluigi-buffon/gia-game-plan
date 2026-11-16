@@ -4,8 +4,8 @@
 import { firebaseConfig, PEOPLE } from "./firebase-config.js";
 import { buildDayPlan, WUSHU_DAYS } from "./planner.js?v=3";
 import { TIMETABLE, lessonsOn, nextLessonDate } from "./timetable.js?v=1";
-import { initRevision, sessionsFor, upcomingTests, overdueSessions, paceSummary, revisionCount, progressHtml as revisionProgressHtml, subjectName, openSubject as openRevisionSubject, render as renderRevision } from "./revision/revision.js?v=18";
-import { HW_SUBJECTS as SUBJECTS, SUBJECT_GROUPS } from "./revision/syllabus.js?v=17";
+import { initRevision, sessionsFor, upcomingTests, overdueSessions, paceSummary, revisionCount, progressHtml as revisionProgressHtml, subjectName, openSubject as openRevisionSubject, render as renderRevision } from "./revision/revision.js?v=19";
+import { HW_SUBJECTS as SUBJECTS, SUBJECT_GROUPS } from "./revision/syllabus.js?v=18";
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import {
@@ -359,9 +359,19 @@ function showQuotePopup() {
   el.onclick = close;
   setTimeout(close, 5000);
 }
+// A new random quote (or verse, on verse days) each time the app is opened or refreshed.
+// Picked once per page load so the pop-up and the Today card match; never the same as last time.
+let pickedQuote = null;
 function quoteOfDay() {
-  const day = dayOfYear();
-  return [2, 4, 6].includes(new Date().getDay()) ? VERSES[day % VERSES.length] : QUOTES[day % QUOTES.length];
+  if (pickedQuote) return pickedQuote;
+  const list = [2, 4, 6].includes(new Date().getDay()) ? VERSES : QUOTES;
+  let last = null;
+  try { last = localStorage.getItem("gia-last-quote"); } catch (_) {}
+  let i, tries = 0;
+  do { i = Math.floor(Math.random() * list.length); } while (list[i][0] === last && list.length > 1 && ++tries < 10);
+  pickedQuote = list[i];
+  try { localStorage.setItem("gia-last-quote", pickedQuote[0]); } catch (_) {}
+  return pickedQuote;
 }
 
 // date string of the n-th upcoming school day (Mon–Fri), today included

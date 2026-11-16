@@ -19,7 +19,7 @@
 export const REVISION_GOAL = { start: "2026-11-09", by: "2027-01-31", rounds: 2 };
 
 // Bump when a pack JSON changes so browsers fetch the new copy.
-export const PACK_VERSION = 6;
+export const PACK_VERSION = 7;
 
 export const PACKS = {
   "geo7-ncert": "Geography: Our Environment",
@@ -27,6 +27,7 @@ export const PACKS = {
   "math8-cup": "Maths: Learner's Book 8",
   "history7-our-pasts-2": "History: Our Pasts II",
   "chi-history": "A Children's History of India",
+  "eng7-cup": "English: Learner's Book 7",
 };
 
 // Gia's subjects (confirmed by Christabel, Nov 2026).
@@ -306,23 +307,23 @@ const ALL_SUBJECTS = [
       note: IGCSE_NOTE,
     },
     topics: [
-      { id: "eng7-u1", unit: "English: Cambridge Learner's Book 7", name: "Unit 1: Adventure",
+      { id: "eng7-u1", unit: "English: Cambridge Learner's Book 7", pack: "eng7-cup", packUnit: "u1", name: "Unit 1: Adventure",
         points: ["Read: 'Beware Low-Flying Girls', Around India in 80 Trains, 'Hard is the Journey', Silverfin", "Text types: adventure fiction, travel writing, thematic poetry, a spy story", "Write: summarise genre features; a monologue; a poem's meaning; a story", "Language: sentence types; alliteration and sibilance; powerful verbs", "Speak: pair discussion and prediction; present group views; recount an anecdote"] },
-      { id: "eng7-u2", unit: "English: Cambridge Learner's Book 7", name: "Unit 2: 'Hey, You Down There'",
+      { id: "eng7-u2", unit: "English: Cambridge Learner's Book 7", pack: "eng7-cup", packUnit: "u2", name: "Unit 2: 'Hey, You Down There'",
         points: ["Read: 'Hey, You Down There' (science fiction short story)", "Write: a spoken drama; informally about theme; a story with an unusual ending", "Language: sentence openings; compound-complex sentences; formal and informal language", "Speak: pair and group discussion"] },
-      { id: "eng7-u3", unit: "English: Cambridge Learner's Book 7", name: "Unit 3: Film and fame",
+      { id: "eng7-u3", unit: "English: Cambridge Learner's Book 7", pack: "eng7-cup", packUnit: "u3", name: "Unit 3: Film and fame",
         points: ["Read: Film Boy; 'Hrithik Roshan says he practises every day to overcome stammering'; The Incredibles film review; 'Thai cave rescue boys meet hero'", "Text types: informative article, film review", "Write: a section of a story; an article; a film review; a speech", "Language: direct speech; types of noun/adjective-noun combinations", "Speak: pair discussion; individual speaking"] },
-      { id: "eng7-u4", unit: "English: Cambridge Learner's Book 7", name: "Unit 4: Small but perfect",
+      { id: "eng7-u4", unit: "English: Cambridge Learner's Book 7", pack: "eng7-cup", packUnit: "u4", name: "Unit 4: Small but perfect",
         points: ["Read: 'One in Twenty-Three'; haiku and imagist poems; 'The tiny world of Willard Wigan'; explanation of shabtis; 'Micro-artist Willard Wigan'", "Text types: flash fiction, haiku, imagist poetry, explanatory text, magazine article and interview", "Write: flash fiction; analyse a poem; poems; an interview", "Language: time connectives; prefixes", "Speak: pair and group discussion"] },
-      { id: "eng7-u5", unit: "English: Cambridge Learner's Book 7", name: "Unit 5: Unusual education",
+      { id: "eng7-u5", unit: "English: Cambridge Learner's Book 7", pack: "eng7-cup", packUnit: "u5", name: "Unit 5: Unusual education",
         points: ["Read: two accounts of different schools; blogs about school uniform; homeschooling article and account; Wonder; The Last Class", "Text types: descriptive accounts, blogs, discussion article, contemporary drama", "Write: an account about school; a letter; a script", "Language: connectives; colons", "Speak: pair and group discussion"] },
-      { id: "eng7-u6", unit: "English: Cambridge Learner's Book 7", name: "Unit 6: Life stories",
+      { id: "eng7-u6", unit: "English: Cambridge Learner's Book 7", pack: "eng7-cup", packUnit: "u6", name: "Unit 6: Life stories",
         points: ["Read: 'Lullaby'; 'The Song of the Old Mother'; biography of Malala Yousafzai; As I Walked Out One Midsummer Morning; Letter to Daniel; Captain Robert Scott's diary; speech by Nelson Mandela", "Text types: thematic poetry, autobiography, diary, persuasive speech", "Write: justify poetry choices; an account of family life; a monologue; analyse language; a letter; a poem; a speech", "Language: rhythm and rhyme; voice; embedded clauses", "Speak: pair and group discussion"] },
-      { id: "eng7-u7", unit: "English: Cambridge Learner's Book 7", name: "Unit 7: 'The Travel Agency'",
+      { id: "eng7-u7", unit: "English: Cambridge Learner's Book 7", pack: "eng7-cup", packUnit: "u7", name: "Unit 7: 'The Travel Agency'",
         points: ["Read: 'The Travel Agency' (fantasy short story)", "Write: about characters, events and settings; a narrative piece; a brochure introduction; analyse character; a diary entry; about theme", "Language: word choice and order; voice and excitement", "Speak: pair and group discussion"] },
-      { id: "eng7-u8", unit: "English: Cambridge Learner's Book 7", name: "Unit 8: In the city",
+      { id: "eng7-u8", unit: "English: Cambridge Learner's Book 7", pack: "eng7-cup", packUnit: "u8", name: "Unit 8: In the city",
         points: ["Read: The White Tiger; Doha article; Neverwhere; A Christmas Carol; The Sign of Four; 'City Jungle'; 'Last Night, I Saw the City Breathing'; 'Urban Threats'; 'What would the ultimate child-friendly city look like?'", "Text types: informative article, classic fiction, thematic poetry, argument articles", "Write: a travel article; continue a story; a poem about a city", "Language: punctuation; personification; related word forms; perspective", "Speak: pair and group discussion; individual speaking"] },
-      { id: "eng7-u9", unit: "English: Cambridge Learner's Book 7", name: "Unit 9: Dangers of the sea",
+      { id: "eng7-u9", unit: "English: Cambridge Learner's Book 7", pack: "eng7-cup", packUnit: "u9", name: "Unit 9: Dangers of the sea",
         points: ["Read: Jaws; 'Why Are We Afraid of Sharks?'; Moby-Dick; And The Ocean Was Our Sky; The Rime of the Ancient Mariner", "Text types: informative article, classic fiction, classic poetry", "Write: describe a sea snake; analyse characters; continue a story; analyse poetic language", "Language: choosing words and phrases; poetic language", "Speak: pair and group discussion; individual speaking"] },
       { id: "eng-reading", unit: "IGCSE skills to build", name: "Reading for meaning",
         points: ["Find explicit information quickly", "Work out implied meaning (what the writer suggests)", "Answer in your own words, backed by short quotations"] },
