@@ -7,7 +7,8 @@
 //            and mutates; call save() after each change (caller persists it).
 //            state: { answers:{key:text}, cards:{key:"got"|"again"},
 //                     quizzes:[{d, unit, score, n}], drills:{key:date} }
-//    opts  = { unit }  — pre-select a unit chip (e.g. "kq4")
+//    opts  = { unit }  — pre-select a unit chip (e.g. "kq4"). Several units can then be
+//            selected together; their questions are mixed and shuffled.
 // =============================================================
 
 const esc = (s) => String(s ?? "").replace(/[<>&"]/g, (c) => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;", '"': "&quot;" }[c]));
@@ -55,8 +56,11 @@ export function renderPack(root, pack, store, opts = {}) {
   S.answers ||= {}; S.cards ||= {}; S.quizzes ||= []; S.drills ||= {};
   const modeKeys = packModes(pack).map(([k]) => k);
   let mode = modeKeys.includes(opts.mode) ? opts.mode : modeKeys.includes("cards") ? "cards" : "learn";
-  let unit = opts.unit || "all";
-  const inUnit = (x) => unit === "all" || !x.unit || x.unit === unit;
+  // Selected units: empty = all. Tap chips to add or remove units and mix them.
+  const sel = new Set(opts.unit && opts.unit !== "all" ? [opts.unit] : []);
+  const inUnit = (x) => !sel.size || !x.unit || sel.has(x.unit);
+  const mixed = () => sel.size !== 1;            // show which unit each item comes from
+  const unitKey = () => sel.size ? [...sel].sort().join("+") : "all";
   const unitName = (k) => (pack.units || []).find(u => u.key === k)?.name || "";
 
   root.innerHTML = "";
@@ -72,14 +76,20 @@ export function renderPack(root, pack, store, opts = {}) {
     modesBar.appendChild(b);
   });
   if (pack.units?.length) {
+    unitsBar.appendChild(h("div", { class: "muted small pk-units-hint" }, "Tap one or more chapters to mix them (questions are shuffled):"));
     [{ key: "all", name: "All" }, ...pack.units].forEach(u => {
-      unitsBar.appendChild(h("button", { class: "chip", type: "button", "data-u": u.key, on: { click: () => { unit = u.key; draw(); } } }, esc(u.name)));
+      unitsBar.appendChild(h("button", { class: "chip", type: "button", "data-u": u.key, on: { click: () => {
+        if (u.key === "all") sel.clear();
+        else if (sel.has(u.key)) sel.delete(u.key);
+        else sel.add(u.key);
+        draw();
+      } } }, esc(u.name)));
     });
   }
 
   function draw() {
     modesBar.querySelectorAll(".pk-mode").forEach(b => b.classList.toggle("on", b.dataset.m === mode));
-    unitsBar.querySelectorAll(".chip").forEach(b => b.classList.toggle("on", b.dataset.u === unit));
+    unitsBar.querySelectorAll(".chip").forEach(b => b.classList.toggle("on", b.dataset.u === "all" ? !sel.size : sel.has(b.dataset.u)));
     unitsBar.classList.toggle("hidden", !pack.units?.length || mode === "learn");
     body.innerHTML = "";
     ({ learn, cards, quiz, exam, data, plan, drill, timeline })[mode]();
@@ -107,7 +117,7 @@ export function renderPack(root, pack, store, opts = {}) {
   function examCard(q, key) {
     const c = h("div", { class: "card pk-eq" });
     c.appendChild(h("div", { class: "row-between" }, `<div class="pk-q">${esc(q.q)}</div><span class="pill soon">${q.marks} mark${q.marks > 1 ? "s" : ""}</span>`));
-    if (q.unit && unit === "all") c.appendChild(h("div", { class: "tag" }, esc(unitName(q.unit))));
+    if (q.unit && mixed()) c.appendChild(h("div", { class: "tag" }, esc(unitName(q.unit))));
     c.appendChild(textBox(key, `Write your answer first (${q.marks} mark${q.marks > 1 ? "s" : ""}), then check`));
     const ms = q.model
       ? msBox("Model answer", null, q.why ? "Why it scores: " + q.why : "", q.model)
@@ -145,11 +155,11 @@ export function renderPack(root, pack, store, opts = {}) {
     function show() {
       flipped = false; card.classList.remove("on");
       if (!deck.length) {
-        card.innerHTML = `<div class="pk-face">🎉 You know all ${all.length} cards here.<div class="muted small">Switch unit or try the exam questions.</div></div>`;
+        card.innerHTML = `<div class="pk-face">🎉 You know all ${all.length} cards here.<div class="muted small">Pick other chapters or try the exam questions.</div></div>`;
         again.disabled = got.disabled = true;
       } else {
         const c = deck[0];
-        card.innerHTML = `<div class="pk-face"><div class="pk-front">${esc(c.front)}</div><div class="muted small">${c.unit && unit === "all" ? esc(unitName(c.unit)) + " · " : ""}tap to flip</div></div>`;
+        card.innerHTML = `<div class="pk-face"><div class="pk-front">${esc(c.front)}</div><div class="muted small">${c.unit && mixed() ? esc(unitName(c.unit)) + " · " : ""}tap to flip</div></div>`;
         again.disabled = got.disabled = false;
       }
       meta.textContent = `${deck.length} left this round · ${known()} / ${all.length} known`;
@@ -173,7 +183,7 @@ export function renderPack(root, pack, store, opts = {}) {
     show();
   }
 
-  function logQuiz(score, n) { S.quizzes.push({ d: today(), unit, score, n }); store.save(); }
+  function logQuiz(score, n) { S.quizzes.push({ d: today(), unit: unitKey(), score, n }); store.save(); }
 
   function quiz() {
     if (pack.quiz?.length) return mcq();
@@ -242,7 +252,10 @@ export function renderPack(root, pack, store, opts = {}) {
 
   function exam() {
     body.appendChild(h("p", { class: "muted small" }, esc(pack.examIntro || "")));
-    (pack.exam || []).forEach((q, i) => { if (inUnit(q)) body.appendChild(examCard(q, "eq" + i)); });
+    // One chapter: book order. Several (or all): shuffled, so mixed revision isn't predictable.
+    const qs = (pack.exam || []).map((q, i) => ({ q, key: "eq" + i })).filter(x => inUnit(x.q));
+    (mixed() ? shuffle(qs) : qs).forEach(x => body.appendChild(examCard(x.q, x.key)));
+    if (mixed() && qs.length) body.appendChild(h("button", { class: "btn ghost", type: "button", on: { click: () => { body.innerHTML = ""; exam(); } } }, "Shuffle again"));
   }
 
   function data() {

@@ -19,7 +19,7 @@
 export const REVISION_GOAL = { start: "2026-11-09", by: "2027-02-28", rounds: 2 };
 
 // Bump when a pack JSON changes so browsers fetch the new copy.
-export const PACK_VERSION = 1;
+export const PACK_VERSION = 2;
 
 export const PACKS = {
   "sci7-cup": "Science: Learner's Book 7",

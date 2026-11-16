@@ -93,7 +93,7 @@
   ]
  ],
  "quizTitle": "Quiz",
- "quizIntro": "Pick a unit above, then answer. Each answer shows why it's right.",
+ "quizIntro": "Pick one or more units above, then answer. Each answer shows why it's right.",
  "quiz": [
   {
    "q": "Which part is found in plant cells but NOT animal cells?",
@@ -504,7 +504,7 @@
    "unit": "u9"
   }
  ],
- "flashIntro": "Pick a unit above. Answer out loud, then flip. 'Not yet' cards come back sooner.",
+ "flashIntro": "Pick one or more units above. Answer out loud, then flip. 'Not yet' cards come back sooner.",
  "flashcards": [
   {
    "front": "What does the nucleus do?",

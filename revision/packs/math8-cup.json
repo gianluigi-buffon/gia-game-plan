@@ -109,7 +109,7 @@
   ]
  ],
  "quizTitle": "Quiz",
- "quizIntro": "Pick a unit above. Work it out on paper first, then choose.",
+ "quizIntro": "Pick one or more units above. Work it out on paper first, then choose.",
  "quiz": [
   {
    "q": "−6 − (−9) = ?",
@@ -722,7 +722,7 @@
    "unit": "u16"
   }
  ],
- "flashIntro": "Pick a unit above. Work out the answer, then flip to check the method.",
+ "flashIntro": "Pick one or more units above. Work out the answer, then flip to check the method.",
  "flashcards": [
   {
    "front": "−3 × −4 = ?",

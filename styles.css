@@ -319,3 +319,4 @@ details summary{list-style-position:inside}
 .qpop-card .q-by{margin-top:10px}
 @keyframes qpopIn{from{opacity:0}to{opacity:1}}
 @keyframes qpopOut{from{opacity:1}to{opacity:0}}
+.pk-units-hint{flex-basis:100%;margin-bottom:2px}

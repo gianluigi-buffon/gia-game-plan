@@ -89,7 +89,7 @@
   ]
  ],
  "quizTitle": "Quiz",
- "quizIntro": "Pick a chapter above, then answer. Each answer shows why it's right.",
+ "quizIntro": "Pick one or more chapters above, then answer. Each answer shows why it's right.",
  "quiz": [
   {
    "q": "In which year did al-Idrisi make his map?",
@@ -764,7 +764,7 @@
    "unit": "ch10"
   }
  ],
- "flashIntro": "Pick a chapter above. Read the question, answer out loud, then tap to flip. Mark “Got it” or “Not yet”: “Not yet” cards come back sooner.",
+ "flashIntro": "Pick one or more chapters above. Read the question, answer out loud, then tap to flip. Mark “Got it” or “Not yet”: “Not yet” cards come back sooner.",
  "flashcards": [
   {
    "front": "Who made Map 1, and when?",
