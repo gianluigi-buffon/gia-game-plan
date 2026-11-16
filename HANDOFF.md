@@ -73,9 +73,12 @@ School 6:30am–4:15pm. Wushu Mon/Wed/Fri 5–6:30pm (a missed/cancelled/resched
 ## ⭐ Progress rules
 Weekly targets: homework on time · 1 creation finished · Wushu = attended ≥ classes held that week (cancelled ones don't count; made-up ones do) · 2 revision rounds (counts as met until revision topics exist). Score /10 = 2.5 per target (partial credit for creations, Wushu, revision). Streak badges: First Bow, Steady Stance (3 wks), Perfect Form (10/10), Top Dog (6 wks). Belts at 20/40/60/80/100% of overall goals: creations 29, homework on time 100, Wushu classes 60, revision 30.
 
+## ✅ Setup status (16 Nov 2026)
+- Firebase connected, logins and rules live; browser API key restricted to the Pages site, `gia-plan-2026.firebaseapp.com` and `localhost:8765` (checked: other sites get "referer blocked").
+- Email secrets added (Part C); a manual digest run sent successfully.
+
 ## ⏳ Waiting on Christabel
-- Gia's revision goal and topic lists for each subject → `revision/syllabus.js`
-- Firebase project keys → `firebase-config.js`; real emails into the console rules
+- Gia's revision goal (still the placeholder in `revision/syllabus.js`)
 - Optional links: Next, weekly wins document, Substack
 
 ## ⚠️ Gotchas (from Jake's app)
