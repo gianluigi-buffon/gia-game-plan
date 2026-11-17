@@ -29,7 +29,7 @@ Two Firebase Auth (Email/Password) users: Gia and Christabel. Emails live in **o
 3. After deploying, check the live `index.html` serves the new version numbers.
 
 ### Current cache-buster versions
-- `styles.css?v=9`, `app.js?v=41`, `timetable.js?v=1`, `planner.js?v=3`, `revision.js?v=21`, `syllabus.js?v=19`, `packview.js?v=4`
+- `styles.css?v=9`, `app.js?v=42`, `timetable.js?v=1`, `planner.js?v=3`, `revision.js?v=21`, `syllabus.js?v=19`, `packview.js?v=4`
 
 ## 🧪 Testing without logging in (demo mode)
 
@@ -73,7 +73,7 @@ Two Firebase Auth (Email/Password) users: Gia and Christabel. Emails live in **o
 School 6:30am–4:15pm. Wushu Mon/Wed/Fri 5–6:30pm (a missed/cancelled/rescheduled class frees that slot for study). Wake up 6am. Reading + wind-down 9:15–9:30pm, lights out 9:30pm. Weekdays + Saturday morning for work; Saturday afternoon + Sunday free.
 
 ## ⭐ Progress rules
-Weekly targets: homework on time · 1 creation finished · Wushu = attended ≥ classes held that week (cancelled ones don't count; made-up ones do) · 2 revision rounds (counts as met until revision topics exist). Score /10 = 2.5 per target (partial credit for creations, Wushu, revision). Streak badges: First Bow, Steady Stance (3 wks), Perfect Form (10/10), Top Dog (6 wks). Belts at 20/40/60/80/100% of overall goals: creations 29, homework on time 100, Wushu classes 60, revision 30.
+Weekly targets: homework on time · 1 creation finished · Wushu = attended ≥ classes held that week (cancelled ones don't count; made-up ones do) · 2 revision rounds (counts as met until revision topics exist). Score /10 = 2.5 per target (partial credit for creations, Wushu, revision). Star badges: First Spark (first on-target week), Rising Star (3 wks), Supernova (10/10), Constellation (6 wks). Gem levels Pearl / Jade / Sapphire / Ruby / Diamond at 20/40/60/80/100% of overall goals (internal keys still firstbow/stance/perfect/dragon and white…black): creations 29, homework on time 100, Wushu classes 60, revision 30.
 
 ## ✅ Setup status (16 Nov 2026)
 - Firebase connected, logins and rules live; browser API key restricted to the Pages site, `gia-plan-2026.firebaseapp.com` and `localhost:8765` (checked: other sites get "referer blocked").

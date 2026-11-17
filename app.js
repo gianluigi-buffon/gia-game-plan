@@ -1022,34 +1022,43 @@ function renderReading() {
   fill("rdDone", cache.books.filter(b => b.status === "finished").sort((a, b) => (b.finishedOn || "").localeCompare(a.finishedOn || "")), "Finished books will appear here.");
 }
 
-// ---------- PROGRESS: weekly requirements, badges & belt ladder ----------
+// ---------- PROGRESS: weekly requirements, star badges & gem levels ----------
+// (Internal keys firstbow/stance/perfect/dragon and white…black are kept from the
+// first version; only the names and pictures changed, Nov 2026.)
 const REQ = { revision: 2, creations: 1 };
 const SEASON = { creations: CREATIONS.goal, hw: 100, wushu: 60, revision: 30 };
 const BADGE_DESC = {
-  firstbow: "Complete one full week meeting all four requirements.",
-  stance: "Stay on target 3 weeks in a row.",
-  perfect: "A perfect 10/10 week — nothing missed.",
-  dragon: "On target 6 weeks in a row — real consistency.",
-  white: "Reach 20% of your overall goals.",
-  yellow: "Reach 40% of your overall goals.",
-  green: "Reach 60% of your overall goals.",
-  blue: "Reach 80% of your overall goals.",
-  black: "100% — every goal achieved. Black belt!",
+  firstbow: "Your first spark: one full week meeting all four targets.",
+  stance: "Rising Star: on target 3 weeks in a row.",
+  perfect: "Supernova: a perfect 10/10 week, nothing missed.",
+  dragon: "Constellation: on target 6 weeks in a row. Real consistency.",
+  white: "Pearl: reach 20% of your overall goals.",
+  yellow: "Jade: reach 40% of your overall goals.",
+  green: "Sapphire: reach 60% of your overall goals.",
+  blue: "Ruby: reach 80% of your overall goals.",
+  black: "Diamond: 100%, every goal achieved!",
 };
 const BADGE_ART = {
-  firstbow: { ring: "#f2b544", face: "#3a2363", em: "🥋" },
-  stance: { ring: "#ff9a5a", face: "#4a1f10", em: "🔥" },
-  perfect: { ring: "#a9c1ff", face: "#1f2350", em: "💯" },
-  dragon: { ring: "#c79bff", face: "#2a1052", em: "🐶" },
-  white: { belt: "#f4f1ea" }, yellow: { belt: "#f5d33a" }, green: { belt: "#3fbf6a" }, blue: { belt: "#3a7bf0" }, black: { belt: "#111111" },
+  firstbow: { ring: "#f2b544", face: "#3a2363", em: "✨" },
+  stance: { ring: "#ffd36b", face: "#3a2c12", em: "🌟" },
+  perfect: { ring: "#ff9a5a", face: "#4a1f10", em: "💥" },
+  dragon: { ring: "#a9c1ff", face: "#1f2350", em: "🌌" },
+  // gems: base colour, light facet, dark facet
+  white: { pearl: true, gem: "#f3eee6", hi: "#ffffff", lo: "#cfc6d9" },
+  yellow: { gem: "#2fa36b", hi: "#7ee0ad", lo: "#1d6b46" },
+  green: { gem: "#2f5fd6", hi: "#8fb0ff", lo: "#1d3a8a" },
+  blue: { gem: "#d42f4f", hi: "#ff8fa3", lo: "#8a1c31" },
+  black: { gem: "#cdeeff", hi: "#ffffff", lo: "#8fc4e0" },
 };
 function badgeSVG(key, on) {
   const a = BADGE_ART[key];
   const op = on ? "" : ` opacity="0.45"`;
   const lock = on ? "" : `<rect x="45" y="49" width="11" height="8.5" rx="1.6" fill="#e7e0f2"/><path d="M46.8 49 V46.4 a2.7 2.7 0 0 1 5.4 0 V49" fill="none" stroke="#e7e0f2" stroke-width="1.7"/>`;
   let inner;
-  if (a.belt) {
-    inner = `<circle cx="32" cy="30" r="26" fill="#3b2d5a"${op}/><g${op}><rect x="8" y="25" width="48" height="9" rx="2" fill="${a.belt}" stroke="#00000055"/><path d="M28 34 L22 48 L27 48 L31 36 Z M36 34 L42 48 L37 48 L33 36 Z" fill="${a.belt}" stroke="#00000055"/><rect x="27" y="23" width="10" height="13" rx="2" fill="${a.belt}" stroke="#00000077"/></g>`;
+  if (a.pearl) {
+    inner = `<circle cx="32" cy="30" r="26" fill="#3b2d5a"${op}/><g${op}><circle cx="32" cy="31" r="14" fill="${a.gem}" stroke="${a.lo}" stroke-width="1.5"/><circle cx="27" cy="26" r="4.5" fill="${a.hi}" opacity=".9"/></g>`;
+  } else if (a.gem) {
+    inner = `<circle cx="32" cy="30" r="26" fill="#3b2d5a"${op}/><g${op} stroke="#00000044" stroke-width=".8"><path d="M20 22 L26 15 L38 15 L44 22 L32 46 Z" fill="${a.gem}"/><path d="M20 22 L44 22 L32 46 Z" fill="${a.lo}" opacity=".55"/><path d="M26 15 L32 22 L38 15 Z" fill="${a.hi}"/><path d="M20 22 L26 15 L32 22 Z M32 22 L38 15 L44 22 Z" fill="${a.hi}" opacity=".6"/><path d="M26 22 L32 46 L28 22 Z" fill="${a.hi}" opacity=".5"/></g>`;
   } else {
     inner = `<circle cx="32" cy="30" r="26" fill="${a.ring}"${op}/><circle cx="32" cy="30" r="21" fill="${a.face}"${op}/><text x="32" y="38" text-anchor="middle" font-size="22"${op}>${a.em}</text>`;
   }
@@ -1110,15 +1119,15 @@ async function loadProgress() {
   const overallPct = Math.round(((fr(creationsDone, SEASON.creations) + fr(hwOnTime, SEASON.hw) + fr(seasonWushu, SEASON.wushu) + fr(seasonRevision, SEASON.revision)) / 4) * 100);
 
   const streakBadges = [
-    { key: "firstbow", name: "First Bow", on: recentWeeks.some(w => w.onTarget) || week.onTarget, meta: "first on-target week" },
-    { key: "stance", name: "Steady Stance", on: streak >= 3, meta: `${Math.min(streak, 3)}/3 weeks` },
-    { key: "perfect", name: "Perfect Form", on: recentWeeks.some(w => (w.rating || 0) >= 10) || week.rating >= 10, meta: "a 10/10 week" },
-    { key: "dragon", name: "Top Dog", on: streak >= 6, meta: `${Math.min(streak, 6)}/6 weeks` },
+    { key: "firstbow", name: "First Spark", on: recentWeeks.some(w => w.onTarget) || week.onTarget, meta: "first on-target week" },
+    { key: "stance", name: "Rising Star", on: streak >= 3, meta: `${Math.min(streak, 3)}/3 weeks` },
+    { key: "perfect", name: "Supernova", on: recentWeeks.some(w => (w.rating || 0) >= 10) || week.rating >= 10, meta: "a 10/10 week" },
+    { key: "dragon", name: "Constellation", on: streak >= 6, meta: `${Math.min(streak, 6)}/6 weeks` },
   ];
   const ladder = [
-    { p: 20, key: "white", name: "White belt" }, { p: 40, key: "yellow", name: "Yellow belt" },
-    { p: 60, key: "green", name: "Green belt" }, { p: 80, key: "blue", name: "Blue belt" },
-    { p: 100, key: "black", name: "Black belt" },
+    { p: 20, key: "white", name: "Pearl" }, { p: 40, key: "yellow", name: "Jade" },
+    { p: 60, key: "green", name: "Sapphire" }, { p: 80, key: "blue", name: "Ruby" },
+    { p: 100, key: "black", name: "Diamond" },
   ].map(tr => ({ ...tr, on: overallPct >= tr.p }));
   progressCache = {
     week, streak, overallPct, streakBadges, ladder,
@@ -1141,12 +1150,12 @@ function renderProgress() {
   const chip = (ok, label) => `<span class="chip ${ok ? "on" : ""}">${ok ? "✓" : "✗"} ${label}</span>`;
   const cell = (b, sub) => `<div class="bcell ${b.on ? "" : "lock"}" data-desc="${esc(b.name)}: ${esc(BADGE_DESC[b.key])} ${b.on ? "— unlocked ✓" : "— locked 🔒"}" title="${esc(BADGE_DESC[b.key])}">${badgeSVG(b.key, b.on)}<div class="bname">${b.name}</div><div class="bmeta muted small">${sub}</div></div>`;
   const nextTier = ladder.find(l => !l.on);
-  const ladderHeadline = overallPct >= 100 ? "🥋 Black belt: unlocked! 🐶"
-    : overallPct === 0 ? "🥋 Your climb to black belt starts here!"
-      : `🥋 Just ${nextTier.p - overallPct}% to your ${nextTier.name}!`;
+  const ladderHeadline = overallPct >= 100 ? "💎 Diamond: unlocked! 🐶"
+    : overallPct === 0 ? "💎 Your gem collection starts here: Pearl first!"
+      : `💎 Just ${nextTier.p - overallPct}% to ${nextTier.name}!`;
   detailEl.innerHTML = `
     <div class="card"><b>🐶 How it works</b>
-      <div class="muted small" style="margin-top:4px">Hit your <b>4 weekly targets</b> to push your score toward a perfect 10. Hit all four and the week is <b>on target</b>: stack those weeks for a <b>streak</b> and earn badges. Everything you finish also moves you up the belts, from white to black.</div>
+      <div class="muted small" style="margin-top:4px">Hit your <b>4 weekly targets</b> to push your score toward a perfect 10. Hit all four and the week is <b>on target</b>: stack those weeks for a <b>streak</b> and earn badges. Everything you finish also earns you gems, from Pearl to Diamond.</div>
     </div>
     <div class="card"><b>🎯 This week: ${week.pillarsMet}/4${week.pillarsMet === 4 ? " — on target! ✨" : ""}</b>
       <div class="chips" style="margin-top:8px">${chip(p.hw, week.overdue ? `${week.overdue} homework overdue` : "homework on time")} ${chip(p.creation, `creation ${week.creations}/${REQ.creations}`)} ${chip(p.wushu, `Wushu ${week.wushu}/${week.wushuTarget}`)} ${chip(p.revision, week.revisionLive ? `revision ${week.revision}/${REQ.revision}` : "revision (starts when topics are added)")}</div>
@@ -1157,7 +1166,7 @@ function renderProgress() {
     <h3 class="section-h">📖 Revision</h3>
     <div id="progRevision">${revisionProgressHtml()}</div>
     <div id="badgeInfo" class="badge-info">👆 Tap any badge to see how to unlock it.</div>
-    <h3 class="section-h">🔥 Streak badges (${progressCache.streakUnlocked}/4)</h3>
+    <h3 class="section-h">✨ Star badges (${progressCache.streakUnlocked}/4)</h3>
     <div class="badgegrid">${streakBadges.map(b => cell(b, b.on ? "unlocked ✓" : b.meta)).join("")}</div>
     <h3 class="section-h">${ladderHeadline}</h3>
     <div class="progress"><div style="width:${overallPct}%"></div></div>
@@ -1220,13 +1229,13 @@ function renderDashboard() {
   }
   html += card("today", "📅 Today's plan", DAY_NAMES[new Date().getDay()].slice(0, 3), true, "tap for your schedule");
   if (pg) {
-    const nextName = (pg.ladder.find(l => !l.on) || {}).name || "Black belt";
-    const h2 = pg.overallPct >= 100 ? "🐶 Black belt unlocked — every goal achieved!"
+    const nextName = (pg.ladder.find(l => !l.on) || {}).name || "Diamond";
+    const h2 = pg.overallPct >= 100 ? "💎 Diamond unlocked: every goal achieved!"
       : pg.streak >= 1 ? `🔥 ${pg.streak}-week streak! Keep going for your ${nextName}!`
         : `Hit all 4 this week to start your streak — next up: ${nextName} 🥋`;
     html += `<div class="dash-h2">${esc(h2)}</div>`;
     const chips = pg.streakBadges.map(b => `<span class="chip ${b.on ? "on" : ""}" title="${esc(BADGE_DESC[b.key])}">${b.name}</span>`).join("");
-    html += `<div class="dcard wide" data-go="progress"><div class="dc-h">⭐ Score ${pg.week.rating}/10 · ${pg.streak}-week streak 🔥 · ${pg.streakUnlocked}/4 badges · ${pg.overallPct}% (${pg.ladderTier ? pg.ladderTier.name : "no belt yet"})</div><div class="chips">${chips}</div></div>`;
+    html += `<div class="dcard wide" data-go="progress"><div class="dc-h">⭐ Score ${pg.week.rating}/10 · ${pg.streak}-week streak 🔥 · ${pg.streakUnlocked}/4 badges · ${pg.overallPct}% (${pg.ladderTier ? pg.ladderTier.name : "no gem yet"})</div><div class="chips">${chips}</div></div>`;
   }
   el.innerHTML = html;
   el.querySelectorAll(".dcard").forEach(c => (c.onclick = () => activateTab(c.dataset.go)));

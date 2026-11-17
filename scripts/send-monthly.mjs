@@ -1,7 +1,7 @@
 // =============================================================
 //  send-monthly.mjs — monthly progress report to Gia + Christabel.
 //  Runs on the 1st of each month (GitHub Actions) and reports the
-//  month just finished: weekly scores, streaks, badges, belts, goals.
+//  month just finished: weekly scores, streaks, star badges, gem levels, goals.
 //  Uses the same secrets as the twice-weekly digest.
 // =============================================================
 import admin from "firebase-admin";
@@ -63,9 +63,9 @@ async function build() {
 
   const sorted = [...weeklog].sort((a, b) => b.weekStart.localeCompare(a.weekStart));
   let streak = 0; for (const w of sorted) { if (w.onTarget) streak++; else break; }
-  const streakBadges = [["🥋 First Bow", weeklog.some((w) => w.onTarget)], ["🔥 Steady Stance", streak >= 3], ["💯 Perfect Form", weeklog.some((w) => (w.rating || 0) >= 10)], ["🐶 Top Dog", streak >= 6]];
-  const belts = [["White belt", 20], ["Yellow belt", 40], ["Green belt", 60], ["Blue belt", 80], ["Black belt", 100]];
-  const belt = belts.filter(([, p]) => overall >= p).slice(-1)[0]?.[0] || "no belt yet";
+  const streakBadges = [["✨ First Spark", weeklog.some((w) => w.onTarget)], ["🌟 Rising Star", streak >= 3], ["💥 Supernova", weeklog.some((w) => (w.rating || 0) >= 10)], ["🌌 Constellation", streak >= 6]];
+  const belts = [["Pearl", 20], ["Jade", 40], ["Sapphire", 60], ["Ruby", 80], ["Diamond", 100]];
+  const belt = belts.filter(([, p]) => overall >= p).slice(-1)[0]?.[0] || "no gem yet";
 
   const [qt, qa] = QUOTES[new Date(ms + "T12:00:00Z").getUTCMonth() % QUOTES.length];
   const hr = `<hr style="border:none;border-top:1px solid #e4dcef;margin:20px 0 0" />`;
@@ -91,7 +91,7 @@ async function build() {
     ${skillsMonth.length ? `<p style="font-size:14px">🌱 Skills grown: ${skillsMonth.map((c) => esc(c.skill)).join("; ")}</p>` : ""}
     ${hr}<h3 style="margin:16px 0 6px;color:#5f33ad">🏅 Badges</h3>
     <p style="font-size:14px">${streakBadges.map(([n, on]) => `${on ? "✅" : "🔒"} ${n}`).join("&nbsp;&nbsp;")}</p>
-    <p style="font-size:14px">Belt: <b>${esc(belt)}</b> (${overall}% of overall goals). Current streak: <b>${streak}</b> week(s) 🔥</p>
+    <p style="font-size:14px">Gem level: <b>${esc(belt)}</b> (${overall}% of overall goals). Current streak: <b>${streak}</b> week(s) 🔥</p>
     ${hr}<p style="font-size:14px;font-style:italic;color:#4a3a66">“${esc(qt)}” — ${esc(qa)}</p>
     <p style="margin-top:18px;font-size:12px;color:#8a7aa6">Sent automatically from Gia's Game Plan.</p>
   </div>`;
